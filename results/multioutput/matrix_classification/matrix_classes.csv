@@ -1,0 +1,22 @@
+,Matrix short,Polarity
+0,9AA,negative
+1,9AA,positive
+2,CHCA,negative
+3,CHCA,positive
+4,CMBT,negative
+5,CMBT,positive
+6,ClCCA,negative
+7,ClCCA,positive
+8,DAN,negative
+9,DAN,positive
+10,DHAP,negative
+11,DHAP,positive
+12,DHB,negative
+13,DHB,positive
+14,NEDC,negative
+15,NEDC,positive
+16,NOR,negative
+17,NOR,positive
+18,pNA,negative
+19,pNA,positive
+20,not-detected,not-detected
