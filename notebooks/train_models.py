@@ -751,30 +751,29 @@ task_type = "regression"
 if task_type == "regression":
     tick = time.time()
     print("One single mol feature")
-    regr_out = result_dir / "regression"
+    regr_out = result_dir / "regression/random-forest"
     regr_out.mkdir(exist_ok=True, parents=True)
     regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols[[0]]], intensity_column="norm_intensity_seurat")
     regression_results_fingerprints.to_csv(regr_out / "regr_results_single_mol_feat.csv")
     print('Took {} s'.format(time.time()-tick))
 
+    tick = time.time()
+    print("Only FINGERPRINTS")
+    regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[fingerprints_cols], intensity_column="norm_intensity_seurat")
+    regression_results_fingerprints.to_csv(regr_out / "regr_results_fingerprints.csv")
+    print('Took {} s'.format(time.time()-tick))
 
-    # tick = time.time()
-    # print("Only FINGERPRINTS")
-    # regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[fingerprints_cols], intensity_column="norm_intensity_seurat")
-    # regression_results_fingerprints.to_csv(regr_out / "regr_results_fingerprints.csv")
-    # print('Took {} s'.format(time.time()-tick))
-    #
-    # tick = time.time()
-    # print("Only MOLECULES")
-    # regression_results_mols = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols], intensity_column="norm_intensity_seurat")
-    # regression_results_mols.to_csv(regr_out / "regr_results_mol_feat.csv")
-    # print('Took {} s'.format(time.time()-tick))
-    #
-    # tick = time.time()
-    # print("Both features")
-    # regression_results_all_feat = train_with_cross_val_multi_output(features_norm_df, intensity_column="norm_intensity_seurat")
-    # regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
-    # print('Took {} s'.format(time.time()-tick))
+    tick = time.time()
+    print("Only MOLECULES")
+    regression_results_mols = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols], intensity_column="norm_intensity_seurat")
+    regression_results_mols.to_csv(regr_out / "regr_results_mol_feat.csv")
+    print('Took {} s'.format(time.time()-tick))
+
+    tick = time.time()
+    print("Both features")
+    regression_results_all_feat = train_with_cross_val_multi_output(features_norm_df, intensity_column="norm_intensity_seurat")
+    regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
+    print('Took {} s'.format(time.time()-tick))
 elif task_type == "detection":
     tick = time.time()
     print("Both features")
