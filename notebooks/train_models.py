@@ -516,7 +516,7 @@ def train_test_regression_models_multi_output(train_x, test_x, train_y, test_y,
 
 def train_with_cross_val_multi_output(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    regression_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
+    regression_results = pd.DataFrame()
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
@@ -529,7 +529,7 @@ def train_with_cross_val_multi_output(features_normalized, intensity_column="spo
                  left_on="name_short"
                  )
 
-    for train_index, test_index in pbar_cross_split:
+    for fold, (train_index, test_index) in enumerate(pbar_cross_split):
         train_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[train_index])]
         test_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[test_index])]
         g_train = train_intensities.groupby(by=['name_short', 'adduct'])
@@ -550,6 +550,7 @@ def train_with_cross_val_multi_output(features_normalized, intensity_column="spo
                                                   out_multi_index = out_multi_index,
                                                   train=True)
         results_df.rename(columns={"matrix": "matrix", "polarity": "polarity"})
+        results_df["fold"] = int(fold)
         regression_results = pd.concat([regression_results, results_df])
     return regression_results
 
@@ -640,7 +641,7 @@ def train_classification_models_multi_output(train_x, test_x, train_y, test_y,
 
 def train_detection_classifiers(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    regression_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
+    regression_results = pd.DataFrame()
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
@@ -653,7 +654,7 @@ def train_detection_classifiers(features_normalized, intensity_column="spot_inte
                  left_on="name_short"
                  )
 
-    for train_index, test_index in pbar_cross_split:
+    for fold, (train_index, test_index) in enumerate(pbar_cross_split):
         train_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[train_index])]
         test_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[test_index])]
         g_train = train_intensities.groupby(by=['name_short', 'adduct'])
@@ -676,13 +677,14 @@ def train_detection_classifiers(features_normalized, intensity_column="spot_inte
                                                   name_test=test_mol_names,
                                                   out_multi_index = out_multi_index,
                                                   train=True)
+        results_df["fold"] = int(fold)
         regression_results = pd.concat([regression_results, results_df])
     return regression_results
 
 
 def train_matrix_classifiers(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    classification_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
+    classification_results = pd.DataFrame()
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
@@ -695,7 +697,7 @@ def train_matrix_classifiers(features_normalized, intensity_column="spot_intensi
                  left_on="name_short"
                  )
 
-    for train_index, test_index in pbar_cross_split:
+    for fold, (train_index, test_index) in enumerate(pbar_cross_split):
         train_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[train_index])]
         test_intensities = sorted_intensities[sorted_intensities.name_short.isin(selected_mols.index[test_index])]
         g_train = train_intensities.groupby(by=['name_short', 'adduct'])
@@ -728,6 +730,7 @@ def train_matrix_classifiers(features_normalized, intensity_column="spot_intensi
                                                   is_multioutput=False,
                                                   test_multioutout_models=False,
                                                   train=True)
+        results_df["fold"] = int(fold)
         classification_results = pd.concat([classification_results, results_df])
     return classification_results, matrix_names
 
