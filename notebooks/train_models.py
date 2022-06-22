@@ -113,7 +113,6 @@ print(missing_molecules)
 
 
 all_mol_features = pd.merge(mol_properties, fingerprints, how="inner", right_index=True, left_index=True)
-all_mol_features
 
 
 # ### Loading intensities
@@ -123,6 +122,7 @@ all_mol_features
 
 # Intensities:
 intensities = pd.read_csv(input_dir / "3june22_ions_no_nl.csv", index_col=0)
+intensities = intensities.rename(columns={"Matrix short": "matrix", "Polarity": "polarity"})
 intensities.head()
 
 
@@ -163,7 +163,7 @@ if remove_not_detected_adducts:
 # In[49]:
 
 
-g = intensities.groupby(['Matrix short', 'Polarity'], as_index=False)
+g = intensities.groupby(['matrix', 'polarity'], as_index=False)
 detected_ratio = g["detected"].apply(lambda x: x.sum() / x.shape[0])
 detected_ratio["Sum detected"] = g["detected"].sum()["detected"]
 
@@ -177,11 +177,11 @@ detected_ratio.sort_values("detected", ascending=False).rename(columns={"detecte
 # In[50]:
 
 
-std_intesities = intensities.groupby(['Matrix short', "Polarity", "name_short"], as_index=False).std()
+std_intesities = intensities.groupby(['matrix', "polarity", "name_short"], as_index=False).std()
 
 fig = plt.figure(figsize = (15,20))
 ax = fig.gca()
-std_intesities.hist(column=["detected"], by=['Matrix short', "Polarity"], grid=False, ax=ax)
+std_intesities.hist(column=["detected"], by=['matrix', "polarity"], grid=False, ax=ax)
 fig.savefig(plots_dir / "std_detected_value.pdf")
 
 
@@ -228,7 +228,7 @@ fig = plt.figure(figsize = (15,20))
 ax = fig.gca()
 
 
-_ = intensities[intensities["spot_intensity"] > 100.].hist("spot_intensity", by=["Matrix short", "Polarity"], ax=ax, sharex=True)
+_ = intensities[intensities["spot_intensity"] > 100.].hist("spot_intensity", by=["matrix", "polarity"], ax=ax, sharex=True)
 
 
 # In[56]:
@@ -303,7 +303,7 @@ fig = plt.figure(figsize = (15,20))
 ax = fig.gca()
 
 
-_ = intensities[intensities["spot_intensity"] > 100].hist("norm_intensity", by=["Matrix short", "Polarity"], ax=ax, sharex=True)
+_ = intensities[intensities["spot_intensity"] > 100].hist("norm_intensity", by=["matrix", "polarity"], ax=ax, sharex=True)
 
 
 # In[64]:
@@ -321,7 +321,7 @@ fig = plt.figure(figsize = (15,20))
 ax = fig.gca()
 
 
-_ = intensities[intensities["spot_intensity"] > 100].hist("norm_intensity_seurat", by=["Matrix short", "Polarity"], ax=ax, sharex=True)
+_ = intensities[intensities["spot_intensity"] > 100].hist("norm_intensity_seurat", by=["matrix", "polarity"], ax=ax, sharex=True)
 
 
 # In[63]:
@@ -431,7 +431,7 @@ digitized_mol_properties['combined'] = digitized_mol_properties.astype(str).sum(
 
 
 # Define cross-validation objects:
-NUM_SPLITS = 5
+NUM_SPLITS = 10
 skf = sklearn.model_selection.StratifiedKFold(n_splits=NUM_SPLITS)
 skf.get_n_splits()
 
@@ -462,20 +462,20 @@ def train_test_regression_models_multi_output(train_x, test_x, train_y, test_y,
                                  name_test=None, train=True):
     results_df = pd.DataFrame()
     regressors = {
-        'Lin_reg': LinearRegression(),
-        'Lin_regMultiOut': LinearRegression(),
-        'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
+        # 'Lin_reg': LinearRegression(),
+        # 'Lin_regMultiOut': LinearRegression(),
+        # 'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
         # 'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
-        'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
-        'KNeighbors': KNeighborsRegressor(n_neighbors=5),
-        'DecisionTree': DecisionTreeRegressor(max_depth=5),
-        'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
+        # 'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
+        # 'KNeighbors': KNeighborsRegressor(n_neighbors=5),
+        # 'DecisionTree': DecisionTreeRegressor(max_depth=5),
+        # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
         'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
-        'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
-        'MLP': MLPRegressor(max_iter=1000),
-        'MLPMultiOut': MLPRegressor(max_iter=1000),
-        'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
-        'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
+        # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
+        # 'MLP': MLPRegressor(max_iter=1000),
+        # 'MLPMultiOut': MLPRegressor(max_iter=1000),
+        # 'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
+        # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
     }
 
     if len(model_set)==0: model_set = regressors.keys()
@@ -516,12 +516,12 @@ def train_test_regression_models_multi_output(train_x, test_x, train_y, test_y,
 
 def train_with_cross_val_multi_output(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    regression_results = pd.DataFrame(columns = ['Matrix short', 'Polarity', 'regressor', "observed_value", 'prediction'])
+    regression_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
 
-    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "Matrix short", "Polarity"])
+    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "matrix", "polarity"])
     sorted_intensities = pd.merge(sorted_intensities,
                  features_normalized,
                  how="left",
@@ -543,12 +543,13 @@ def train_with_cross_val_multi_output(features_normalized, intensity_column="spo
 
         test_mol_names = pd.DataFrame([[name, adduct]for (name, adduct), _ in g_test], columns=["name_short", "adduct"])
 
-        matrix_names = train_intensities[["Matrix short", "Polarity"]].drop_duplicates()
-        out_multi_index = pd.MultiIndex.from_arrays([matrix_names["Matrix short"], matrix_names["Polarity"]])
+        matrix_names = train_intensities[["matrix", "polarity"]].drop_duplicates()
+        out_multi_index = pd.MultiIndex.from_arrays([matrix_names["matrix"], matrix_names["polarity"]])
         results_df = train_test_regression_models_multi_output(train_x, test_x, train_y, test_y,
                                                   name_test=test_mol_names,
                                                   out_multi_index = out_multi_index,
                                                   train=True)
+        results_df.rename(columns={"matrix": "matrix", "polarity": "polarity"})
         regression_results = pd.concat([regression_results, results_df])
     return regression_results
 
@@ -630,6 +631,7 @@ def train_classification_models_multi_output(train_x, test_x, train_y, test_y,
 
         else:
             raise NotImplementedError()
+        results_df.rename(columns={"matrix": "matrix", "polarity": "polarity"})
         results_df = pd.concat([results_df, loc_res_df])
 
     results_df = results_df.reset_index(drop = True)
@@ -638,12 +640,12 @@ def train_classification_models_multi_output(train_x, test_x, train_y, test_y,
 
 def train_detection_classifiers(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    regression_results = pd.DataFrame(columns = ['Matrix short', 'Polarity', 'regressor', "observed_value", 'prediction'])
+    regression_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
 
-    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "Matrix short", "Polarity"])
+    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "matrix", "polarity"])
     sorted_intensities = pd.merge(sorted_intensities,
                  features_normalized,
                  how="left",
@@ -668,8 +670,8 @@ def train_detection_classifiers(features_normalized, intensity_column="spot_inte
 
         test_mol_names = pd.DataFrame([[name, adduct]for (name, adduct), _ in g_test], columns=["name_short", "adduct"])
 
-        matrix_names = train_intensities[["Matrix short", "Polarity"]].drop_duplicates()
-        out_multi_index = pd.MultiIndex.from_arrays([matrix_names["Matrix short"], matrix_names["Polarity"]])
+        matrix_names = train_intensities[["matrix", "polarity"]].drop_duplicates()
+        out_multi_index = pd.MultiIndex.from_arrays([matrix_names["matrix"], matrix_names["polarity"]])
         results_df = train_classification_models_multi_output(train_x, test_x, train_y, test_y,
                                                   name_test=test_mol_names,
                                                   out_multi_index = out_multi_index,
@@ -680,12 +682,12 @@ def train_detection_classifiers(features_normalized, intensity_column="spot_inte
 
 def train_matrix_classifiers(features_normalized, intensity_column="spot_intensity"):
     # Cross-validation loop:
-    classification_results = pd.DataFrame(columns = ['Matrix short', 'Polarity', 'regressor', "observed_value", 'prediction'])
+    classification_results = pd.DataFrame(columns = ['matrix', 'polarity', 'regressor', "observed_value", 'prediction'])
     selected_mols = digitized_mol_properties
 
     pbar_cross_split = tqdm(skf.split(selected_mols.index, selected_mols['combined']), leave=False, total=NUM_SPLITS)
 
-    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "Matrix short", "Polarity"])
+    sorted_intensities = intensities.sort_values(by=['name_short', 'adduct',  "matrix", "polarity"])
     sorted_intensities = pd.merge(sorted_intensities,
                  features_normalized,
                  how="left",
@@ -719,8 +721,8 @@ def train_matrix_classifiers(features_normalized, intensity_column="spot_intensi
 
         test_mol_names = pd.DataFrame([[name, adduct]for (name, adduct), _ in g_test], columns=["name_short", "adduct"])
 
-        matrix_names = train_intensities[["Matrix short", "Polarity"]].drop_duplicates()
-        # out_multi_index = pd.MultiIndex.from_arrays([matrix_names["Matrix short"], matrix_names["Polarity"]])
+        matrix_names = train_intensities[["matrix", "polarity"]].drop_duplicates()
+        # out_multi_index = pd.MultiIndex.from_arrays([matrix_names["matrix"], matrix_names["polarity"]])
         results_df = train_classification_models_multi_output(train_x, test_x, train_y, test_y,
                                                   name_test=test_mol_names,
                                                   is_multioutput=False,
@@ -741,26 +743,35 @@ def train_matrix_classifiers(features_normalized, intensity_column="spot_intensi
 # All features:
 import time
 
-task_type = "detection"
+task_type = "regression"
 
 if task_type == "regression":
     tick = time.time()
-    print("Only FINGERPRINTS")
-    regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[fingerprints_cols], intensity_column="norm_intensity_seurat")
-    regression_results_fingerprints.to_csv(result_dir / "regr_results_fingerprints.csv")
+    print("One single mol feature")
+    regr_out = result_dir / "regression"
+    regr_out.mkdir(exist_ok=True, parents=True)
+    regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols[[0]]], intensity_column="norm_intensity_seurat")
+    regression_results_fingerprints.to_csv(regr_out / "regr_results_single_mol_feat.csv")
     print('Took {} s'.format(time.time()-tick))
 
-    tick = time.time()
-    print("Only MOLECULES")
-    regression_results_mols = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols], intensity_column="norm_intensity_seurat")
-    regression_results_mols.to_csv(result_dir / "regr_results_mol_feat.csv")
-    print('Took {} s'.format(time.time()-tick))
 
-    tick = time.time()
-    print("Both features")
-    regression_results_all_feat = train_with_cross_val_multi_output(features_norm_df, intensity_column="norm_intensity_seurat")
-    regression_results_all_feat.to_csv(result_dir / "regr_results_all_feat.csv")
-    print('Took {} s'.format(time.time()-tick))
+    # tick = time.time()
+    # print("Only FINGERPRINTS")
+    # regression_results_fingerprints = train_with_cross_val_multi_output(features_norm_df[fingerprints_cols], intensity_column="norm_intensity_seurat")
+    # regression_results_fingerprints.to_csv(regr_out / "regr_results_fingerprints.csv")
+    # print('Took {} s'.format(time.time()-tick))
+    #
+    # tick = time.time()
+    # print("Only MOLECULES")
+    # regression_results_mols = train_with_cross_val_multi_output(features_norm_df[mol_properties_cols], intensity_column="norm_intensity_seurat")
+    # regression_results_mols.to_csv(regr_out / "regr_results_mol_feat.csv")
+    # print('Took {} s'.format(time.time()-tick))
+    #
+    # tick = time.time()
+    # print("Both features")
+    # regression_results_all_feat = train_with_cross_val_multi_output(features_norm_df, intensity_column="norm_intensity_seurat")
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
+    # print('Took {} s'.format(time.time()-tick))
 elif task_type == "detection":
     tick = time.time()
     print("Both features")
