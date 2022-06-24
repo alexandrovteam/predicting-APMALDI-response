@@ -894,23 +894,52 @@ if task_type == "regression":
     regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
     print('Took {} s'.format(time.time() - tick))
 elif task_type == "detection":
+    det_out = result_dir / "detection"
+    det_out.mkdir(parents=True, exist_ok=True)
+
     # Discretize the intensity:
     intensities["detected"] = (intensities["spot_intensity"] > 100).astype("int")
 
     # Get oversampler:
     sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
 
+    # tick = time.time()
+    # print("Both features")
+    # regression_results_all_feat = \
+    #     train_one_regressor_per_matrix(features_norm_df,
+    #                                    intensity_column="detected",
+    #                                    train_loop_function=train_classification_models_multi_output,
+    #                                    test_split_col_name="stratification_class",
+    #                                    oversampler=sampler
+    #                                    )
+    # regression_results_all_feat.to_csv(det_out / "detection_results_all_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+
+    # tick = time.time()
+    # print("Mol features")
+    # regression_results_all_feat = \
+    #     train_one_regressor_per_matrix(features_norm_df[mol_properties_cols],
+    #                                    intensity_column="detected",
+    #                                    train_loop_function=train_classification_models_multi_output,
+    #                                    test_split_col_name="stratification_class",
+    #                                    oversampler=sampler
+    #                                    )
+    # regression_results_all_feat.to_csv(det_out / "detection_results_mol_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+
     tick = time.time()
-    print("Both features")
+    print("Fingerprints features")
     regression_results_all_feat = \
-        train_one_regressor_per_matrix(features_norm_df,
+        train_one_regressor_per_matrix(features_norm_df[fingerprints_cols],
                                        intensity_column="detected",
                                        train_loop_function=train_classification_models_multi_output,
                                        test_split_col_name="stratification_class",
                                        oversampler=sampler
                                        )
-    regression_results_all_feat.to_csv(result_dir / "detection_results_all_feat.csv")
+    regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
     print('Took {} s'.format(time.time() - tick))
+
+
 elif task_type == "matrix_classification":
     tick = time.time()
     print("Both features")
