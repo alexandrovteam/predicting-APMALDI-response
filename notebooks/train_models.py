@@ -75,8 +75,8 @@ sets_of_models = {
             'RandomForestMultiOut': RandomForestClassifier(max_depth=5, n_estimators=10),
             'MLP': MLPClassifier(max_iter=1000),
             'MLPMultiOut': MLPClassifier(max_iter=1000),
-            'GaussianProcess': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel()),
-            'GaussianProcessMultiOut': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel())
+            # 'GaussianProcess': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel()),
+            # 'GaussianProcessMultiOut': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel())
         }
 }
 
@@ -271,7 +271,8 @@ def train_multi_output_regressors(features_normalized, intensity_column="spot_in
 # ----------------------------
 # LOAD AND NORMALIZE DATA:
 # ----------------------------
-TASK_TYPE = "detection"
+# TASK_TYPE = "detection"
+TASK_TYPE = "intensity_classification"
 
 # Paths:
 input_dir = Path.cwd() / "../input_data"
@@ -549,6 +550,7 @@ elif TASK_TYPE == "detection":
     # regression_results_all_feat.to_csv(det_out / "detection_results_one_random_mol_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
 
+
     tick = time.time()
     print("No features")
     zero_feat = features_norm_df[mol_properties_cols[[1]]]
@@ -581,7 +583,7 @@ elif TASK_TYPE == "intensity_classification":
                                             test_split_col_name="stratification_class",
                                             oversampler=sampler
                                             )
-    regression_results_all_feat.to_csv(det_out / "detection_results_all_feat.csv")
+    regression_results_all_feat.to_csv(det_out / "intensity_classification_all_feat.csv")
     print('Took {} s'.format(time.time() - tick))
 
     tick = time.time()
@@ -593,17 +595,30 @@ elif TASK_TYPE == "intensity_classification":
                                             test_split_col_name="stratification_class",
                                             oversampler=sampler
                                             )
-    regression_results_all_feat.to_csv(det_out / "detection_results_mol_feat.csv")
+    regression_results_all_feat.to_csv(det_out / "intensity_classification_mol_feat.csv")
     print('Took {} s'.format(time.time() - tick))
 
-    # tick = time.time()
-    # print("Fingerprints features")
-    # regression_results_all_feat = \
-    #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-    #                                         intensity_column="digitized_seurat",
-    #                                         type_of_models="classifier",
-    #                                         test_split_col_name="stratification_class",
-    #                                         oversampler=sampler
-    #                                         )
-    # regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
-    # print('Took {} s'.format(time.time() - tick))
+    tick = time.time()
+    print("Fingerprints features")
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
+                                            intensity_column="digitized_seurat",
+                                            type_of_models="classifier",
+                                            test_split_col_name="stratification_class",
+                                            oversampler=sampler
+                                            )
+    regression_results_all_feat.to_csv(det_out / "intensity_classification_fingerprints_feat.csv")
+    print('Took {} s'.format(time.time() - tick))
+
+    tick = time.time()
+    print("One random features")
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols[[1]]],
+                                            intensity_column="digitized_seurat",
+                                            type_of_models="classifier",
+                                            test_split_col_name="stratification_class",
+                                            oversampler=sampler
+                                            )
+    regression_results_all_feat.to_csv(det_out / "intensity_classification_one_random_mol_feat.csv")
+    print('Took {} s'.format(time.time() - tick))
+
