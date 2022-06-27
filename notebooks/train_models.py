@@ -20,7 +20,10 @@ plt.style.use('dark_background')
 from sklearn.preprocessing import StandardScaler
 import umap.plot
 
-# In[145]:
+
+# ----------------------------
+# DATA PREPARATION:
+# ----------------------------
 
 
 # Paths:
