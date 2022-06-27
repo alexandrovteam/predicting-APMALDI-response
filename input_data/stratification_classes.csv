@@ -1,0 +1,1184 @@
+name_short,adduct,Stratification class
+2-Oxoglutaric acid,+Cl,16
+2-Oxoglutaric acid,+H,16
+2-Oxoglutaric acid,+K,16
+2-Oxoglutaric acid,+Na,11
+2-Oxoglutaric acid,-H,20
+2-Oxoglutaric acid,[M]+,16
+2-Oxoglutaric acid,[M]-,16
+3-Hydroxyanthranilic acid,+Cl,16
+3-Hydroxyanthranilic acid,+H,13
+3-Hydroxyanthranilic acid,+K,16
+3-Hydroxyanthranilic acid,+Na,16
+3-Hydroxyanthranilic acid,-H,18
+3-Hydroxyanthranilic acid,[M]+,11
+3-Hydroxyanthranilic acid,[M]-,16
+3-Hydroxymethylglutaric acid,+Cl,16
+3-Hydroxymethylglutaric acid,+H,11
+3-Hydroxymethylglutaric acid,+K,9
+3-Hydroxymethylglutaric acid,+Na,9
+3-Hydroxymethylglutaric acid,-H,16
+3-Hydroxymethylglutaric acid,[M]+,16
+3-Hydroxymethylglutaric acid,[M]-,16
+3-Phosphoglyceric acid,+Cl,16
+3-Phosphoglyceric acid,+H,13
+3-Phosphoglyceric acid,+K,16
+3-Phosphoglyceric acid,+Na,15
+3-Phosphoglyceric acid,-H,26
+3-Phosphoglyceric acid,[M]+,16
+3-Phosphoglyceric acid,[M]-,16
+"4,5-Dihydroorotic acid",+Cl,18
+"4,5-Dihydroorotic acid",+H,13
+"4,5-Dihydroorotic acid",+K,16
+"4,5-Dihydroorotic acid",+Na,14
+"4,5-Dihydroorotic acid",-H,26
+"4,5-Dihydroorotic acid",[M]+,16
+"4,5-Dihydroorotic acid",[M]-,16
+4-Hydroxyproline,+Cl,16
+4-Hydroxyproline,+H,7
+4-Hydroxyproline,+K,11
+4-Hydroxyproline,+Na,8
+4-Hydroxyproline,-H,22
+4-Hydroxyproline,[M]+,16
+4-Hydroxyproline,[M]-,16
+5-Hydroxyindoleacetic acid,+Cl,16
+5-Hydroxyindoleacetic acid,+H,11
+5-Hydroxyindoleacetic acid,+K,9
+5-Hydroxyindoleacetic acid,+Na,9
+5-Hydroxyindoleacetic acid,-H,19
+5-Hydroxyindoleacetic acid,[M]+,11
+5-Hydroxyindoleacetic acid,[M]-,16
+6-Phosphogluconic acid,+Cl,16
+6-Phosphogluconic acid,+H,16
+6-Phosphogluconic acid,+K,16
+6-Phosphogluconic acid,+Na,15
+6-Phosphogluconic acid,-H,24
+6-Phosphogluconic acid,[M]+,16
+6-Phosphogluconic acid,[M]-,16
+Acetoacetic acid,+Cl,16
+Acetoacetic acid,+H,16
+Acetoacetic acid,+K,16
+Acetoacetic acid,+Na,16
+Acetoacetic acid,-H,16
+Acetoacetic acid,[M]+,16
+Acetoacetic acid,[M]-,16
+Acetyl-CoA,+Cl,16
+Acetyl-CoA,+H,10
+Acetyl-CoA,+K,16
+Acetyl-CoA,+Na,15
+Acetyl-CoA,-H,26
+Acetyl-CoA,[M]+,16
+Acetyl-CoA,[M]-,17
+Acetylcarnitine,+Cl,16
+Acetylcarnitine,+H,3
+Acetylcarnitine,+K,9
+Acetylcarnitine,+Na,8
+Acetylcarnitine,-H,16
+Acetylcarnitine,[M]+,16
+Acetylcarnitine,[M]-,16
+Acetylcholine,+Cl,16
+Acetylcholine,+H,16
+Acetylcholine,+K,16
+Acetylcholine,+Na,16
+Acetylcholine,-H,16
+Acetylcholine,[M]+,1
+Acetylcholine,[M]-,16
+Adenine,+Cl,16
+Adenine,+H,10
+Adenine,+K,12
+Adenine,+Na,12
+Adenine,-H,22
+Adenine,[M]+,16
+Adenine,[M]-,16
+Adenosine diphosphate,+Cl,16
+Adenosine diphosphate,+H,15
+Adenosine diphosphate,+K,15
+Adenosine diphosphate,+Na,15
+Adenosine diphosphate,-H,25
+Adenosine diphosphate,[M]+,16
+Adenosine diphosphate,[M]-,16
+Adenosine monophosphate,+Cl,18
+Adenosine monophosphate,+H,5
+Adenosine monophosphate,+K,15
+Adenosine monophosphate,+Na,8
+Adenosine monophosphate,-H,24
+Adenosine monophosphate,[M]+,16
+Adenosine monophosphate,[M]-,16
+Agmatine,+Cl,16
+Agmatine,+H,4
+Agmatine,+K,16
+Agmatine,+Na,8
+Agmatine,-H,16
+Agmatine,[M]+,16
+Agmatine,[M]-,16
+Arachidonic acid,+Cl,16
+Arachidonic acid,+H,16
+Arachidonic acid,+K,16
+Arachidonic acid,+Na,16
+Arachidonic acid,-H,16
+Arachidonic acid,[M]+,16
+Arachidonic acid,[M]-,16
+Arginine,+Cl,18
+Arginine,+H,4
+Arginine,+K,9
+Arginine,+Na,8
+Arginine,-H,22
+Arginine,[M]+,16
+Arginine,[M]-,16
+Argininosuccinic acid,+Cl,16
+Argininosuccinic acid,+H,10
+Argininosuccinic acid,+K,10
+Argininosuccinic acid,+Na,9
+Argininosuccinic acid,-H,21
+Argininosuccinic acid,[M]+,16
+Argininosuccinic acid,[M]-,16
+Ascorbic acid,+Cl,16
+Ascorbic acid,+H,14
+Ascorbic acid,+K,12
+Ascorbic acid,+Na,15
+Ascorbic acid,-H,20
+Ascorbic acid,[M]+,16
+Ascorbic acid,[M]-,16
+Asparagine,+Cl,19
+Asparagine,+H,10
+Asparagine,+K,10
+Asparagine,+Na,5
+Asparagine,-H,22
+Asparagine,[M]+,16
+Asparagine,[M]-,16
+Aspartic acid,+Cl,19
+Aspartic acid,+H,10
+Aspartic acid,+K,13
+Aspartic acid,+Na,12
+Aspartic acid,-H,20
+Aspartic acid,[M]+,16
+Aspartic acid,[M]-,16
+Biotin,+Cl,16
+Biotin,+H,11
+Biotin,+K,15
+Biotin,+Na,7
+Biotin,-H,17
+Biotin,[M]+,16
+Biotin,[M]-,16
+Butyric acid,+Cl,16
+Butyric acid,+H,16
+Butyric acid,+K,16
+Butyric acid,+Na,16
+Butyric acid,-H,16
+Butyric acid,[M]+,16
+Butyric acid,[M]-,16
+CAR 16:0,+Cl,16
+CAR 16:0,+H,1
+CAR 16:0,+K,7
+CAR 16:0,+Na,2
+CAR 16:0,-H,16
+CAR 16:0,[M]+,16
+CAR 16:0,[M]-,16
+Carbamoyl phosphate,+Cl,16
+Carbamoyl phosphate,+H,16
+Carbamoyl phosphate,+K,16
+Carbamoyl phosphate,+Na,16
+Carbamoyl phosphate,-H,16
+Carbamoyl phosphate,[M]+,16
+Carbamoyl phosphate,[M]-,16
+Cardiolipin 18:1,+Cl,16
+Cardiolipin 18:1,+H,11
+Cardiolipin 18:1,+K,16
+Cardiolipin 18:1,+Na,9
+Cardiolipin 18:1,-H,20
+Cardiolipin 18:1,[M]+,16
+Cardiolipin 18:1,[M]-,20
+Carnitine,+Cl,16
+Carnitine,+H,3
+Carnitine,+K,9
+Carnitine,+Na,8
+Carnitine,-H,16
+Carnitine,[M]+,16
+Carnitine,[M]-,16
+Carnosine,+Cl,19
+Carnosine,+H,6
+Carnosine,+K,9
+Carnosine,+Na,6
+Carnosine,-H,20
+Carnosine,[M]+,16
+Carnosine,[M]-,16
+Cer d8:1/22:0 Cer,+Cl,20
+Cer d8:1/22:0 Cer,+H,5
+Cer d8:1/22:0 Cer,+K,7
+Cer d8:1/22:0 Cer,+Na,2
+Cer d8:1/22:0 Cer,-H,22
+Cer d8:1/22:0 Cer,[M]+,16
+Cer d8:1/22:0 Cer,[M]-,16
+Cholecalciferol,+Cl,16
+Cholecalciferol,+H,12
+Cholecalciferol,+K,16
+Cholecalciferol,+Na,16
+Cholecalciferol,-H,16
+Cholecalciferol,[M]+,16
+Cholecalciferol,[M]-,16
+Cholesterol,+Cl,16
+Cholesterol,+H,16
+Cholesterol,+K,16
+Cholesterol,+Na,16
+Cholesterol,-H,16
+Cholesterol,[M]+,16
+Cholesterol,[M]-,16
+Cholesteryl acetate,+Cl,16
+Cholesteryl acetate,+H,16
+Cholesteryl acetate,+K,16
+Cholesteryl acetate,+Na,16
+Cholesteryl acetate,-H,16
+Cholesteryl acetate,[M]+,16
+Cholesteryl acetate,[M]-,16
+Cholesteryl ester 17:0,+Cl,16
+Cholesteryl ester 17:0,+H,16
+Cholesteryl ester 17:0,+K,9
+Cholesteryl ester 17:0,+Na,7
+Cholesteryl ester 17:0,-H,16
+Cholesteryl ester 17:0,[M]+,16
+Cholesteryl ester 17:0,[M]-,16
+Cholic acid,+Cl,16
+Cholic acid,+H,16
+Cholic acid,+K,7
+Cholic acid,+Na,2
+Cholic acid,-H,21
+Cholic acid,[M]+,16
+Cholic acid,[M]-,16
+Choline,+Cl,16
+Choline,+H,16
+Choline,+K,16
+Choline,+Na,16
+Choline,-H,16
+Choline,[M]+,1
+Choline,[M]-,16
+Citric acid,+Cl,16
+Citric acid,+H,16
+Citric acid,+K,12
+Citric acid,+Na,15
+Citric acid,-H,26
+Citric acid,[M]+,16
+Citric acid,[M]-,16
+Citrulline,+Cl,19
+Citrulline,+H,8
+Citrulline,+K,10
+Citrulline,+Na,6
+Citrulline,-H,22
+Citrulline,[M]+,16
+Citrulline,[M]-,16
+Coenzyme A,+Cl,16
+Coenzyme A,+H,7
+Coenzyme A,+K,13
+Coenzyme A,+Na,10
+Coenzyme A,-H,20
+Coenzyme A,[M]+,16
+Coenzyme A,[M]-,17
+Creatine,+Cl,16
+Creatine,+H,6
+Creatine,+K,9
+Creatine,+Na,8
+Creatine,-H,19
+Creatine,[M]+,16
+Creatine,[M]-,16
+Creatinine,+Cl,16
+Creatinine,+H,5
+Creatinine,+K,5
+Creatinine,+Na,6
+Creatinine,-H,22
+Creatinine,[M]+,16
+Creatinine,[M]-,16
+Cyclic adenosine monophosphate,+Cl,16
+Cyclic adenosine monophosphate,+H,15
+Cyclic adenosine monophosphate,+K,11
+Cyclic adenosine monophosphate,+Na,8
+Cyclic adenosine monophosphate,-H,16
+Cyclic adenosine monophosphate,[M]+,16
+Cyclic adenosine monophosphate,[M]-,16
+Cysteine,+Cl,19
+Cysteine,+H,10
+Cysteine,+K,16
+Cysteine,+Na,15
+Cysteine,-H,22
+Cysteine,[M]+,16
+Cysteine,[M]-,16
+Cystine,+Cl,16
+Cystine,+H,14
+Cystine,+K,16
+Cystine,+Na,11
+Cystine,-H,19
+Cystine,[M]+,16
+Cystine,[M]-,16
+Cytidine,+Cl,19
+Cytidine,+H,7
+Cytidine,+K,11
+Cytidine,+Na,5
+Cytidine,-H,22
+Cytidine,[M]+,16
+Cytidine,[M]-,16
+Cytidine monophosphate,+Cl,16
+Cytidine monophosphate,+H,12
+Cytidine monophosphate,+K,10
+Cytidine monophosphate,+Na,4
+Cytidine monophosphate,-H,17
+Cytidine monophosphate,[M]+,16
+Cytidine monophosphate,[M]-,16
+Cytosine,+Cl,16
+Cytosine,+H,7
+Cytosine,+K,10
+Cytosine,+Na,5
+Cytosine,-H,19
+Cytosine,[M]+,16
+Cytosine,[M]-,16
+DG 18:0-22:6,+Cl,16
+DG 18:0-22:6,+H,16
+DG 18:0-22:6,+K,16
+DG 18:0-22:6,+Na,9
+DG 18:0-22:6,-H,16
+DG 18:0-22:6,[M]+,16
+DG 18:0-22:6,[M]-,16
+Dihydroxyacetone,+Cl,16
+Dihydroxyacetone,+H,16
+Dihydroxyacetone,+K,16
+Dihydroxyacetone,+Na,16
+Dihydroxyacetone,-H,16
+Dihydroxyacetone,[M]+,16
+Dihydroxyacetone,[M]-,16
+Dihydroxyacetone phosphate,+Cl,16
+Dihydroxyacetone phosphate,+H,16
+Dihydroxyacetone phosphate,+K,16
+Dihydroxyacetone phosphate,+Na,15
+Dihydroxyacetone phosphate,-H,21
+Dihydroxyacetone phosphate,[M]+,16
+Dihydroxyacetone phosphate,[M]-,16
+Dopamine,+Cl,17
+Dopamine,+H,7
+Dopamine,+K,16
+Dopamine,+Na,11
+Dopamine,-H,22
+Dopamine,[M]+,14
+Dopamine,[M]-,16
+Epinephrine,+Cl,16
+Epinephrine,+H,7
+Epinephrine,+K,16
+Epinephrine,+Na,9
+Epinephrine,-H,22
+Epinephrine,[M]+,14
+Epinephrine,[M]-,16
+Estradiol,+Cl,16
+Estradiol,+H,16
+Estradiol,+K,16
+Estradiol,+Na,16
+Estradiol,-H,19
+Estradiol,[M]+,14
+Estradiol,[M]-,16
+Flavin adenine dinucleotide,+Cl,16
+Flavin adenine dinucleotide,+H,10
+Flavin adenine dinucleotide,+K,12
+Flavin adenine dinucleotide,+Na,8
+Flavin adenine dinucleotide,-H,24
+Flavin adenine dinucleotide,[M]+,16
+Flavin adenine dinucleotide,[M]-,21
+Flavin mononucleotide,+Cl,16
+Flavin mononucleotide,+H,8
+Flavin mononucleotide,+K,10
+Flavin mononucleotide,+Na,4
+Flavin mononucleotide,-H,16
+Flavin mononucleotide,[M]+,11
+Flavin mononucleotide,[M]-,21
+Folic acid,+Cl,16
+Folic acid,+H,11
+Folic acid,+K,12
+Folic acid,+Na,4
+Folic acid,-H,16
+Folic acid,[M]+,11
+Folic acid,[M]-,17
+"Fructose 1,6-bisphosphate",+Cl,16
+"Fructose 1,6-bisphosphate",+H,16
+"Fructose 1,6-bisphosphate",+K,13
+"Fructose 1,6-bisphosphate",+Na,15
+"Fructose 1,6-bisphosphate",-H,25
+"Fructose 1,6-bisphosphate",[M]+,16
+"Fructose 1,6-bisphosphate",[M]-,16
+Fumaric acid,+Cl,16
+Fumaric acid,+H,16
+Fumaric acid,+K,16
+Fumaric acid,+Na,12
+Fumaric acid,-H,20
+Fumaric acid,[M]+,16
+Fumaric acid,[M]-,16
+GM3 Ganglioside 18:0,+Cl,16
+GM3 Ganglioside 18:0,+H,11
+GM3 Ganglioside 18:0,+K,9
+GM3 Ganglioside 18:0,+Na,5
+GM3 Ganglioside 18:0,-H,20
+GM3 Ganglioside 18:0,[M]+,16
+GM3 Ganglioside 18:0,[M]-,17
+GlcCer d18:1/18:0,+Cl,22
+GlcCer d18:1/18:0,+H,5
+GlcCer d18:1/18:0,+K,6
+GlcCer d18:1/18:0,+Na,1
+GlcCer d18:1/18:0,-H,22
+GlcCer d18:1/18:0,[M]+,16
+GlcCer d18:1/18:0,[M]-,17
+Gluconic acid,+Cl,16
+Gluconic acid,+H,16
+Gluconic acid,+K,14
+Gluconic acid,+Na,8
+Gluconic acid,-H,20
+Gluconic acid,[M]+,16
+Gluconic acid,[M]-,16
+Glucosamine,+Cl,16
+Glucosamine,+H,7
+Glucosamine,+K,13
+Glucosamine,+Na,8
+Glucosamine,-H,16
+Glucosamine,[M]+,16
+Glucosamine,[M]-,16
+Glucosamine 6-phosphate,+Cl,17
+Glucosamine 6-phosphate,+H,14
+Glucosamine 6-phosphate,+K,15
+Glucosamine 6-phosphate,+Na,9
+Glucosamine 6-phosphate,-H,26
+Glucosamine 6-phosphate,[M]+,16
+Glucosamine 6-phosphate,[M]-,16
+Glucose,+Cl,19
+Glucose,+H,16
+Glucose,+K,11
+Glucose,+Na,10
+Glucose,-H,22
+Glucose,[M]+,16
+Glucose,[M]-,16
+Glucose 6-phosphate,+Cl,18
+Glucose 6-phosphate,+H,13
+Glucose 6-phosphate,+K,13
+Glucose 6-phosphate,+Na,13
+Glucose 6-phosphate,-H,26
+Glucose 6-phosphate,[M]+,16
+Glucose 6-phosphate,[M]-,16
+Glucosyl cholesterol,+Cl,20
+Glucosyl cholesterol,+H,16
+Glucosyl cholesterol,+K,9
+Glucosyl cholesterol,+Na,6
+Glucosyl cholesterol,-H,19
+Glucosyl cholesterol,[M]+,16
+Glucosyl cholesterol,[M]-,16
+Glutamic acid,+Cl,19
+Glutamic acid,+H,10
+Glutamic acid,+K,12
+Glutamic acid,+Na,8
+Glutamic acid,-H,20
+Glutamic acid,[M]+,16
+Glutamic acid,[M]-,16
+Glutamine,+Cl,19
+Glutamine,+H,7
+Glutamine,+K,10
+Glutamine,+Na,8
+Glutamine,-H,22
+Glutamine,[M]+,16
+Glutamine,[M]-,16
+Glutathione,+Cl,16
+Glutathione,+H,9
+Glutathione,+K,9
+Glutathione,+Na,4
+Glutathione,-H,20
+Glutathione,[M]+,16
+Glutathione,[M]-,16
+Glycerol 3-phosphate,+Cl,16
+Glycerol 3-phosphate,+H,16
+Glycerol 3-phosphate,+K,13
+Glycerol 3-phosphate,+Na,13
+Glycerol 3-phosphate,-H,21
+Glycerol 3-phosphate,[M]+,16
+Glycerol 3-phosphate,[M]-,16
+Glycerophosphocholine,+Cl,16
+Glycerophosphocholine,+H,6
+Glycerophosphocholine,+K,10
+Glycerophosphocholine,+Na,4
+Glycerophosphocholine,-H,16
+Glycerophosphocholine,[M]+,16
+Glycerophosphocholine,[M]-,16
+Glycine,+Cl,16
+Glycine,+H,13
+Glycine,+K,16
+Glycine,+Na,15
+Glycine,-H,16
+Glycine,[M]+,16
+Glycine,[M]-,16
+Guanine,+Cl,16
+Guanine,+H,12
+Guanine,+K,11
+Guanine,+Na,12
+Guanine,-H,22
+Guanine,[M]+,16
+Guanine,[M]-,16
+Histamine,+Cl,16
+Histamine,+H,6
+Histamine,+K,15
+Histamine,+Na,8
+Histamine,-H,19
+Histamine,[M]+,16
+Histamine,[M]-,16
+Histidine,+Cl,16
+Histidine,+H,8
+Histidine,+K,10
+Histidine,+Na,8
+Histidine,-H,20
+Histidine,[M]+,16
+Histidine,[M]-,16
+Homocysteine,+Cl,16
+Homocysteine,+H,10
+Homocysteine,+K,16
+Homocysteine,+Na,16
+Homocysteine,-H,17
+Homocysteine,[M]+,16
+Homocysteine,[M]-,16
+Hypoxanthine,+Cl,16
+Hypoxanthine,+H,15
+Hypoxanthine,+K,15
+Hypoxanthine,+Na,8
+Hypoxanthine,-H,20
+Hypoxanthine,[M]+,16
+Hypoxanthine,[M]-,16
+Indole,+Cl,16
+Indole,+H,16
+Indole,+K,16
+Indole,+Na,16
+Indole,-H,16
+Indole,[M]+,16
+Indole,[M]-,16
+Kynurenic acid,+Cl,18
+Kynurenic acid,+H,9
+Kynurenic acid,+K,16
+Kynurenic acid,+Na,9
+Kynurenic acid,-H,18
+Kynurenic acid,[M]+,16
+Kynurenic acid,[M]-,16
+Kynurenine,+Cl,19
+Kynurenine,+H,7
+Kynurenine,+K,12
+Kynurenine,+Na,7
+Kynurenine,-H,22
+Kynurenine,[M]+,16
+Kynurenine,[M]-,16
+L-Dopa,+Cl,17
+L-Dopa,+H,10
+L-Dopa,+K,11
+L-Dopa,+Na,9
+L-Dopa,-H,22
+L-Dopa,[M]+,11
+L-Dopa,[M]-,16
+Lactic acid,+Cl,16
+Lactic acid,+H,16
+Lactic acid,+K,16
+Lactic acid,+Na,16
+Lactic acid,-H,16
+Lactic acid,[M]+,16
+Lactic acid,[M]-,16
+Lyso PA 18:1,+Cl,18
+Lyso PA 18:1,+H,15
+Lyso PA 18:1,+K,9
+Lyso PA 18:1,+Na,6
+Lyso PA 18:1,-H,16
+Lyso PA 18:1,[M]+,16
+Lyso PA 18:1,[M]-,17
+Lyso PC 15:0,+Cl,22
+Lyso PC 15:0,+H,1
+Lyso PC 15:0,+K,6
+Lyso PC 15:0,+Na,1
+Lyso PC 15:0,-H,16
+Lyso PC 15:0,[M]+,16
+Lyso PC 15:0,[M]-,16
+Lyso PE 18:0,+Cl,16
+Lyso PE 18:0,+H,5
+Lyso PE 18:0,+K,5
+Lyso PE 18:0,+Na,2
+Lyso PE 18:0,-H,24
+Lyso PE 18:0,[M]+,16
+Lyso PE 18:0,[M]-,16
+Lyso PG 16:0,+Cl,16
+Lyso PG 16:0,+H,9
+Lyso PG 16:0,+K,9
+Lyso PG 16:0,+Na,2
+Lyso PG 16:0,-H,24
+Lyso PG 16:0,[M]+,16
+Lyso PG 16:0,[M]-,17
+Lyso PI 17:1,+Cl,16
+Lyso PI 17:1,+H,15
+Lyso PI 17:1,+K,9
+Lyso PI 17:1,+Na,6
+Lyso PI 17:1,-H,23
+Lyso PI 17:1,[M]+,16
+Lyso PI 17:1,[M]-,16
+Lyso PS 17:1,+Cl,16
+Lyso PS 17:1,+H,5
+Lyso PS 17:1,+K,8
+Lyso PS 17:1,+Na,2
+Lyso PS 17:1,-H,23
+Lyso PS 17:1,[M]+,12
+Lyso PS 17:1,[M]-,16
+MG 18:1,+Cl,16
+MG 18:1,+H,16
+MG 18:1,+K,12
+MG 18:1,+Na,8
+MG 18:1,-H,16
+MG 18:1,[M]+,16
+MG 18:1,[M]-,16
+Malic acid,+Cl,16
+Malic acid,+H,16
+Malic acid,+K,12
+Malic acid,+Na,8
+Malic acid,-H,26
+Malic acid,[M]+,16
+Malic acid,[M]-,16
+Malonic acid,+Cl,16
+Malonic acid,+H,16
+Malonic acid,+K,16
+Malonic acid,+Na,14
+Malonic acid,-H,24
+Malonic acid,[M]+,16
+Malonic acid,[M]-,16
+Melatonin,+Cl,16
+Melatonin,+H,9
+Melatonin,+K,9
+Melatonin,+Na,5
+Melatonin,-H,19
+Melatonin,[M]+,9
+Melatonin,[M]-,16
+Methionine,+Cl,16
+Methionine,+H,10
+Methionine,+K,16
+Methionine,+Na,12
+Methionine,-H,22
+Methionine,[M]+,16
+Methionine,[M]-,16
+Mevalonic acid,+Cl,18
+Mevalonic acid,+H,14
+Mevalonic acid,+K,11
+Mevalonic acid,+Na,12
+Mevalonic acid,-H,20
+Mevalonic acid,[M]+,16
+Mevalonic acid,[M]-,16
+Myo-inositol 1-phosphate,+Cl,16
+Myo-inositol 1-phosphate,+H,13
+Myo-inositol 1-phosphate,+K,13
+Myo-inositol 1-phosphate,+Na,16
+Myo-inositol 1-phosphate,-H,24
+Myo-inositol 1-phosphate,[M]+,16
+Myo-inositol 1-phosphate,[M]-,16
+N-Acetylaspartic acid,+Cl,16
+N-Acetylaspartic acid,+H,10
+N-Acetylaspartic acid,+K,10
+N-Acetylaspartic acid,+Na,7
+N-Acetylaspartic acid,-H,26
+N-Acetylaspartic acid,[M]+,16
+N-Acetylaspartic acid,[M]-,16
+N-Acetylaspartylglutamic acid,+Cl,16
+N-Acetylaspartylglutamic acid,+H,9
+N-Acetylaspartylglutamic acid,+K,10
+N-Acetylaspartylglutamic acid,+Na,4
+N-Acetylaspartylglutamic acid,-H,20
+N-Acetylaspartylglutamic acid,[M]+,16
+N-Acetylaspartylglutamic acid,[M]-,16
+N-Acetylgalactosamine 6-phosphate,+Cl,16
+N-Acetylgalactosamine 6-phosphate,+H,13
+N-Acetylgalactosamine 6-phosphate,+K,15
+N-Acetylgalactosamine 6-phosphate,+Na,11
+N-Acetylgalactosamine 6-phosphate,-H,21
+N-Acetylgalactosamine 6-phosphate,[M]+,16
+N-Acetylgalactosamine 6-phosphate,[M]-,16
+N-Acetylglucosamine,+Cl,19
+N-Acetylglucosamine,+H,10
+N-Acetylglucosamine,+K,15
+N-Acetylglucosamine,+Na,8
+N-Acetylglucosamine,-H,22
+N-Acetylglucosamine,[M]+,16
+N-Acetylglucosamine,[M]-,16
+"N6,N6,N6-Trimethyllysine",+Cl,17
+"N6,N6,N6-Trimethyllysine",+H,3
+"N6,N6,N6-Trimethyllysine",+K,12
+"N6,N6,N6-Trimethyllysine",+Na,8
+"N6,N6,N6-Trimethyllysine",-H,16
+"N6,N6,N6-Trimethyllysine",[M]+,16
+"N6,N6,N6-Trimethyllysine",[M]-,16
+Niacinamide,+Cl,16
+Niacinamide,+H,14
+Niacinamide,+K,16
+Niacinamide,+Na,11
+Niacinamide,-H,16
+Niacinamide,[M]+,16
+Niacinamide,[M]-,16
+Nicotinamide adenine dinucleotide (NAD),+Cl,16
+Nicotinamide adenine dinucleotide (NAD),+H,16
+Nicotinamide adenine dinucleotide (NAD),+K,16
+Nicotinamide adenine dinucleotide (NAD),+Na,16
+Nicotinamide adenine dinucleotide (NAD),-H,16
+Nicotinamide adenine dinucleotide (NAD),[M]+,15
+Nicotinamide adenine dinucleotide (NAD),[M]-,21
+"Nicotinamide adenine dinucleotide, reduced (NADH)",+Cl,17
+"Nicotinamide adenine dinucleotide, reduced (NADH)",+H,14
+"Nicotinamide adenine dinucleotide, reduced (NADH)",+K,16
+"Nicotinamide adenine dinucleotide, reduced (NADH)",+Na,15
+"Nicotinamide adenine dinucleotide, reduced (NADH)",-H,24
+"Nicotinamide adenine dinucleotide, reduced (NADH)",[M]+,16
+"Nicotinamide adenine dinucleotide, reduced (NADH)",[M]-,17
+Nicotinamide riboside,+Cl,16
+Nicotinamide riboside,+H,16
+Nicotinamide riboside,+K,16
+Nicotinamide riboside,+Na,16
+Nicotinamide riboside,-H,16
+Nicotinamide riboside,[M]+,8
+Nicotinamide riboside,[M]-,16
+Nicotinamide ribotide,+Cl,16
+Nicotinamide ribotide,+H,10
+Nicotinamide ribotide,+K,16
+Nicotinamide ribotide,+Na,12
+Nicotinamide ribotide,-H,16
+Nicotinamide ribotide,[M]+,16
+Nicotinamide ribotide,[M]-,16
+Nicotinic acid,+Cl,16
+Nicotinic acid,+H,14
+Nicotinic acid,+K,16
+Nicotinic acid,+Na,16
+Nicotinic acid,-H,21
+Nicotinic acid,[M]+,16
+Nicotinic acid,[M]-,16
+Ornithine,+Cl,16
+Ornithine,+H,8
+Ornithine,+K,13
+Ornithine,+Na,7
+Ornithine,-H,22
+Ornithine,[M]+,16
+Ornithine,[M]-,16
+Orotic acid,+Cl,16
+Orotic acid,+H,16
+Orotic acid,+K,16
+Orotic acid,+Na,16
+Orotic acid,-H,22
+Orotic acid,[M]+,16
+Orotic acid,[M]-,16
+Oxalacetic acid,+Cl,16
+Oxalacetic acid,+H,16
+Oxalacetic acid,+K,16
+Oxalacetic acid,+Na,16
+Oxalacetic acid,-H,16
+Oxalacetic acid,[M]+,16
+Oxalacetic acid,[M]-,16
+Oxidized glutathione,+Cl,16
+Oxidized glutathione,+H,6
+Oxidized glutathione,+K,10
+Oxidized glutathione,+Na,4
+Oxidized glutathione,-H,23
+Oxidized glutathione,[M]+,16
+Oxidized glutathione,[M]-,16
+PA 16:0-18:1,+Cl,18
+PA 16:0-18:1,+H,11
+PA 16:0-18:1,+K,9
+PA 16:0-18:1,+Na,6
+PA 16:0-18:1,-H,20
+PA 16:0-18:1,[M]+,16
+PA 16:0-18:1,[M]-,17
+PC (O) C16-18:1,+Cl,18
+PC (O) C16-18:1,+H,4
+PC (O) C16-18:1,+K,7
+PC (O) C16-18:1,+Na,2
+PC (O) C16-18:1,-H,16
+PC (O) C16-18:1,[M]+,12
+PC (O) C16-18:1,[M]-,16
+PC 15:0-18:1,+Cl,18
+PC 15:0-18:1,+H,4
+PC 15:0-18:1,+K,7
+PC 15:0-18:1,+Na,2
+PC 15:0-18:1,-H,16
+PC 15:0-18:1,[M]+,12
+PC 15:0-18:1,[M]-,16
+PE 18:0-20:4,+Cl,16
+PE 18:0-20:4,+H,14
+PE 18:0-20:4,+K,13
+PE 18:0-20:4,+Na,8
+PE 18:0-20:4,-H,19
+PE 18:0-20:4,[M]+,16
+PE 18:0-20:4,[M]-,17
+PG 16:0-18:1,+Cl,16
+PG 16:0-18:1,+H,11
+PG 16:0-18:1,+K,9
+PG 16:0-18:1,+Na,6
+PG 16:0-18:1,-H,26
+PG 16:0-18:1,[M]+,16
+PG 16:0-18:1,[M]-,17
+PI 16:0-18:1,+Cl,16
+PI 16:0-18:1,+H,11
+PI 16:0-18:1,+K,9
+PI 16:0-18:1,+Na,5
+PI 16:0-18:1,-H,26
+PI 16:0-18:1,[M]+,16
+PI 16:0-18:1,[M]-,17
+PI(5)P 18:1,+Cl,16
+PI(5)P 18:1,+H,11
+PI(5)P 18:1,+K,15
+PI(5)P 18:1,+Na,8
+PI(5)P 18:1,-H,20
+PI(5)P 18:1,[M]+,16
+PI(5)P 18:1,[M]-,20
+PS (POPS) 16:0-18:1,+Cl,16
+PS (POPS) 16:0-18:1,+H,5
+PS (POPS) 16:0-18:1,+K,9
+PS (POPS) 16:0-18:1,+Na,6
+PS (POPS) 16:0-18:1,-H,26
+PS (POPS) 16:0-18:1,[M]+,12
+PS (POPS) 16:0-18:1,[M]-,17
+Palmitic acid,+Cl,16
+Palmitic acid,+H,16
+Palmitic acid,+K,16
+Palmitic acid,+Na,16
+Palmitic acid,-H,16
+Palmitic acid,[M]+,16
+Palmitic acid,[M]-,16
+Palmitoyl-CoA,+Cl,16
+Palmitoyl-CoA,+H,6
+Palmitoyl-CoA,+K,9
+Palmitoyl-CoA,+Na,6
+Palmitoyl-CoA,-H,23
+Palmitoyl-CoA,[M]+,16
+Palmitoyl-CoA,[M]-,20
+Pantetheine,+Cl,17
+Pantetheine,+H,8
+Pantetheine,+K,10
+Pantetheine,+Na,5
+Pantetheine,-H,22
+Pantetheine,[M]+,16
+Pantetheine,[M]-,16
+Pantothenic acid,+Cl,16
+Pantothenic acid,+H,10
+Pantothenic acid,+K,10
+Pantothenic acid,+Na,8
+Pantothenic acid,-H,22
+Pantothenic acid,[M]+,16
+Pantothenic acid,[M]-,16
+Phenylalanine,+Cl,16
+Phenylalanine,+H,10
+Phenylalanine,+K,12
+Phenylalanine,+Na,8
+Phenylalanine,-H,22
+Phenylalanine,[M]+,16
+Phenylalanine,[M]-,16
+Phosphocreatine,+Cl,16
+Phosphocreatine,+H,16
+Phosphocreatine,+K,16
+Phosphocreatine,+Na,11
+Phosphocreatine,-H,18
+Phosphocreatine,[M]+,16
+Phosphocreatine,[M]-,16
+Phosphoenolpyruvic acid,+Cl,16
+Phosphoenolpyruvic acid,+H,13
+Phosphoenolpyruvic acid,+K,14
+Phosphoenolpyruvic acid,+Na,14
+Phosphoenolpyruvic acid,-H,26
+Phosphoenolpyruvic acid,[M]+,16
+Phosphoenolpyruvic acid,[M]-,16
+Phosphoserine,+Cl,16
+Phosphoserine,+H,16
+Phosphoserine,+K,16
+Phosphoserine,+Na,16
+Phosphoserine,-H,16
+Phosphoserine,[M]+,16
+Phosphoserine,[M]-,16
+Phylloquinone,+Cl,16
+Phylloquinone,+H,8
+Phylloquinone,+K,16
+Phylloquinone,+Na,9
+Phylloquinone,-H,16
+Phylloquinone,[M]+,9
+Phylloquinone,[M]-,16
+Proline,+Cl,16
+Proline,+H,7
+Proline,+K,11
+Proline,+Na,8
+Proline,-H,22
+Proline,[M]+,16
+Proline,[M]-,16
+Propionylcarnitine,+Cl,16
+Propionylcarnitine,+H,3
+Propionylcarnitine,+K,9
+Propionylcarnitine,+Na,8
+Propionylcarnitine,-H,16
+Propionylcarnitine,[M]+,16
+Propionylcarnitine,[M]-,16
+Prostaglandin E1,+Cl,18
+Prostaglandin E1,+H,16
+Prostaglandin E1,+K,8
+Prostaglandin E1,+Na,2
+Prostaglandin E1,-H,18
+Prostaglandin E1,[M]+,16
+Prostaglandin E1,[M]-,16
+Putrescine,+Cl,16
+Putrescine,+H,10
+Putrescine,+K,16
+Putrescine,+Na,12
+Putrescine,-H,16
+Putrescine,[M]+,16
+Putrescine,[M]-,16
+Pyridoxine,+Cl,19
+Pyridoxine,+H,7
+Pyridoxine,+K,12
+Pyridoxine,+Na,9
+Pyridoxine,-H,19
+Pyridoxine,[M]+,16
+Pyridoxine,[M]-,16
+Pyruvic acid,+Cl,16
+Pyruvic acid,+H,16
+Pyruvic acid,+K,16
+Pyruvic acid,+Na,16
+Pyruvic acid,-H,16
+Pyruvic acid,[M]+,16
+Pyruvic acid,[M]-,16
+Quinolinic acid,+Cl,16
+Quinolinic acid,+H,15
+Quinolinic acid,+K,16
+Quinolinic acid,+Na,15
+Quinolinic acid,-H,20
+Quinolinic acid,[M]+,16
+Quinolinic acid,[M]-,16
+Retinoic acid,+Cl,16
+Retinoic acid,+H,11
+Retinoic acid,+K,16
+Retinoic acid,+Na,16
+Retinoic acid,-H,19
+Retinoic acid,[M]+,11
+Retinoic acid,[M]-,16
+Riboflavin,+Cl,18
+Riboflavin,+H,5
+Riboflavin,+K,8
+Riboflavin,+Na,3
+Riboflavin,-H,18
+Riboflavin,[M]+,15
+Riboflavin,[M]-,21
+Ribulose,+Cl,16
+Ribulose,+H,16
+Ribulose,+K,16
+Ribulose,+Na,12
+Ribulose,-H,22
+Ribulose,[M]+,16
+Ribulose,[M]-,16
+Ribulose 5-phosphate,+Cl,16
+Ribulose 5-phosphate,+H,13
+Ribulose 5-phosphate,+K,13
+Ribulose 5-phosphate,+Na,15
+Ribulose 5-phosphate,-H,26
+Ribulose 5-phosphate,[M]+,16
+Ribulose 5-phosphate,[M]-,16
+S-Adenosylhomocysteine,+Cl,18
+S-Adenosylhomocysteine,+H,5
+S-Adenosylhomocysteine,+K,10
+S-Adenosylhomocysteine,+Na,4
+S-Adenosylhomocysteine,-H,24
+S-Adenosylhomocysteine,[M]+,16
+S-Adenosylhomocysteine,[M]-,16
+S-Adenosylmethionine,+Cl,16
+S-Adenosylmethionine,+H,16
+S-Adenosylmethionine,+K,16
+S-Adenosylmethionine,+Na,16
+S-Adenosylmethionine,-H,16
+S-Adenosylmethionine,[M]+,6
+S-Adenosylmethionine,[M]-,16
+SM d18:1-16:0,+Cl,17
+SM d18:1-16:0,+H,2
+SM d18:1-16:0,+K,10
+SM d18:1-16:0,+Na,2
+SM d18:1-16:0,-H,19
+SM d18:1-16:0,[M]+,16
+SM d18:1-16:0,[M]-,16
+Serine,+Cl,16
+Serine,+H,10
+Serine,+K,16
+Serine,+Na,10
+Serine,-H,22
+Serine,[M]+,16
+Serine,[M]-,16
+Serotonin,+Cl,19
+Serotonin,+H,9
+Serotonin,+K,11
+Serotonin,+Na,14
+Serotonin,-H,19
+Serotonin,[M]+,15
+Serotonin,[M]-,16
+Spermidine,+Cl,16
+Spermidine,+H,6
+Spermidine,+K,16
+Spermidine,+Na,8
+Spermidine,-H,16
+Spermidine,[M]+,16
+Spermidine,[M]-,16
+Succinic acid,+Cl,16
+Succinic acid,+H,16
+Succinic acid,+K,16
+Succinic acid,+Na,14
+Succinic acid,-H,20
+Succinic acid,[M]+,16
+Succinic acid,[M]-,16
+Sulfo GalCer 18:0(2S-OH),+Cl,16
+Sulfo GalCer 18:0(2S-OH),+H,9
+Sulfo GalCer 18:0(2S-OH),+K,16
+Sulfo GalCer 18:0(2S-OH),+Na,9
+Sulfo GalCer 18:0(2S-OH),-H,23
+Sulfo GalCer 18:0(2S-OH),[M]+,16
+Sulfo GalCer 18:0(2S-OH),[M]-,17
+TG 15:0-18:1-15:0,+Cl,16
+TG 15:0-18:1-15:0,+H,11
+TG 15:0-18:1-15:0,+K,9
+TG 15:0-18:1-15:0,+Na,5
+TG 15:0-18:1-15:0,-H,16
+TG 15:0-18:1-15:0,[M]+,16
+TG 15:0-18:1-15:0,[M]-,16
+Taurine,+Cl,16
+Taurine,+H,15
+Taurine,+K,13
+Taurine,+Na,10
+Taurine,-H,26
+Taurine,[M]+,16
+Taurine,[M]-,16
+Taurocholic acid,+Cl,16
+Taurocholic acid,+H,16
+Taurocholic acid,+K,10
+Taurocholic acid,+Na,8
+Taurocholic acid,-H,23
+Taurocholic acid,[M]+,16
+Taurocholic acid,[M]-,16
+Tetrahydrofolic acid,+Cl,16
+Tetrahydrofolic acid,+H,9
+Tetrahydrofolic acid,+K,9
+Tetrahydrofolic acid,+Na,6
+Tetrahydrofolic acid,-H,16
+Tetrahydrofolic acid,[M]+,8
+Tetrahydrofolic acid,[M]-,17
+Thiamine,+Cl,16
+Thiamine,+H,11
+Thiamine,+K,16
+Thiamine,+Na,16
+Thiamine,-H,16
+Thiamine,[M]+,6
+Thiamine,[M]-,16
+Thymine,+Cl,16
+Thymine,+H,14
+Thymine,+K,16
+Thymine,+Na,12
+Thymine,-H,21
+Thymine,[M]+,16
+Thymine,[M]-,16
+Tryptophan,+Cl,16
+Tryptophan,+H,9
+Tryptophan,+K,9
+Tryptophan,+Na,8
+Tryptophan,-H,19
+Tryptophan,[M]+,11
+Tryptophan,[M]-,16
+Tyrosine,+Cl,16
+Tyrosine,+H,12
+Tyrosine,+K,12
+Tyrosine,+Na,12
+Tyrosine,-H,19
+Tyrosine,[M]+,16
+Tyrosine,[M]-,16
+Uracil,+Cl,18
+Uracil,+H,13
+Uracil,+K,16
+Uracil,+Na,11
+Uracil,-H,21
+Uracil,[M]+,16
+Uracil,[M]-,16
+Ureidosuccinic acid,+Cl,16
+Ureidosuccinic acid,+H,15
+Ureidosuccinic acid,+K,15
+Ureidosuccinic acid,+Na,10
+Ureidosuccinic acid,-H,20
+Ureidosuccinic acid,[M]+,16
+Ureidosuccinic acid,[M]-,16
+Uric acid,+Cl,18
+Uric acid,+H,13
+Uric acid,+K,16
+Uric acid,+Na,11
+Uric acid,-H,24
+Uric acid,[M]+,16
+Uric acid,[M]-,16
+Uridine,+Cl,19
+Uridine,+H,14
+Uridine,+K,11
+Uridine,+Na,12
+Uridine,-H,19
+Uridine,[M]+,16
+Uridine,[M]-,16
+Uridine diphosphate,+Cl,16
+Uridine diphosphate,+H,16
+Uridine diphosphate,+K,11
+Uridine diphosphate,+Na,15
+Uridine diphosphate,-H,25
+Uridine diphosphate,[M]+,16
+Uridine diphosphate,[M]-,16
+Uridine diphosphate glucose,+Cl,16
+Uridine diphosphate glucose,+H,16
+Uridine diphosphate glucose,+K,16
+Uridine diphosphate glucose,+Na,13
+Uridine diphosphate glucose,-H,26
+Uridine diphosphate glucose,[M]+,16
+Uridine diphosphate glucose,[M]-,16
+Uridine diphosphate glucuronic acid,+Cl,16
+Uridine diphosphate glucuronic acid,+H,16
+Uridine diphosphate glucuronic acid,+K,16
+Uridine diphosphate glucuronic acid,+Na,13
+Uridine diphosphate glucuronic acid,-H,24
+Uridine diphosphate glucuronic acid,[M]+,16
+Uridine diphosphate glucuronic acid,[M]-,16
+Uridine diphosphate-N-acetylglucosamine,+Cl,16
+Uridine diphosphate-N-acetylglucosamine,+H,16
+Uridine diphosphate-N-acetylglucosamine,+K,16
+Uridine diphosphate-N-acetylglucosamine,+Na,11
+Uridine diphosphate-N-acetylglucosamine,-H,26
+Uridine diphosphate-N-acetylglucosamine,[M]+,16
+Uridine diphosphate-N-acetylglucosamine,[M]-,17
+Urocanic acid,+Cl,18
+Urocanic acid,+H,14
+Urocanic acid,+K,14
+Urocanic acid,+Na,8
+Urocanic acid,-H,20
+Urocanic acid,[M]+,16
+Urocanic acid,[M]-,16
+Valine,+Cl,16
+Valine,+H,10
+Valine,+K,16
+Valine,+Na,10
+Valine,-H,19
+Valine,[M]+,16
+Valine,[M]-,16
+Xanthine,+Cl,18
+Xanthine,+H,14
+Xanthine,+K,16
+Xanthine,+Na,12
+Xanthine,-H,24
+Xanthine,[M]+,16
+Xanthine,[M]-,16
+alpha-tocopherol,+Cl,16
+alpha-tocopherol,+H,16
+alpha-tocopherol,+K,16
+alpha-tocopherol,+Na,16
+alpha-tocopherol,-H,16
+alpha-tocopherol,[M]+,7
+alpha-tocopherol,[M]-,16
+cis-Aconitic acid,+Cl,16
+cis-Aconitic acid,+H,13
+cis-Aconitic acid,+K,13
+cis-Aconitic acid,+Na,9
+cis-Aconitic acid,-H,26
+cis-Aconitic acid,[M]+,16
+cis-Aconitic acid,[M]-,16
+gamma-Aminobutyric acid,+Cl,16
+gamma-Aminobutyric acid,+H,7
+gamma-Aminobutyric acid,+K,12
+gamma-Aminobutyric acid,+Na,8
+gamma-Aminobutyric acid,-H,22
+gamma-Aminobutyric acid,[M]+,16
+gamma-Aminobutyric acid,[M]-,16
+myo-Inositol,+Cl,19
+myo-Inositol,+H,16
+myo-Inositol,+K,11
+myo-Inositol,+Na,8
+myo-Inositol,-H,22
+myo-Inositol,[M]+,16
+myo-Inositol,[M]-,16
