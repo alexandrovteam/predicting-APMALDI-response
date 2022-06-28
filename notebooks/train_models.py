@@ -14,6 +14,7 @@ import sklearn.model_selection
 from matplotlib import pyplot as plt
 
 from imblearn.over_sampling import RandomOverSampler
+from sklearn.feature_selection import SelectKBest, mutual_info_classif
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 
@@ -40,7 +41,6 @@ from sklearn.gaussian_process.kernels import DotProduct, WhiteKernel
 from sklearn.linear_model import LogisticRegression
 from sklearn.multioutput import MultiOutputClassifier
 
-
 # --------------------------------------
 # DEFINE TRAINING FUNCTIONS AND MODELS:
 # --------------------------------------
@@ -48,20 +48,20 @@ from sklearn.multioutput import MultiOutputClassifier
 sets_of_models = {
     "regressor":
         {
-            # 'Lin_reg': LinearRegression(),
-            # 'Lin_regMultiOut': LinearRegression(),
-            # 'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
-            # 'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
-            # 'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
-            # 'KNeighbors': KNeighborsRegressor(n_neighbors=5),
-            # 'DecisionTree': DecisionTreeRegressor(max_depth=5),
-            # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
+            'Lin_reg': LinearRegression(),
+            'Lin_regMultiOut': LinearRegression(),
+            'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
+            'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
+            'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
+            'KNeighbors': KNeighborsRegressor(n_neighbors=5),
+            'DecisionTree': DecisionTreeRegressor(max_depth=5),
+            'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
             'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
-            # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
-            # 'MLP': MLPRegressor(max_iter=1000),
-            # 'MLPMultiOut': MLPRegressor(max_iter=1000),
-            # 'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
-            # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
+            'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
+            'MLP': MLPRegressor(max_iter=1000),
+            'MLPMultiOut': MLPRegressor(max_iter=1000),
+            'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
+            'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
         },
     "classifier":
         {
@@ -147,7 +147,9 @@ def train_one_model_per_matrix_polarity(features_normalized,
                                         train_loop_function=train_multiple_models,
                                         test_split_col_name='mol_strat_class',
                                         oversampler=None,
-                                        test_baseline=False
+                                        test_baseline=False,
+                                        feature_selection=False,
+                                        use_adduct_features=False
                                         ):
     """
 
@@ -163,7 +165,10 @@ def train_one_model_per_matrix_polarity(features_normalized,
     # Cross-validation loop:
     regression_results = pd.DataFrame()
 
-    pbar_matrices = tqdm(max_intesities_per_mol.groupby(by=["matrix", "polarity"]), leave=False)
+    if use_adduct_features:
+        pbar_matrices = tqdm(intensities.groupby(by=["matrix", "polarity"]), leave=False)
+    else:
+        pbar_matrices = tqdm(max_intesities_per_mol.groupby(by=["matrix", "polarity"]), leave=False)
     for (matrix, polarity), rows in pbar_matrices:
         rows = rows.reset_index(drop=True)
         pbar_cross_split = tqdm(skf.split(rows.index, rows[test_split_col_name]),
@@ -180,23 +185,27 @@ def train_one_model_per_matrix_polarity(features_normalized,
 
             # print(train_intensities[adducts_columns])
 
+            train_cols = adducts_columns.tolist() if use_adduct_features else []
+            test_cols = adducts_columns.tolist() + ["adduct"] if use_adduct_features else []
+            mol_names_cols = ["name_short", "adduct"] if use_adduct_features else ["name_short"]
+
             train_x = \
-                pd.merge(train_intensities[["name_short"]],
+                pd.merge(train_intensities[train_cols + ["name_short"]],
                          features_normalized,
                          how="left",
                          right_index=True,
                          left_on="name_short"
                          ).drop(columns=["name_short"]).to_numpy()
             test_x = \
-                pd.merge(test_intensities[["name_short"]],
+                pd.merge(test_intensities[test_cols + ["name_short"]],
                          features_normalized,
                          how="left",
                          right_index=True,
                          left_on="name_short"
                          )
 
-            test_mol_names = test_x[["name_short"]].reset_index(drop=True)
-            test_x = test_x.drop(columns=["name_short"]).to_numpy()
+            test_mol_names = test_x[mol_names_cols].reset_index(drop=True)
+            test_x = test_x.drop(columns=mol_names_cols).to_numpy()
 
             if test_baseline:
                 test_x[:] = 0
@@ -204,6 +213,20 @@ def train_one_model_per_matrix_polarity(features_normalized,
 
             if oversampler is not None:
                 train_x, train_y = oversampler.fit_resample(train_x, train_y)
+
+            if feature_selection:
+                fig, axes = plt.subplots(ncols=1, nrows=1, figsize=(10, 10))
+                # ax_list = axes.flat
+
+                X_train_fs, X_test_fs, fs = select_features(train_x, train_y, test_x)
+                # what are scores for the features
+                for i in range(len(fs.scores_)):
+                    print('Feature %d: %f' % (i, fs.scores_[i]))
+                # plot the scores
+                axes.bar([i for i in range(len(fs.scores_))], fs.scores_)
+                plt.show()
+                fig.savefig(plots_dir / "selected_feat.pdf")
+                print("")
 
             results_df = train_loop_function(
                 train_x, test_x, train_y, test_y,
@@ -268,11 +291,20 @@ def train_multi_output_regressors(features_normalized, intensity_column="spot_in
     return regression_results
 
 
+# feature selection
+def select_features(X_train, y_train, X_test, k='all'):
+    fs = SelectKBest(score_func=mutual_info_classif, k=k)
+    fs.fit(X_train, y_train)
+    X_train_fs = fs.transform(X_train)
+    X_test_fs = fs.transform(X_test)
+    return X_train_fs, X_test_fs, fs
+
+
 # ----------------------------
 # LOAD AND NORMALIZE DATA:
 # ----------------------------
-# TASK_TYPE = "detection"
-TASK_TYPE = "intensity_classification"
+TASK_TYPE = "regression"
+# TASK_TYPE = "intensity_classification"
 
 # Paths:
 input_dir = Path.cwd() / "../input_data"
@@ -315,8 +347,6 @@ print("Molecules with missing fingerprints: ")
 missing_molecules = list(mol_properties[~ mol_properties.index.isin(fingerprints.index)].index)
 print(missing_molecules)
 
-all_mol_features = pd.merge(mol_properties, fingerprints, how="inner", right_index=True, left_index=True)
-
 # Intensities:
 intensities = pd.read_csv(input_dir / "3june22_ions_no_nl.csv", index_col=0)
 intensities = intensities.rename(columns={"Matrix short": "matrix", "Polarity": "polarity"})
@@ -333,18 +363,18 @@ print("{}/{} molecules kept".format(len(intensities.name_short.unique()), nb_bef
 
 remove_not_detected_adducts = False
 
-if remove_not_detected_adducts:
-    g = intensities.groupby(["name_short", "adduct"], as_index=False)["detected"].max()
-    nb_comb_before = intensities.shape[0]
-    intensities = intensities.merge(g[g["detected"] == 1][["name_short", "adduct"]])
-    print("{}/{} combinations of molecules/adduct with non-zero observed values".format(intensities.shape[0],
-                                                                                        nb_comb_before))
-
-    # Now check if some molecules are never observed (for any adduct) and
-    # remove them from the feature vectors:
-    nb_mol_before = len(all_mol_features.index)
-    all_mol_features = all_mol_features[all_mol_features.index.isin(intensities["name_short"].unique())]
-    print("{}/{} molecules with non-zero observed values".format(len(all_mol_features.index), nb_mol_before))
+# if remove_not_detected_adducts:
+#     g = intensities.groupby(["name_short", "adduct"], as_index=False)["detected"].max()
+#     nb_comb_before = intensities.shape[0]
+#     intensities = intensities.merge(g[g["detected"] == 1][["name_short", "adduct"]])
+#     print("{}/{} combinations of molecules/adduct with non-zero observed values".format(intensities.shape[0],
+#                                                                                         nb_comb_before))
+#
+#     # Now check if some molecules are never observed (for any adduct) and
+#     # remove them from the feature vectors:
+#     nb_mol_before = len(all_mol_features.index)
+#     all_mol_features = all_mol_features[all_mol_features.index.isin(intensities["name_short"].unique())]
+#     print("{}/{} molecules with non-zero observed values".format(len(all_mol_features.index), nb_mol_before))
 
 # #### How many molecules-adduct observed per matrix-polarity
 #
@@ -361,9 +391,16 @@ ss = StandardScaler()
 pt = PowerTransformer()
 
 # OPTION 1
-features_norm_df = pd.DataFrame(pt.fit_transform(all_mol_features),
-                                index=all_mol_features.index,
-                                columns=all_mol_features.columns)
+mol_properties_norm_df = pd.DataFrame(pt.fit_transform(mol_properties),
+                                      index=mol_properties.index,
+                                      columns=mol_properties.columns)
+
+features_norm_df = pd.merge(mol_properties_norm_df, fingerprints, how="inner", right_index=True, left_index=True)
+
+# features_norm_df = pd.DataFrame(pt.fit_transform(all_mol_features),
+#                                 index=all_mol_features.index,
+#                                 columns=all_mol_features.columns)
+
 
 # OPTION 2
 # features_norm_df = pd.DataFrame(ss.fit_transform(all_mol_features), index = all_mol_features.index, columns = all_mol_features.columns)
@@ -378,21 +415,21 @@ features_norm_df = pd.DataFrame(pt.fit_transform(all_mol_features),
 numpy_intensities = intensities[["spot_intensity"]].to_numpy()
 intensities["norm_intensity_seurat"] = np.log2((numpy_intensities.T / numpy_intensities.T.sum()) * 10000 + 1).T
 
-
 # Digitize intensities into four classes (low, medium, high, very high):
 # Make sure to set noisy predictions (<100) to zero:
 intensities.loc[intensities["spot_intensity"] < 100, "norm_intensity_seurat"] = 0
 # Now digitize intensities that were normalized with Seurat:
 zero_mask = intensities["norm_intensity_seurat"] == 0
-intensities.loc[~zero_mask,"norm_intensity_seurat"].hist(bins=4)
+intensities.loc[~zero_mask, "norm_intensity_seurat"].hist(bins=4)
 _, bins = np.histogram(intensities["norm_intensity_seurat"], bins=4)
-bins[-1] += 0.1 # Make sure to include the last point in the last bin
+bins[-1] += 0.1  # Make sure to include the last point in the last bin
 intensities["digitized_seurat"] = np.digitize(intensities["norm_intensity_seurat"], bins=bins)
 # Mask not detected intensities:
 intensities.loc[zero_mask, "digitized_seurat"] = 0
 
 # Get max intensities across adducts:
-max_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)["digitized_seurat"].max()
+max_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
+    "digitized_seurat"].max()
 
 # ----------------------------
 # CREATE TRAIN/VAL SPLIT:
@@ -414,11 +451,12 @@ for col in selected_stratification_features:
 
 digitized_mol_properties['mol_strat_class'] = digitized_mol_properties.astype(str).sum(axis=1).astype('category')
 
-def get_strat_classes(intensity_column="digitized_seurat"):
+
+def get_strat_classes(intesity_df, intensity_column="digitized_seurat"):
     # Get class depending on matrix:
     strat_df = \
-    max_intesities_per_mol.merge(digitized_mol_properties, left_on="name_short", right_index=True, how="left")[
-        [intensity_column, "matrix", "polarity", "mol_strat_class"]]
+        intesity_df.merge(digitized_mol_properties, left_on="name_short", right_index=True, how="left")[
+            [intensity_column, "matrix", "polarity", "mol_strat_class"]]
     strat_df['mol_strat_class'] = strat_df['mol_strat_class'].astype(int)
     strat_df = pd.get_dummies(strat_df, columns=["matrix", "polarity"], prefix=["mat", "pol"])
     strat_df['matrix_class'] = strat_df.iloc[:, 2:].applymap(str).apply(''.join, axis=1)
@@ -437,10 +475,17 @@ def get_strat_classes(intensity_column="digitized_seurat"):
 max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
 
 if TASK_TYPE == "detection":
-    max_intesities_per_mol['stratification_class'] = get_strat_classes("detected")
+    max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "detected")
+    intensities['stratification_class'] = get_strat_classes(intensities, "detected")
 elif TASK_TYPE == "intensity_classification":
-    max_intesities_per_mol['stratification_class'] = get_strat_classes("digitized_seurat")
-
+    max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "digitized_seurat")
+    intensities['stratification_class'] = get_strat_classes(intensities, "digitized_seurat")
+elif TASK_TYPE == "regression":
+    # max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "digitized_seurat")
+    intensities['stratification_class'] = intensities.merge(digitized_mol_properties,
+                                                            left_on="name_short",
+                                                            right_index=True,
+                                                            how="left")["mol_strat_class"]
 
 # ----------------------------
 # START TRAINING:
@@ -451,7 +496,6 @@ NUM_SPLITS = 10
 skf = sklearn.model_selection.StratifiedKFold(n_splits=NUM_SPLITS)
 skf.get_n_splits()
 
-
 # Now, train regressors using:
 # - Only fingerprints
 # - Only mol features
@@ -460,38 +504,81 @@ skf.get_n_splits()
 # All features:
 import time
 
-
-
 if TASK_TYPE == "regression":
-    tick = time.time()
-    print("One single mol feature")
-    regr_out = result_dir / "regression_per_mol"
+    regr_out = result_dir / "detected_regression_per_ion"
     regr_out.mkdir(exist_ok=True, parents=True)
-    regression_results_fingerprints = train_multi_output_regressors(features_norm_df[mol_properties_cols[[0]]],
-                                                                    intensity_column="norm_intensity_seurat")
-    regression_results_fingerprints.to_csv(regr_out / "regr_results_single_mol_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
+
+    # Filter intensities, using only detected values:
+    intensities = intensities[intensities["detected"] == 1]
+    #
+    # tick = time.time()
+    # print("Both features")
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(features_norm_df,
+    #                                         intensity_column="norm_intensity_seurat",
+    #                                         type_of_models="regressor",
+    #                                         test_split_col_name="stratification_class",
+    #                                         use_adduct_features=True,
+    #                                         )
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+    #
+    #
+    # tick = time.time()
+    # print("No features")
+    # random_features = features_norm_df[mol_properties_cols[[1]]]
+    # random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(random_features,
+    #                                         intensity_column="norm_intensity_seurat",
+    #                                         type_of_models="regressor",
+    #                                         test_split_col_name="stratification_class",
+    #                                         use_adduct_features=True
+    #                                         )
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_random_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+
 
     tick = time.time()
-    print("Only FINGERPRINTS")
-    regression_results_fingerprints = train_multi_output_regressors(features_norm_df[fingerprints_cols],
-                                                                    intensity_column="norm_intensity_seurat")
-    regression_results_fingerprints.to_csv(regr_out / "regr_results_fingerprints.csv")
+    print("Zero features")
+    random_features = features_norm_df[mol_properties_cols[[1]]]
+    random_features.iloc[:, :] = np.zeros(shape=random_features.shape, dtype="float")
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(random_features,
+                                            intensity_column="norm_intensity_seurat",
+                                            type_of_models="regressor",
+                                            test_split_col_name="stratification_class",
+                                            use_adduct_features=True
+                                            )
+    regression_results_all_feat.to_csv(regr_out / "regr_results_no_feat.csv")
     print('Took {} s'.format(time.time() - tick))
 
-    tick = time.time()
-    print("Only MOLECULES")
-    regression_results_mols = train_multi_output_regressors(features_norm_df[mol_properties_cols],
-                                                            intensity_column="norm_intensity_seurat")
-    regression_results_mols.to_csv(regr_out / "regr_results_mol_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
 
-    tick = time.time()
-    print("Both features")
-    regression_results_all_feat = train_multi_output_regressors(features_norm_df,
-                                                                intensity_column="norm_intensity_seurat")
-    regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
+    # tick = time.time()
+    # print("Mol features")
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
+    #                                         intensity_column="norm_intensity_seurat",
+    #                                         type_of_models="regressor",
+    #                                         test_split_col_name="stratification_class",
+    #                                         use_adduct_features=True
+    #                                         )
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_mol_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+    #
+    # tick = time.time()
+    # print("Fingerprints features")
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
+    #                                         intensity_column="norm_intensity_seurat",
+    #                                         type_of_models="regressor",
+    #                                         test_split_col_name="stratification_class",
+    #                                         use_adduct_features=True
+    #                                         )
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_fingerprints_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+
+
 elif TASK_TYPE == "detection":
     det_out = result_dir / "detection_per_mol"
     det_out.mkdir(parents=True, exist_ok=True)
@@ -526,17 +613,18 @@ elif TASK_TYPE == "detection":
     # regression_results_all_feat.to_csv(det_out / "detection_results_mol_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
     #
-    # tick = time.time()
-    # print("Fingerprints features")
-    # regression_results_all_feat = \
-    #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-    #                                         intensity_column="detected",
-    #                                         type_of_models="classifier",
-    #                                         test_split_col_name="stratification_class",
-    #                                         oversampler=sampler
-    #                                         )
-    # regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
-    # print('Took {} s'.format(time.time() - tick))
+    tick = time.time()
+    print("Fingerprints features")
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
+                                            intensity_column="detected",
+                                            type_of_models="classifier",
+                                            test_split_col_name="stratification_class",
+                                            oversampler=sampler,
+                                            feature_selection=True
+                                            )
+    regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
+    print('Took {} s'.format(time.time() - tick))
     #
     # tick = time.time()
     # print("One single mol_feat")
@@ -550,21 +638,20 @@ elif TASK_TYPE == "detection":
     # regression_results_all_feat.to_csv(det_out / "detection_results_one_random_mol_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
 
-
-    tick = time.time()
-    print("No features")
-    zero_feat = features_norm_df[mol_properties_cols[[1]]]
-    zero_feat.iloc[:, :] = 0
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(zero_feat,
-                                            intensity_column="detected",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler,
-                                            test_baseline=True
-                                            )
-    regression_results_all_feat.to_csv(det_out / "detection_results_no_features.csv")
-    print('Took {} s'.format(time.time() - tick))
+    # tick = time.time()
+    # print("No features")
+    # zero_feat = features_norm_df[mol_properties_cols[[1]]]
+    # zero_feat.iloc[:, :] = 0
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(zero_feat,
+    #                                         intensity_column="detected",
+    #                                         type_of_models="classifier",
+    #                                         test_split_col_name="stratification_class",
+    #                                         oversampler=sampler,
+    #                                         test_baseline=True
+    #                                         )
+    # regression_results_all_feat.to_csv(det_out / "detection_results_no_features.csv")
+    # print('Took {} s'.format(time.time() - tick))
 
 
 elif TASK_TYPE == "intensity_classification":
@@ -621,4 +708,3 @@ elif TASK_TYPE == "intensity_classification":
                                             )
     regression_results_all_feat.to_csv(det_out / "intensity_classification_one_random_mol_feat.csv")
     print('Took {} s'.format(time.time() - tick))
-
