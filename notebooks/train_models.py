@@ -51,7 +51,7 @@ sets_of_models = {
             'Lin_reg': LinearRegression(),
             'Lin_regMultiOut': LinearRegression(),
             'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
-            'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
+            # 'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
             'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
             'KNeighbors': KNeighborsRegressor(n_neighbors=5),
             'DecisionTree': DecisionTreeRegressor(max_depth=5),
@@ -149,7 +149,8 @@ def train_one_model_per_matrix_polarity(features_normalized,
                                         oversampler=None,
                                         test_baseline=False,
                                         feature_selection=False,
-                                        use_adduct_features=False
+                                        use_adduct_features=False,
+                                        train_only_on_detected=False
                                         ):
     """
 
@@ -171,14 +172,23 @@ def train_one_model_per_matrix_polarity(features_normalized,
         pbar_matrices = tqdm(max_intesities_per_mol.groupby(by=["matrix", "polarity"]), leave=False)
     for (matrix, polarity), rows in pbar_matrices:
         rows = rows.reset_index(drop=True)
-        pbar_cross_split = tqdm(skf.split(rows.index, rows[test_split_col_name]),
+        # if train_only_on_detected:
+        detected_mask = rows[intensity_column] > 0
+        detected_rows = rows[detected_mask].reset_index(drop=True)
+        not_detected_rows = rows[~detected_mask].reset_index(drop=True)
+        # else:
+        pbar_cross_split_detected = tqdm(skf.split(detected_rows.index, detected_rows[test_split_col_name]),
                                 leave=False, total=NUM_SPLITS)
+        cross_split_not_detected = skf.split(not_detected_rows.index, not_detected_rows[test_split_col_name])
 
-        for fold, (train_index, test_index) in enumerate(pbar_cross_split):
+        for fold, ((train_index_det, test_index_det), (train_index_not_det, test_index_not_det)) \
+                in enumerate(zip(pbar_cross_split_detected, cross_split_not_detected)):
             # pbar_cross_split.set_postfix({'Cross-validation split': r})
 
-            train_intensities = rows.loc[train_index]
-            test_intensities = rows.loc[test_index]
+            train_intensities = detected_rows.loc[train_index_det]
+            test_intensities = pd.concat([detected_rows.loc[test_index_det], not_detected_rows.loc[test_index_not_det]])
+            if not train_only_on_detected:
+                train_intensities = pd.concat([train_intensities, not_detected_rows.loc[train_index_not_det]])
 
             train_y = train_intensities[intensity_column].to_numpy()
             test_y = test_intensities[intensity_column].to_numpy()
@@ -303,7 +313,16 @@ def select_features(X_train, y_train, X_test, k='all'):
 # ----------------------------
 # LOAD AND NORMALIZE DATA:
 # ----------------------------
-TASK_TYPE = "regression"
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--task_type', type=str, default="regression_on_all")
+args = parser.parse_args()
+# print(args.accumulate(args.integers))
+
+# TASK_TYPE = "regression_on_all"
+# TASK_TYPE = "detection"
+TASK_TYPE = args.task_type
 # TASK_TYPE = "intensity_classification"
 
 # Paths:
@@ -480,12 +499,14 @@ if TASK_TYPE == "detection":
 elif TASK_TYPE == "intensity_classification":
     max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "digitized_seurat")
     intensities['stratification_class'] = get_strat_classes(intensities, "digitized_seurat")
-elif TASK_TYPE == "regression":
+elif TASK_TYPE == "regression_on_detected":
     # max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "digitized_seurat")
     intensities['stratification_class'] = intensities.merge(digitized_mol_properties,
                                                             left_on="name_short",
                                                             right_index=True,
                                                             how="left")["mol_strat_class"]
+elif TASK_TYPE == "regression_on_all":
+    intensities['stratification_class'] = get_strat_classes(intensities, "detected")
 
 # ----------------------------
 # START TRAINING:
@@ -504,28 +525,30 @@ skf.get_n_splits()
 # All features:
 import time
 
-if TASK_TYPE == "regression":
-    regr_out = result_dir / "detected_regression_per_ion"
+if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
+    regr_out = result_dir / TASK_TYPE
     regr_out.mkdir(exist_ok=True, parents=True)
 
     # Filter intensities, using only detected values:
-    intensities = intensities[intensities["detected"] == 1]
+    # if TASK_TYPE == "regression_on_detected":
+    #     intensities = intensities[intensities["detected"] == 1]
     #
+    tick = time.time()
+    print("Both features")
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(features_norm_df,
+                                            intensity_column="norm_intensity_seurat",
+                                            type_of_models="regressor",
+                                            test_split_col_name="stratification_class",
+                                            use_adduct_features=True,
+                                            train_only_on_detected=(TASK_TYPE == "regression_on_detected")
+                                            )
+    regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
+    print('Took {} s'.format(time.time() - tick))
+
+
     # tick = time.time()
-    # print("Both features")
-    # regression_results_all_feat = \
-    #     train_one_model_per_matrix_polarity(features_norm_df,
-    #                                         intensity_column="norm_intensity_seurat",
-    #                                         type_of_models="regressor",
-    #                                         test_split_col_name="stratification_class",
-    #                                         use_adduct_features=True,
-    #                                         )
-    # regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
-    # print('Took {} s'.format(time.time() - tick))
-    #
-    #
-    # tick = time.time()
-    # print("No features")
+    # print("Uniformly distributed feature")
     # random_features = features_norm_df[mol_properties_cols[[1]]]
     # random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
     # regression_results_all_feat = \
@@ -533,27 +556,29 @@ if TASK_TYPE == "regression":
     #                                         intensity_column="norm_intensity_seurat",
     #                                         type_of_models="regressor",
     #                                         test_split_col_name="stratification_class",
-    #                                         use_adduct_features=True
+    #                                         use_adduct_features=True,
+    #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
     #                                         )
     # regression_results_all_feat.to_csv(regr_out / "regr_results_random_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
-
-
-    tick = time.time()
-    print("Zero features")
-    random_features = features_norm_df[mol_properties_cols[[1]]]
-    random_features.iloc[:, :] = np.zeros(shape=random_features.shape, dtype="float")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(random_features,
-                                            intensity_column="norm_intensity_seurat",
-                                            type_of_models="regressor",
-                                            test_split_col_name="stratification_class",
-                                            use_adduct_features=True
-                                            )
-    regression_results_all_feat.to_csv(regr_out / "regr_results_no_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
-
-
+    #
+    #
+    # tick = time.time()
+    # print("No features")
+    # random_features = features_norm_df[mol_properties_cols[[1]]]
+    # random_features.iloc[:, :] = np.zeros(shape=random_features.shape, dtype="float")
+    # regression_results_all_feat = \
+    #     train_one_model_per_matrix_polarity(random_features,
+    #                                         intensity_column="norm_intensity_seurat",
+    #                                         type_of_models="regressor",
+    #                                         test_split_col_name="stratification_class",
+    #                                         use_adduct_features=True,
+    #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
+    #                                         )
+    # regression_results_all_feat.to_csv(regr_out / "regr_results_no_feat.csv")
+    # print('Took {} s'.format(time.time() - tick))
+    #
+    #
     # tick = time.time()
     # print("Mol features")
     # regression_results_all_feat = \
@@ -561,7 +586,8 @@ if TASK_TYPE == "regression":
     #                                         intensity_column="norm_intensity_seurat",
     #                                         type_of_models="regressor",
     #                                         test_split_col_name="stratification_class",
-    #                                         use_adduct_features=True
+    #                                         use_adduct_features=True,
+    #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
     #                                         )
     # regression_results_all_feat.to_csv(regr_out / "regr_results_mol_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
@@ -573,7 +599,8 @@ if TASK_TYPE == "regression":
     #                                         intensity_column="norm_intensity_seurat",
     #                                         type_of_models="regressor",
     #                                         test_split_col_name="stratification_class",
-    #                                         use_adduct_features=True
+    #                                         use_adduct_features=True,
+    #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
     #                                         )
     # regression_results_all_feat.to_csv(regr_out / "regr_results_fingerprints_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
@@ -613,30 +640,32 @@ elif TASK_TYPE == "detection":
     # regression_results_all_feat.to_csv(det_out / "detection_results_mol_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
     #
-    tick = time.time()
-    print("Fingerprints features")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-                                            intensity_column="detected",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler,
-                                            feature_selection=True
-                                            )
-    regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
-    #
     # tick = time.time()
-    # print("One single mol_feat")
+    # print("Fingerprints features")
     # regression_results_all_feat = \
-    #     train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols[[1]]],
+    #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
     #                                         intensity_column="detected",
     #                                         type_of_models="classifier",
     #                                         test_split_col_name="stratification_class",
-    #                                         oversampler=sampler
+    #                                         oversampler=sampler,
+    #                                         feature_selection=True
     #                                         )
-    # regression_results_all_feat.to_csv(det_out / "detection_results_one_random_mol_feat.csv")
+    # regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
     # print('Took {} s'.format(time.time() - tick))
+    #
+    tick = time.time()
+    print("One single mol_feat")
+    random_features = features_norm_df[mol_properties_cols[[1]]]
+    random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
+    regression_results_all_feat = \
+        train_one_model_per_matrix_polarity(random_features,
+                                            intensity_column="detected",
+                                            type_of_models="classifier",
+                                            test_split_col_name="stratification_class",
+                                            oversampler=sampler
+                                            )
+    regression_results_all_feat.to_csv(det_out / "detection_results_random_feat.csv")
+    print('Took {} s'.format(time.time() - tick))
 
     # tick = time.time()
     # print("No features")
@@ -708,3 +737,5 @@ elif TASK_TYPE == "intensity_classification":
                                             )
     regression_results_all_feat.to_csv(det_out / "intensity_classification_one_random_mol_feat.csv")
     print('Took {} s'.format(time.time() - tick))
+else:
+    raise NotImplementedError(f"Task type not recognized {TASK_TYPE}")
