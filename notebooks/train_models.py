@@ -47,7 +47,10 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--task_type', type=str, default="regression_on_all")
 # parser.add_argument('--feature_selection', type=str, default=None)
-parser.add_argument('--feature_selection', type=bool, default=True)
+parser.add_argument('--do_feat_sel', action='store_true')
+parser.add_argument('--only_save_feat', action='store_true')
+parser.add_argument('--feat_sel_load_dir', type=str, default=None)
+parser.add_argument('-s', '--setup_list', nargs='+', default=[])
 args = parser.parse_args()
 # print(args.accumulate(args.integers))
 
@@ -55,7 +58,9 @@ args = parser.parse_args()
 # TASK_TYPE = "regression_on_all"
 # TASK_TYPE = "detection"
 TASK_TYPE = args.task_type
-DO_FEAT_SEL = args.feature_selection
+DO_FEAT_SEL = args.do_feat_sel
+ONLY_SAVE_FEAT = args.only_save_feat
+setups = args.setup_list
 
 # --------------------------------------
 # DEFINE TRAINING FUNCTIONS AND MODELS:
@@ -179,8 +184,8 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
     # -----------------------
     # Random Forest feat selection:
     # -----------------------
-    # rf.fit(X, Y)
-    # mdl_important_features.loc[feat_names, 'RandomForest'] = rf.feature_importances_
+    rf.fit(X, Y)
+    mdl_important_features.loc[feat_names, 'RandomForest'] = rf.feature_importances_
 
     # -----------------------
     # MLP Feat selection:
@@ -217,11 +222,10 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
         mdl_important_features['polyfit'] = polifit_res[1]
 
         # Correlation
-        # pearson = X_df.corrwith(Y_df, method='pearson')
-        # mdl_important_features['pearson'] = np.abs(pearson.values)
+        pearson = X_df.corrwith(Y_df, method='pearson')
+        mdl_important_features['pearson'] = np.abs(pearson.values)
         spearman = X_df.corrwith(Y_df, method='spearman')
         mdl_important_features['spearman'] = np.abs(spearman.values)
-
 
         # # # Linear regression
         # from sklearn.linear_model import LinearRegression
@@ -338,12 +342,14 @@ def train_one_model_per_matrix_polarity(features_normalized,
     else:
         pbar_matrices = tqdm(max_intesities_per_mol.groupby(by=["matrix", "polarity"]), leave=False)
 
+    all_feat_importance = pd.DataFrame()
+
     # Loop over types of matrices:
     for (matrix, polarity), rows in pbar_matrices:
         pbar_matrices.set_postfix({"Matrix": f"{matrix}, {polarity}"})
         rows = rows.reset_index(drop=True)
 
-        if DO_FEAT_SEL is None:
+        if not DO_FEAT_SEL:
             # Simply perform the cross-validation loop using all features:
             model_predictions = pd.concat([model_predictions,
                                            cross_val_loop(rows, features_normalized, matrix, polarity)])
@@ -355,20 +361,32 @@ def train_one_model_per_matrix_polarity(features_normalized,
             if use_adduct_features:
                 feat_names = adducts_columns.tolist() + feat_names
 
-            # Get all data in training format X, Y:
-            X_global, Y_global, _ = convert_df_to_training_format(rows, features_normalized)
-
-            # TODO: fix this hack
-            if FEATURES_TYPE == "categorical":
-                feat_sel_type = "classifier"
-            elif FEATURES_TYPE == "numerical":
-                feat_sel_type = "regressor"
+            if args.feat_sel_load_dir is not None:
+                # Load feature importance from file:
+                assert FEAT_SEL_CSV_FILE is not None
+                mdl_important_features = pd.read_csv(FEAT_SEL_CSV_FILE, index_col=0)
+                # Get data for the given matrix/polarity:
+                mdl_important_features = \
+                    mdl_important_features[(mdl_important_features.matrix == matrix) &
+                                       (mdl_important_features.polarity == polarity)]
+                mdl_important_features = mdl_important_features.drop(columns={"matrix", "polarity"}).astype('float')
+                # for col in mdl_important_features.columns:
+                #     mdl_important_features = mdl_important_features[col].astype('float')
             else:
-                raise ValueError("Feature types not set correctly")
+                # Get all data in training format X, Y:
+                X_global, Y_global, _ = convert_df_to_training_format(rows, features_normalized)
 
-                # Get feature scores:
-            mdl_important_features = select_important_features(X_global, Y_global, feat_names,
-                                                               type_of_models=feat_sel_type)
+                # TODO: fix this hack
+                if FEATURES_TYPE == "categorical":
+                    feat_sel_type = "classifier"
+                elif FEATURES_TYPE == "numerical":
+                    feat_sel_type = "regressor"
+                else:
+                    raise ValueError("Feature types not set correctly")
+
+                    # Get feature scores:
+                mdl_important_features = select_important_features(X_global, Y_global, feat_names,
+                                                                   type_of_models=feat_sel_type)
 
             # ----------------------------------------------
             # Next, train models using different quantile thresholds for feature importance:
@@ -377,29 +395,39 @@ def train_one_model_per_matrix_polarity(features_normalized,
             # min_thresh = (mdl_important_features.max() - mdl_important_features.min()) * 0.05
             # mdl_important_features[mdl_important_features < min_thresh] = np.nan
 
-            n_thresholds = 5  # NUMBER OF THRESHOLDS, CAN BE CHANGED
-            quantiles = np.linspace(0, 1, n_thresholds + 2)[:-1]
-            feat_quantiles = mdl_important_features.abs().quantile(quantiles)
+            if ONLY_SAVE_FEAT:
+                mdl_important_features["matrix"] = matrix
+                mdl_important_features["polarity"] = polarity
+                all_feat_importance = pd.concat([all_feat_importance, mdl_important_features])
+            else:
+                n_thresholds = 5  # NUMBER OF THRESHOLDS, CAN BE CHANGED
+                quantiles = np.linspace(0, 1, n_thresholds + 2)[:-1]
+                feat_quantiles = mdl_important_features.abs().quantile(quantiles)
 
-            pbar_feat_sel_methods = tqdm(mdl_important_features.columns, leave=False)
-            for feat_sel_method in pbar_feat_sel_methods:
-                pbar_feat_sel_methods.set_postfix({"Feat-sel method": feat_sel_method})
-                loc_scores_important_feat = mdl_important_features[feat_sel_method]
+                pbar_feat_sel_methods = tqdm(mdl_important_features.columns, leave=False)
+                for feat_sel_method in pbar_feat_sel_methods:
+                    pbar_feat_sel_methods.set_postfix({"Feat-sel method": feat_sel_method})
+                    loc_scores_important_feat = mdl_important_features[feat_sel_method]
 
-                quantiles_tqdm = tqdm(quantiles, leave=False)
-                for i, q in enumerate(quantiles_tqdm):
-                    quantiles_tqdm.set_postfix({"Quantile": q})
-                    important_features = loc_scores_important_feat[
-                        loc_scores_important_feat > feat_quantiles.loc[q, feat_sel_method]].index.tolist()
-                    if len(important_features) == 0: continue
-                    # Possibly remove adduct feat, that will anyway added in a second moment:
-                    if use_adduct_features: important_features = [feat for feat in important_features if "adduct" not in feat]
-                    # Filter features:
-                    loc_model_predictions = cross_val_loop(rows, features_normalized[important_features],
-                                                           matrix, polarity)
-                    loc_model_predictions["feat_sel_method"] = feat_sel_method
-                    loc_model_predictions["feat_sel_quantile"] = q
-                    model_predictions = pd.concat([model_predictions, loc_model_predictions])
+                    quantiles_tqdm = tqdm(quantiles, leave=False)
+                    for i, q in enumerate(quantiles_tqdm):
+                        quantiles_tqdm.set_postfix({"Quantile": q})
+                        important_features = loc_scores_important_feat[
+                            loc_scores_important_feat > feat_quantiles.loc[q, feat_sel_method]].index.tolist()
+                        # Possibly remove adduct feat, that will anyway added in a second moment:
+                        important_features = [feat for feat in important_features if
+                                                                      "adduct" not in feat]
+                        if len(important_features) == 0: continue
+                        # Filter features:
+                        loc_model_predictions = cross_val_loop(rows, features_normalized[important_features],
+                                                               matrix, polarity)
+                        loc_model_predictions["feat_sel_method"] = feat_sel_method
+                        loc_model_predictions["feat_sel_quantile"] = q
+                        model_predictions = pd.concat([model_predictions, loc_model_predictions])
+
+
+    if ONLY_SAVE_FEAT and DO_FEAT_SEL:
+        return all_feat_importance
 
     return model_predictions
 
@@ -626,7 +654,7 @@ def get_strat_classes(intesity_df, intensity_column="digitized_seurat",
     # Apply molecule features stratification only to molecules that were not detected:
     strat_df.loc[strat_df[intensity_column] > 0, 'mol_strat_class'] = 0
     # Finally, merge classes:
-    strat_cols =  ["matrix_class", intensity_column]
+    strat_cols = ["matrix_class", intensity_column]
     if stratify_not_detected: strat_cols = ["mol_strat_class"] + strat_cols
     strat_df['stratification_class'] = strat_df[strat_cols].applymap(
         str).apply(''.join, axis=1).astype(
@@ -670,259 +698,130 @@ skf.get_n_splits()
 
 # All features:
 import time
+
 # FIXME: refactor this mess...
 FEATURES_TYPE = None
 
-if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
-    regr_out = result_dir / TASK_TYPE
-    regr_out.mkdir(exist_ok=True, parents=True)
+dir_out = result_dir / TASK_TYPE
+dir_out.mkdir(exist_ok=True, parents=True)
 
-    # TODO: clean and shorten this messy code
+random_features = features_norm_df[mol_properties_cols[[1]]]
+random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
+zero_features = features_norm_df[mol_properties_cols[[1]]]
+zero_features.iloc[:, :] = np.zeros(shape=zero_features.shape, dtype="float")
 
+runs_setup = {
+    "fingerprints": [features_norm_df[fingerprints_cols]],
+    "mol": [features_norm_df[mol_properties_cols]],
+    "all": [features_norm_df],
+    "random": [random_features],
+    "no": [zero_features],
+}
+FEAT_SEL_CSV_FILE = None
+
+for setup_name in setups:
+    assert setup_name in runs_setup
     if DO_FEAT_SEL:
-        tick = time.time()
-        print("Feature selection on fingerprints")
-        FEATURES_TYPE = "categorical"
-        regression_results_all_feat = \
-            train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
+        if setup_name == "fingerprints":
+            FEATURES_TYPE = "categorical"
+        elif setup_name == "mol":
+            FEATURES_TYPE = "numerical"
+
+    if not DO_FEAT_SEL:
+        out_filename = f"results_{setup_name}_feat.csv"
+    else:
+        out_filename = f"results_{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection'}.csv"
+
+    if args.feat_sel_load_dir is not None:
+        FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"results_{setup_name}_feature_importance.csv"
+
+
+    # Start running:
+    tick = time.time()
+    print(f"Running setup {setup_name}...")
+    if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
+        model_results = \
+            train_one_model_per_matrix_polarity(runs_setup[setup_name][0],
                                                 intensity_column="norm_intensity_seurat",
                                                 type_of_models="regressor",
                                                 test_split_col_name="stratification_class",
                                                 use_adduct_features=True,
                                                 train_only_on_detected=(TASK_TYPE == "regression_on_detected")
                                                 )
-        regression_results_all_feat.to_csv(regr_out / "regr_results_fingerprints_feat_selection.csv")
-        print('Took {} s'.format(time.time() - tick))
+    elif TASK_TYPE == "detection":
+        # Discretize the intensity:
+        max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
 
-        # tick = time.time()
-        # print("Feature selection on mol features")
-        # FEATURES_TYPE = "numerical"
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
-        #                                         intensity_column="norm_intensity_seurat",
-        #                                         type_of_models="regressor",
-        #                                         test_split_col_name="stratification_class",
-        #                                         use_adduct_features=True,
-        #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-        #                                         )
-        # regression_results_all_feat.to_csv(regr_out / "regr_results_mol_feat_selection.csv")
-        # print('Took {} s'.format(time.time() - tick))
-    else:
-        tick = time.time()
-        print("Both features")
-        regression_results_all_feat = \
-            train_one_model_per_matrix_polarity(features_norm_df,
-                                                intensity_column="norm_intensity_seurat",
-                                                type_of_models="regressor",
-                                                test_split_col_name="stratification_class",
-                                                use_adduct_features=True,
-                                                train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-                                                )
-        regression_results_all_feat.to_csv(regr_out / "regr_results_all_feat.csv")
-        print('Took {} s'.format(time.time() - tick))
-
-        # tick = time.time()
-        # print("Uniformly distributed feature")
-        # random_features = features_norm_df[mol_properties_cols[[1]]]
-        # random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(random_features,
-        #                                         intensity_column="norm_intensity_seurat",
-        #                                         type_of_models="regressor",
-        #                                         test_split_col_name="stratification_class",
-        #                                         use_adduct_features=True,
-        #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-        #                                         )
-        # regression_results_all_feat.to_csv(regr_out / "regr_results_random_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        #
-        # tick = time.time()
-        # print("No features")
-        # random_features = features_norm_df[mol_properties_cols[[1]]]
-        # random_features.iloc[:, :] = np.zeros(shape=random_features.shape, dtype="float")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(random_features,
-        #                                         intensity_column="norm_intensity_seurat",
-        #                                         type_of_models="regressor",
-        #                                         test_split_col_name="stratification_class",
-        #                                         use_adduct_features=True,
-        #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-        #                                         )
-        # regression_results_all_feat.to_csv(regr_out / "regr_results_no_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        #
-        # tick = time.time()
-        # print("Mol features")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
-        #                                         intensity_column="norm_intensity_seurat",
-        #                                         type_of_models="regressor",
-        #                                         test_split_col_name="stratification_class",
-        #                                         use_adduct_features=True,
-        #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-        #                                         )
-        # regression_results_all_feat.to_csv(regr_out / "regr_results_mol_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        # tick = time.time()
-        # print("Fingerprints features")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-        #                                         intensity_column="norm_intensity_seurat",
-        #                                         type_of_models="regressor",
-        #                                         test_split_col_name="stratification_class",
-        #                                         use_adduct_features=True,
-        #                                         train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-        #                                         )
-        # regression_results_all_feat.to_csv(regr_out / "regr_results_fingerprints_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-
-
-elif TASK_TYPE == "detection":
-    det_out = result_dir / "detection_per_mol"
-    det_out.mkdir(parents=True, exist_ok=True)
-
-    # Discretize the intensity:
-    max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
-
-    # Get oversampler:
-    sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
-
-    if DO_FEAT_SEL:
-        tick = time.time()
-        print("Feature selection")
-        regression_results_all_feat = \
+        # Get oversampler:
+        sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
+        model_results = \
             train_one_model_per_matrix_polarity(features_norm_df,
                                                 intensity_column="detected",
                                                 type_of_models="classifier",
                                                 test_split_col_name="stratification_class",
                                                 oversampler=sampler
                                                 )
-        regression_results_all_feat.to_csv(det_out / "detection_results_feat_selection.csv")
-        print('Took {} s'.format(time.time() - tick))
     else:
-        # tick = time.time()
-        # print("Both features")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df,
-        #                                         intensity_column="detected",
-        #                                         type_of_models="classifier",
-        #                                         test_split_col_name="stratification_class",
-        #                                         oversampler=sampler
-        #                                         )
-        # regression_results_all_feat.to_csv(det_out / "detection_results_all_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        # tick = time.time()
-        # print("Mol features")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
-        #                                         intensity_column="detected",
-        #                                         type_of_models="classifier",
-        #                                         test_split_col_name="stratification_class",
-        #                                         oversampler=sampler
-        #                                         )
-        # regression_results_all_feat.to_csv(det_out / "detection_results_mol_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        # tick = time.time()
-        # print("Fingerprints features")
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-        #                                         intensity_column="detected",
-        #                                         type_of_models="classifier",
-        #                                         test_split_col_name="stratification_class",
-        #                                         oversampler=sampler,
-        #                                         feature_selection=True
-        #                                         )
-        # regression_results_all_feat.to_csv(det_out / "detection_results_fingerprints_feat.csv")
-        # print('Took {} s'.format(time.time() - tick))
-        #
-        tick = time.time()
-        print("One single mol_feat")
-        random_features = features_norm_df[mol_properties_cols[[1]]]
-        random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
-        regression_results_all_feat = \
-            train_one_model_per_matrix_polarity(random_features,
-                                                intensity_column="detected",
-                                                type_of_models="classifier",
-                                                test_split_col_name="stratification_class",
-                                                oversampler=sampler
-                                                )
-        regression_results_all_feat.to_csv(det_out / "detection_results_random_feat.csv")
-        print('Took {} s'.format(time.time() - tick))
+        raise ValueError(f"Task type not recognized {TASK_TYPE}")
 
-        # tick = time.time()
-        # print("No features")
-        # zero_feat = features_norm_df[mol_properties_cols[[1]]]
-        # zero_feat.iloc[:, :] = 0
-        # regression_results_all_feat = \
-        #     train_one_model_per_matrix_polarity(zero_feat,
-        #                                         intensity_column="detected",
-        #                                         type_of_models="classifier",
-        #                                         test_split_col_name="stratification_class",
-        #                                         oversampler=sampler,
-        #                                         test_baseline=True
-        #                                         )
-        # regression_results_all_feat.to_csv(det_out / "detection_results_no_features.csv")
-        # print('Took {} s'.format(time.time() - tick))
-
-
-elif TASK_TYPE == "intensity_classification":
-    det_out = result_dir / "intensity_classification_per_mol"
-    det_out.mkdir(parents=True, exist_ok=True)
-
-    # Get oversampler:
-    sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
-
-    tick = time.time()
-    print("Both features")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(features_norm_df,
-                                            intensity_column="digitized_seurat",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler
-                                            )
-    regression_results_all_feat.to_csv(det_out / "intensity_classification_all_feat.csv")
     print('Took {} s'.format(time.time() - tick))
 
-    tick = time.time()
-    print("Mol features")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
-                                            intensity_column="digitized_seurat",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler
-                                            )
-    regression_results_all_feat.to_csv(det_out / "intensity_classification_mol_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
+    # Write results:
+    model_results.to_csv(dir_out / out_filename)
 
-    tick = time.time()
-    print("Fingerprints features")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
-                                            intensity_column="digitized_seurat",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler
-                                            )
-    regression_results_all_feat.to_csv(det_out / "intensity_classification_fingerprints_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
-
-    tick = time.time()
-    print("One random features")
-    regression_results_all_feat = \
-        train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols[[1]]],
-                                            intensity_column="digitized_seurat",
-                                            type_of_models="classifier",
-                                            test_split_col_name="stratification_class",
-                                            oversampler=sampler
-                                            )
-    regression_results_all_feat.to_csv(det_out / "intensity_classification_one_random_mol_feat.csv")
-    print('Took {} s'.format(time.time() - tick))
-else:
-    raise NotImplementedError(f"Task type not recognized {TASK_TYPE}")
+# elif TASK_TYPE == "intensity_classification":
+#     det_out = result_dir / "intensity_classification_per_mol"
+#     det_out.mkdir(parents=True, exist_ok=True)
+#
+#     # Get oversampler:
+#     sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
+#
+#     tick = time.time()
+#     print("Both features")
+#     regression_results_all_feat = \
+#         train_one_model_per_matrix_polarity(features_norm_df,
+#                                             intensity_column="digitized_seurat",
+#                                             type_of_models="classifier",
+#                                             test_split_col_name="stratification_class",
+#                                             oversampler=sampler
+#                                             )
+#     regression_results_all_feat.to_csv(det_out / "intensity_classification_all_feat.csv")
+#     print('Took {} s'.format(time.time() - tick))
+#
+#     tick = time.time()
+#     print("Mol features")
+#     regression_results_all_feat = \
+#         train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols],
+#                                             intensity_column="digitized_seurat",
+#                                             type_of_models="classifier",
+#                                             test_split_col_name="stratification_class",
+#                                             oversampler=sampler
+#                                             )
+#     regression_results_all_feat.to_csv(det_out / "intensity_classification_mol_feat.csv")
+#     print('Took {} s'.format(time.time() - tick))
+#
+#     tick = time.time()
+#     print("Fingerprints features")
+#     regression_results_all_feat = \
+#         train_one_model_per_matrix_polarity(features_norm_df[fingerprints_cols],
+#                                             intensity_column="digitized_seurat",
+#                                             type_of_models="classifier",
+#                                             test_split_col_name="stratification_class",
+#                                             oversampler=sampler
+#                                             )
+#     regression_results_all_feat.to_csv(det_out / "intensity_classification_fingerprints_feat.csv")
+#     print('Took {} s'.format(time.time() - tick))
+#
+#     tick = time.time()
+#     print("One random features")
+#     regression_results_all_feat = \
+#         train_one_model_per_matrix_polarity(features_norm_df[mol_properties_cols[[1]]],
+#                                             intensity_column="digitized_seurat",
+#                                             type_of_models="classifier",
+#                                             test_split_col_name="stratification_class",
+#                                             oversampler=sampler
+#                                             )
+#     regression_results_all_feat.to_csv(det_out / "intensity_classification_one_random_mol_feat.csv")
+#     print('Took {} s'.format(time.time() - tick))
+# else:
+#     raise NotImplementedError(f"Task type not recognized {TASK_TYPE}")
