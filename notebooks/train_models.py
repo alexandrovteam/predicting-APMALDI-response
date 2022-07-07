@@ -49,6 +49,7 @@ parser.add_argument('--task_type', type=str, default="regression_on_all")
 # parser.add_argument('--feature_selection', type=str, default=None)
 parser.add_argument('--do_feat_sel', action='store_true')
 parser.add_argument('--only_save_feat', action='store_true')
+parser.add_argument('--nb_iter', type=int, default=1)
 parser.add_argument('--feat_sel_load_dir', type=str, default=None)
 parser.add_argument('-s', '--setup_list', nargs='+', default=[])
 args = parser.parse_args()
@@ -425,7 +426,6 @@ def train_one_model_per_matrix_polarity(features_normalized,
                         loc_model_predictions["feat_sel_quantile"] = q
                         model_predictions = pd.concat([model_predictions, loc_model_predictions])
 
-
     if ONLY_SAVE_FEAT and DO_FEAT_SEL:
         return all_feat_importance
 
@@ -722,52 +722,57 @@ FEAT_SEL_CSV_FILE = None
 for setup_name in setups:
     assert setup_name in runs_setup
     if DO_FEAT_SEL:
+        assert args.nb_iter == 1, "Multiple iterations not supported for feature selection"
         if setup_name == "fingerprints":
             FEATURES_TYPE = "categorical"
         elif setup_name == "mol":
             FEATURES_TYPE = "numerical"
 
-    if not DO_FEAT_SEL:
-        out_filename = f"results_{setup_name}_feat.csv"
-    else:
-        out_filename = f"results_{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection'}.csv"
+    for iter in range(args.nb_iter):
+        if not DO_FEAT_SEL:
+            if args.nb_iter == 1:
+                out_filename = f"results_{setup_name}_feat.csv"
+            else:
+                out_filename = f"results_{setup_name}_feat_{iter}.csv"
+        else:
+            out_filename = f"results_{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection'}.csv"
 
-    if args.feat_sel_load_dir is not None:
-        FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"results_{setup_name}_feature_importance.csv"
+        if args.feat_sel_load_dir is not None:
+            FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"results_{setup_name}_feature_importance.csv"
 
 
-    # Start running:
-    tick = time.time()
-    print(f"Running setup {setup_name}...")
-    if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
-        model_results = \
-            train_one_model_per_matrix_polarity(runs_setup[setup_name][0],
-                                                intensity_column="norm_intensity_seurat",
-                                                type_of_models="regressor",
-                                                test_split_col_name="stratification_class",
-                                                use_adduct_features=True,
-                                                train_only_on_detected=(TASK_TYPE == "regression_on_detected")
-                                                )
-    elif TASK_TYPE == "detection":
-        # Discretize the intensity:
-        max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
+        # Start running:
+        tick = time.time()
+        print(f"Running setup {setup_name}...")
+        if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
+            model_results = \
+                train_one_model_per_matrix_polarity(runs_setup[setup_name][0],
+                                                    intensity_column="norm_intensity_seurat",
+                                                    type_of_models="regressor",
+                                                    test_split_col_name="stratification_class",
+                                                    use_adduct_features=True,
+                                                    train_only_on_detected=(TASK_TYPE == "regression_on_detected")
+                                                    )
+        elif TASK_TYPE == "detection":
+            # Discretize the intensity:
+            max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
 
-        # Get oversampler:
-        sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
-        model_results = \
-            train_one_model_per_matrix_polarity(features_norm_df,
-                                                intensity_column="detected",
-                                                type_of_models="classifier",
-                                                test_split_col_name="stratification_class",
-                                                oversampler=sampler
-                                                )
-    else:
-        raise ValueError(f"Task type not recognized {TASK_TYPE}")
+            # Get oversampler:
+            sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
+            model_results = \
+                train_one_model_per_matrix_polarity(features_norm_df,
+                                                    intensity_column="detected",
+                                                    type_of_models="classifier",
+                                                    test_split_col_name="stratification_class",
+                                                    oversampler=sampler
+                                                    )
+        else:
+            raise ValueError(f"Task type not recognized {TASK_TYPE}")
 
-    print('Took {} s'.format(time.time() - tick))
+        print('Took {} s'.format(time.time() - tick))
 
-    # Write results:
-    model_results.to_csv(dir_out / out_filename)
+        # Write results:
+        model_results.to_csv(dir_out / out_filename)
 
 # elif TASK_TYPE == "intensity_classification":
 #     det_out = result_dir / "intensity_classification_per_mol"
