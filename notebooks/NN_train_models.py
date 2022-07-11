@@ -47,7 +47,7 @@ class TestData(Dataset):
 
 
 # Load data:
-out_dir = Path("/Users/alberto-mac/EMBL_repos/spotting-project-regression/input_data/numpy")
+out_dir = Path.cwd() / "../input_data/numpy"
 out_dir.mkdir(exist_ok=True)
 # train_index = np.load(out_dir / "train_indices.npy")
 # test_index = np.load(out_dir / "test_indices.npy")
@@ -275,7 +275,7 @@ for fold, (train_index, test_index) in enumerate(pbar_cross_split):
     # train model
     trainer = pl.Trainer(
         callbacks=[lr_monitor],
-        default_root_dir="/Users/alberto-mac/EMBL_repos/spotting-project-regression/training_data_torch",
+        default_root_dir=Path.cwd() / "../training_data_torch",
         gradient_clip_algorithm="norm",
         enable_progress_bar=True,
         max_epochs=300,
@@ -299,5 +299,5 @@ for fold, (train_index, test_index) in enumerate(pbar_cross_split):
     lc_results["fold"] = fold
     all_results = pd.concat([all_results, lc_results])
 
-all_results.to_csv("/Users/alberto-mac/EMBL_repos/spotting-project-regression/results/nn_results.csv")
+all_results.to_csv(Path.cwd() / "../results/nn_results.csv")
 

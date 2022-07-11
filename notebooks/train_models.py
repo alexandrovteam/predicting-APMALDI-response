@@ -80,8 +80,8 @@ sets_of_models = {
             # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
             # 'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
             # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
-            'MLP': MLPRegressor(max_iter=1000),
-            # 'MLPMultiOut': MLPRegressor(max_iter=1000),
+            'MLP': MLPRegressor(max_iter=2000),
+            # 'MLPMultiOut': MLPRegressor(max_iter=2000),
             # 'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
             # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
         },
@@ -95,12 +95,13 @@ sets_of_models = {
             # 'DecisionTreeMultiOut': DecisionTreeClassifier(max_depth=5),
             # 'RandomForest': RandomForestClassifier(max_depth=5, n_estimators=10),
             # 'RandomForestMultiOut': RandomForestClassifier(max_depth=5, n_estimators=10),
-            'MLP': MLPClassifier(max_iter=1000),
-            # 'MLPMultiOut': MLPClassifier(max_iter=1000),
+            'MLP': MLPClassifier(max_iter=2000),
+            # 'MLPMultiOut': MLPClassifier(max_iter=2000),
             # 'GaussianProcess': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel()),
             # 'GaussianProcessMultiOut': GaussianProcessClassifier(kernel=DotProduct() + WhiteKernel())
         }
 }
+
 
 
 def train_multiple_models(train_x, test_x, train_y, test_y,
@@ -174,7 +175,8 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
     mdl_important_features = pd.DataFrame(index=feat_names)
 
     if type_of_models == "classifier":
-        rf = RandomForestClassifier(max_depth=5, n_estimators=10)
+        rf = RandomForestRegressor(max_depth=5, n_estimators=10)
+        # rf = RandomForestClassifier(max_depth=5, n_estimators=10)
         mlp = MLPClassifier(max_iter=1000)
     elif type_of_models == "regressor":
         rf = RandomForestRegressor(max_depth=5, n_estimators=10)
@@ -185,8 +187,9 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
     # -----------------------
     # Random Forest feat selection:
     # -----------------------
-    rf.fit(X, Y)
-    mdl_important_features.loc[feat_names, 'RandomForest'] = rf.feature_importances_
+    if type_of_models != "regressor":
+        rf.fit(X, Y)
+        mdl_important_features.loc[feat_names, 'RandomForest'] = rf.feature_importances_
 
     # -----------------------
     # MLP Feat selection:
@@ -212,8 +215,6 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
     # -----------------------
     X_df, Y_df = pd.DataFrame(X), pd.Series(Y)
     if type_of_models == "regressor":
-        pass
-
         # # Mutual information
         fi_clf = mutual_info_regression(X, Y)
         mdl_important_features['mutual_info'] = fi_clf
@@ -223,8 +224,8 @@ def select_important_features(X, Y, feat_names, type_of_models="classifier"):
         mdl_important_features['polyfit'] = polifit_res[1]
 
         # Correlation
-        pearson = X_df.corrwith(Y_df, method='pearson')
-        mdl_important_features['pearson'] = np.abs(pearson.values)
+        # pearson = X_df.corrwith(Y_df, method='pearson')
+        # mdl_important_features['pearson'] = np.abs(pearson.values)
         spearman = X_df.corrwith(Y_df, method='spearman')
         mdl_important_features['spearman'] = np.abs(spearman.values)
 
@@ -369,7 +370,7 @@ def train_one_model_per_matrix_polarity(features_normalized,
                 # Get data for the given matrix/polarity:
                 mdl_important_features = \
                     mdl_important_features[(mdl_important_features.matrix == matrix) &
-                                       (mdl_important_features.polarity == polarity)]
+                                           (mdl_important_features.polarity == polarity)]
                 mdl_important_features = mdl_important_features.drop(columns={"matrix", "polarity"}).astype('float')
                 # for col in mdl_important_features.columns:
                 #     mdl_important_features = mdl_important_features[col].astype('float')
@@ -402,7 +403,7 @@ def train_one_model_per_matrix_polarity(features_normalized,
                 all_feat_importance = pd.concat([all_feat_importance, mdl_important_features])
             else:
                 n_thresholds = 5  # NUMBER OF THRESHOLDS, CAN BE CHANGED
-                quantiles = np.linspace(0, 1, n_thresholds + 2)[:-1]
+                quantiles = np.linspace(0, 1, n_thresholds + 2)  # [:-1]
                 feat_quantiles = mdl_important_features.abs().quantile(quantiles)
 
                 pbar_feat_sel_methods = tqdm(mdl_important_features.columns, leave=False)
@@ -411,20 +412,37 @@ def train_one_model_per_matrix_polarity(features_normalized,
                     loc_scores_important_feat = mdl_important_features[feat_sel_method]
 
                     quantiles_tqdm = tqdm(quantiles, leave=False)
+                    last_thresh = -1
                     for i, q in enumerate(quantiles_tqdm):
-                        quantiles_tqdm.set_postfix({"Quantile": q})
+                        q_thresh = feat_quantiles.loc[q, feat_sel_method]
+                        if q_thresh == last_thresh:
+                            continue
+                        last_thresh = q_thresh
                         important_features = loc_scores_important_feat[
-                            loc_scores_important_feat > feat_quantiles.loc[q, feat_sel_method]].index.tolist()
+                            loc_scores_important_feat >= q_thresh].index.tolist()
                         # Possibly remove adduct feat, that will anyway added in a second moment:
                         important_features = [feat for feat in important_features if
-                                                                      "adduct" not in feat]
-                        if len(important_features) == 0: continue
+                                              "adduct" not in feat]
+                        quantiles_tqdm.set_postfix({"Quantile": (int(q * (n_thresholds+2)), len(important_features))})
                         # Filter features:
-                        loc_model_predictions = cross_val_loop(rows, features_normalized[important_features],
+                        if len(important_features) == 0:
+                            # Just give a random feature instead:
+                            important_feat_df = pd.DataFrame(
+                                data=np.random.normal(size=(features_normalized.shape[0], 1)),
+                                index=features_normalized.index,
+                                columns=["random_feature"]
+                                )
+                        else:
+                            important_feat_df = features_normalized[important_features]
+                            # important_feat_array = np.random.features_normalized.iloc[:,0].shape
+                        loc_model_predictions = cross_val_loop(rows, important_feat_df,
                                                                matrix, polarity)
                         loc_model_predictions["feat_sel_method"] = feat_sel_method
                         loc_model_predictions["feat_sel_quantile"] = q
+                        loc_model_predictions["nb_features"] = len(important_features)
+                        # print(q, len(important_features))
                         model_predictions = pd.concat([model_predictions, loc_model_predictions])
+
 
     if ONLY_SAVE_FEAT and DO_FEAT_SEL:
         return all_feat_importance
@@ -740,7 +758,6 @@ for setup_name in setups:
         if args.feat_sel_load_dir is not None:
             FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"results_{setup_name}_feature_importance.csv"
 
-
         # Start running:
         tick = time.time()
         print(f"Running setup {setup_name}...")
@@ -760,7 +777,7 @@ for setup_name in setups:
             # Get oversampler:
             sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
             model_results = \
-                train_one_model_per_matrix_polarity(features_norm_df,
+                train_one_model_per_matrix_polarity(runs_setup[setup_name][0],
                                                     intensity_column="detected",
                                                     type_of_models="classifier",
                                                     test_split_col_name="stratification_class",
