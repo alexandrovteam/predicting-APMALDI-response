@@ -1,0 +1,3486 @@
+,name_short,Matrix short,Polarity,detectability,intensity,log10_intensity
+0,2-Oxoglutaric acid,9AA,negative,1,65207.863,4.814306627793246
+1,2-Oxoglutaric acid,9AA,positive,0,0.0,0.0
+2,2-Oxoglutaric acid,CHCA,negative,1,1489.3842,3.173298237829419
+3,2-Oxoglutaric acid,CHCA,positive,0,0.0,0.0
+4,2-Oxoglutaric acid,CMBT,negative,1,879.0179,2.9444915060048995
+5,2-Oxoglutaric acid,CMBT,positive,0,0.0,0.0
+6,2-Oxoglutaric acid,ClCCA,negative,1,88.82836,1.9534134708215005
+7,2-Oxoglutaric acid,ClCCA,positive,0,0.0,0.0
+8,2-Oxoglutaric acid,DAN,negative,1,6752.459,3.829526267622287
+9,2-Oxoglutaric acid,DAN,positive,0,0.0,0.0
+10,2-Oxoglutaric acid,DHAP,negative,1,1492.5983,3.174233810631274
+11,2-Oxoglutaric acid,DHAP,positive,0,0.0,0.0
+12,2-Oxoglutaric acid,DHB,negative,1,930.48126,2.9691741219692886
+13,2-Oxoglutaric acid,DHB,positive,0,0.0,0.0
+14,2-Oxoglutaric acid,MAPS,negative,1,388.89798,2.590950985182533
+15,2-Oxoglutaric acid,MAPS,positive,0,0.0,0.0
+16,2-Oxoglutaric acid,NEDC,negative,0,0.0,0.0
+17,2-Oxoglutaric acid,NEDC,positive,0,0.0,0.0
+18,2-Oxoglutaric acid,NOR,negative,1,36786.184,4.565696544556646
+19,2-Oxoglutaric acid,NOR,positive,0,0.0,0.0
+20,2-Oxoglutaric acid,pNA,negative,1,6166.8667,3.7901349791674126
+21,3-Hydroxyanthranilic acid,9AA,negative,1,5635.4595,3.751006390785782
+22,3-Hydroxyanthranilic acid,9AA,positive,0,0.0,0.0
+23,3-Hydroxyanthranilic acid,CHCA,negative,0,0.0,0.0
+24,3-Hydroxyanthranilic acid,CHCA,positive,1,854.46674,2.932203129113515
+25,3-Hydroxyanthranilic acid,CMBT,negative,0,0.0,0.0
+26,3-Hydroxyanthranilic acid,CMBT,positive,0,0.0,0.0
+27,3-Hydroxyanthranilic acid,ClCCA,negative,0,0.0,0.0
+28,3-Hydroxyanthranilic acid,ClCCA,positive,1,129.4211,2.11534785882126
+29,3-Hydroxyanthranilic acid,DAN,positive,0,0.0,0.0
+30,3-Hydroxyanthranilic acid,DHAP,negative,0,0.0,0.0
+31,3-Hydroxyanthranilic acid,DHAP,positive,1,23.555162,1.3901428036874959
+32,3-Hydroxyanthranilic acid,DHB,negative,0,0.0,0.0
+33,3-Hydroxyanthranilic acid,MAPS,negative,1,950.47253,2.9783962542713494
+34,3-Hydroxyanthranilic acid,MAPS,positive,0,0.0,0.0
+35,3-Hydroxyanthranilic acid,NEDC,negative,0,0.0,0.0
+36,3-Hydroxyanthranilic acid,NEDC,positive,0,0.0,0.0
+37,3-Hydroxyanthranilic acid,NOR,negative,0,0.0,0.0
+38,3-Hydroxyanthranilic acid,NOR,positive,0,0.0,0.0
+39,3-Hydroxyanthranilic acid,pNA,negative,0,0.0,0.0
+40,3-Hydroxyanthranilic acid,pNA,positive,0,0.0,0.0
+41,3-Hydroxymethylglutaric acid,9AA,negative,0,0.0,0.0
+42,3-Hydroxymethylglutaric acid,9AA,positive,0,0.0,0.0
+43,3-Hydroxymethylglutaric acid,CHCA,negative,0,0.0,0.0
+44,3-Hydroxymethylglutaric acid,CHCA,positive,0,0.0,0.0
+45,3-Hydroxymethylglutaric acid,CMBT,negative,1,2040.8381,3.3100213033414287
+46,3-Hydroxymethylglutaric acid,CMBT,positive,1,44.459694,1.6576265080594594
+47,3-Hydroxymethylglutaric acid,ClCCA,negative,1,579.8331,2.7640513575848473
+48,3-Hydroxymethylglutaric acid,ClCCA,positive,1,838.8174,2.9241848684511247
+49,3-Hydroxymethylglutaric acid,DAN,negative,0,0.0,0.0
+50,3-Hydroxymethylglutaric acid,DAN,positive,0,0.0,0.0
+51,3-Hydroxymethylglutaric acid,DHAP,negative,1,2897.0745,3.4621095455668427
+52,3-Hydroxymethylglutaric acid,DHAP,positive,1,11.582249,1.0997582755283675
+53,3-Hydroxymethylglutaric acid,DHB,negative,0,0.0,0.0
+54,3-Hydroxymethylglutaric acid,DHB,positive,0,0.0,0.0
+55,3-Hydroxymethylglutaric acid,MAPS,negative,1,4850.6377,3.685888362110946
+56,3-Hydroxymethylglutaric acid,MAPS,positive,0,0.0,0.0
+57,3-Hydroxymethylglutaric acid,NEDC,negative,1,352.04083,2.5478249354679043
+58,3-Hydroxymethylglutaric acid,NEDC,positive,0,0.0,0.0
+59,3-Hydroxymethylglutaric acid,NOR,negative,0,0.0,0.0
+60,3-Hydroxymethylglutaric acid,NOR,positive,0,0.0,0.0
+61,3-Hydroxymethylglutaric acid,pNA,negative,0,0.0,0.0
+62,3-Hydroxymethylglutaric acid,pNA,positive,0,0.0,0.0
+63,3-Phosphoglyceric acid,9AA,negative,1,146078.0,5.164587787189345
+64,3-Phosphoglyceric acid,9AA,positive,0,0.0,0.0
+65,3-Phosphoglyceric acid,CHCA,negative,1,1875.6426,3.273381570635653
+66,3-Phosphoglyceric acid,CHCA,positive,1,296.45044,2.4734146156863686
+67,3-Phosphoglyceric acid,CMBT,negative,0,0.0,0.0
+68,3-Phosphoglyceric acid,CMBT,positive,0,0.0,0.0
+69,3-Phosphoglyceric acid,ClCCA,negative,1,183.77728,2.2666485698211445
+70,3-Phosphoglyceric acid,ClCCA,positive,1,52.880165,1.7314289170153094
+71,3-Phosphoglyceric acid,DAN,negative,1,339.9789,2.5327275053940004
+72,3-Phosphoglyceric acid,DAN,positive,0,0.0,0.0
+73,3-Phosphoglyceric acid,DHAP,negative,1,87.839325,1.9486052501253226
+74,3-Phosphoglyceric acid,DHAP,positive,0,0.0,0.0
+75,3-Phosphoglyceric acid,DHB,negative,1,509.05933,2.7076206960841422
+76,3-Phosphoglyceric acid,DHB,positive,1,18.55582,1.2912760311809517
+77,3-Phosphoglyceric acid,MAPS,negative,0,0.0,0.0
+78,3-Phosphoglyceric acid,MAPS,positive,0,0.0,0.0
+79,3-Phosphoglyceric acid,NEDC,negative,1,54.33839,1.7430265197437271
+80,3-Phosphoglyceric acid,NEDC,positive,0,0.0,0.0
+81,3-Phosphoglyceric acid,NOR,negative,1,58597.375,4.767885572702078
+82,3-Phosphoglyceric acid,NOR,positive,0,0.0,0.0
+83,3-Phosphoglyceric acid,pNA,negative,1,141.76958,2.154635681911425
+84,3-Phosphoglyceric acid,pNA,positive,0,0.0,0.0
+85,"4,5-Dihydroorotic acid",9AA,negative,1,93481.85,4.970731944203777
+86,"4,5-Dihydroorotic acid",9AA,positive,0,0.0,0.0
+87,"4,5-Dihydroorotic acid",CHCA,negative,1,2834.2925,3.4525978690783834
+88,"4,5-Dihydroorotic acid",CHCA,positive,1,252.09502,2.4032835998884097
+89,"4,5-Dihydroorotic acid",CMBT,negative,1,128.98422,2.113890632438432
+90,"4,5-Dihydroorotic acid",CMBT,positive,0,0.0,0.0
+91,"4,5-Dihydroorotic acid",ClCCA,negative,1,104.67583,2.023975667553854
+92,"4,5-Dihydroorotic acid",ClCCA,positive,1,29.125195,1.478929866774622
+93,"4,5-Dihydroorotic acid",DAN,negative,1,4853.601,3.686153541016593
+94,"4,5-Dihydroorotic acid",DAN,positive,0,0.0,0.0
+95,"4,5-Dihydroorotic acid",DHAP,negative,1,388.35788,2.590348968568283
+96,"4,5-Dihydroorotic acid",DHAP,positive,0,0.0,0.0
+97,"4,5-Dihydroorotic acid",DHB,negative,1,747.35974,2.8741104154311916
+98,"4,5-Dihydroorotic acid",DHB,positive,1,40.500538,1.6180537268064727
+99,"4,5-Dihydroorotic acid",MAPS,negative,0,0.0,0.0
+100,"4,5-Dihydroorotic acid",MAPS,positive,0,0.0,0.0
+101,"4,5-Dihydroorotic acid",NEDC,negative,0,0.0,0.0
+102,"4,5-Dihydroorotic acid",NEDC,positive,0,0.0,0.0
+103,"4,5-Dihydroorotic acid",NOR,negative,1,19093.518,4.280908700018459
+104,"4,5-Dihydroorotic acid",NOR,positive,0,0.0,0.0
+105,"4,5-Dihydroorotic acid",pNA,negative,1,2257.4182,3.3538043650183007
+106,"4,5-Dihydroorotic acid",pNA,positive,0,0.0,0.0
+107,4-Hydroxyproline,9AA,negative,1,2332.6228,3.3680306592855205
+108,4-Hydroxyproline,9AA,positive,0,0.0,0.0
+109,4-Hydroxyproline,CHCA,negative,0,0.0,0.0
+110,4-Hydroxyproline,CHCA,positive,1,27148.082,4.433755149244398
+111,4-Hydroxyproline,CMBT,negative,0,0.0,0.0
+112,4-Hydroxyproline,CMBT,positive,1,900.9108,2.95516358744949
+113,4-Hydroxyproline,ClCCA,negative,0,0.0,0.0
+114,4-Hydroxyproline,ClCCA,positive,1,3772.8613,3.576785934580487
+115,4-Hydroxyproline,DAN,negative,1,4162.0317,3.619409717896785
+116,4-Hydroxyproline,DAN,positive,1,350.61737,2.5460703212049687
+117,4-Hydroxyproline,DHAP,negative,1,237.07237,2.376708995351015
+118,4-Hydroxyproline,DHAP,positive,1,775.2833,2.8900202433888964
+119,4-Hydroxyproline,DHB,negative,0,0.0,0.0
+120,4-Hydroxyproline,DHB,positive,1,10469.678,4.019974804135893
+121,4-Hydroxyproline,MAPS,negative,0,0.0,0.0
+122,4-Hydroxyproline,MAPS,positive,0,0.0,0.0
+123,4-Hydroxyproline,NEDC,negative,0,0.0,0.0
+124,4-Hydroxyproline,NEDC,positive,0,0.0,0.0
+125,4-Hydroxyproline,NOR,negative,1,1675.1226,3.2243057819291914
+126,4-Hydroxyproline,NOR,positive,0,0.0,0.0
+127,4-Hydroxyproline,pNA,negative,1,319.6381,2.5060151263669748
+128,4-Hydroxyproline,pNA,positive,1,1520.3328,3.182224228776012
+129,5-Hydroxyindoleacetic acid,9AA,negative,1,296.88385,2.4740469582468996
+130,5-Hydroxyindoleacetic acid,9AA,positive,0,0.0,0.0
+131,5-Hydroxyindoleacetic acid,CMBT,negative,0,0.0,0.0
+132,5-Hydroxyindoleacetic acid,CMBT,positive,1,23.333462,1.3862039018011607
+133,5-Hydroxyindoleacetic acid,ClCCA,negative,0,0.0,0.0
+134,5-Hydroxyindoleacetic acid,ClCCA,positive,1,316.75818,2.502096739346063
+135,5-Hydroxyindoleacetic acid,DAN,negative,1,6172.612,3.7905393314055487
+136,5-Hydroxyindoleacetic acid,DAN,positive,0,0.0,0.0
+137,5-Hydroxyindoleacetic acid,DHAP,negative,1,76.438995,1.888959708081503
+138,5-Hydroxyindoleacetic acid,DHAP,positive,1,133.37004,2.128302446447499
+139,5-Hydroxyindoleacetic acid,DHB,negative,0,0.0,0.0
+140,5-Hydroxyindoleacetic acid,DHB,positive,1,808.4305,2.9081795649334024
+141,5-Hydroxyindoleacetic acid,MAPS,negative,0,0.0,0.0
+142,5-Hydroxyindoleacetic acid,MAPS,positive,0,0.0,0.0
+143,5-Hydroxyindoleacetic acid,NEDC,negative,0,0.0,0.0
+144,5-Hydroxyindoleacetic acid,NEDC,positive,0,0.0,0.0
+145,5-Hydroxyindoleacetic acid,NOR,negative,0,0.0,0.0
+146,5-Hydroxyindoleacetic acid,NOR,positive,0,0.0,0.0
+147,5-Hydroxyindoleacetic acid,pNA,negative,0,0.0,0.0
+148,5-Hydroxyindoleacetic acid,pNA,positive,0,0.0,0.0
+149,6-Phosphogluconic acid,9AA,negative,1,102873.76,5.012308835041252
+150,6-Phosphogluconic acid,9AA,positive,0,0.0,0.0
+151,6-Phosphogluconic acid,CHCA,negative,1,872.72015,2.941372351658768
+152,6-Phosphogluconic acid,CHCA,positive,1,33.364746,1.5361131382579967
+153,6-Phosphogluconic acid,CMBT,negative,0,0.0,0.0
+154,6-Phosphogluconic acid,CMBT,positive,0,0.0,0.0
+155,6-Phosphogluconic acid,ClCCA,negative,1,41.54446,1.6288430156997347
+156,6-Phosphogluconic acid,ClCCA,positive,0,0.0,0.0
+157,6-Phosphogluconic acid,DAN,negative,0,0.0,0.0
+158,6-Phosphogluconic acid,DAN,positive,0,0.0,0.0
+159,6-Phosphogluconic acid,DHAP,negative,0,0.0,0.0
+160,6-Phosphogluconic acid,DHAP,positive,0,0.0,0.0
+161,6-Phosphogluconic acid,DHB,negative,1,271.84552,2.435916827258794
+162,6-Phosphogluconic acid,DHB,positive,0,0.0,0.0
+163,6-Phosphogluconic acid,MAPS,negative,0,0.0,0.0
+164,6-Phosphogluconic acid,MAPS,positive,0,0.0,0.0
+165,6-Phosphogluconic acid,NEDC,negative,0,0.0,0.0
+166,6-Phosphogluconic acid,NEDC,positive,0,0.0,0.0
+167,6-Phosphogluconic acid,NOR,negative,1,8021.8633,3.904329392406726
+168,6-Phosphogluconic acid,NOR,positive,0,0.0,0.0
+169,6-Phosphogluconic acid,pNA,negative,1,40.37429,1.6167305541740389
+170,6-Phosphogluconic acid,pNA,positive,0,0.0,0.0
+171,Acetoacetic acid,9AA,positive,0,0.0,0.0
+172,Acetoacetic acid,CHCA,negative,0,0.0,0.0
+173,Acetoacetic acid,CHCA,positive,0,0.0,0.0
+174,Acetoacetic acid,CMBT,positive,0,0.0,0.0
+175,Acetoacetic acid,ClCCA,negative,0,0.0,0.0
+176,Acetoacetic acid,ClCCA,positive,0,0.0,0.0
+177,Acetoacetic acid,DAN,positive,0,0.0,0.0
+178,Acetoacetic acid,DHAP,positive,0,0.0,0.0
+179,Acetoacetic acid,DHB,positive,0,0.0,0.0
+180,Acetoacetic acid,MAPS,positive,0,0.0,0.0
+181,Acetoacetic acid,NEDC,positive,0,0.0,0.0
+182,Acetoacetic acid,pNA,positive,0,0.0,0.0
+183,Acetyl-CoA,9AA,negative,1,204906.36,5.311557557961862
+184,Acetyl-CoA,9AA,positive,0,0.0,0.0
+185,Acetyl-CoA,CHCA,negative,1,9388.563,3.9726453802208543
+186,Acetyl-CoA,CHCA,positive,1,1737.4437,3.2401606304951187
+187,Acetyl-CoA,CMBT,negative,0,0.0,0.0
+188,Acetyl-CoA,CMBT,positive,0,0.0,0.0
+189,Acetyl-CoA,ClCCA,negative,1,496.38724,2.6966946396619615
+190,Acetyl-CoA,ClCCA,positive,1,309.01556,2.4913834920683033
+191,Acetyl-CoA,DAN,negative,1,1439.2262,3.1584307071625304
+192,Acetyl-CoA,DAN,positive,0,0.0,0.0
+193,Acetyl-CoA,DHAP,negative,0,0.0,0.0
+194,Acetyl-CoA,DHAP,positive,0,0.0,0.0
+195,Acetyl-CoA,DHB,negative,1,13952.669,4.144688416709737
+196,Acetyl-CoA,DHB,positive,1,4155.728,3.6187516069060432
+197,Acetyl-CoA,MAPS,negative,0,0.0,0.0
+198,Acetyl-CoA,MAPS,positive,0,0.0,0.0
+199,Acetyl-CoA,NEDC,negative,0,0.0,0.0
+200,Acetyl-CoA,NEDC,positive,0,0.0,0.0
+201,Acetyl-CoA,NOR,negative,1,47726.6,4.678769596256826
+202,Acetyl-CoA,NOR,positive,1,62.406204,1.8021317536411339
+203,Acetyl-CoA,pNA,negative,1,1434.233,3.1569224114533183
+204,Acetyl-CoA,pNA,positive,1,122.43919,2.0914530632520743
+205,Acetylcarnitine,9AA,negative,0,0.0,0.0
+206,Acetylcarnitine,9AA,positive,1,72196.945,4.858524836241916
+207,Acetylcarnitine,CHCA,negative,0,0.0,0.0
+208,Acetylcarnitine,CHCA,positive,1,206221.31,5.314335647299428
+209,Acetylcarnitine,CMBT,negative,0,0.0,0.0
+210,Acetylcarnitine,CMBT,positive,1,8852.297,3.9471050336647338
+211,Acetylcarnitine,ClCCA,negative,0,0.0,0.0
+212,Acetylcarnitine,ClCCA,positive,1,25760.895,4.4109778058063185
+213,Acetylcarnitine,DAN,negative,0,0.0,0.0
+214,Acetylcarnitine,DAN,positive,1,13596.422,4.133456576215523
+215,Acetylcarnitine,DHAP,negative,0,0.0,0.0
+216,Acetylcarnitine,DHAP,positive,1,3707.928,3.5692484026178515
+217,Acetylcarnitine,DHB,negative,0,0.0,0.0
+218,Acetylcarnitine,DHB,positive,1,74550.02,4.872453589805661
+219,Acetylcarnitine,MAPS,negative,0,0.0,0.0
+220,Acetylcarnitine,MAPS,positive,0,0.0,0.0
+221,Acetylcarnitine,NEDC,negative,0,0.0,0.0
+222,Acetylcarnitine,NEDC,positive,1,1091.1395,3.0382781147522624
+223,Acetylcarnitine,NOR,negative,0,0.0,0.0
+224,Acetylcarnitine,NOR,positive,1,48241.57,4.68343043568036
+225,Acetylcarnitine,pNA,negative,0,0.0,0.0
+226,Acetylcarnitine,pNA,positive,1,84189.125,4.925261154332001
+227,Adenine,9AA,negative,1,2550.6094,3.40681419340028
+228,Adenine,9AA,positive,0,0.0,0.0
+229,Adenine,CHCA,negative,0,0.0,0.0
+230,Adenine,CHCA,positive,1,17318.488,4.238535049225127
+231,Adenine,CMBT,negative,0,0.0,0.0
+232,Adenine,CMBT,positive,1,874.0682,2.942041901855954
+233,Adenine,ClCCA,negative,0,0.0,0.0
+234,Adenine,ClCCA,positive,1,277.7199,2.4451679775100605
+235,Adenine,DAN,negative,1,6570.248,3.8176478578462882
+236,Adenine,DAN,positive,0,0.0,0.0
+237,Adenine,DHAP,negative,0,0.0,0.0
+238,Adenine,DHAP,positive,1,604.89197,2.782395196748388
+239,Adenine,DHB,negative,0,0.0,0.0
+240,Adenine,DHB,positive,1,1570.2814,3.196253969586917
+241,Adenine,MAPS,negative,1,54.013977,1.7404730415453513
+242,Adenine,MAPS,positive,0,0.0,0.0
+243,Adenine,NEDC,negative,0,0.0,0.0
+244,Adenine,NEDC,positive,0,0.0,0.0
+245,Adenine,NOR,negative,1,2687.2866,3.4294755672699675
+246,Adenine,NOR,positive,0,0.0,0.0
+247,Adenine,pNA,negative,1,543.2665,2.7358116039976155
+248,Adenine,pNA,positive,1,3943.3755,3.59597825257123
+249,Adenosine diphosphate,9AA,negative,1,869459.6,5.939249906533922
+250,Adenosine diphosphate,9AA,positive,0,0.0,0.0
+251,Adenosine diphosphate,CHCA,negative,1,33588.35,4.526201599728994
+252,Adenosine diphosphate,CHCA,positive,1,4367.9077,3.6403728696571287
+253,Adenosine diphosphate,CMBT,negative,0,0.0,0.0
+254,Adenosine diphosphate,CMBT,positive,0,0.0,0.0
+255,Adenosine diphosphate,ClCCA,negative,1,1115.4866,3.047853515064438
+256,Adenosine diphosphate,ClCCA,positive,1,856.00726,2.9329845009950577
+257,Adenosine diphosphate,DAN,negative,0,0.0,0.0
+258,Adenosine diphosphate,DAN,positive,0,0.0,0.0
+259,Adenosine diphosphate,DHAP,negative,0,0.0,0.0
+260,Adenosine diphosphate,DHAP,positive,0,0.0,0.0
+261,Adenosine diphosphate,DHB,negative,1,24084.432,4.3817544402927044
+262,Adenosine diphosphate,DHB,positive,1,7042.129,3.84776564288262
+263,Adenosine diphosphate,MAPS,negative,0,0.0,0.0
+264,Adenosine diphosphate,MAPS,positive,0,0.0,0.0
+265,Adenosine diphosphate,NEDC,negative,0,0.0,0.0
+266,Adenosine diphosphate,NEDC,positive,0,0.0,0.0
+267,Adenosine diphosphate,NOR,negative,1,82661.945,4.917310873658801
+268,Adenosine diphosphate,NOR,positive,0,0.0,0.0
+269,Adenosine diphosphate,pNA,negative,0,0.0,0.0
+270,Adenosine diphosphate,pNA,positive,0,0.0,0.0
+271,Adenosine monophosphate,9AA,negative,1,405090.22,5.607552830330284
+272,Adenosine monophosphate,9AA,positive,1,37.335915,1.58360583343831
+273,Adenosine monophosphate,CHCA,negative,0,0.0,0.0
+274,Adenosine monophosphate,CHCA,positive,1,9272.839,3.9672595519847884
+275,Adenosine monophosphate,CMBT,negative,0,0.0,0.0
+276,Adenosine monophosphate,CMBT,positive,1,577.3727,2.7622077854635716
+277,Adenosine monophosphate,ClCCA,negative,1,772.64923,2.8885440976275274
+278,Adenosine monophosphate,ClCCA,positive,1,2516.969,3.4010503789839905
+279,Adenosine monophosphate,DAN,negative,0,0.0,0.0
+280,Adenosine monophosphate,DAN,positive,1,138.20456,2.143653461929722
+281,Adenosine monophosphate,DHAP,negative,1,2260.5806,3.354412070088341
+282,Adenosine monophosphate,DHAP,positive,1,443.10007,2.6474808416281035
+283,Adenosine monophosphate,DHB,negative,1,7392.9844,3.868878529953471
+284,Adenosine monophosphate,DHB,positive,1,20602.14,4.313933413609562
+285,Adenosine monophosphate,MAPS,negative,0,0.0,0.0
+286,Adenosine monophosphate,MAPS,positive,0,0.0,0.0
+287,Adenosine monophosphate,NEDC,negative,1,680.76245,2.8336330775515917
+288,Adenosine monophosphate,NEDC,positive,0,0.0,0.0
+289,Adenosine monophosphate,NOR,negative,1,51646.18,4.713046613486352
+290,Adenosine monophosphate,NOR,positive,1,6082.1196,3.7841263551953612
+291,Adenosine monophosphate,pNA,negative,0,0.0,0.0
+292,Adenosine monophosphate,pNA,positive,1,693.52423,2.841687401652808
+293,Adenosine triphosphate,9AA,negative,1,188954.58,5.276359721484188
+294,Adenosine triphosphate,9AA,positive,0,0.0,0.0
+295,Adenosine triphosphate,CHCA,negative,1,16537.125,4.218486270131139
+296,Adenosine triphosphate,CHCA,positive,1,1494.2412,3.1747112551218057
+297,Adenosine triphosphate,CMBT,negative,0,0.0,0.0
+298,Adenosine triphosphate,CMBT,positive,0,0.0,0.0
+299,Adenosine triphosphate,ClCCA,negative,1,340.3004,2.5331367972668923
+300,Adenosine triphosphate,ClCCA,positive,1,110.72633,2.048155533242649
+301,Adenosine triphosphate,DAN,negative,1,20080.72,4.3028009074031734
+302,Adenosine triphosphate,DAN,positive,0,0.0,0.0
+303,Adenosine triphosphate,DHAP,negative,0,0.0,0.0
+304,Adenosine triphosphate,DHAP,positive,0,0.0,0.0
+305,Adenosine triphosphate,DHB,negative,1,1309.5391,3.1174499826736355
+306,Adenosine triphosphate,DHB,positive,0,0.0,0.0
+307,Adenosine triphosphate,MAPS,negative,0,0.0,0.0
+308,Adenosine triphosphate,MAPS,positive,0,0.0,0.0
+309,Adenosine triphosphate,NEDC,negative,0,0.0,0.0
+310,Adenosine triphosphate,NEDC,positive,0,0.0,0.0
+311,Adenosine triphosphate,NOR,negative,1,51961.008,4.715685925435432
+312,Adenosine triphosphate,NOR,positive,0,0.0,0.0
+313,Adenosine triphosphate,pNA,negative,1,1565.5999,3.194958094484483
+314,Adenosine triphosphate,pNA,positive,0,0.0,0.0
+315,Agmatine,9AA,negative,0,0.0,0.0
+316,Agmatine,9AA,positive,1,23242.79,4.366306943076614
+317,Agmatine,CHCA,negative,0,0.0,0.0
+318,Agmatine,CHCA,positive,1,154435.62,5.188750288086613
+319,Agmatine,CMBT,negative,0,0.0,0.0
+320,Agmatine,CMBT,positive,1,11584.733,4.0639235157077644
+321,Agmatine,ClCCA,negative,0,0.0,0.0
+322,Agmatine,ClCCA,positive,1,16132.004,4.207715241484096
+323,Agmatine,DAN,negative,0,0.0,0.0
+324,Agmatine,DAN,positive,1,16097.67,4.206789998049234
+325,Agmatine,DHAP,negative,0,0.0,0.0
+326,Agmatine,DHAP,positive,1,3640.3054,3.561257105182931
+327,Agmatine,DHB,negative,0,0.0,0.0
+328,Agmatine,DHB,positive,1,40941.043,4.612169510077562
+329,Agmatine,MAPS,negative,0,0.0,0.0
+330,Agmatine,MAPS,positive,0,0.0,0.0
+331,Agmatine,NEDC,negative,0,0.0,0.0
+332,Agmatine,NEDC,positive,1,1098.5364,3.0412096111933735
+333,Agmatine,NOR,negative,0,0.0,0.0
+334,Agmatine,NOR,positive,1,8298.699,3.9190623423749362
+335,Agmatine,pNA,negative,0,0.0,0.0
+336,Agmatine,pNA,positive,1,42522.47,4.628628696593577
+337,Arginine,9AA,negative,1,6045.505,3.7815044163374036
+338,Arginine,9AA,positive,1,4932.095,3.69311947904992
+339,Arginine,CHCA,negative,1,23.5185,1.3894938972636084
+340,Arginine,CHCA,positive,1,142436.39,5.153624007132357
+341,Arginine,CMBT,negative,0,0.0,0.0
+342,Arginine,CMBT,positive,1,7383.9805,3.8683493528973147
+343,Arginine,ClCCA,negative,0,0.0,0.0
+344,Arginine,ClCCA,positive,1,13448.083,4.12869267380932
+345,Arginine,DAN,negative,1,5825.8433,3.765433338862351
+346,Arginine,DAN,positive,1,16050.156,4.20550631564071
+347,Arginine,DHAP,negative,1,92.14985,1.9691821598847066
+348,Arginine,DHAP,positive,1,2122.7913,3.327111837403978
+349,Arginine,DHB,negative,0,0.0,0.0
+350,Arginine,DHB,positive,1,46600.383,4.668398805538839
+351,Arginine,MAPS,negative,0,0.0,0.0
+352,Arginine,MAPS,positive,1,18.805185,1.2967789034989032
+353,Arginine,NEDC,negative,0,0.0,0.0
+354,Arginine,NEDC,positive,1,201.90733,2.307297736146466
+355,Arginine,NOR,negative,1,2650.2842,3.4234562837030187
+356,Arginine,NOR,positive,1,11842.481,4.0734793676656995
+357,Arginine,pNA,negative,1,277.5379,2.4448842969639406
+358,Arginine,pNA,positive,1,62455.562,4.795578074266211
+359,Argininosuccinic acid,9AA,negative,1,27789.115,4.443890343962045
+360,Argininosuccinic acid,9AA,positive,1,14.900511,1.2014110816106518
+361,Argininosuccinic acid,CHCA,negative,1,49.9853,1.7074449790562414
+362,Argininosuccinic acid,CHCA,positive,1,32365.035,4.510089499430628
+363,Argininosuccinic acid,CMBT,negative,0,0.0,0.0
+364,Argininosuccinic acid,CMBT,positive,1,304.34607,2.4847923347189895
+365,Argininosuccinic acid,ClCCA,negative,0,0.0,0.0
+366,Argininosuccinic acid,ClCCA,positive,1,3636.7664,3.5608348073035345
+367,Argininosuccinic acid,DAN,negative,1,1374.545,3.138474802600664
+368,Argininosuccinic acid,DAN,positive,0,0.0,0.0
+369,Argininosuccinic acid,DHAP,negative,1,11.063781,1.0814834446269235
+370,Argininosuccinic acid,DHAP,positive,1,94.39562,1.9795284349399531
+371,Argininosuccinic acid,DHB,negative,0,0.0,0.0
+372,Argininosuccinic acid,DHB,positive,1,4634.3423,3.666081810435663
+373,Argininosuccinic acid,MAPS,negative,0,0.0,0.0
+374,Argininosuccinic acid,MAPS,positive,0,0.0,0.0
+375,Argininosuccinic acid,NEDC,negative,0,0.0,0.0
+376,Argininosuccinic acid,NEDC,positive,1,12.288447,1.1234742285920651
+377,Argininosuccinic acid,NOR,negative,1,3269.5786,3.5146245907516085
+378,Argininosuccinic acid,NOR,positive,1,57.192383,1.7648661420801581
+379,Argininosuccinic acid,pNA,negative,1,295.31024,2.471746660250386
+380,Argininosuccinic acid,pNA,positive,1,1017.1551,3.007813941009907
+381,Ascorbic acid,9AA,negative,1,9525.733,3.9789439936786417
+382,Ascorbic acid,9AA,positive,0,0.0,0.0
+383,Ascorbic acid,CHCA,negative,1,1765.8657,3.2472035399054384
+384,Ascorbic acid,CHCA,positive,1,175.75993,2.2473838209021375
+385,Ascorbic acid,CMBT,negative,0,0.0,0.0
+386,Ascorbic acid,CMBT,positive,0,0.0,0.0
+387,Ascorbic acid,ClCCA,negative,1,60.181175,1.7866178134645478
+388,Ascorbic acid,ClCCA,positive,1,54.689316,1.7457718837319227
+389,Ascorbic acid,DAN,negative,1,8059.088,3.9063397834559312
+390,Ascorbic acid,DAN,positive,0,0.0,0.0
+391,Ascorbic acid,DHAP,negative,1,544.4009,2.7367158502625806
+392,Ascorbic acid,DHAP,positive,0,0.0,0.0
+393,Ascorbic acid,DHB,negative,1,1109.1461,3.0453801375690435
+394,Ascorbic acid,DHB,positive,1,209.3337,2.322908861614034
+395,Ascorbic acid,MAPS,negative,0,0.0,0.0
+396,Ascorbic acid,MAPS,positive,0,0.0,0.0
+397,Ascorbic acid,NEDC,negative,0,0.0,0.0
+398,Ascorbic acid,NEDC,positive,0,0.0,0.0
+399,Ascorbic acid,NOR,negative,1,10278.6045,4.011976405829317
+400,Ascorbic acid,NOR,positive,0,0.0,0.0
+401,Ascorbic acid,pNA,negative,1,1817.4087,3.2596915005616975
+402,Ascorbic acid,pNA,positive,0,0.0,0.0
+403,Asparagine,9AA,negative,1,1136.5548,3.055972327319788
+404,Asparagine,9AA,positive,0,0.0,0.0
+405,Asparagine,CHCA,negative,0,0.0,0.0
+406,Asparagine,CHCA,positive,1,7012.418,3.845929723639062
+407,Asparagine,CMBT,negative,1,36.75878,1.5770179536390747
+408,Asparagine,CMBT,positive,1,409.3819,2.6131881978555396
+409,Asparagine,ClCCA,negative,0,0.0,0.0
+410,Asparagine,ClCCA,positive,1,1109.2064,3.0454037265777845
+411,Asparagine,DAN,negative,1,22758.654,4.357165655480814
+412,Asparagine,DAN,positive,1,405.66757,2.6092395406573305
+413,Asparagine,DHAP,negative,1,159.0339,2.2042119890526943
+414,Asparagine,DHAP,positive,1,97.46525,1.9932829878986993
+415,Asparagine,DHB,negative,0,0.0,0.0
+416,Asparagine,DHB,positive,1,2443.957,3.388271225493611
+417,Asparagine,MAPS,negative,0,0.0,0.0
+418,Asparagine,MAPS,positive,0,0.0,0.0
+419,Asparagine,NEDC,negative,0,0.0,0.0
+420,Asparagine,NEDC,positive,0,0.0,0.0
+421,Asparagine,NOR,negative,1,2916.1348,3.4649564982144696
+422,Asparagine,NOR,positive,0,0.0,0.0
+423,Asparagine,pNA,negative,1,936.014,2.9717460797643254
+424,Asparagine,pNA,positive,1,550.14056,2.7412623731666463
+425,Aspartic acid,9AA,negative,1,16146.886,4.208115674739658
+426,Aspartic acid,9AA,positive,0,0.0,0.0
+427,Aspartic acid,CHCA,negative,1,211.19722,2.326739689901946
+428,Aspartic acid,CHCA,positive,1,3947.9585,3.596482569716361
+429,Aspartic acid,CMBT,negative,1,236.5623,2.3757775213215733
+430,Aspartic acid,CMBT,positive,1,25.26115,1.419313740326141
+431,Aspartic acid,ClCCA,negative,0,0.0,0.0
+432,Aspartic acid,ClCCA,positive,1,233.88345,2.370852417259132
+433,Aspartic acid,DAN,negative,1,20900.578,4.32017907514561
+434,Aspartic acid,DAN,positive,0,0.0,0.0
+435,Aspartic acid,DHAP,negative,0,0.0,0.0
+436,Aspartic acid,DHAP,positive,0,0.0,0.0
+437,Aspartic acid,DHB,negative,1,138.05779,2.1431953230042082
+438,Aspartic acid,DHB,positive,1,590.9392,2.772277101215267
+439,Aspartic acid,MAPS,negative,0,0.0,0.0
+440,Aspartic acid,MAPS,positive,0,0.0,0.0
+441,Aspartic acid,NEDC,negative,0,0.0,0.0
+442,Aspartic acid,NEDC,positive,0,0.0,0.0
+443,Aspartic acid,NOR,negative,1,17542.287,4.244110968289964
+444,Aspartic acid,NOR,positive,0,0.0,0.0
+445,Aspartic acid,pNA,negative,1,1969.2108,3.29451269538952
+446,Aspartic acid,pNA,positive,1,163.66438,2.216599663271126
+447,Biotin,9AA,negative,0,0.0,0.0
+448,Biotin,9AA,positive,0,0.0,0.0
+449,Biotin,CHCA,negative,0,0.0,0.0
+450,Biotin,CMBT,negative,0,0.0,0.0
+451,Biotin,CMBT,positive,1,65.45244,1.8225109319917827
+452,Biotin,ClCCA,negative,0,0.0,0.0
+453,Biotin,ClCCA,positive,1,300.8318,2.4797649936800656
+454,Biotin,DAN,positive,0,0.0,0.0
+455,Biotin,DHAP,negative,0,0.0,0.0
+456,Biotin,DHAP,positive,1,192.85478,2.287476514149159
+457,Biotin,DHB,negative,0,0.0,0.0
+458,Biotin,DHB,positive,1,1826.3438,3.2618202640445024
+459,Biotin,MAPS,negative,0,0.0,0.0
+460,Biotin,MAPS,positive,0,0.0,0.0
+461,Biotin,NEDC,negative,0,0.0,0.0
+462,Biotin,NEDC,positive,0,0.0,0.0
+463,Biotin,NOR,negative,1,425.85217,2.630277493597988
+464,Biotin,NOR,positive,0,0.0,0.0
+465,Biotin,pNA,negative,0,0.0,0.0
+466,Biotin,pNA,positive,0,0.0,0.0
+467,Butyric acid,9AA,positive,0,0.0,0.0
+468,Butyric acid,CHCA,negative,0,0.0,0.0
+469,Butyric acid,CHCA,positive,0,0.0,0.0
+470,Butyric acid,CMBT,positive,0,0.0,0.0
+471,Butyric acid,ClCCA,negative,0,0.0,0.0
+472,Butyric acid,ClCCA,positive,0,0.0,0.0
+473,Butyric acid,DAN,positive,0,0.0,0.0
+474,Butyric acid,DHAP,negative,0,0.0,0.0
+475,Butyric acid,DHAP,positive,0,0.0,0.0
+476,Butyric acid,DHB,positive,0,0.0,0.0
+477,Butyric acid,MAPS,positive,0,0.0,0.0
+478,Butyric acid,NEDC,positive,0,0.0,0.0
+479,Butyric acid,pNA,positive,0,0.0,0.0
+480,CAR 16:0,9AA,negative,0,0.0,0.0
+481,CAR 16:0,9AA,positive,1,823601.0,5.915717392569487
+482,CAR 16:0,CHCA,negative,0,0.0,0.0
+483,CAR 16:0,CHCA,positive,1,769879.2,5.886423150462401
+484,CAR 16:0,CMBT,negative,0,0.0,0.0
+485,CAR 16:0,CMBT,positive,1,570483.6,5.7562439253093745
+486,CAR 16:0,ClCCA,negative,0,0.0,0.0
+487,CAR 16:0,ClCCA,positive,1,457025.72,5.65994159177516
+488,CAR 16:0,DAN,negative,0,0.0,0.0
+489,CAR 16:0,DAN,positive,1,144998.12,5.161365366508742
+490,CAR 16:0,DHAP,negative,0,0.0,0.0
+491,CAR 16:0,DHAP,positive,1,126994.22,5.103787374761539
+492,CAR 16:0,DHB,negative,0,0.0,0.0
+493,CAR 16:0,DHB,positive,1,993985.9,5.997380660760288
+494,CAR 16:0,MAPS,negative,0,0.0,0.0
+495,CAR 16:0,MAPS,positive,1,4632.651,3.6659233202433366
+496,CAR 16:0,NEDC,negative,0,0.0,0.0
+497,CAR 16:0,NEDC,positive,1,80014.9,4.9031762944437025
+498,CAR 16:0,NOR,negative,0,0.0,0.0
+499,CAR 16:0,NOR,positive,1,447456.2,5.650751500673666
+500,CAR 16:0,pNA,negative,0,0.0,0.0
+501,CAR 16:0,pNA,positive,1,420165.75,5.6234216814281535
+502,Cardiolipin 18:1,9AA,negative,1,1258.8322,3.1003127042707233
+503,Cardiolipin 18:1,9AA,positive,0,0.0,0.0
+504,Cardiolipin 18:1,CHCA,negative,1,106.9404,2.033184023118401
+505,Cardiolipin 18:1,CHCA,positive,0,0.0,0.0
+506,Cardiolipin 18:1,CMBT,negative,0,0.0,0.0
+507,Cardiolipin 18:1,CMBT,positive,0,0.0,0.0
+508,Cardiolipin 18:1,ClCCA,negative,0,0.0,0.0
+509,Cardiolipin 18:1,ClCCA,positive,1,19.301334,1.3075245763272003
+510,Cardiolipin 18:1,DAN,negative,1,880.762,2.9453513787430663
+511,Cardiolipin 18:1,DAN,positive,0,0.0,0.0
+512,Cardiolipin 18:1,DHAP,negative,1,95.08087,1.9826369268936905
+513,Cardiolipin 18:1,DHAP,positive,0,0.0,0.0
+514,Cardiolipin 18:1,DHB,negative,1,154.12149,2.1906719676518134
+515,Cardiolipin 18:1,DHB,positive,1,212.30815,2.3290074491316073
+516,Cardiolipin 18:1,MAPS,negative,1,609.7447,2.7858597068845388
+517,Cardiolipin 18:1,MAPS,positive,0,0.0,0.0
+518,Cardiolipin 18:1,NEDC,negative,1,291.31055,2.46584449008922
+519,Cardiolipin 18:1,NEDC,positive,0,0.0,0.0
+520,Cardiolipin 18:1,NOR,negative,1,1226.4435,3.089001510405629
+521,Cardiolipin 18:1,NOR,positive,0,0.0,0.0
+522,Cardiolipin 18:1,pNA,negative,1,729.41547,2.863569962862067
+523,Cardiolipin 18:1,pNA,positive,0,0.0,0.0
+524,Carnitine,9AA,negative,0,0.0,0.0
+525,Carnitine,9AA,positive,1,121696.07,5.085280122205824
+526,Carnitine,CHCA,negative,0,0.0,0.0
+527,Carnitine,CHCA,positive,1,262288.9,5.418781567530044
+528,Carnitine,CMBT,negative,0,0.0,0.0
+529,Carnitine,CMBT,positive,1,4580.3516,3.660993623380584
+530,Carnitine,ClCCA,negative,0,0.0,0.0
+531,Carnitine,ClCCA,positive,1,27707.344,4.442610570778515
+532,Carnitine,DAN,negative,0,0.0,0.0
+533,Carnitine,DAN,positive,1,6549.736,3.816290097363017
+534,Carnitine,DHAP,negative,0,0.0,0.0
+535,Carnitine,DHAP,positive,1,1037.2396,3.016297589495151
+536,Carnitine,DHB,negative,0,0.0,0.0
+537,Carnitine,DHB,positive,1,69143.34,4.839756635531773
+538,Carnitine,MAPS,negative,0,0.0,0.0
+539,Carnitine,MAPS,positive,0,0.0,0.0
+540,Carnitine,NEDC,negative,0,0.0,0.0
+541,Carnitine,NEDC,positive,1,729.6852,2.863730310816646
+542,Carnitine,NOR,negative,0,0.0,0.0
+543,Carnitine,NOR,positive,1,28601.137,4.456398482521913
+544,Carnitine,pNA,negative,0,0.0,0.0
+545,Carnitine,pNA,positive,1,49329.61,4.69311648578438
+546,Carnosine,9AA,negative,1,119209.45,5.076314327370768
+547,Carnosine,9AA,positive,0,0.0,0.0
+548,Carnosine,CHCA,negative,1,344.8041,2.5388301381479095
+549,Carnosine,CHCA,positive,1,31946.037,4.504430584740983
+550,Carnosine,CMBT,negative,1,190.34114,2.2818083571369745
+551,Carnosine,CMBT,positive,1,1893.945,3.277596609268131
+552,Carnosine,ClCCA,negative,1,42.71273,1.6406079304180858
+553,Carnosine,ClCCA,positive,1,3227.6199,3.5090169192663994
+554,Carnosine,DAN,negative,1,26861.78,4.429150955323927
+555,Carnosine,DAN,positive,1,1725.1785,3.2370857030574767
+556,Carnosine,DHAP,negative,1,974.3546,2.98916253654532
+557,Carnosine,DHAP,positive,1,1383.639,3.1413365598669674
+558,Carnosine,DHB,negative,1,34.820415,1.5541306130921846
+559,Carnosine,DHB,positive,1,12700.983,4.103871527155132
+560,Carnosine,MAPS,negative,0,0.0,0.0
+561,Carnosine,MAPS,positive,0,0.0,0.0
+562,Carnosine,NEDC,negative,0,0.0,0.0
+563,Carnosine,NEDC,positive,0,0.0,0.0
+564,Carnosine,NOR,negative,1,61567.87,4.789361182870871
+565,Carnosine,NOR,positive,1,2750.9084,3.4396339738815636
+566,Carnosine,pNA,negative,1,3917.6536,3.5931368745376604
+567,Carnosine,pNA,positive,1,14813.341,4.170682337123587
+568,Cer d8:1/22:0 Cer,9AA,negative,1,175.25,2.2461291256634364
+569,Cer d8:1/22:0 Cer,9AA,positive,0,0.0,0.0
+570,Cer d8:1/22:0 Cer,CHCA,negative,0,0.0,0.0
+571,Cer d8:1/22:0 Cer,CHCA,positive,1,1971.6425,3.2950483856347246
+572,Cer d8:1/22:0 Cer,CMBT,negative,0,0.0,0.0
+573,Cer d8:1/22:0 Cer,CMBT,positive,1,22623.262,4.354574421488066
+574,Cer d8:1/22:0 Cer,ClCCA,negative,0,0.0,0.0
+575,Cer d8:1/22:0 Cer,ClCCA,positive,1,3339.3782,3.523795640726069
+576,Cer d8:1/22:0 Cer,DAN,negative,1,7359.353,3.866898643451059
+577,Cer d8:1/22:0 Cer,DAN,positive,1,1978.3369,3.2965197211181287
+578,Cer d8:1/22:0 Cer,DHAP,negative,1,131.16359,2.121111827010315
+579,Cer d8:1/22:0 Cer,DHAP,positive,1,4067.2998,3.6094129493362948
+580,Cer d8:1/22:0 Cer,DHB,negative,0,0.0,0.0
+581,Cer d8:1/22:0 Cer,DHB,positive,1,20406.492,4.3097896349224545
+582,Cer d8:1/22:0 Cer,MAPS,negative,1,286.88757,2.4592229139334902
+583,Cer d8:1/22:0 Cer,MAPS,positive,1,43.961964,1.6528452735515091
+584,Cer d8:1/22:0 Cer,NEDC,negative,0,0.0,0.0
+585,Cer d8:1/22:0 Cer,NEDC,positive,1,332.2592,2.522782147445485
+586,Cer d8:1/22:0 Cer,NOR,negative,1,368.63028,2.567767541277121
+587,Cer d8:1/22:0 Cer,NOR,positive,1,96.92948,1.9909134484330715
+588,Cer d8:1/22:0 Cer,pNA,negative,0,0.0,0.0
+589,Cer d8:1/22:0 Cer,pNA,positive,1,5537.5723,3.7433978293240373
+590,Cholecalciferol,9AA,negative,0,0.0,0.0
+591,Cholecalciferol,9AA,positive,0,0.0,0.0
+592,Cholecalciferol,CHCA,negative,0,0.0,0.0
+593,Cholecalciferol,CHCA,positive,0,0.0,0.0
+594,Cholecalciferol,CMBT,negative,0,0.0,0.0
+595,Cholecalciferol,CMBT,positive,0,0.0,0.0
+596,Cholecalciferol,ClCCA,negative,0,0.0,0.0
+597,Cholecalciferol,ClCCA,positive,0,0.0,0.0
+598,Cholecalciferol,DAN,negative,0,0.0,0.0
+599,Cholecalciferol,DAN,positive,1,209.38205,2.3230086826371
+600,Cholecalciferol,DHAP,negative,0,0.0,0.0
+601,Cholecalciferol,DHAP,positive,0,0.0,0.0
+602,Cholecalciferol,DHB,negative,0,0.0,0.0
+603,Cholecalciferol,DHB,positive,1,131.47305,2.1221275354294495
+604,Cholecalciferol,MAPS,negative,0,0.0,0.0
+605,Cholecalciferol,MAPS,positive,0,0.0,0.0
+606,Cholecalciferol,NEDC,negative,0,0.0,0.0
+607,Cholecalciferol,NEDC,positive,1,27.491285,1.4547120370184938
+608,Cholecalciferol,NOR,negative,0,0.0,0.0
+609,Cholecalciferol,NOR,positive,0,0.0,0.0
+610,Cholecalciferol,pNA,negative,0,0.0,0.0
+611,Cholecalciferol,pNA,positive,0,0.0,0.0
+612,Cholesterol,9AA,negative,0,0.0,0.0
+613,Cholesterol,9AA,positive,0,0.0,0.0
+614,Cholesterol,CHCA,negative,0,0.0,0.0
+615,Cholesterol,CHCA,positive,0,0.0,0.0
+616,Cholesterol,CMBT,negative,0,0.0,0.0
+617,Cholesterol,CMBT,positive,0,0.0,0.0
+618,Cholesterol,ClCCA,negative,0,0.0,0.0
+619,Cholesterol,ClCCA,positive,0,0.0,0.0
+620,Cholesterol,DAN,negative,0,0.0,0.0
+621,Cholesterol,DAN,positive,0,0.0,0.0
+622,Cholesterol,DHAP,negative,0,0.0,0.0
+623,Cholesterol,DHAP,positive,0,0.0,0.0
+624,Cholesterol,DHB,negative,0,0.0,0.0
+625,Cholesterol,DHB,positive,0,0.0,0.0
+626,Cholesterol,MAPS,negative,0,0.0,0.0
+627,Cholesterol,MAPS,positive,0,0.0,0.0
+628,Cholesterol,NEDC,negative,0,0.0,0.0
+629,Cholesterol,NEDC,positive,0,0.0,0.0
+630,Cholesterol,NOR,negative,0,0.0,0.0
+631,Cholesterol,NOR,positive,0,0.0,0.0
+632,Cholesterol,pNA,negative,0,0.0,0.0
+633,Cholesterol,pNA,positive,0,0.0,0.0
+634,Cholesteryl acetate,9AA,negative,0,0.0,0.0
+635,Cholesteryl acetate,9AA,positive,0,0.0,0.0
+636,Cholesteryl acetate,CHCA,negative,0,0.0,0.0
+637,Cholesteryl acetate,CHCA,positive,0,0.0,0.0
+638,Cholesteryl acetate,CMBT,negative,0,0.0,0.0
+639,Cholesteryl acetate,CMBT,positive,0,0.0,0.0
+640,Cholesteryl acetate,ClCCA,negative,0,0.0,0.0
+641,Cholesteryl acetate,ClCCA,positive,0,0.0,0.0
+642,Cholesteryl acetate,DAN,negative,0,0.0,0.0
+643,Cholesteryl acetate,DAN,positive,0,0.0,0.0
+644,Cholesteryl acetate,DHAP,negative,0,0.0,0.0
+645,Cholesteryl acetate,DHAP,positive,0,0.0,0.0
+646,Cholesteryl acetate,DHB,negative,0,0.0,0.0
+647,Cholesteryl acetate,DHB,positive,0,0.0,0.0
+648,Cholesteryl acetate,MAPS,negative,0,0.0,0.0
+649,Cholesteryl acetate,MAPS,positive,0,0.0,0.0
+650,Cholesteryl acetate,NEDC,negative,0,0.0,0.0
+651,Cholesteryl acetate,NEDC,positive,0,0.0,0.0
+652,Cholesteryl acetate,NOR,negative,0,0.0,0.0
+653,Cholesteryl acetate,NOR,positive,0,0.0,0.0
+654,Cholesteryl acetate,pNA,negative,0,0.0,0.0
+655,Cholesteryl acetate,pNA,positive,0,0.0,0.0
+656,Cholesteryl ester 17:0,9AA,negative,0,0.0,0.0
+657,Cholesteryl ester 17:0,9AA,positive,0,0.0,0.0
+658,Cholesteryl ester 17:0,CHCA,negative,0,0.0,0.0
+659,Cholesteryl ester 17:0,CHCA,positive,0,0.0,0.0
+660,Cholesteryl ester 17:0,CMBT,negative,0,0.0,0.0
+661,Cholesteryl ester 17:0,CMBT,positive,0,0.0,0.0
+662,Cholesteryl ester 17:0,ClCCA,negative,0,0.0,0.0
+663,Cholesteryl ester 17:0,ClCCA,positive,0,0.0,0.0
+664,Cholesteryl ester 17:0,DAN,negative,0,0.0,0.0
+665,Cholesteryl ester 17:0,DAN,positive,0,0.0,0.0
+666,Cholesteryl ester 17:0,DHAP,negative,0,0.0,0.0
+667,Cholesteryl ester 17:0,DHAP,positive,0,0.0,0.0
+668,Cholesteryl ester 17:0,DHB,negative,0,0.0,0.0
+669,Cholesteryl ester 17:0,DHB,positive,1,72.92574,1.8687956805273145
+670,Cholesteryl ester 17:0,MAPS,negative,0,0.0,0.0
+671,Cholesteryl ester 17:0,MAPS,positive,0,0.0,0.0
+672,Cholesteryl ester 17:0,NEDC,negative,0,0.0,0.0
+673,Cholesteryl ester 17:0,NEDC,positive,0,0.0,0.0
+674,Cholesteryl ester 17:0,NOR,negative,0,0.0,0.0
+675,Cholesteryl ester 17:0,NOR,positive,0,0.0,0.0
+676,Cholesteryl ester 17:0,pNA,negative,0,0.0,0.0
+677,Cholesteryl ester 17:0,pNA,positive,0,0.0,0.0
+678,Cholic acid,9AA,negative,1,18127.912,4.2583717408536526
+679,Cholic acid,9AA,positive,0,0.0,0.0
+680,Cholic acid,CHCA,negative,1,15.174971,1.2088435106976922
+681,Cholic acid,CHCA,positive,0,0.0,0.0
+682,Cholic acid,CMBT,negative,0,0.0,0.0
+683,Cholic acid,CMBT,positive,0,0.0,0.0
+684,Cholic acid,ClCCA,negative,1,9.1373825,1.0059258334438872
+685,Cholic acid,ClCCA,positive,0,0.0,0.0
+686,Cholic acid,DAN,negative,1,41987.312,4.623128415628153
+687,Cholic acid,DAN,positive,0,0.0,0.0
+688,Cholic acid,DHAP,negative,1,5212.022,3.7170895577408385
+689,Cholic acid,DHAP,positive,0,0.0,0.0
+690,Cholic acid,DHB,negative,0,0.0,0.0
+691,Cholic acid,DHB,positive,0,0.0,0.0
+692,Cholic acid,MAPS,negative,1,842.51904,2.9260948899762536
+693,Cholic acid,MAPS,positive,0,0.0,0.0
+694,Cholic acid,NEDC,negative,1,139.86417,2.1488005406599164
+695,Cholic acid,NEDC,positive,0,0.0,0.0
+696,Cholic acid,NOR,negative,1,13415.152,4.127627970020457
+697,Cholic acid,NOR,positive,0,0.0,0.0
+698,Cholic acid,pNA,negative,0,0.0,0.0
+699,Cholic acid,pNA,positive,0,0.0,0.0
+700,Citric acid,9AA,negative,1,160924.69,5.206625379926532
+701,Citric acid,9AA,positive,0,0.0,0.0
+702,Citric acid,CHCA,negative,1,29802.469,4.474266817092202
+703,Citric acid,CHCA,positive,1,41.1942,1.6252527570964792
+704,Citric acid,CMBT,negative,1,1221.2974,3.0871768879561547
+705,Citric acid,CMBT,positive,0,0.0,0.0
+706,Citric acid,ClCCA,negative,1,492.6884,2.6934529228946875
+707,Citric acid,ClCCA,positive,0,0.0,0.0
+708,Citric acid,DAN,negative,1,8965.288,3.9526126844296186
+709,Citric acid,DAN,positive,0,0.0,0.0
+710,Citric acid,DHAP,negative,1,1290.58,3.111121311386245
+711,Citric acid,DHAP,positive,0,0.0,0.0
+712,Citric acid,DHB,negative,1,5183.281,3.7146885332641606
+713,Citric acid,DHB,positive,0,0.0,0.0
+714,Citric acid,MAPS,negative,0,0.0,0.0
+715,Citric acid,MAPS,positive,0,0.0,0.0
+716,Citric acid,NEDC,negative,0,0.0,0.0
+717,Citric acid,NEDC,positive,0,0.0,0.0
+718,Citric acid,NOR,negative,1,107555.63,5.031637186305705
+719,Citric acid,NOR,positive,0,0.0,0.0
+720,Citric acid,pNA,negative,1,28523.428,4.455216944275725
+721,Citric acid,pNA,positive,0,0.0,0.0
+722,Citrulline,9AA,negative,1,11564.286,4.0631563769843755
+723,Citrulline,9AA,positive,0,0.0,0.0
+724,Citrulline,CHCA,negative,1,53.731575,1.7382379459310495
+725,Citrulline,CHCA,positive,1,11782.537,4.071275669824437
+726,Citrulline,CMBT,negative,0,0.0,0.0
+727,Citrulline,CMBT,positive,1,511.5103,2.709702597899916
+728,Citrulline,ClCCA,negative,1,33.687496,1.5401729503859436
+729,Citrulline,ClCCA,positive,1,3836.0315,3.583995364541039
+730,Citrulline,DAN,negative,1,7591.4062,3.8803794351541434
+731,Citrulline,DAN,positive,1,740.18274,2.869925297303584
+732,Citrulline,DHAP,negative,0,0.0,0.0
+733,Citrulline,DHAP,positive,0,0.0,0.0
+734,Citrulline,DHB,negative,0,0.0,0.0
+735,Citrulline,DHB,positive,1,3117.8428,3.493993485429452
+736,Citrulline,MAPS,negative,0,0.0,0.0
+737,Citrulline,MAPS,positive,0,0.0,0.0
+738,Citrulline,NEDC,negative,0,0.0,0.0
+739,Citrulline,NEDC,positive,0,0.0,0.0
+740,Citrulline,NOR,negative,1,9417.826,3.9739967739716424
+741,Citrulline,NOR,positive,1,363.44376,2.5616305186453663
+742,Citrulline,pNA,negative,1,484.53207,2.6862179208847023
+743,Citrulline,pNA,positive,1,1760.735,3.245940582456826
+744,Coenzyme A,9AA,negative,1,6321.2407,3.8008710262539327
+745,Coenzyme A,9AA,positive,0,0.0,0.0
+746,Coenzyme A,CHCA,negative,1,27081.262,4.432684935238046
+747,Coenzyme A,CHCA,positive,1,12406.309,4.093677598325576
+748,Coenzyme A,CMBT,negative,0,0.0,0.0
+749,Coenzyme A,CMBT,positive,1,225.62831,2.355314160200034
+750,Coenzyme A,ClCCA,negative,1,2288.4492,3.3597310115219625
+751,Coenzyme A,ClCCA,positive,1,716.8546,2.8560364876791713
+752,Coenzyme A,DAN,negative,1,43477.145,4.638271006586071
+753,Coenzyme A,DAN,positive,1,151.3479,2.1828364721806306
+754,Coenzyme A,DHAP,negative,1,1631.4667,3.212844331047419
+755,Coenzyme A,DHAP,positive,1,332.2015,2.5227069478375608
+756,Coenzyme A,DHB,negative,1,3341.536,3.524076093426065
+757,Coenzyme A,DHB,positive,1,3577.3193,3.5536790908543248
+758,Coenzyme A,MAPS,negative,0,0.0,0.0
+759,Coenzyme A,MAPS,positive,0,0.0,0.0
+760,Coenzyme A,NEDC,negative,0,0.0,0.0
+761,Coenzyme A,NEDC,positive,0,0.0,0.0
+762,Coenzyme A,NOR,negative,1,12559.612,4.099010800368353
+763,Coenzyme A,NOR,positive,0,0.0,0.0
+764,Coenzyme A,pNA,negative,0,0.0,0.0
+765,Coenzyme A,pNA,positive,1,1663.1174,3.221183961602331
+766,Creatine,9AA,negative,1,286.85608,2.4591754069110547
+767,Creatine,9AA,positive,0,0.0,0.0
+768,Creatine,CHCA,negative,0,0.0,0.0
+769,Creatine,CHCA,positive,1,27467.326,4.43883219305306
+770,Creatine,CMBT,negative,0,0.0,0.0
+771,Creatine,CMBT,positive,1,1140.6129,3.057518867576075
+772,Creatine,ClCCA,negative,0,0.0,0.0
+773,Creatine,ClCCA,positive,1,3293.0757,3.5177335753178034
+774,Creatine,DAN,negative,1,569.10815,2.7559572495197044
+775,Creatine,DAN,positive,1,852.02045,2.9309594429092525
+776,Creatine,DHAP,negative,1,95.564835,1.984819002752614
+777,Creatine,DHAP,positive,1,1366.7407,3.136003770459258
+778,Creatine,DHB,negative,0,0.0,0.0
+779,Creatine,DHB,positive,1,14685.986,4.16693268089106
+780,Creatine,MAPS,negative,0,0.0,0.0
+781,Creatine,MAPS,positive,0,0.0,0.0
+782,Creatine,NEDC,negative,0,0.0,0.0
+783,Creatine,NEDC,positive,0,0.0,0.0
+784,Creatine,NOR,negative,1,322.7955,2.5102708087819354
+785,Creatine,NOR,positive,1,984.3144,2.9935748298868963
+786,Creatine,pNA,negative,0,0.0,0.0
+787,Creatine,pNA,positive,1,4170.131,3.6202538296645144
+788,Creatinine,9AA,negative,1,2131.1282,3.328813314275123
+789,Creatinine,9AA,positive,0,0.0,0.0
+790,Creatinine,CHCA,negative,0,0.0,0.0
+791,Creatinine,CHCA,positive,1,13036.716,4.115201516589411
+792,Creatinine,CMBT,negative,0,0.0,0.0
+793,Creatinine,CMBT,positive,1,2646.7292,3.422873564997384
+794,Creatinine,ClCCA,negative,0,0.0,0.0
+795,Creatinine,ClCCA,positive,1,658.077,2.8189361562049244
+796,Creatinine,DAN,negative,1,4102.7393,3.6131797633689495
+797,Creatinine,DAN,positive,1,1382.1149,3.1408582599091766
+798,Creatinine,DHAP,negative,0,0.0,0.0
+799,Creatinine,DHAP,positive,1,815.0316,2.911706976694923
+800,Creatinine,DHB,negative,1,24.499426,1.406530404440295
+801,Creatinine,DHB,positive,1,15588.596,4.192834860715198
+802,Creatinine,MAPS,negative,0,0.0,0.0
+803,Creatinine,MAPS,positive,0,0.0,0.0
+804,Creatinine,NEDC,negative,0,0.0,0.0
+805,Creatinine,NEDC,positive,1,334.85446,2.526151119913343
+806,Creatinine,NOR,negative,1,387.36945,2.589245060014954
+807,Creatinine,NOR,positive,1,1740.3456,3.2408849728851505
+808,Creatinine,pNA,negative,1,195.36823,2.2930712255498773
+809,Creatinine,pNA,positive,1,11729.101,4.069301751548934
+810,Cyclic adenosine monophosphate,9AA,negative,0,0.0,0.0
+811,Cyclic adenosine monophosphate,9AA,positive,1,197.49648,2.2977528096878954
+812,Cyclic adenosine monophosphate,CHCA,negative,0,0.0,0.0
+813,Cyclic adenosine monophosphate,CHCA,positive,1,11826.187,4.072881463508045
+814,Cyclic adenosine monophosphate,CMBT,negative,0,0.0,0.0
+815,Cyclic adenosine monophosphate,CMBT,positive,0,0.0,0.0
+816,Cyclic adenosine monophosphate,ClCCA,negative,0,0.0,0.0
+817,Cyclic adenosine monophosphate,ClCCA,positive,1,4911.171,3.6912734768350175
+818,Cyclic adenosine monophosphate,DAN,negative,0,0.0,0.0
+819,Cyclic adenosine monophosphate,DAN,positive,0,0.0,0.0
+820,Cyclic adenosine monophosphate,DHAP,negative,1,5269.643,3.721863600851508
+821,Cyclic adenosine monophosphate,DHAP,positive,0,0.0,0.0
+822,Cyclic adenosine monophosphate,DHB,negative,1,5424.6196,3.7344493413215942
+823,Cyclic adenosine monophosphate,DHB,positive,1,26573.5,4.42446510200874
+824,Cyclic adenosine monophosphate,MAPS,negative,0,0.0,0.0
+825,Cyclic adenosine monophosphate,MAPS,positive,0,0.0,0.0
+826,Cyclic adenosine monophosphate,NEDC,negative,0,0.0,0.0
+827,Cyclic adenosine monophosphate,NEDC,positive,0,0.0,0.0
+828,Cyclic adenosine monophosphate,NOR,negative,0,0.0,0.0
+829,Cyclic adenosine monophosphate,NOR,positive,1,250.64426,2.400787028598619
+830,Cyclic adenosine monophosphate,pNA,negative,0,0.0,0.0
+831,Cyclic adenosine monophosphate,pNA,positive,0,0.0,0.0
+832,Cysteine,9AA,negative,1,436.89478,2.641369768140955
+833,Cysteine,9AA,positive,0,0.0,0.0
+834,Cysteine,CHCA,negative,1,28.773159,1.4738249167254274
+835,Cysteine,CHCA,positive,1,3678.8364,3.565828511022263
+836,Cysteine,CMBT,negative,0,0.0,0.0
+837,Cysteine,CMBT,positive,0,0.0,0.0
+838,Cysteine,ClCCA,negative,1,14.690308,1.1956314688506422
+839,Cysteine,ClCCA,positive,1,658.9105,2.8194850385845522
+840,Cysteine,DAN,negative,1,2803.3064,3.4478254631318035
+841,Cysteine,DAN,positive,0,0.0,0.0
+842,Cysteine,DHAP,negative,1,280.78735,2.4499214928595383
+843,Cysteine,DHAP,positive,1,4.0357428,0.7020635404602009
+844,Cysteine,DHB,negative,0,0.0,0.0
+845,Cysteine,DHB,positive,1,425.36584,2.629782402177548
+846,Cysteine,MAPS,negative,1,257.6298,2.4126785639702377
+847,Cysteine,MAPS,positive,0,0.0,0.0
+848,Cysteine,NEDC,negative,0,0.0,0.0
+849,Cysteine,NEDC,positive,1,51.5295,1.7204032670076697
+850,Cysteine,NOR,negative,1,4166.0073,3.6198242612796783
+851,Cysteine,NOR,positive,1,41.150925,1.6248071096366292
+852,Cysteine,pNA,negative,1,523.02515,2.719352130961034
+853,Cysteine,pNA,positive,1,369.40103,2.568672185684558
+854,Cystine,9AA,negative,1,1098.6666,3.0412610344968245
+855,Cystine,9AA,positive,0,0.0,0.0
+856,Cystine,CHCA,negative,0,0.0,0.0
+857,Cystine,CHCA,positive,1,430.04684,2.634524465632273
+858,Cystine,CMBT,negative,0,0.0,0.0
+859,Cystine,CMBT,positive,0,0.0,0.0
+860,Cystine,ClCCA,negative,0,0.0,0.0
+861,Cystine,ClCCA,positive,0,0.0,0.0
+862,Cystine,DAN,negative,1,2579.3845,3.4116844244851157
+863,Cystine,DAN,positive,0,0.0,0.0
+864,Cystine,DHAP,negative,0,0.0,0.0
+865,Cystine,DHAP,positive,0,0.0,0.0
+866,Cystine,DHB,negative,0,0.0,0.0
+867,Cystine,DHB,positive,1,280.49283,2.4494673372651894
+868,Cystine,MAPS,negative,0,0.0,0.0
+869,Cystine,MAPS,positive,0,0.0,0.0
+870,Cystine,NEDC,negative,0,0.0,0.0
+871,Cystine,NEDC,positive,0,0.0,0.0
+872,Cystine,NOR,negative,0,0.0,0.0
+873,Cystine,NOR,positive,0,0.0,0.0
+874,Cystine,pNA,negative,0,0.0,0.0
+875,Cystine,pNA,positive,0,0.0,0.0
+876,Cytidine,9AA,negative,1,1163.3219,3.0660730662818927
+877,Cytidine,9AA,positive,0,0.0,0.0
+878,Cytidine,CHCA,negative,0,0.0,0.0
+879,Cytidine,CHCA,positive,1,5934.102,3.7734281870912
+880,Cytidine,CMBT,negative,0,0.0,0.0
+881,Cytidine,CMBT,positive,1,675.45703,2.830240214493748
+882,Cytidine,ClCCA,negative,0,0.0,0.0
+883,Cytidine,ClCCA,positive,1,588.03687,2.770142479738542
+884,Cytidine,DAN,negative,1,2369.153,3.3747763818375356
+885,Cytidine,DAN,positive,1,191.01929,2.2833448595355477
+886,Cytidine,DHAP,negative,0,0.0,0.0
+887,Cytidine,DHAP,positive,1,835.43176,2.922430514976424
+888,Cytidine,DHB,negative,0,0.0,0.0
+889,Cytidine,DHB,positive,1,4050.4407,3.607609486621819
+890,Cytidine,MAPS,negative,0,0.0,0.0
+891,Cytidine,MAPS,positive,0,0.0,0.0
+892,Cytidine,NEDC,negative,0,0.0,0.0
+893,Cytidine,NEDC,positive,0,0.0,0.0
+894,Cytidine,NOR,negative,1,335.36893,2.5268158737111177
+895,Cytidine,NOR,positive,1,44.439617,1.6574346621508593
+896,Cytidine,pNA,negative,1,109.34706,2.042760766652309
+897,Cytidine,pNA,positive,1,2450.7383,3.3894741114697493
+898,Cytidine monophosphate,9AA,negative,0,0.0,0.0
+899,Cytidine monophosphate,9AA,positive,0,0.0,0.0
+900,Cytidine monophosphate,CHCA,negative,0,0.0,0.0
+901,Cytidine monophosphate,CHCA,positive,1,2818.1733,3.450121773608523
+902,Cytidine monophosphate,CMBT,negative,0,0.0,0.0
+903,Cytidine monophosphate,CMBT,positive,0,0.0,0.0
+904,Cytidine monophosphate,ClCCA,negative,0,0.0,0.0
+905,Cytidine monophosphate,ClCCA,positive,1,39.89781,1.6117000529858296
+906,Cytidine monophosphate,DAN,negative,0,0.0,0.0
+907,Cytidine monophosphate,DAN,positive,0,0.0,0.0
+908,Cytidine monophosphate,DHAP,negative,0,0.0,0.0
+909,Cytidine monophosphate,DHAP,positive,0,0.0,0.0
+910,Cytidine monophosphate,DHB,negative,0,0.0,0.0
+911,Cytidine monophosphate,DHB,positive,1,1157.6917,3.063967896015327
+912,Cytidine monophosphate,MAPS,negative,0,0.0,0.0
+913,Cytidine monophosphate,MAPS,positive,0,0.0,0.0
+914,Cytidine monophosphate,NEDC,negative,0,0.0,0.0
+915,Cytidine monophosphate,NEDC,positive,0,0.0,0.0
+916,Cytidine monophosphate,NOR,negative,1,10085.86,4.003755993104502
+917,Cytidine monophosphate,NOR,positive,0,0.0,0.0
+918,Cytidine monophosphate,pNA,negative,0,0.0,0.0
+919,Cytidine monophosphate,pNA,positive,1,298.25018,2.4760344203081335
+920,Cytosine,9AA,negative,1,340.1688,2.5329693079368925
+921,Cytosine,9AA,positive,0,0.0,0.0
+922,Cytosine,CHCA,negative,0,0.0,0.0
+923,Cytosine,CHCA,positive,1,14601.104,4.164415437274559
+924,Cytosine,CMBT,negative,0,0.0,0.0
+925,Cytosine,CMBT,positive,1,432.8434,2.637332994975832
+926,Cytosine,ClCCA,negative,0,0.0,0.0
+927,Cytosine,ClCCA,positive,1,1357.7526,3.133140388126235
+928,Cytosine,DAN,negative,1,2334.9692,3.3684671122596144
+929,Cytosine,DAN,positive,1,1494.343,3.174740822039383
+930,Cytosine,DHAP,negative,0,0.0,0.0
+931,Cytosine,DHAP,positive,1,995.592,2.9985173966120797
+932,Cytosine,DHB,negative,0,0.0,0.0
+933,Cytosine,DHB,positive,1,3930.402,3.594547454264093
+934,Cytosine,MAPS,negative,0,0.0,0.0
+935,Cytosine,MAPS,positive,0,0.0,0.0
+936,Cytosine,NEDC,negative,0,0.0,0.0
+937,Cytosine,NEDC,positive,0,0.0,0.0
+938,Cytosine,NOR,negative,0,0.0,0.0
+939,Cytosine,NOR,positive,0,0.0,0.0
+940,Cytosine,pNA,negative,1,391.39383,2.5937221699158104
+941,Cytosine,pNA,positive,1,5721.569,3.757591037893298
+942,DG 18:0-22:6,9AA,negative,0,0.0,0.0
+943,DG 18:0-22:6,9AA,positive,0,0.0,0.0
+944,DG 18:0-22:6,CHCA,negative,0,0.0,0.0
+945,DG 18:0-22:6,CHCA,positive,0,0.0,0.0
+946,DG 18:0-22:6,CMBT,negative,0,0.0,0.0
+947,DG 18:0-22:6,CMBT,positive,0,0.0,0.0
+948,DG 18:0-22:6,ClCCA,negative,0,0.0,0.0
+949,DG 18:0-22:6,ClCCA,positive,0,0.0,0.0
+950,DG 18:0-22:6,DAN,negative,0,0.0,0.0
+951,DG 18:0-22:6,DAN,positive,0,0.0,0.0
+952,DG 18:0-22:6,DHAP,negative,0,0.0,0.0
+953,DG 18:0-22:6,DHAP,positive,0,0.0,0.0
+954,DG 18:0-22:6,DHB,negative,0,0.0,0.0
+955,DG 18:0-22:6,DHB,positive,0,0.0,0.0
+956,DG 18:0-22:6,MAPS,negative,0,0.0,0.0
+957,DG 18:0-22:6,MAPS,positive,0,0.0,0.0
+958,DG 18:0-22:6,NEDC,negative,0,0.0,0.0
+959,DG 18:0-22:6,NEDC,positive,0,0.0,0.0
+960,DG 18:0-22:6,NOR,negative,0,0.0,0.0
+961,DG 18:0-22:6,NOR,positive,0,0.0,0.0
+962,DG 18:0-22:6,pNA,negative,0,0.0,0.0
+963,DG 18:0-22:6,pNA,positive,0,0.0,0.0
+964,Dihydroxyacetone,9AA,positive,0,0.0,0.0
+965,Dihydroxyacetone,CHCA,negative,0,0.0,0.0
+966,Dihydroxyacetone,CHCA,positive,0,0.0,0.0
+967,Dihydroxyacetone,CMBT,positive,0,0.0,0.0
+968,Dihydroxyacetone,ClCCA,negative,0,0.0,0.0
+969,Dihydroxyacetone,ClCCA,positive,0,0.0,0.0
+970,Dihydroxyacetone,DAN,negative,0,0.0,0.0
+971,Dihydroxyacetone,DAN,positive,0,0.0,0.0
+972,Dihydroxyacetone,DHAP,negative,0,0.0,0.0
+973,Dihydroxyacetone,DHAP,positive,0,0.0,0.0
+974,Dihydroxyacetone,DHB,positive,0,0.0,0.0
+975,Dihydroxyacetone,MAPS,positive,0,0.0,0.0
+976,Dihydroxyacetone,NEDC,positive,0,0.0,0.0
+977,Dihydroxyacetone,NOR,positive,0,0.0,0.0
+978,Dihydroxyacetone,pNA,negative,0,0.0,0.0
+979,Dihydroxyacetone,pNA,positive,0,0.0,0.0
+980,Dihydroxyacetone phosphate,9AA,negative,1,19646.547,4.29330833634685
+981,Dihydroxyacetone phosphate,9AA,positive,0,0.0,0.0
+982,Dihydroxyacetone phosphate,CHCA,negative,1,302.13666,2.4816384611876354
+983,Dihydroxyacetone phosphate,CHCA,positive,0,0.0,0.0
+984,Dihydroxyacetone phosphate,CMBT,negative,0,0.0,0.0
+985,Dihydroxyacetone phosphate,CMBT,positive,0,0.0,0.0
+986,Dihydroxyacetone phosphate,ClCCA,negative,0,0.0,0.0
+987,Dihydroxyacetone phosphate,ClCCA,positive,0,0.0,0.0
+988,Dihydroxyacetone phosphate,DAN,negative,0,0.0,0.0
+989,Dihydroxyacetone phosphate,DAN,positive,0,0.0,0.0
+990,Dihydroxyacetone phosphate,DHAP,negative,0,0.0,0.0
+991,Dihydroxyacetone phosphate,DHAP,positive,0,0.0,0.0
+992,Dihydroxyacetone phosphate,DHB,negative,1,65.03279,1.8197596473564017
+993,Dihydroxyacetone phosphate,DHB,positive,0,0.0,0.0
+994,Dihydroxyacetone phosphate,MAPS,negative,0,0.0,0.0
+995,Dihydroxyacetone phosphate,MAPS,positive,0,0.0,0.0
+996,Dihydroxyacetone phosphate,NEDC,negative,0,0.0,0.0
+997,Dihydroxyacetone phosphate,NEDC,positive,0,0.0,0.0
+998,Dihydroxyacetone phosphate,NOR,negative,1,8056.7773,3.9062152602330937
+999,Dihydroxyacetone phosphate,NOR,positive,0,0.0,0.0
+1000,Dihydroxyacetone phosphate,pNA,negative,0,0.0,0.0
+1001,Dihydroxyacetone phosphate,pNA,positive,0,0.0,0.0
+1002,Dopamine,9AA,negative,1,462.97455,2.6664941592236446
+1003,Dopamine,9AA,positive,0,0.0,0.0
+1004,Dopamine,CHCA,negative,0,0.0,0.0
+1005,Dopamine,CHCA,positive,1,4449.5156,3.6484103276693536
+1006,Dopamine,CMBT,negative,0,0.0,0.0
+1007,Dopamine,CMBT,positive,1,419.97577,2.6242570999731405
+1008,Dopamine,ClCCA,negative,0,0.0,0.0
+1009,Dopamine,ClCCA,positive,1,1247.109,3.0962525148587443
+1010,Dopamine,DAN,negative,1,2406.6624,3.3815955905193786
+1011,Dopamine,DAN,positive,1,777.70166,2.8913711005059226
+1012,Dopamine,DHAP,negative,1,90.58036,1.961802346395284
+1013,Dopamine,DHAP,positive,1,1470.7745,3.167841274058689
+1014,Dopamine,DHB,negative,0,0.0,0.0
+1015,Dopamine,DHB,positive,1,1971.3297,3.2949795145211467
+1016,Dopamine,MAPS,negative,0,0.0,0.0
+1017,Dopamine,MAPS,positive,0,0.0,0.0
+1018,Dopamine,NEDC,negative,0,0.0,0.0
+1019,Dopamine,NEDC,positive,0,0.0,0.0
+1020,Dopamine,NOR,negative,1,2445.8752,3.3886118192359245
+1021,Dopamine,NOR,positive,0,0.0,0.0
+1022,Dopamine,pNA,negative,1,263.59702,2.422584948676713
+1023,Dopamine,pNA,positive,1,1117.8838,3.0487849858677682
+1024,Epinephrine,9AA,negative,1,474.44894,2.677103883488091
+1025,Epinephrine,9AA,positive,0,0.0,0.0
+1026,Epinephrine,CHCA,negative,0,0.0,0.0
+1027,Epinephrine,CHCA,positive,1,10929.398,4.038635975861583
+1028,Epinephrine,CMBT,negative,0,0.0,0.0
+1029,Epinephrine,CMBT,positive,1,515.57733,2.7131353432388945
+1030,Epinephrine,ClCCA,negative,0,0.0,0.0
+1031,Epinephrine,ClCCA,positive,1,683.116,2.8351297477560102
+1032,Epinephrine,DAN,negative,1,1635.3859,3.213885728722586
+1033,Epinephrine,DAN,positive,1,257.71414,2.412820165694337
+1034,Epinephrine,DHAP,negative,1,115.47093,2.066217543250549
+1035,Epinephrine,DHAP,positive,1,530.9094,2.7258376653197485
+1036,Epinephrine,DHB,negative,0,0.0,0.0
+1037,Epinephrine,DHB,positive,1,7609.2217,3.8813973087658646
+1038,Epinephrine,MAPS,negative,0,0.0,0.0
+1039,Epinephrine,MAPS,positive,0,0.0,0.0
+1040,Epinephrine,NEDC,negative,0,0.0,0.0
+1041,Epinephrine,NEDC,positive,0,0.0,0.0
+1042,Epinephrine,NOR,negative,1,558.98975,2.7481800777933802
+1043,Epinephrine,NOR,positive,0,0.0,0.0
+1044,Epinephrine,pNA,negative,1,84.95673,1.9342798855308028
+1045,Epinephrine,pNA,positive,1,629.5782,2.7997389524833127
+1046,Estradiol,9AA,negative,0,0.0,0.0
+1047,Estradiol,9AA,positive,0,0.0,0.0
+1048,Estradiol,CHCA,negative,0,0.0,0.0
+1049,Estradiol,CHCA,positive,0,0.0,0.0
+1050,Estradiol,CMBT,negative,0,0.0,0.0
+1051,Estradiol,CMBT,positive,0,0.0,0.0
+1052,Estradiol,ClCCA,negative,0,0.0,0.0
+1053,Estradiol,ClCCA,positive,0,0.0,0.0
+1054,Estradiol,DAN,negative,1,302.21036,2.4817440360562113
+1055,Estradiol,DAN,positive,0,0.0,0.0
+1056,Estradiol,DHAP,negative,0,0.0,0.0
+1057,Estradiol,DHAP,positive,0,0.0,0.0
+1058,Estradiol,DHB,negative,0,0.0,0.0
+1059,Estradiol,DHB,positive,0,0.0,0.0
+1060,Estradiol,MAPS,negative,0,0.0,0.0
+1061,Estradiol,MAPS,positive,0,0.0,0.0
+1062,Estradiol,NEDC,negative,0,0.0,0.0
+1063,Estradiol,NEDC,positive,0,0.0,0.0
+1064,Estradiol,NOR,negative,0,0.0,0.0
+1065,Estradiol,NOR,positive,0,0.0,0.0
+1066,Estradiol,pNA,negative,0,0.0,0.0
+1067,Estradiol,pNA,positive,0,0.0,0.0
+1068,Flavin adenine dinucleotide,9AA,negative,1,87294.48,4.940991757315216
+1069,Flavin adenine dinucleotide,9AA,positive,0,0.0,0.0
+1070,Flavin adenine dinucleotide,CHCA,negative,1,1260.6934,3.1009538312428346
+1071,Flavin adenine dinucleotide,CHCA,positive,1,261.62552,2.419336925320366
+1072,Flavin adenine dinucleotide,CMBT,negative,0,0.0,0.0
+1073,Flavin adenine dinucleotide,CMBT,positive,0,0.0,0.0
+1074,Flavin adenine dinucleotide,ClCCA,negative,1,342.0882,2.535405781410842
+1075,Flavin adenine dinucleotide,ClCCA,positive,1,117.47739,2.073635478319676
+1076,Flavin adenine dinucleotide,DAN,negative,1,8300.432,3.9191530147923603
+1077,Flavin adenine dinucleotide,DAN,positive,0,0.0,0.0
+1078,Flavin adenine dinucleotide,DHAP,negative,0,0.0,0.0
+1079,Flavin adenine dinucleotide,DHAP,positive,0,0.0,0.0
+1080,Flavin adenine dinucleotide,DHB,negative,1,6670.2563,3.824207625937774
+1081,Flavin adenine dinucleotide,DHB,positive,1,1163.8556,3.0662720918770208
+1082,Flavin adenine dinucleotide,MAPS,negative,0,0.0,0.0
+1083,Flavin adenine dinucleotide,MAPS,positive,0,0.0,0.0
+1084,Flavin adenine dinucleotide,NEDC,negative,0,0.0,0.0
+1085,Flavin adenine dinucleotide,NEDC,positive,0,0.0,0.0
+1086,Flavin adenine dinucleotide,NOR,negative,1,29202.8,4.465439365546253
+1087,Flavin adenine dinucleotide,NOR,positive,0,0.0,0.0
+1088,Flavin adenine dinucleotide,pNA,negative,0,0.0,0.0
+1089,Flavin adenine dinucleotide,pNA,positive,1,1262.5402,3.101589063715722
+1090,Flavin mononucleotide,9AA,negative,0,0.0,0.0
+1091,Flavin mononucleotide,9AA,positive,1,41.883667,1.6322919149723316
+1092,Flavin mononucleotide,CHCA,negative,0,0.0,0.0
+1093,Flavin mononucleotide,CHCA,positive,1,11573.976,4.063520099208058
+1094,Flavin mononucleotide,CMBT,negative,0,0.0,0.0
+1095,Flavin mononucleotide,CMBT,positive,1,1251.9508,3.097934017755505
+1096,Flavin mononucleotide,ClCCA,negative,0,0.0,0.0
+1097,Flavin mononucleotide,ClCCA,positive,1,1226.1476,3.088896802344219
+1098,Flavin mononucleotide,DAN,negative,0,0.0,0.0
+1099,Flavin mononucleotide,DAN,positive,1,485.24615,2.68685617569032
+1100,Flavin mononucleotide,DHAP,negative,0,0.0,0.0
+1101,Flavin mononucleotide,DHAP,positive,0,0.0,0.0
+1102,Flavin mononucleotide,DHB,negative,0,0.0,0.0
+1103,Flavin mononucleotide,DHB,positive,1,9649.004,3.9845274933621933
+1104,Flavin mononucleotide,MAPS,negative,0,0.0,0.0
+1105,Flavin mononucleotide,MAPS,positive,0,0.0,0.0
+1106,Flavin mononucleotide,NEDC,negative,0,0.0,0.0
+1107,Flavin mononucleotide,NEDC,positive,0,0.0,0.0
+1108,Flavin mononucleotide,NOR,negative,0,0.0,0.0
+1109,Flavin mononucleotide,NOR,positive,1,1712.2239,3.2338141243083034
+1110,Flavin mononucleotide,pNA,negative,0,0.0,0.0
+1111,Flavin mononucleotide,pNA,positive,1,2086.6423,3.3196560879872496
+1112,Folic acid,9AA,negative,0,0.0,0.0
+1113,Folic acid,9AA,positive,0,0.0,0.0
+1114,Folic acid,CHCA,negative,0,0.0,0.0
+1115,Folic acid,CHCA,positive,0,0.0,0.0
+1116,Folic acid,CMBT,negative,0,0.0,0.0
+1117,Folic acid,CMBT,positive,1,77.881584,1.8969756229721038
+1118,Folic acid,ClCCA,negative,0,0.0,0.0
+1119,Folic acid,ClCCA,positive,1,279.4089,2.447791793743795
+1120,Folic acid,DAN,negative,0,0.0,0.0
+1121,Folic acid,DAN,positive,0,0.0,0.0
+1122,Folic acid,DHAP,negative,0,0.0,0.0
+1123,Folic acid,DHAP,positive,1,93.33434,1.974669815300519
+1124,Folic acid,DHB,negative,0,0.0,0.0
+1125,Folic acid,DHB,positive,1,4038.1917,3.6062944652711337
+1126,Folic acid,MAPS,negative,0,0.0,0.0
+1127,Folic acid,MAPS,positive,0,0.0,0.0
+1128,Folic acid,NEDC,negative,0,0.0,0.0
+1129,Folic acid,NEDC,positive,0,0.0,0.0
+1130,Folic acid,NOR,negative,0,0.0,0.0
+1131,Folic acid,NOR,positive,0,0.0,0.0
+1132,Folic acid,pNA,negative,0,0.0,0.0
+1133,Folic acid,pNA,positive,1,98.24893,1.9967258333434594
+1134,"Fructose 1,6-bisphosphate",9AA,negative,1,378102.03,5.577610157677287
+1135,"Fructose 1,6-bisphosphate",9AA,positive,0,0.0,0.0
+1136,"Fructose 1,6-bisphosphate",CHCA,negative,1,1860.1829,3.2697890537098453
+1137,"Fructose 1,6-bisphosphate",CHCA,positive,0,0.0,0.0
+1138,"Fructose 1,6-bisphosphate",CMBT,negative,0,0.0,0.0
+1139,"Fructose 1,6-bisphosphate",CMBT,positive,0,0.0,0.0
+1140,"Fructose 1,6-bisphosphate",ClCCA,negative,1,38.12349,1.592437588961591
+1141,"Fructose 1,6-bisphosphate",ClCCA,positive,0,0.0,0.0
+1142,"Fructose 1,6-bisphosphate",DAN,negative,0,0.0,0.0
+1143,"Fructose 1,6-bisphosphate",DAN,positive,0,0.0,0.0
+1144,"Fructose 1,6-bisphosphate",DHAP,negative,1,47.70386,1.6875633823700387
+1145,"Fructose 1,6-bisphosphate",DHAP,positive,0,0.0,0.0
+1146,"Fructose 1,6-bisphosphate",DHB,negative,1,2310.8926,3.3639676548735973
+1147,"Fructose 1,6-bisphosphate",DHB,positive,0,0.0,0.0
+1148,"Fructose 1,6-bisphosphate",MAPS,negative,0,0.0,0.0
+1149,"Fructose 1,6-bisphosphate",MAPS,positive,0,0.0,0.0
+1150,"Fructose 1,6-bisphosphate",NEDC,negative,0,0.0,0.0
+1151,"Fructose 1,6-bisphosphate",NEDC,positive,0,0.0,0.0
+1152,"Fructose 1,6-bisphosphate",NOR,negative,1,294745.44,5.469448568312699
+1153,"Fructose 1,6-bisphosphate",NOR,positive,0,0.0,0.0
+1154,"Fructose 1,6-bisphosphate",pNA,negative,0,0.0,0.0
+1155,"Fructose 1,6-bisphosphate",pNA,positive,0,0.0,0.0
+1156,Fumaric acid,9AA,positive,0,0.0,0.0
+1157,Fumaric acid,CHCA,negative,1,553.35565,2.7437884782222257
+1158,Fumaric acid,CHCA,positive,0,0.0,0.0
+1159,Fumaric acid,CMBT,negative,1,1946.1447,3.289398226854618
+1160,Fumaric acid,CMBT,positive,0,0.0,0.0
+1161,Fumaric acid,ClCCA,negative,1,51.43933,1.7196571342163356
+1162,Fumaric acid,ClCCA,positive,0,0.0,0.0
+1163,Fumaric acid,DAN,negative,1,20517.424,4.312143999988088
+1164,Fumaric acid,DAN,positive,0,0.0,0.0
+1165,Fumaric acid,DHAP,positive,0,0.0,0.0
+1166,Fumaric acid,DHB,negative,1,954.7522,2.9803453063737866
+1167,Fumaric acid,DHB,positive,0,0.0,0.0
+1168,Fumaric acid,MAPS,negative,1,1195.0344,3.077743670885945
+1169,Fumaric acid,MAPS,positive,0,0.0,0.0
+1170,Fumaric acid,NEDC,negative,1,144.5076,2.162885677527172
+1171,Fumaric acid,NEDC,positive,0,0.0,0.0
+1172,Fumaric acid,NOR,negative,1,40922.695,4.611974839254772
+1173,Fumaric acid,NOR,positive,0,0.0,0.0
+1174,Fumaric acid,pNA,negative,1,8909.922,3.949922642173372
+1175,Fumaric acid,pNA,positive,0,0.0,0.0
+1176,GM3 Ganglioside 18:0,9AA,negative,1,13297.406,4.123799587817361
+1177,GM3 Ganglioside 18:0,9AA,positive,0,0.0,0.0
+1178,GM3 Ganglioside 18:0,CHCA,negative,1,111.033455,2.0493477293874225
+1179,GM3 Ganglioside 18:0,CHCA,positive,0,0.0,0.0
+1180,GM3 Ganglioside 18:0,CMBT,negative,1,98.3645,1.9972312515212565
+1181,GM3 Ganglioside 18:0,CMBT,positive,0,0.0,0.0
+1182,GM3 Ganglioside 18:0,ClCCA,negative,0,0.0,0.0
+1183,GM3 Ganglioside 18:0,ClCCA,positive,0,0.0,0.0
+1184,GM3 Ganglioside 18:0,DAN,negative,1,2119.0862,3.3263535191472777
+1185,GM3 Ganglioside 18:0,DAN,positive,0,0.0,0.0
+1186,GM3 Ganglioside 18:0,DHAP,negative,1,3301.0383,3.518782106292672
+1187,GM3 Ganglioside 18:0,DHAP,positive,1,8.4339695,0.9746944678389696
+1188,GM3 Ganglioside 18:0,DHB,negative,1,607.80054,2.784475028977556
+1189,GM3 Ganglioside 18:0,DHB,positive,1,221.24854,2.3468389166747543
+1190,GM3 Ganglioside 18:0,MAPS,negative,0,0.0,0.0
+1191,GM3 Ganglioside 18:0,MAPS,positive,0,0.0,0.0
+1192,GM3 Ganglioside 18:0,NEDC,negative,0,0.0,0.0
+1193,GM3 Ganglioside 18:0,NEDC,positive,0,0.0,0.0
+1194,GM3 Ganglioside 18:0,NOR,negative,1,5830.9927,3.7658169716968004
+1195,GM3 Ganglioside 18:0,NOR,positive,0,0.0,0.0
+1196,GM3 Ganglioside 18:0,pNA,negative,0,0.0,0.0
+1197,GM3 Ganglioside 18:0,pNA,positive,0,0.0,0.0
+1198,GlcCer d18:1/18:0,9AA,negative,1,3223.8003,3.508502825546985
+1199,GlcCer d18:1/18:0,9AA,positive,0,0.0,0.0
+1200,GlcCer d18:1/18:0,CHCA,negative,0,0.0,0.0
+1201,GlcCer d18:1/18:0,CHCA,positive,1,2243.6704,3.3511525796511115
+1202,GlcCer d18:1/18:0,CMBT,negative,0,0.0,0.0
+1203,GlcCer d18:1/18:0,CMBT,positive,1,22718.746,4.356403471783039
+1204,GlcCer d18:1/18:0,ClCCA,negative,1,46.026978,1.6723470714508917
+1205,GlcCer d18:1/18:0,ClCCA,positive,1,5218.1465,3.7175994875526506
+1206,GlcCer d18:1/18:0,DAN,negative,1,6602.2856,3.8197600814350086
+1207,GlcCer d18:1/18:0,DAN,positive,1,1592.7391,3.2024172275342404
+1208,GlcCer d18:1/18:0,DHAP,negative,1,856.5355,2.933252107880965
+1209,GlcCer d18:1/18:0,DHAP,positive,1,7411.709,3.8699769513999236
+1210,GlcCer d18:1/18:0,DHB,negative,0,0.0,0.0
+1211,GlcCer d18:1/18:0,DHB,positive,1,12351.221,4.091745053249262
+1212,GlcCer d18:1/18:0,MAPS,negative,1,671.97577,2.82799942805053
+1213,GlcCer d18:1/18:0,MAPS,positive,1,94.063644,1.9780144577470837
+1214,GlcCer d18:1/18:0,NEDC,negative,1,21.3496,1.3492697547902237
+1215,GlcCer d18:1/18:0,NEDC,positive,1,576.004,2.761178823852276
+1216,GlcCer d18:1/18:0,NOR,negative,1,644.8554,2.8101352950669676
+1217,GlcCer d18:1/18:0,NOR,positive,1,166.37569,2.2236923803864572
+1218,GlcCer d18:1/18:0,pNA,negative,1,994.2818,2.9979460625122454
+1219,GlcCer d18:1/18:0,pNA,positive,1,8305.491,3.9194175988528603
+1220,Gluconic acid,9AA,negative,1,51773.508,4.714115980594938
+1221,Gluconic acid,9AA,positive,0,0.0,0.0
+1222,Gluconic acid,CHCA,negative,1,824.0963,2.9165046396019014
+1223,Gluconic acid,CHCA,positive,0,0.0,0.0
+1224,Gluconic acid,CMBT,negative,1,292.514,2.4676288210103445
+1225,Gluconic acid,CMBT,positive,0,0.0,0.0
+1226,Gluconic acid,ClCCA,negative,1,99.8487,2.0036703042695043
+1227,Gluconic acid,ClCCA,positive,0,0.0,0.0
+1228,Gluconic acid,DAN,negative,1,8889.631,3.948932585502616
+1229,Gluconic acid,DAN,positive,0,0.0,0.0
+1230,Gluconic acid,DHAP,negative,1,501.25204,2.7009217094002644
+1231,Gluconic acid,DHAP,positive,0,0.0,0.0
+1232,Gluconic acid,DHB,negative,1,807.33484,2.907591297706962
+1233,Gluconic acid,DHB,positive,0,0.0,0.0
+1234,Gluconic acid,MAPS,negative,0,0.0,0.0
+1235,Gluconic acid,MAPS,positive,0,0.0,0.0
+1236,Gluconic acid,NEDC,negative,0,0.0,0.0
+1237,Gluconic acid,NEDC,positive,0,0.0,0.0
+1238,Gluconic acid,NOR,negative,1,6609.245,3.8202175563352943
+1239,Gluconic acid,NOR,positive,0,0.0,0.0
+1240,Gluconic acid,pNA,negative,1,618.07935,2.7917463179353392
+1241,Gluconic acid,pNA,positive,0,0.0,0.0
+1242,Glucosamine,9AA,negative,0,0.0,0.0
+1243,Glucosamine,9AA,positive,0,0.0,0.0
+1244,Glucosamine,CHCA,negative,0,0.0,0.0
+1245,Glucosamine,CHCA,positive,1,3778.9363,3.577484481109289
+1246,Glucosamine,CMBT,negative,0,0.0,0.0
+1247,Glucosamine,CMBT,positive,1,233.19847,2.3695840535342616
+1248,Glucosamine,ClCCA,negative,0,0.0,0.0
+1249,Glucosamine,ClCCA,positive,1,717.832,2.856627402207224
+1250,Glucosamine,DAN,negative,1,19.298597,1.307466021350899
+1251,Glucosamine,DAN,positive,1,407.67798,2.611381238097883
+1252,Glucosamine,DHAP,negative,0,0.0,0.0
+1253,Glucosamine,DHAP,positive,1,345.75546,2.540023308185704
+1254,Glucosamine,DHB,negative,0,0.0,0.0
+1255,Glucosamine,DHB,positive,1,1064.0046,3.027351483596637
+1256,Glucosamine,MAPS,negative,0,0.0,0.0
+1257,Glucosamine,MAPS,positive,0,0.0,0.0
+1258,Glucosamine,NEDC,negative,0,0.0,0.0
+1259,Glucosamine,NEDC,positive,0,0.0,0.0
+1260,Glucosamine,NOR,negative,0,0.0,0.0
+1261,Glucosamine,NOR,positive,0,0.0,0.0
+1262,Glucosamine,pNA,negative,0,0.0,0.0
+1263,Glucosamine,pNA,positive,1,284.5748,2.4557198813121004
+1264,Glucosamine 6-phosphate,9AA,negative,1,73753.9,4.8677908785114905
+1265,Glucosamine 6-phosphate,9AA,positive,0,0.0,0.0
+1266,Glucosamine 6-phosphate,CHCA,negative,1,169.86076,2.232642333801918
+1267,Glucosamine 6-phosphate,CHCA,positive,1,843.4416,2.9265696199523266
+1268,Glucosamine 6-phosphate,CMBT,negative,0,0.0,0.0
+1269,Glucosamine 6-phosphate,CMBT,positive,0,0.0,0.0
+1270,Glucosamine 6-phosphate,ClCCA,negative,0,0.0,0.0
+1271,Glucosamine 6-phosphate,ClCCA,positive,1,91.98472,1.9684115876410773
+1272,Glucosamine 6-phosphate,DAN,negative,1,6427.3613,3.8081002778901127
+1273,Glucosamine 6-phosphate,DAN,positive,0,0.0,0.0
+1274,Glucosamine 6-phosphate,DHAP,negative,1,258.68463,2.414446245725863
+1275,Glucosamine 6-phosphate,DHAP,positive,0,0.0,0.0
+1276,Glucosamine 6-phosphate,DHB,negative,1,78.6942,1.9014267153778739
+1277,Glucosamine 6-phosphate,DHB,positive,1,424.42862,2.6288267029855525
+1278,Glucosamine 6-phosphate,MAPS,negative,0,0.0,0.0
+1279,Glucosamine 6-phosphate,MAPS,positive,0,0.0,0.0
+1280,Glucosamine 6-phosphate,NEDC,negative,0,0.0,0.0
+1281,Glucosamine 6-phosphate,NEDC,positive,0,0.0,0.0
+1282,Glucosamine 6-phosphate,NOR,negative,1,47220.793,4.674142473111673
+1283,Glucosamine 6-phosphate,NOR,positive,0,0.0,0.0
+1284,Glucosamine 6-phosphate,pNA,negative,1,1773.1157,3.248981939189647
+1285,Glucosamine 6-phosphate,pNA,positive,1,37.263874,1.5827889377678692
+1286,Glucose,9AA,negative,1,3140.8533,3.4971859030184436
+1287,Glucose,9AA,positive,0,0.0,0.0
+1288,Glucose,CHCA,negative,0,0.0,0.0
+1289,Glucose,CHCA,positive,0,0.0,0.0
+1290,Glucose,CMBT,negative,0,0.0,0.0
+1291,Glucose,CMBT,positive,0,0.0,0.0
+1292,Glucose,ClCCA,negative,0,0.0,0.0
+1293,Glucose,ClCCA,positive,0,0.0,0.0
+1294,Glucose,DAN,negative,1,2354.1206,3.372013151198874
+1295,Glucose,DAN,positive,0,0.0,0.0
+1296,Glucose,DHAP,negative,1,48.382416,1.693572333668024
+1297,Glucose,DHAP,positive,0,0.0,0.0
+1298,Glucose,DHB,negative,0,0.0,0.0
+1299,Glucose,DHB,positive,0,0.0,0.0
+1300,Glucose,MAPS,negative,0,0.0,0.0
+1301,Glucose,MAPS,positive,0,0.0,0.0
+1302,Glucose,NEDC,negative,0,0.0,0.0
+1303,Glucose,NEDC,positive,0,0.0,0.0
+1304,Glucose,NOR,negative,1,2663.8647,3.4256751640060985
+1305,Glucose,NOR,positive,0,0.0,0.0
+1306,Glucose,pNA,negative,1,338.10986,2.530340417561445
+1307,Glucose,pNA,positive,0,0.0,0.0
+1308,Glucose 6-phosphate,9AA,negative,1,122184.99,5.087021412007154
+1309,Glucose 6-phosphate,9AA,positive,0,0.0,0.0
+1310,Glucose 6-phosphate,CHCA,negative,1,591.4028,2.772617102552877
+1311,Glucose 6-phosphate,CHCA,positive,1,104.24432,2.0221986664153353
+1312,Glucose 6-phosphate,CMBT,negative,0,0.0,0.0
+1313,Glucose 6-phosphate,CMBT,positive,0,0.0,0.0
+1314,Glucose 6-phosphate,ClCCA,negative,0,0.0,0.0
+1315,Glucose 6-phosphate,ClCCA,positive,0,0.0,0.0
+1316,Glucose 6-phosphate,DAN,negative,1,1099.7699,3.0416965454893368
+1317,Glucose 6-phosphate,DAN,positive,0,0.0,0.0
+1318,Glucose 6-phosphate,DHAP,negative,0,0.0,0.0
+1319,Glucose 6-phosphate,DHAP,positive,0,0.0,0.0
+1320,Glucose 6-phosphate,DHB,negative,0,0.0,0.0
+1321,Glucose 6-phosphate,DHB,positive,0,0.0,0.0
+1322,Glucose 6-phosphate,MAPS,negative,0,0.0,0.0
+1323,Glucose 6-phosphate,MAPS,positive,0,0.0,0.0
+1324,Glucose 6-phosphate,NEDC,negative,0,0.0,0.0
+1325,Glucose 6-phosphate,NEDC,positive,0,0.0,0.0
+1326,Glucose 6-phosphate,NOR,negative,1,54916.195,4.739708346715991
+1327,Glucose 6-phosphate,NOR,positive,0,0.0,0.0
+1328,Glucose 6-phosphate,pNA,negative,1,592.43304,2.773371722449688
+1329,Glucose 6-phosphate,pNA,positive,0,0.0,0.0
+1330,Glucosyl cholesterol,9AA,negative,1,96.512085,1.9890584426069617
+1331,Glucosyl cholesterol,9AA,positive,0,0.0,0.0
+1332,Glucosyl cholesterol,CHCA,negative,0,0.0,0.0
+1333,Glucosyl cholesterol,CHCA,positive,0,0.0,0.0
+1334,Glucosyl cholesterol,CMBT,negative,0,0.0,0.0
+1335,Glucosyl cholesterol,CMBT,positive,0,0.0,0.0
+1336,Glucosyl cholesterol,ClCCA,negative,0,0.0,0.0
+1337,Glucosyl cholesterol,ClCCA,positive,0,0.0,0.0
+1338,Glucosyl cholesterol,DAN,negative,1,1368.9746,3.1367125151986692
+1339,Glucosyl cholesterol,DAN,positive,0,0.0,0.0
+1340,Glucosyl cholesterol,DHAP,negative,0,0.0,0.0
+1341,Glucosyl cholesterol,DHAP,positive,0,0.0,0.0
+1342,Glucosyl cholesterol,DHB,negative,0,0.0,0.0
+1343,Glucosyl cholesterol,DHB,positive,0,0.0,0.0
+1344,Glucosyl cholesterol,MAPS,negative,1,85.18729,1.9354432253391876
+1345,Glucosyl cholesterol,MAPS,positive,0,0.0,0.0
+1346,Glucosyl cholesterol,NEDC,negative,0,0.0,0.0
+1347,Glucosyl cholesterol,NEDC,positive,0,0.0,0.0
+1348,Glucosyl cholesterol,NOR,negative,1,62.00591,1.7993812885012967
+1349,Glucosyl cholesterol,NOR,positive,0,0.0,0.0
+1350,Glucosyl cholesterol,pNA,negative,1,35.360527,1.5606301691465563
+1351,Glucosyl cholesterol,pNA,positive,0,0.0,0.0
+1352,Glutamic acid,9AA,negative,1,34824.582,4.541898383022101
+1353,Glutamic acid,9AA,positive,0,0.0,0.0
+1354,Glutamic acid,CHCA,negative,1,429.5252,2.6339985771616545
+1355,Glutamic acid,CHCA,positive,1,17904.287,4.252981286616694
+1356,Glutamic acid,CMBT,negative,1,89.9697,1.9588967624962021
+1357,Glutamic acid,CMBT,positive,1,195.91393,2.294276439897105
+1358,Glutamic acid,ClCCA,negative,1,16.253721,1.236882771032329
+1359,Glutamic acid,ClCCA,positive,1,1047.02,3.020369570631256
+1360,Glutamic acid,DAN,negative,1,63601.473,4.803474002273784
+1361,Glutamic acid,DAN,positive,1,386.5214,2.588295690443079
+1362,Glutamic acid,DHAP,negative,1,437.94434,2.6424094533550906
+1363,Glutamic acid,DHAP,positive,0,0.0,0.0
+1364,Glutamic acid,DHB,negative,1,344.5867,2.5385570201848777
+1365,Glutamic acid,DHB,positive,1,2546.8293,3.406170327685514
+1366,Glutamic acid,MAPS,negative,0,0.0,0.0
+1367,Glutamic acid,MAPS,positive,0,0.0,0.0
+1368,Glutamic acid,NEDC,negative,0,0.0,0.0
+1369,Glutamic acid,NEDC,positive,0,0.0,0.0
+1370,Glutamic acid,NOR,negative,1,26430.72,4.422125425038781
+1371,Glutamic acid,NOR,positive,0,0.0,0.0
+1372,Glutamic acid,pNA,negative,1,2559.8198,3.4083790190701193
+1373,Glutamic acid,pNA,positive,1,472.7578,2.675556373306625
+1374,Glutamine,9AA,negative,1,11018.534,4.042163229224686
+1375,Glutamine,9AA,positive,0,0.0,0.0
+1376,Glutamine,CHCA,negative,0,0.0,0.0
+1377,Glutamine,CHCA,positive,1,6304.834,3.7997425338345145
+1378,Glutamine,CMBT,negative,0,0.0,0.0
+1379,Glutamine,CMBT,positive,1,238.90938,2.3800472283871827
+1380,Glutamine,ClCCA,negative,0,0.0,0.0
+1381,Glutamine,ClCCA,positive,1,1009.204,3.00440908381055
+1382,Glutamine,DAN,negative,1,20789.766,4.317870490459162
+1383,Glutamine,DAN,positive,1,1112.8938,3.0468437866432976
+1384,Glutamine,DHAP,negative,1,474.14954,2.676830313153366
+1385,Glutamine,DHAP,positive,1,507.07623,2.705928877214345
+1386,Glutamine,DHB,negative,0,0.0,0.0
+1387,Glutamine,DHB,positive,1,1946.9398,3.2895755311197026
+1388,Glutamine,MAPS,negative,0,0.0,0.0
+1389,Glutamine,MAPS,positive,0,0.0,0.0
+1390,Glutamine,NEDC,negative,0,0.0,0.0
+1391,Glutamine,NEDC,positive,0,0.0,0.0
+1392,Glutamine,NOR,negative,1,5836.192,3.7662039785884103
+1393,Glutamine,NOR,positive,0,0.0,0.0
+1394,Glutamine,pNA,negative,1,386.68665,2.5884808463227724
+1395,Glutamine,pNA,positive,1,924.79114,2.9665130201846166
+1396,Glutathione,9AA,negative,1,6856.212,3.836147576475278
+1397,Glutathione,9AA,positive,0,0.0,0.0
+1398,Glutathione,CHCA,negative,0,0.0,0.0
+1399,Glutathione,CMBT,negative,0,0.0,0.0
+1400,Glutathione,CMBT,positive,1,276.82053,2.4437643354846483
+1401,Glutathione,ClCCA,negative,1,49.42742,1.7026667490747358
+1402,Glutathione,ClCCA,positive,1,617.1806,2.7911153717315713
+1403,Glutathione,DAN,negative,1,16257.871,4.2110903853236525
+1404,Glutathione,DAN,positive,1,333.10556,2.5238837029869114
+1405,Glutathione,DHAP,negative,1,979.12274,2.991280465454616
+1406,Glutathione,DHAP,positive,1,218.46869,2.3413725713657074
+1407,Glutathione,DHB,negative,1,249.44804,2.3987176372612473
+1408,Glutathione,DHB,positive,1,1226.0126,3.088849022451842
+1409,Glutathione,MAPS,negative,0,0.0,0.0
+1410,Glutathione,MAPS,positive,0,0.0,0.0
+1411,Glutathione,NEDC,negative,0,0.0,0.0
+1412,Glutathione,NEDC,positive,0,0.0,0.0
+1413,Glutathione,NOR,negative,1,15786.706,4.198319030330107
+1414,Glutathione,NOR,positive,0,0.0,0.0
+1415,Glutathione,pNA,negative,1,606.4535,2.7835130387043723
+1416,Glutathione,pNA,positive,1,651.7673,2.8147583905600535
+1417,Glycerol 3-phosphate,9AA,negative,1,52911.28,4.723556475765371
+1418,Glycerol 3-phosphate,9AA,positive,0,0.0,0.0
+1419,Glycerol 3-phosphate,CHCA,negative,1,194.93634,2.2921149913690417
+1420,Glycerol 3-phosphate,CMBT,negative,0,0.0,0.0
+1421,Glycerol 3-phosphate,CMBT,positive,0,0.0,0.0
+1422,Glycerol 3-phosphate,ClCCA,negative,0,0.0,0.0
+1423,Glycerol 3-phosphate,ClCCA,positive,0,0.0,0.0
+1424,Glycerol 3-phosphate,DAN,negative,1,601.4366,2.7799113488088225
+1425,Glycerol 3-phosphate,DAN,positive,0,0.0,0.0
+1426,Glycerol 3-phosphate,DHAP,negative,0,0.0,0.0
+1427,Glycerol 3-phosphate,DHB,negative,0,0.0,0.0
+1428,Glycerol 3-phosphate,DHB,positive,0,0.0,0.0
+1429,Glycerol 3-phosphate,MAPS,negative,0,0.0,0.0
+1430,Glycerol 3-phosphate,MAPS,positive,0,0.0,0.0
+1431,Glycerol 3-phosphate,NEDC,negative,0,0.0,0.0
+1432,Glycerol 3-phosphate,NEDC,positive,0,0.0,0.0
+1433,Glycerol 3-phosphate,NOR,negative,1,1626.627,3.211554885564236
+1434,Glycerol 3-phosphate,NOR,positive,0,0.0,0.0
+1435,Glycerol 3-phosphate,pNA,negative,0,0.0,0.0
+1436,Glycerol 3-phosphate,pNA,positive,0,0.0,0.0
+1437,Glycerophosphocholine,9AA,negative,0,0.0,0.0
+1438,Glycerophosphocholine,9AA,positive,1,10084.105,4.003680424183213
+1439,Glycerophosphocholine,CHCA,negative,0,0.0,0.0
+1440,Glycerophosphocholine,CHCA,positive,1,38416.72,4.584531586949389
+1441,Glycerophosphocholine,CMBT,negative,0,0.0,0.0
+1442,Glycerophosphocholine,CMBT,positive,1,2250.1204,3.352398723635469
+1443,Glycerophosphocholine,ClCCA,negative,0,0.0,0.0
+1444,Glycerophosphocholine,ClCCA,positive,1,6602.9165,3.8198015734007957
+1445,Glycerophosphocholine,DAN,positive,1,6291.7515,3.798840581849243
+1446,Glycerophosphocholine,DHAP,negative,0,0.0,0.0
+1447,Glycerophosphocholine,DHAP,positive,1,1266.2789,3.1028722039928263
+1448,Glycerophosphocholine,DHB,negative,0,0.0,0.0
+1449,Glycerophosphocholine,DHB,positive,1,13334.229,4.125000478037324
+1450,Glycerophosphocholine,MAPS,negative,0,0.0,0.0
+1451,Glycerophosphocholine,MAPS,positive,0,0.0,0.0
+1452,Glycerophosphocholine,NEDC,negative,0,0.0,0.0
+1453,Glycerophosphocholine,NEDC,positive,1,113.99457,2.0606773336169772
+1454,Glycerophosphocholine,NOR,negative,0,0.0,0.0
+1455,Glycerophosphocholine,NOR,positive,1,26793.752,4.428049741766645
+1456,Glycerophosphocholine,pNA,negative,0,0.0,0.0
+1457,Glycerophosphocholine,pNA,positive,1,21787.193,4.3382212136023695
+1458,Glycine,9AA,negative,1,59.502007,1.7817697815048323
+1459,Glycine,9AA,positive,0,0.0,0.0
+1460,Glycine,CHCA,negative,0,0.0,0.0
+1461,Glycine,CHCA,positive,1,317.9806,2.5037642706146976
+1462,Glycine,CMBT,negative,0,0.0,0.0
+1463,Glycine,CMBT,positive,0,0.0,0.0
+1464,Glycine,ClCCA,negative,0,0.0,0.0
+1465,Glycine,ClCCA,positive,0,0.0,0.0
+1466,Glycine,DAN,negative,0,0.0,0.0
+1467,Glycine,DAN,positive,0,0.0,0.0
+1468,Glycine,DHAP,negative,0,0.0,0.0
+1469,Glycine,DHAP,positive,0,0.0,0.0
+1470,Glycine,DHB,negative,0,0.0,0.0
+1471,Glycine,DHB,positive,0,0.0,0.0
+1472,Glycine,MAPS,negative,0,0.0,0.0
+1473,Glycine,MAPS,positive,0,0.0,0.0
+1474,Glycine,NEDC,negative,0,0.0,0.0
+1475,Glycine,NEDC,positive,0,0.0,0.0
+1476,Glycine,NOR,negative,1,21.540495,1.3529634491283682
+1477,Glycine,NOR,positive,0,0.0,0.0
+1478,Glycine,pNA,negative,0,0.0,0.0
+1479,Glycine,pNA,positive,0,0.0,0.0
+1480,Guanine,9AA,negative,1,2527.219,3.4028146908018333
+1481,Guanine,9AA,positive,0,0.0,0.0
+1482,Guanine,CHCA,negative,0,0.0,0.0
+1483,Guanine,CHCA,positive,0,0.0,0.0
+1484,Guanine,CMBT,negative,0,0.0,0.0
+1485,Guanine,CMBT,positive,0,0.0,0.0
+1486,Guanine,ClCCA,negative,0,0.0,0.0
+1487,Guanine,ClCCA,positive,1,16.411882,1.240845715289719
+1488,Guanine,DAN,negative,1,169.84038,2.232590528756423
+1489,Guanine,DAN,positive,0,0.0,0.0
+1490,Guanine,DHAP,negative,0,0.0,0.0
+1491,Guanine,DHAP,positive,0,0.0,0.0
+1492,Guanine,DHB,negative,0,0.0,0.0
+1493,Guanine,DHB,positive,1,269.85593,2.4327383482787153
+1494,Guanine,MAPS,negative,0,0.0,0.0
+1495,Guanine,MAPS,positive,0,0.0,0.0
+1496,Guanine,NEDC,negative,0,0.0,0.0
+1497,Guanine,NEDC,positive,0,0.0,0.0
+1498,Guanine,NOR,negative,1,847.2884,2.9285435282412786
+1499,Guanine,NOR,positive,0,0.0,0.0
+1500,Guanine,pNA,negative,1,237.81065,2.378053690686382
+1501,Guanine,pNA,positive,1,271.16425,2.4348310780774916
+1502,Histamine,9AA,negative,1,264.1762,2.4235345428379342
+1503,Histamine,9AA,positive,1,78.12647,1.8983217913597963
+1504,Histamine,CHCA,negative,0,0.0,0.0
+1505,Histamine,CHCA,positive,1,38512.688,4.585615107855656
+1506,Histamine,CMBT,negative,0,0.0,0.0
+1507,Histamine,CMBT,positive,1,3097.2278,3.4911133464915687
+1508,Histamine,ClCCA,negative,0,0.0,0.0
+1509,Histamine,ClCCA,positive,1,4274.999,3.631037594971134
+1510,Histamine,DAN,negative,1,136.02904,2.1368126151510403
+1511,Histamine,DAN,positive,1,2148.7034,3.332378543343901
+1512,Histamine,DHAP,negative,0,0.0,0.0
+1513,Histamine,DHAP,positive,1,964.99,2.984972630590133
+1514,Histamine,DHB,negative,0,0.0,0.0
+1515,Histamine,DHB,positive,1,11114.022,4.045910326636372
+1516,Histamine,MAPS,negative,0,0.0,0.0
+1517,Histamine,MAPS,positive,0,0.0,0.0
+1518,Histamine,NEDC,negative,0,0.0,0.0
+1519,Histamine,NEDC,positive,1,943.0091,2.9749761808030866
+1520,Histamine,NOR,negative,1,41.175304,1.6250582216712797
+1521,Histamine,NOR,positive,1,7871.0054,3.896085383338605
+1522,Histamine,pNA,negative,1,16.400164,1.2405533416135985
+1523,Histamine,pNA,positive,1,25580.672,4.407928926250658
+1524,Histidine,9AA,negative,1,11973.12,4.078243606162822
+1525,Histidine,9AA,positive,0,0.0,0.0
+1526,Histidine,CHCA,negative,1,124.28565,2.097901330509632
+1527,Histidine,CHCA,positive,1,44323.145,4.646640366938193
+1528,Histidine,CMBT,negative,1,128.74927,2.1131049230841668
+1529,Histidine,CMBT,positive,1,1700.8446,3.2309199009637797
+1530,Histidine,ClCCA,negative,0,0.0,0.0
+1531,Histidine,ClCCA,positive,1,1371.8168,3.1376125852647205
+1532,Histidine,DAN,negative,1,18248.467,4.261250184828705
+1533,Histidine,DAN,positive,1,923.30316,2.9658144378015243
+1534,Histidine,DHAP,negative,1,361.26733,2.559029170246312
+1535,Histidine,DHAP,positive,1,220.51779,2.345408609965792
+1536,Histidine,DHB,negative,0,0.0,0.0
+1537,Histidine,DHB,positive,1,12633.987,4.101574799415318
+1538,Histidine,MAPS,negative,0,0.0,0.0
+1539,Histidine,MAPS,positive,0,0.0,0.0
+1540,Histidine,NEDC,negative,0,0.0,0.0
+1541,Histidine,NOR,negative,1,33991.63,4.53138476712206
+1542,Histidine,NOR,positive,1,3694.203,3.56763830182642
+1543,Histidine,pNA,negative,1,854.17145,2.9320531934700984
+1544,Homocysteine,9AA,negative,0,0.0,0.0
+1545,Homocysteine,9AA,positive,0,0.0,0.0
+1546,Homocysteine,CHCA,negative,0,0.0,0.0
+1547,Homocysteine,CHCA,positive,1,1161.4071,3.0653582539752753
+1548,Homocysteine,CMBT,negative,0,0.0,0.0
+1549,Homocysteine,CMBT,positive,0,0.0,0.0
+1550,Homocysteine,ClCCA,negative,0,0.0,0.0
+1551,Homocysteine,ClCCA,positive,1,311.03528,2.4942036999258455
+1552,Homocysteine,DAN,negative,1,3188.3347,3.5037000980249027
+1553,Homocysteine,DAN,positive,1,68.47373,1.8418206164924715
+1554,Homocysteine,DHAP,negative,0,0.0,0.0
+1555,Homocysteine,DHAP,positive,1,75.366806,1.8829046268526588
+1556,Homocysteine,DHB,negative,0,0.0,0.0
+1557,Homocysteine,DHB,positive,1,230.6154,2.364767432053114
+1558,Homocysteine,MAPS,negative,0,0.0,0.0
+1559,Homocysteine,MAPS,positive,0,0.0,0.0
+1560,Homocysteine,NEDC,negative,0,0.0,0.0
+1561,Homocysteine,NEDC,positive,0,0.0,0.0
+1562,Homocysteine,NOR,negative,1,586.46014,2.7689784044496077
+1563,Homocysteine,NOR,positive,0,0.0,0.0
+1564,Homocysteine,pNA,negative,1,589.3615,2.771118027536625
+1565,Homocysteine,pNA,positive,1,265.1189,2.425075719625517
+1566,Hypoxanthine,9AA,negative,1,3877.989,3.588718548033654
+1567,Hypoxanthine,9AA,positive,0,0.0,0.0
+1568,Hypoxanthine,CHCA,negative,1,141.43369,2.153612725611023
+1569,Hypoxanthine,CHCA,positive,1,3689.398,3.567073206235697
+1570,Hypoxanthine,CMBT,negative,0,0.0,0.0
+1571,Hypoxanthine,CMBT,positive,1,47.74923,1.6879677603547187
+1572,Hypoxanthine,ClCCA,negative,0,0.0,0.0
+1573,Hypoxanthine,ClCCA,positive,1,653.03925,2.815603811851673
+1574,Hypoxanthine,DAN,negative,1,10183.855,4.007954850405585
+1575,Hypoxanthine,DAN,positive,0,0.0,0.0
+1576,Hypoxanthine,DHAP,negative,1,173.1264,2.2408646212329124
+1577,Hypoxanthine,DHAP,positive,1,42.80124,1.641486405424984
+1578,Hypoxanthine,DHB,negative,1,47.335484,1.6842660716922635
+1579,Hypoxanthine,DHB,positive,1,1354.9988,3.1322593051994745
+1580,Hypoxanthine,MAPS,negative,0,0.0,0.0
+1581,Hypoxanthine,MAPS,positive,0,0.0,0.0
+1582,Hypoxanthine,NEDC,negative,0,0.0,0.0
+1583,Hypoxanthine,NEDC,positive,0,0.0,0.0
+1584,Hypoxanthine,NOR,negative,1,644.9367,2.810189960429026
+1585,Hypoxanthine,NOR,positive,0,0.0,0.0
+1586,Hypoxanthine,pNA,negative,1,247.30963,2.3949935627875933
+1587,Hypoxanthine,pNA,positive,1,54.247833,1.7423152482467616
+1588,Kynurenic acid,9AA,negative,1,29967.404,4.476663614735782
+1589,Kynurenic acid,9AA,positive,0,0.0,0.0
+1590,Kynurenic acid,CMBT,negative,1,57.49614,1.767127209124767
+1591,Kynurenic acid,CMBT,positive,1,139.1894,2.146715177000508
+1592,Kynurenic acid,ClCCA,positive,1,774.9845,2.889853046475071
+1593,Kynurenic acid,DAN,positive,0,0.0,0.0
+1594,Kynurenic acid,DHAP,negative,0,0.0,0.0
+1595,Kynurenic acid,DHAP,positive,1,127.66507,2.109460660616663
+1596,Kynurenic acid,DHB,negative,0,0.0,0.0
+1597,Kynurenic acid,DHB,positive,1,1190.5319,3.0761056738822394
+1598,Kynurenic acid,MAPS,negative,1,218.19882,2.3408382119069118
+1599,Kynurenic acid,MAPS,positive,0,0.0,0.0
+1600,Kynurenic acid,NEDC,negative,1,275.77075,2.4421201906083314
+1601,Kynurenic acid,NEDC,positive,0,0.0,0.0
+1602,Kynurenic acid,NOR,positive,0,0.0,0.0
+1603,Kynurenic acid,pNA,negative,1,3688.471,3.5669641010505395
+1604,Kynurenic acid,pNA,positive,1,431.66635,2.6361531198865147
+1605,Kynurenine,9AA,negative,1,311.59586,2.4949832219523262
+1606,Kynurenine,9AA,positive,0,0.0,0.0
+1607,Kynurenine,CHCA,negative,0,0.0,0.0
+1608,Kynurenine,CHCA,positive,1,6332.168,3.801621008713443
+1609,Kynurenine,CMBT,negative,0,0.0,0.0
+1610,Kynurenine,CMBT,positive,1,546.70276,2.7385449294439392
+1611,Kynurenine,ClCCA,negative,0,0.0,0.0
+1612,Kynurenine,ClCCA,positive,1,393.9548,2.5965473963003634
+1613,Kynurenine,DAN,negative,1,3708.731,3.5693424191969476
+1614,Kynurenine,DAN,positive,1,303.51385,2.4836070501438847
+1615,Kynurenine,DHAP,negative,0,0.0,0.0
+1616,Kynurenine,DHAP,positive,1,235.63591,2.3740806503995153
+1617,Kynurenine,DHB,negative,0,0.0,0.0
+1618,Kynurenine,DHB,positive,1,5212.6494,3.7171418230032263
+1619,Kynurenine,MAPS,negative,1,213.29105,2.3310040328393926
+1620,Kynurenine,MAPS,positive,0,0.0,0.0
+1621,Kynurenine,NEDC,negative,0,0.0,0.0
+1622,Kynurenine,NEDC,positive,0,0.0,0.0
+1623,Kynurenine,NOR,negative,1,470.50443,2.673485777488017
+1624,Kynurenine,NOR,positive,0,0.0,0.0
+1625,Kynurenine,pNA,negative,1,789.08545,2.897674064020321
+1626,Kynurenine,pNA,positive,1,1210.6644,3.0833823480392897
+1627,L-Dopa,9AA,negative,1,536.2889,2.730207868451544
+1628,L-Dopa,9AA,positive,0,0.0,0.0
+1629,L-Dopa,CHCA,negative,0,0.0,0.0
+1630,L-Dopa,CHCA,positive,1,2788.5417,3.445532857929408
+1631,L-Dopa,CMBT,negative,0,0.0,0.0
+1632,L-Dopa,CMBT,positive,0,0.0,0.0
+1633,L-Dopa,ClCCA,negative,0,0.0,0.0
+1634,L-Dopa,ClCCA,positive,1,506.0087,2.705015411659914
+1635,L-Dopa,DAN,negative,1,3431.619,3.535625602033341
+1636,L-Dopa,DAN,positive,0,0.0,0.0
+1637,L-Dopa,DHAP,negative,1,71.893616,1.862689494609088
+1638,L-Dopa,DHAP,positive,1,88.5725,1.9521746956954604
+1639,L-Dopa,DHB,negative,0,0.0,0.0
+1640,L-Dopa,DHB,positive,1,2599.3179,3.415026445577012
+1641,L-Dopa,MAPS,negative,0,0.0,0.0
+1642,L-Dopa,MAPS,positive,0,0.0,0.0
+1643,L-Dopa,NEDC,negative,0,0.0,0.0
+1644,L-Dopa,NEDC,positive,0,0.0,0.0
+1645,L-Dopa,NOR,negative,1,4764.406,3.6780999072929785
+1646,L-Dopa,NOR,positive,0,0.0,0.0
+1647,L-Dopa,pNA,negative,1,350.06863,2.5453920244908073
+1648,L-Dopa,pNA,positive,1,147.77544,2.1725312433548423
+1649,Lactic acid,9AA,positive,0,0.0,0.0
+1650,Lactic acid,CHCA,negative,0,0.0,0.0
+1651,Lactic acid,CHCA,positive,0,0.0,0.0
+1652,Lactic acid,CMBT,negative,0,0.0,0.0
+1653,Lactic acid,CMBT,positive,0,0.0,0.0
+1654,Lactic acid,ClCCA,negative,0,0.0,0.0
+1655,Lactic acid,ClCCA,positive,0,0.0,0.0
+1656,Lactic acid,DAN,negative,0,0.0,0.0
+1657,Lactic acid,DAN,positive,0,0.0,0.0
+1658,Lactic acid,DHAP,positive,0,0.0,0.0
+1659,Lactic acid,DHB,positive,0,0.0,0.0
+1660,Lactic acid,MAPS,positive,0,0.0,0.0
+1661,Lactic acid,NEDC,positive,0,0.0,0.0
+1662,Lactic acid,NOR,positive,0,0.0,0.0
+1663,Lactic acid,pNA,positive,0,0.0,0.0
+1664,Lyso PA 18:1,9AA,negative,0,0.0,0.0
+1665,Lyso PA 18:1,9AA,positive,0,0.0,0.0
+1666,Lyso PA 18:1,CHCA,negative,0,0.0,0.0
+1667,Lyso PA 18:1,CHCA,positive,1,232.79369,2.3688327855462594
+1668,Lyso PA 18:1,CMBT,negative,0,0.0,0.0
+1669,Lyso PA 18:1,CMBT,positive,0,0.0,0.0
+1670,Lyso PA 18:1,ClCCA,negative,0,0.0,0.0
+1671,Lyso PA 18:1,ClCCA,positive,1,195.75822,2.2939328850009626
+1672,Lyso PA 18:1,DAN,negative,0,0.0,0.0
+1673,Lyso PA 18:1,DAN,positive,0,0.0,0.0
+1674,Lyso PA 18:1,DHAP,negative,1,1518.5098,3.1817035053848315
+1675,Lyso PA 18:1,DHAP,positive,0,0.0,0.0
+1676,Lyso PA 18:1,DHB,negative,0,0.0,0.0
+1677,Lyso PA 18:1,DHB,positive,1,333.79517,2.524779183916567
+1678,Lyso PA 18:1,MAPS,negative,1,1754.6508,3.244438138725961
+1679,Lyso PA 18:1,MAPS,positive,0,0.0,0.0
+1680,Lyso PA 18:1,NEDC,negative,0,0.0,0.0
+1681,Lyso PA 18:1,NEDC,positive,0,0.0,0.0
+1682,Lyso PA 18:1,NOR,negative,0,0.0,0.0
+1683,Lyso PA 18:1,NOR,positive,0,0.0,0.0
+1684,Lyso PA 18:1,pNA,negative,0,0.0,0.0
+1685,Lyso PA 18:1,pNA,positive,0,0.0,0.0
+1686,Lyso PC 15:0,9AA,negative,0,0.0,0.0
+1687,Lyso PC 15:0,9AA,positive,1,330195.22,5.518772097265545
+1688,Lyso PC 15:0,CHCA,negative,0,0.0,0.0
+1689,Lyso PC 15:0,CHCA,positive,1,247147.94,5.392958752150071
+1690,Lyso PC 15:0,CMBT,negative,0,0.0,0.0
+1691,Lyso PC 15:0,CMBT,positive,1,234185.06,5.369561039988013
+1692,Lyso PC 15:0,ClCCA,negative,0,0.0,0.0
+1693,Lyso PC 15:0,ClCCA,positive,1,79247.96,4.898993571593577
+1694,Lyso PC 15:0,DAN,negative,0,0.0,0.0
+1695,Lyso PC 15:0,DAN,positive,1,226411.0,5.3548994410483575
+1696,Lyso PC 15:0,DHAP,negative,0,0.0,0.0
+1697,Lyso PC 15:0,DHAP,positive,1,40619.145,4.608741469354054
+1698,Lyso PC 15:0,DHB,negative,0,0.0,0.0
+1699,Lyso PC 15:0,DHB,positive,1,196137.7,5.292563292485897
+1700,Lyso PC 15:0,MAPS,negative,0,0.0,0.0
+1701,Lyso PC 15:0,MAPS,positive,1,1954.5326,3.291265060319905
+1702,Lyso PC 15:0,NEDC,negative,0,0.0,0.0
+1703,Lyso PC 15:0,NEDC,positive,1,20056.127,4.302268724426919
+1704,Lyso PC 15:0,NOR,negative,0,0.0,0.0
+1705,Lyso PC 15:0,NOR,positive,1,363529.2,5.56054049538364
+1706,Lyso PC 15:0,pNA,negative,0,0.0,0.0
+1707,Lyso PC 15:0,pNA,positive,1,264625.56,5.42263343124436
+1708,Lyso PE 18:0,9AA,negative,1,214726.64,5.33188795094239
+1709,Lyso PE 18:0,9AA,positive,0,0.0,0.0
+1710,Lyso PE 18:0,CHCA,negative,0,0.0,0.0
+1711,Lyso PE 18:0,CHCA,positive,1,11375.682,4.056015618895417
+1712,Lyso PE 18:0,CMBT,negative,0,0.0,0.0
+1713,Lyso PE 18:0,CMBT,positive,1,42891.46,4.632380954930798
+1714,Lyso PE 18:0,ClCCA,negative,1,46.608234,1.6776820718698076
+1715,Lyso PE 18:0,ClCCA,positive,1,17494.176,4.242918315806884
+1716,Lyso PE 18:0,DAN,negative,0,0.0,0.0
+1717,Lyso PE 18:0,DAN,positive,1,1350.8114,3.1309161045843332
+1718,Lyso PE 18:0,DHAP,negative,1,26773.021,4.427713599687983
+1719,Lyso PE 18:0,DHAP,positive,1,9625.115,3.98345104574432
+1720,Lyso PE 18:0,DHB,negative,1,5534.6494,3.7431685763065308
+1721,Lyso PE 18:0,DHB,positive,1,51500.18,4.711817179752216
+1722,Lyso PE 18:0,MAPS,negative,1,5408.506,3.73315760683119
+1723,Lyso PE 18:0,MAPS,positive,1,95.59287,1.984945070163548
+1724,Lyso PE 18:0,NEDC,negative,1,1183.453,3.07351783226383
+1725,Lyso PE 18:0,NEDC,positive,1,2229.6384,3.348429174222606
+1726,Lyso PE 18:0,NOR,negative,1,25081.018,4.399362475181304
+1727,Lyso PE 18:0,NOR,positive,1,654.86005,2.816811177794918
+1728,Lyso PE 18:0,pNA,negative,0,0.0,0.0
+1729,Lyso PE 18:0,pNA,positive,1,19515.541,4.290402848283138
+1730,Lyso PG 16:0,9AA,negative,1,761925.1,5.881912850711523
+1731,Lyso PG 16:0,9AA,positive,0,0.0,0.0
+1732,Lyso PG 16:0,CHCA,negative,1,5217.811,3.717571569102373
+1733,Lyso PG 16:0,CHCA,positive,1,306.3811,2.4876771604374697
+1734,Lyso PG 16:0,CMBT,negative,0,0.0,0.0
+1735,Lyso PG 16:0,CMBT,positive,1,1322.1553,3.121610820736849
+1736,Lyso PG 16:0,ClCCA,negative,1,1403.3931,3.1474886870427534
+1737,Lyso PG 16:0,ClCCA,positive,1,1220.634,3.086941111316621
+1738,Lyso PG 16:0,DAN,negative,1,8645.708,3.9368507930649077
+1739,Lyso PG 16:0,DAN,positive,0,0.0,0.0
+1740,Lyso PG 16:0,DHAP,negative,1,38930.645,4.590302754587138
+1741,Lyso PG 16:0,DHAP,positive,1,419.2263,2.6234832293822694
+1742,Lyso PG 16:0,DHB,negative,1,20054.383,4.302230960169489
+1743,Lyso PG 16:0,MAPS,negative,1,7494.5586,3.8748040038097424
+1744,Lyso PG 16:0,MAPS,positive,0,0.0,0.0
+1745,Lyso PG 16:0,NEDC,negative,1,10827.994,4.034588113084978
+1746,Lyso PG 16:0,NEDC,positive,1,151.35959,2.1828697953030516
+1747,Lyso PG 16:0,NOR,negative,0,0.0,0.0
+1748,Lyso PG 16:0,NOR,positive,0,0.0,0.0
+1749,Lyso PG 16:0,pNA,negative,0,0.0,0.0
+1750,Lyso PG 16:0,pNA,positive,1,336.94785,2.5288496878379343
+1751,Lyso PI 17:1,9AA,negative,1,438300.6,5.641773056029051
+1752,Lyso PI 17:1,9AA,positive,0,0.0,0.0
+1753,Lyso PI 17:1,CHCA,negative,1,48654.77,4.687134349857626
+1754,Lyso PI 17:1,CHCA,positive,1,251.02676,2.401446656270915
+1755,Lyso PI 17:1,CMBT,negative,1,8766.067,3.9428543255481894
+1756,Lyso PI 17:1,CMBT,positive,1,75.003815,1.8808353921737586
+1757,Lyso PI 17:1,ClCCA,negative,1,1934.6398,3.2868245433511736
+1758,Lyso PI 17:1,ClCCA,positive,1,180.30515,2.2584101404706645
+1759,Lyso PI 17:1,DAN,negative,1,114487.055,5.05876017734664
+1760,Lyso PI 17:1,DAN,positive,0,0.0,0.0
+1761,Lyso PI 17:1,DHAP,negative,1,30814.45,4.488768514143277
+1762,Lyso PI 17:1,DHAP,positive,1,90.83021,1.9629855774754084
+1763,Lyso PI 17:1,DHB,negative,1,23901.754,4.3784479418727456
+1764,Lyso PI 17:1,DHB,positive,1,858.569,2.9342807444512027
+1765,Lyso PI 17:1,MAPS,negative,1,11898.549,4.075530501684714
+1766,Lyso PI 17:1,MAPS,positive,0,0.0,0.0
+1767,Lyso PI 17:1,NEDC,negative,1,4601.0317,3.6629496058770967
+1768,Lyso PI 17:1,NEDC,positive,0,0.0,0.0
+1769,Lyso PI 17:1,NOR,negative,1,159183.02,5.2018994680866175
+1770,Lyso PI 17:1,NOR,positive,0,0.0,0.0
+1771,Lyso PI 17:1,pNA,negative,1,13802.858,4.14000048306413
+1772,Lyso PI 17:1,pNA,positive,0,0.0,0.0
+1773,Lyso PS 17:1,9AA,negative,1,261738.34,5.417869002964245
+1774,Lyso PS 17:1,9AA,positive,0,0.0,0.0
+1775,Lyso PS 17:1,CHCA,negative,1,79966.766,4.902914963624809
+1776,Lyso PS 17:1,CHCA,positive,1,10076.217,4.003340610639116
+1777,Lyso PS 17:1,CMBT,negative,1,12852.003,4.109004608909415
+1778,Lyso PS 17:1,CMBT,positive,1,13186.144,4.120150748590777
+1779,Lyso PS 17:1,ClCCA,negative,1,5008.609,3.699803830504161
+1780,Lyso PS 17:1,ClCCA,positive,1,6038.834,3.7810250025491627
+1781,Lyso PS 17:1,DAN,negative,1,111646.5,5.047849002836382
+1782,Lyso PS 17:1,DAN,positive,1,2674.3872,3.427386644919591
+1783,Lyso PS 17:1,DHAP,negative,1,16325.015,4.212880191184241
+1784,Lyso PS 17:1,DHAP,positive,1,2172.4204,3.337143739086874
+1785,Lyso PS 17:1,DHB,negative,1,21599.174,4.334457249620166
+1786,Lyso PS 17:1,DHB,positive,1,17392.615,4.240389852928131
+1787,Lyso PS 17:1,MAPS,negative,1,23690.611,4.3745945932099835
+1788,Lyso PS 17:1,MAPS,positive,1,36.136833,1.5698048646899896
+1789,Lyso PS 17:1,NEDC,negative,1,8925.474,3.950679944359632
+1790,Lyso PS 17:1,NEDC,positive,1,526.8598,2.7225185888754595
+1791,Lyso PS 17:1,NOR,negative,1,138224.84,5.140589237831294
+1792,Lyso PS 17:1,NOR,positive,1,46.169823,1.673664246602549
+1793,Lyso PS 17:1,pNA,negative,1,44455.086,4.647931223917896
+1794,Lyso PS 17:1,pNA,positive,1,5619.929,3.749808099595916
+1795,MG 18:1,9AA,negative,0,0.0,0.0
+1796,MG 18:1,9AA,positive,0,0.0,0.0
+1797,MG 18:1,CHCA,negative,0,0.0,0.0
+1798,MG 18:1,CHCA,positive,0,0.0,0.0
+1799,MG 18:1,CMBT,negative,0,0.0,0.0
+1800,MG 18:1,CMBT,positive,1,49.908466,1.706790010850491
+1801,MG 18:1,ClCCA,negative,0,0.0,0.0
+1802,MG 18:1,ClCCA,positive,1,28.365461,1.467836823097744
+1803,MG 18:1,DAN,negative,0,0.0,0.0
+1804,MG 18:1,DAN,positive,0,0.0,0.0
+1805,MG 18:1,DHAP,negative,0,0.0,0.0
+1806,MG 18:1,DHAP,positive,0,0.0,0.0
+1807,MG 18:1,DHB,negative,0,0.0,0.0
+1808,MG 18:1,DHB,positive,1,61.89148,1.7985918149268352
+1809,MG 18:1,MAPS,negative,0,0.0,0.0
+1810,MG 18:1,MAPS,positive,0,0.0,0.0
+1811,MG 18:1,NEDC,negative,0,0.0,0.0
+1812,MG 18:1,NEDC,positive,0,0.0,0.0
+1813,MG 18:1,NOR,negative,0,0.0,0.0
+1814,MG 18:1,NOR,positive,0,0.0,0.0
+1815,MG 18:1,pNA,negative,0,0.0,0.0
+1816,MG 18:1,pNA,positive,0,0.0,0.0
+1817,Malic acid,9AA,negative,1,237378.92,5.375443979142473
+1818,Malic acid,9AA,positive,0,0.0,0.0
+1819,Malic acid,CHCA,negative,1,14853.444,4.171856400855204
+1820,Malic acid,CHCA,positive,0,0.0,0.0
+1821,Malic acid,CMBT,negative,1,6104.719,3.7857368131369658
+1822,Malic acid,CMBT,positive,0,0.0,0.0
+1823,Malic acid,ClCCA,negative,1,167.09163,2.225546088601195
+1824,Malic acid,ClCCA,positive,0,0.0,0.0
+1825,Malic acid,DAN,negative,1,46541.77,4.667852226821703
+1826,Malic acid,DAN,positive,0,0.0,0.0
+1827,Malic acid,DHAP,negative,1,975.96216,2.989877742816574
+1828,Malic acid,DHAP,positive,0,0.0,0.0
+1829,Malic acid,DHB,negative,1,2891.726,3.4613072990736424
+1830,Malic acid,DHB,positive,0,0.0,0.0
+1831,Malic acid,MAPS,negative,1,807.26447,2.907553488334507
+1832,Malic acid,MAPS,positive,0,0.0,0.0
+1833,Malic acid,NEDC,negative,1,112.23842,2.053993801084548
+1834,Malic acid,NEDC,positive,0,0.0,0.0
+1835,Malic acid,NOR,negative,1,93725.63,4.971863001975422
+1836,Malic acid,NOR,positive,0,0.0,0.0
+1837,Malic acid,pNA,negative,1,8861.389,3.947550808756496
+1838,Malic acid,pNA,positive,0,0.0,0.0
+1839,Malonic acid,9AA,negative,1,71088.85,4.851807597865303
+1840,Malonic acid,9AA,positive,0,0.0,0.0
+1841,Malonic acid,CHCA,negative,1,1408.4667,3.149054819705964
+1842,Malonic acid,CHCA,positive,0,0.0,0.0
+1843,Malonic acid,CMBT,negative,0,0.0,0.0
+1844,Malonic acid,CMBT,positive,0,0.0,0.0
+1845,Malonic acid,ClCCA,negative,1,512.8948,2.7108742231673064
+1846,Malonic acid,ClCCA,positive,0,0.0,0.0
+1847,Malonic acid,DAN,negative,0,0.0,0.0
+1848,Malonic acid,DAN,positive,0,0.0,0.0
+1849,Malonic acid,DHAP,negative,1,277.73428,2.445190383493818
+1850,Malonic acid,DHAP,positive,0,0.0,0.0
+1851,Malonic acid,DHB,negative,1,1152.9753,3.0621965131624296
+1852,Malonic acid,DHB,positive,0,0.0,0.0
+1853,Malonic acid,MAPS,negative,0,0.0,0.0
+1854,Malonic acid,MAPS,positive,0,0.0,0.0
+1855,Malonic acid,NEDC,negative,1,236.82153,2.376251168772741
+1856,Malonic acid,NEDC,positive,0,0.0,0.0
+1857,Malonic acid,NOR,negative,1,8835.294,3.946270157228091
+1858,Malonic acid,NOR,positive,0,0.0,0.0
+1859,Malonic acid,pNA,negative,1,361.19135,2.558938074105795
+1860,Malonic acid,pNA,positive,0,0.0,0.0
+1861,Melatonin,9AA,negative,1,55.98464,1.7557578089672088
+1862,Melatonin,9AA,positive,0,0.0,0.0
+1863,Melatonin,CHCA,negative,0,0.0,0.0
+1864,Melatonin,CHCA,positive,1,1410.0342,3.1495375401124495
+1865,Melatonin,CMBT,negative,0,0.0,0.0
+1866,Melatonin,CMBT,positive,1,370.6089,2.570086106760255
+1867,Melatonin,ClCCA,negative,0,0.0,0.0
+1868,Melatonin,ClCCA,positive,1,208.68672,2.321570926348277
+1869,Melatonin,DAN,negative,1,2580.7087,3.4119072382714113
+1870,Melatonin,DAN,positive,1,31.293812,1.5091193126805489
+1871,Melatonin,DHAP,negative,0,0.0,0.0
+1872,Melatonin,DHAP,positive,1,328.943,2.5184389188971967
+1873,Melatonin,DHB,negative,0,0.0,0.0
+1874,Melatonin,DHB,positive,1,2497.848,3.3977398396522918
+1875,Melatonin,MAPS,negative,0,0.0,0.0
+1876,Melatonin,MAPS,positive,0,0.0,0.0
+1877,Melatonin,NEDC,negative,0,0.0,0.0
+1878,Melatonin,NEDC,positive,0,0.0,0.0
+1879,Melatonin,NOR,negative,1,32.1271,1.5201834187034742
+1880,Melatonin,NOR,positive,0,0.0,0.0
+1881,Melatonin,pNA,negative,0,0.0,0.0
+1882,Melatonin,pNA,positive,0,0.0,0.0
+1883,Methionine,9AA,negative,1,611.47296,2.7870869198414447
+1884,Methionine,9AA,positive,0,0.0,0.0
+1885,Methionine,CHCA,negative,0,0.0,0.0
+1886,Methionine,CHCA,positive,1,7177.1025,3.856009655566818
+1887,Methionine,CMBT,negative,0,0.0,0.0
+1888,Methionine,CMBT,positive,1,124.98698,2.10032566570229
+1889,Methionine,ClCCA,negative,0,0.0,0.0
+1890,Methionine,ClCCA,positive,1,260.71613,2.4178304897553513
+1891,Methionine,DAN,negative,1,4999.2715,3.6989935858861527
+1892,Methionine,DAN,positive,1,78.24689,1.8989822275794894
+1893,Methionine,DHAP,negative,0,0.0,0.0
+1894,Methionine,DHAP,positive,1,37.689934,1.5875979888719234
+1895,Methionine,DHB,negative,0,0.0,0.0
+1896,Methionine,DHB,positive,1,1927.8596,3.2853006168795704
+1897,Methionine,MAPS,negative,0,0.0,0.0
+1898,Methionine,MAPS,positive,0,0.0,0.0
+1899,Methionine,NEDC,negative,0,0.0,0.0
+1900,Methionine,NEDC,positive,0,0.0,0.0
+1901,Methionine,NOR,negative,1,717.13916,2.8562086093733323
+1902,Methionine,NOR,positive,0,0.0,0.0
+1903,Methionine,pNA,negative,1,187.29243,2.274832860243358
+1904,Methionine,pNA,positive,1,310.27814,2.4931486227360944
+1905,Mevalonic acid,9AA,negative,1,19022.354,4.279287089640111
+1906,Mevalonic acid,9AA,positive,0,0.0,0.0
+1907,Mevalonic acid,CHCA,negative,1,134.09438,2.1306372825101465
+1908,Mevalonic acid,CHCA,positive,1,424.42548,2.6288234975366436
+1909,Mevalonic acid,CMBT,negative,0,0.0,0.0
+1910,Mevalonic acid,CMBT,positive,0,0.0,0.0
+1911,Mevalonic acid,ClCCA,negative,0,0.0,0.0
+1912,Mevalonic acid,ClCCA,positive,0,0.0,0.0
+1913,Mevalonic acid,DAN,negative,1,2460.7344,3.391241194478022
+1914,Mevalonic acid,DAN,positive,0,0.0,0.0
+1915,Mevalonic acid,DHAP,negative,1,107.51778,2.035500900611014
+1916,Mevalonic acid,DHAP,positive,0,0.0,0.0
+1917,Mevalonic acid,DHB,negative,0,0.0,0.0
+1918,Mevalonic acid,DHB,positive,1,115.77981,2.0673677643215136
+1919,Mevalonic acid,MAPS,negative,0,0.0,0.0
+1920,Mevalonic acid,MAPS,positive,0,0.0,0.0
+1921,Mevalonic acid,NEDC,negative,0,0.0,0.0
+1922,Mevalonic acid,NEDC,positive,0,0.0,0.0
+1923,Mevalonic acid,NOR,negative,1,2497.2756,3.397640346350774
+1924,Mevalonic acid,NOR,positive,0,0.0,0.0
+1925,Mevalonic acid,pNA,negative,1,354.40387,2.5507221525365145
+1926,Mevalonic acid,pNA,positive,0,0.0,0.0
+1927,Myo-inositol 1-phosphate,9AA,negative,1,153906.53,5.187259868417889
+1928,Myo-inositol 1-phosphate,9AA,positive,0,0.0,0.0
+1929,Myo-inositol 1-phosphate,CHCA,negative,1,672.6831,2.8284556527871394
+1930,Myo-inositol 1-phosphate,CHCA,positive,1,191.37108,2.284139783187998
+1931,Myo-inositol 1-phosphate,CMBT,negative,0,0.0,0.0
+1932,Myo-inositol 1-phosphate,CMBT,positive,0,0.0,0.0
+1933,Myo-inositol 1-phosphate,ClCCA,negative,1,65.79824,1.8247650198354601
+1934,Myo-inositol 1-phosphate,ClCCA,positive,1,18.59026,1.2920401999465476
+1935,Myo-inositol 1-phosphate,DAN,negative,1,137.22621,2.1405904003400056
+1936,Myo-inositol 1-phosphate,DAN,positive,0,0.0,0.0
+1937,Myo-inositol 1-phosphate,DHAP,negative,0,0.0,0.0
+1938,Myo-inositol 1-phosphate,DHAP,positive,0,0.0,0.0
+1939,Myo-inositol 1-phosphate,DHB,negative,1,112.72583,2.0558591151050227
+1940,Myo-inositol 1-phosphate,DHB,positive,0,0.0,0.0
+1941,Myo-inositol 1-phosphate,MAPS,negative,0,0.0,0.0
+1942,Myo-inositol 1-phosphate,MAPS,positive,0,0.0,0.0
+1943,Myo-inositol 1-phosphate,NEDC,negative,0,0.0,0.0
+1944,Myo-inositol 1-phosphate,NEDC,positive,0,0.0,0.0
+1945,Myo-inositol 1-phosphate,NOR,negative,1,3683.8665,3.566421758310789
+1946,Myo-inositol 1-phosphate,NOR,positive,0,0.0,0.0
+1947,Myo-inositol 1-phosphate,pNA,negative,1,224.1988,2.352566071992955
+1948,Myo-inositol 1-phosphate,pNA,positive,0,0.0,0.0
+1949,N-Acetylaspartic acid,9AA,negative,1,278552.0,5.44490784014757
+1950,N-Acetylaspartic acid,9AA,positive,0,0.0,0.0
+1951,N-Acetylaspartic acid,CHCA,negative,1,7086.804,3.850511699441158
+1952,N-Acetylaspartic acid,CHCA,positive,1,4490.096,3.652352338479473
+1953,N-Acetylaspartic acid,CMBT,negative,1,1614.5999,3.2083338176166376
+1954,N-Acetylaspartic acid,CMBT,positive,1,50.635952,1.7129521884167862
+1955,N-Acetylaspartic acid,ClCCA,negative,1,464.10037,2.667546685004732
+1956,N-Acetylaspartic acid,ClCCA,positive,1,520.97107,2.7176464331027685
+1957,N-Acetylaspartic acid,DAN,negative,1,45739.227,4.6602983155965445
+1958,N-Acetylaspartic acid,DAN,positive,0,0.0,0.0
+1959,N-Acetylaspartic acid,DHAP,negative,1,1396.3196,3.1452957508827772
+1960,N-Acetylaspartic acid,DHAP,positive,1,23.066303,1.3814093802618927
+1961,N-Acetylaspartic acid,DHB,negative,1,2331.2686,3.367778565289545
+1962,N-Acetylaspartic acid,DHB,positive,1,855.54376,2.932749555557283
+1963,N-Acetylaspartic acid,MAPS,negative,1,3002.9966,3.4776994367868332
+1964,N-Acetylaspartic acid,MAPS,positive,0,0.0,0.0
+1965,N-Acetylaspartic acid,NEDC,negative,0,0.0,0.0
+1966,N-Acetylaspartic acid,NEDC,positive,0,0.0,0.0
+1967,N-Acetylaspartic acid,NOR,negative,1,26003.5,4.415048507819425
+1968,N-Acetylaspartic acid,NOR,positive,0,0.0,0.0
+1969,N-Acetylaspartic acid,pNA,negative,1,37246.99,4.5711028420383775
+1970,N-Acetylaspartic acid,pNA,positive,1,443.86722,2.6482304059782096
+1971,N-Acetylaspartylglutamic acid,9AA,negative,1,27795.162,4.4439848341450245
+1972,N-Acetylaspartylglutamic acid,9AA,positive,0,0.0,0.0
+1973,N-Acetylaspartylglutamic acid,CHCA,negative,1,1291.3903,3.1113936897724996
+1974,N-Acetylaspartylglutamic acid,CHCA,positive,1,2085.4304,3.319403901916122
+1975,N-Acetylaspartylglutamic acid,CMBT,negative,1,222.2019,2.3486978872010407
+1976,N-Acetylaspartylglutamic acid,CMBT,positive,1,114.82958,2.0638194815874904
+1977,N-Acetylaspartylglutamic acid,ClCCA,negative,1,192.6587,2.287037012177361
+1978,N-Acetylaspartylglutamic acid,ClCCA,positive,1,441.22693,2.645645185990959
+1979,N-Acetylaspartylglutamic acid,DAN,negative,1,18546.785,4.268292053050013
+1980,N-Acetylaspartylglutamic acid,DAN,positive,0,0.0,0.0
+1981,N-Acetylaspartylglutamic acid,DHAP,negative,1,1371.0328,3.137364493796925
+1982,N-Acetylaspartylglutamic acid,DHAP,positive,1,143.21803,2.1590195588578776
+1983,N-Acetylaspartylglutamic acid,DHB,negative,1,612.0834,2.787519557220043
+1984,N-Acetylaspartylglutamic acid,DHB,positive,1,903.33466,2.9563291761561135
+1985,N-Acetylaspartylglutamic acid,MAPS,negative,0,0.0,0.0
+1986,N-Acetylaspartylglutamic acid,MAPS,positive,0,0.0,0.0
+1987,N-Acetylaspartylglutamic acid,NEDC,negative,1,357.5063,2.5544967918899992
+1988,N-Acetylaspartylglutamic acid,NEDC,positive,0,0.0,0.0
+1989,N-Acetylaspartylglutamic acid,NOR,negative,1,41235.234,4.615278995415989
+1990,N-Acetylaspartylglutamic acid,NOR,positive,0,0.0,0.0
+1991,N-Acetylaspartylglutamic acid,pNA,negative,1,1284.7194,3.109146196948571
+1992,N-Acetylaspartylglutamic acid,pNA,positive,0,0.0,0.0
+1993,N-Acetylgalactosamine 6-phosphate,9AA,negative,1,30827.717,4.488955451051042
+1994,N-Acetylgalactosamine 6-phosphate,9AA,positive,0,0.0,0.0
+1995,N-Acetylgalactosamine 6-phosphate,CHCA,negative,0,0.0,0.0
+1996,N-Acetylgalactosamine 6-phosphate,CHCA,positive,1,303.40106,2.4834461604222846
+1997,N-Acetylgalactosamine 6-phosphate,CMBT,negative,0,0.0,0.0
+1998,N-Acetylgalactosamine 6-phosphate,CMBT,positive,0,0.0,0.0
+1999,N-Acetylgalactosamine 6-phosphate,ClCCA,negative,1,32.390163,1.5236185391450494
+2000,N-Acetylgalactosamine 6-phosphate,ClCCA,positive,1,66.23101,1.8275696356356832
+2001,N-Acetylgalactosamine 6-phosphate,DAN,negative,1,172.07191,2.2382265865239552
+2002,N-Acetylgalactosamine 6-phosphate,DAN,positive,0,0.0,0.0
+2003,N-Acetylgalactosamine 6-phosphate,DHAP,negative,1,43.382698,1.6472136992230997
+2004,N-Acetylgalactosamine 6-phosphate,DHAP,positive,0,0.0,0.0
+2005,N-Acetylgalactosamine 6-phosphate,DHB,negative,1,34.671246,1.5523182795506743
+2006,N-Acetylgalactosamine 6-phosphate,DHB,positive,1,82.01713,1.9191677152300697
+2007,N-Acetylgalactosamine 6-phosphate,MAPS,negative,0,0.0,0.0
+2008,N-Acetylgalactosamine 6-phosphate,MAPS,positive,0,0.0,0.0
+2009,N-Acetylgalactosamine 6-phosphate,NEDC,negative,0,0.0,0.0
+2010,N-Acetylgalactosamine 6-phosphate,NEDC,positive,0,0.0,0.0
+2011,N-Acetylgalactosamine 6-phosphate,NOR,negative,1,12683.119,4.103260307842667
+2012,N-Acetylgalactosamine 6-phosphate,NOR,positive,0,0.0,0.0
+2013,N-Acetylgalactosamine 6-phosphate,pNA,negative,0,0.0,0.0
+2014,N-Acetylgalactosamine 6-phosphate,pNA,positive,0,0.0,0.0
+2015,N-Acetylglucosamine,9AA,negative,1,2773.5083,3.443186028353215
+2016,N-Acetylglucosamine,9AA,positive,0,0.0,0.0
+2017,N-Acetylglucosamine,CHCA,negative,0,0.0,0.0
+2018,N-Acetylglucosamine,CHCA,positive,1,3836.3918,3.5840361431887175
+2019,N-Acetylglucosamine,CMBT,negative,0,0.0,0.0
+2020,N-Acetylglucosamine,CMBT,positive,1,250.19067,2.400003504321661
+2021,N-Acetylglucosamine,ClCCA,negative,0,0.0,0.0
+2022,N-Acetylglucosamine,ClCCA,positive,1,899.31165,2.9543928699356723
+2023,N-Acetylglucosamine,DAN,negative,1,1350.0062,3.1306573420787362
+2024,N-Acetylglucosamine,DAN,positive,0,0.0,0.0
+2025,N-Acetylglucosamine,DHAP,negative,0,0.0,0.0
+2026,N-Acetylglucosamine,DHAP,positive,1,57.224648,1.7651068716658043
+2027,N-Acetylglucosamine,DHB,negative,0,0.0,0.0
+2028,N-Acetylglucosamine,DHB,positive,1,1427.9962,3.1550310739125758
+2029,N-Acetylglucosamine,MAPS,negative,0,0.0,0.0
+2030,N-Acetylglucosamine,MAPS,positive,0,0.0,0.0
+2031,N-Acetylglucosamine,NEDC,negative,0,0.0,0.0
+2032,N-Acetylglucosamine,NEDC,positive,0,0.0,0.0
+2033,N-Acetylglucosamine,NOR,negative,1,855.86884,2.932914350017031
+2034,N-Acetylglucosamine,NOR,positive,1,20.664001,1.3357386670518778
+2035,N-Acetylglucosamine,pNA,negative,1,354.8447,2.551260501769252
+2036,N-Acetylglucosamine,pNA,positive,1,394.26822,2.596891897992191
+2037,"N6,N6,N6-Trimethyllysine",9AA,negative,0,0.0,0.0
+2038,"N6,N6,N6-Trimethyllysine",9AA,positive,1,111564.086,5.047528304548715
+2039,"N6,N6,N6-Trimethyllysine",CHCA,negative,0,0.0,0.0
+2040,"N6,N6,N6-Trimethyllysine",CHCA,positive,1,550165.5,5.740494142382127
+2041,"N6,N6,N6-Trimethyllysine",CMBT,negative,0,0.0,0.0
+2042,"N6,N6,N6-Trimethyllysine",CMBT,positive,1,5026.0986,3.701317403432963
+2043,"N6,N6,N6-Trimethyllysine",ClCCA,negative,0,0.0,0.0
+2044,"N6,N6,N6-Trimethyllysine",ClCCA,positive,1,11084.479,4.044754463581529
+2045,"N6,N6,N6-Trimethyllysine",DAN,negative,0,0.0,0.0
+2046,"N6,N6,N6-Trimethyllysine",DAN,positive,1,8366.293,3.922584977071672
+2047,"N6,N6,N6-Trimethyllysine",DHAP,negative,0,0.0,0.0
+2048,"N6,N6,N6-Trimethyllysine",DHAP,positive,1,2370.0073,3.3749328911122403
+2049,"N6,N6,N6-Trimethyllysine",DHB,negative,0,0.0,0.0
+2050,"N6,N6,N6-Trimethyllysine",DHB,positive,1,117838.016,5.071289107327833
+2051,"N6,N6,N6-Trimethyllysine",MAPS,negative,0,0.0,0.0
+2052,"N6,N6,N6-Trimethyllysine",MAPS,positive,0,0.0,0.0
+2053,"N6,N6,N6-Trimethyllysine",NEDC,negative,0,0.0,0.0
+2054,"N6,N6,N6-Trimethyllysine",NEDC,positive,1,3813.13,3.581395491363495
+2055,"N6,N6,N6-Trimethyllysine",NOR,negative,0,0.0,0.0
+2056,"N6,N6,N6-Trimethyllysine",NOR,positive,1,60213.414,4.779700464203988
+2057,"N6,N6,N6-Trimethyllysine",pNA,negative,0,0.0,0.0
+2058,"N6,N6,N6-Trimethyllysine",pNA,positive,1,65080.473,4.8134573738366155
+2059,Niacinamide,9AA,negative,0,0.0,0.0
+2060,Niacinamide,9AA,positive,0,0.0,0.0
+2061,Niacinamide,CHCA,negative,0,0.0,0.0
+2062,Niacinamide,CHCA,positive,1,3571.969,3.553029248167919
+2063,Niacinamide,CMBT,negative,0,0.0,0.0
+2064,Niacinamide,CMBT,positive,1,102.47253,2.0148250681225823
+2065,Niacinamide,ClCCA,negative,0,0.0,0.0
+2066,Niacinamide,ClCCA,positive,1,49.846012,1.706256895620344
+2067,Niacinamide,DAN,negative,0,0.0,0.0
+2068,Niacinamide,DAN,positive,0,0.0,0.0
+2069,Niacinamide,DHAP,negative,0,0.0,0.0
+2070,Niacinamide,DHAP,positive,1,54.20116,1.741948204111549
+2071,Niacinamide,DHB,negative,0,0.0,0.0
+2072,Niacinamide,DHB,positive,1,1320.2004,3.1209686965042134
+2073,Niacinamide,MAPS,negative,0,0.0,0.0
+2074,Niacinamide,MAPS,positive,0,0.0,0.0
+2075,Niacinamide,NEDC,negative,0,0.0,0.0
+2076,Niacinamide,NEDC,positive,0,0.0,0.0
+2077,Niacinamide,NOR,negative,0,0.0,0.0
+2078,Niacinamide,NOR,positive,0,0.0,0.0
+2079,Niacinamide,pNA,negative,0,0.0,0.0
+2080,Niacinamide,pNA,positive,0,0.0,0.0
+2081,Nicotinamide adenine dinucleotide (NAD),9AA,negative,0,0.0,0.0
+2082,Nicotinamide adenine dinucleotide (NAD),9AA,positive,0,0.0,0.0
+2083,Nicotinamide adenine dinucleotide (NAD),CHCA,negative,0,0.0,0.0
+2084,Nicotinamide adenine dinucleotide (NAD),CHCA,positive,0,0.0,0.0
+2085,Nicotinamide adenine dinucleotide (NAD),CMBT,negative,0,0.0,0.0
+2086,Nicotinamide adenine dinucleotide (NAD),CMBT,positive,0,0.0,0.0
+2087,Nicotinamide adenine dinucleotide (NAD),ClCCA,negative,0,0.0,0.0
+2088,Nicotinamide adenine dinucleotide (NAD),ClCCA,positive,0,0.0,0.0
+2089,Nicotinamide adenine dinucleotide (NAD),DAN,negative,0,0.0,0.0
+2090,Nicotinamide adenine dinucleotide (NAD),DAN,positive,0,0.0,0.0
+2091,Nicotinamide adenine dinucleotide (NAD),DHAP,negative,0,0.0,0.0
+2092,Nicotinamide adenine dinucleotide (NAD),DHAP,positive,0,0.0,0.0
+2093,Nicotinamide adenine dinucleotide (NAD),DHB,negative,0,0.0,0.0
+2094,Nicotinamide adenine dinucleotide (NAD),DHB,positive,0,0.0,0.0
+2095,Nicotinamide adenine dinucleotide (NAD),MAPS,negative,0,0.0,0.0
+2096,Nicotinamide adenine dinucleotide (NAD),MAPS,positive,0,0.0,0.0
+2097,Nicotinamide adenine dinucleotide (NAD),NEDC,negative,0,0.0,0.0
+2098,Nicotinamide adenine dinucleotide (NAD),NEDC,positive,0,0.0,0.0
+2099,Nicotinamide adenine dinucleotide (NAD),NOR,negative,0,0.0,0.0
+2100,Nicotinamide adenine dinucleotide (NAD),NOR,positive,0,0.0,0.0
+2101,Nicotinamide adenine dinucleotide (NAD),pNA,negative,0,0.0,0.0
+2102,Nicotinamide adenine dinucleotide (NAD),pNA,positive,0,0.0,0.0
+2103,"Nicotinamide adenine dinucleotide, reduced (NADH)",9AA,negative,1,142483.45,5.15376747032566
+2104,"Nicotinamide adenine dinucleotide, reduced (NADH)",9AA,positive,0,0.0,0.0
+2105,"Nicotinamide adenine dinucleotide, reduced (NADH)",CHCA,negative,1,3165.5806,3.5005905467419107
+2106,"Nicotinamide adenine dinucleotide, reduced (NADH)",CHCA,positive,1,350.30023,2.545678434129339
+2107,"Nicotinamide adenine dinucleotide, reduced (NADH)",CMBT,negative,0,0.0,0.0
+2108,"Nicotinamide adenine dinucleotide, reduced (NADH)",ClCCA,negative,1,132.88947,2.126746422413646
+2109,"Nicotinamide adenine dinucleotide, reduced (NADH)",ClCCA,positive,1,56.450184,1.759291423973942
+2110,"Nicotinamide adenine dinucleotide, reduced (NADH)",DAN,negative,1,1447.5251,3.160926025046892
+2111,"Nicotinamide adenine dinucleotide, reduced (NADH)",DAN,positive,0,0.0,0.0
+2112,"Nicotinamide adenine dinucleotide, reduced (NADH)",DHAP,negative,0,0.0,0.0
+2113,"Nicotinamide adenine dinucleotide, reduced (NADH)",DHAP,positive,0,0.0,0.0
+2114,"Nicotinamide adenine dinucleotide, reduced (NADH)",DHB,negative,1,16096.453,4.206757165749225
+2115,"Nicotinamide adenine dinucleotide, reduced (NADH)",DHB,positive,1,2059.3438,3.3139396951190636
+2116,"Nicotinamide adenine dinucleotide, reduced (NADH)",MAPS,negative,0,0.0,0.0
+2117,"Nicotinamide adenine dinucleotide, reduced (NADH)",MAPS,positive,0,0.0,0.0
+2118,"Nicotinamide adenine dinucleotide, reduced (NADH)",NEDC,negative,0,0.0,0.0
+2119,"Nicotinamide adenine dinucleotide, reduced (NADH)",NEDC,positive,0,0.0,0.0
+2120,"Nicotinamide adenine dinucleotide, reduced (NADH)",NOR,negative,1,6930.677,3.840838317402252
+2121,"Nicotinamide adenine dinucleotide, reduced (NADH)",NOR,positive,0,0.0,0.0
+2122,"Nicotinamide adenine dinucleotide, reduced (NADH)",pNA,negative,0,0.0,0.0
+2123,"Nicotinamide adenine dinucleotide, reduced (NADH)",pNA,positive,0,0.0,0.0
+2124,Nicotinic acid,9AA,negative,1,23916.844,4.378722028949174
+2125,Nicotinic acid,9AA,positive,0,0.0,0.0
+2126,Nicotinic acid,CHCA,negative,0,0.0,0.0
+2127,Nicotinic acid,CHCA,positive,1,7052.3438,3.8483950531064637
+2128,Nicotinic acid,CMBT,negative,0,0.0,0.0
+2129,Nicotinic acid,CMBT,positive,1,156.10669,2.1961946787905955
+2130,Nicotinic acid,ClCCA,negative,0,0.0,0.0
+2131,Nicotinic acid,ClCCA,positive,1,2173.2815,3.33731577065291
+2132,Nicotinic acid,DAN,negative,1,7788.3784,3.8915028019317304
+2133,Nicotinic acid,DAN,positive,0,0.0,0.0
+2134,Nicotinic acid,DHAP,negative,1,91.27725,1.965094643417097
+2135,Nicotinic acid,DHAP,positive,1,76.04958,1.8867702757062286
+2136,Nicotinic acid,DHB,negative,0,0.0,0.0
+2137,Nicotinic acid,DHB,positive,1,5786.872,3.7625189180398873
+2138,Nicotinic acid,MAPS,negative,0,0.0,0.0
+2139,Nicotinic acid,MAPS,positive,0,0.0,0.0
+2140,Nicotinic acid,NEDC,negative,0,0.0,0.0
+2141,Nicotinic acid,NEDC,positive,0,0.0,0.0
+2142,Nicotinic acid,NOR,negative,1,4940.8535,3.6938898667065603
+2143,Nicotinic acid,NOR,positive,0,0.0,0.0
+2144,Nicotinic acid,pNA,positive,0,0.0,0.0
+2145,Ornithine,9AA,negative,1,178.80928,2.254812102017839
+2146,Ornithine,9AA,positive,0,0.0,0.0
+2147,Ornithine,CHCA,negative,0,0.0,0.0
+2148,Ornithine,CHCA,positive,1,13953.098,4.144701768715489
+2149,Ornithine,CMBT,negative,0,0.0,0.0
+2150,Ornithine,CMBT,positive,1,838.80457,2.924178233626977
+2151,Ornithine,ClCCA,negative,0,0.0,0.0
+2152,Ornithine,ClCCA,positive,1,1251.317,3.097714276098743
+2153,Ornithine,DAN,negative,1,2069.5386,3.31608333124542
+2154,Ornithine,DAN,positive,1,761.3573,2.882158563268115
+2155,Ornithine,DHAP,negative,0,0.0,0.0
+2156,Ornithine,DHAP,positive,1,212.69435,2.3297930397295312
+2157,Ornithine,DHB,negative,0,0.0,0.0
+2158,Ornithine,DHB,positive,1,2610.012,3.4168088678098485
+2159,Ornithine,MAPS,negative,0,0.0,0.0
+2160,Ornithine,MAPS,positive,0,0.0,0.0
+2161,Ornithine,NEDC,negative,0,0.0,0.0
+2162,Ornithine,NEDC,positive,1,17.179518,1.2595823644351636
+2163,Ornithine,NOR,negative,1,928.9961,2.9684811273151923
+2164,Ornithine,NOR,positive,1,296.53418,2.473536863619953
+2165,Ornithine,pNA,negative,1,195.3358,2.2929994963645153
+2166,Ornithine,pNA,positive,1,2526.5234,3.40269518501233
+2167,Orotic acid,9AA,negative,1,4007.626,3.602995538986097
+2168,Orotic acid,9AA,positive,0,0.0,0.0
+2169,Orotic acid,CHCA,negative,1,376.70187,2.577149135022576
+2170,Orotic acid,CHCA,positive,0,0.0,0.0
+2171,Orotic acid,CMBT,negative,0,0.0,0.0
+2172,Orotic acid,CMBT,positive,0,0.0,0.0
+2173,Orotic acid,ClCCA,negative,1,11.8078985,1.1074778772291245
+2174,Orotic acid,ClCCA,positive,0,0.0,0.0
+2175,Orotic acid,DAN,negative,1,284.80157,2.456064610180857
+2176,Orotic acid,DAN,positive,0,0.0,0.0
+2177,Orotic acid,DHAP,negative,1,172.50017,2.2392999046601822
+2178,Orotic acid,DHAP,positive,0,0.0,0.0
+2179,Orotic acid,DHB,negative,1,62.29439,1.8013652187059301
+2180,Orotic acid,DHB,positive,0,0.0,0.0
+2181,Orotic acid,MAPS,negative,0,0.0,0.0
+2182,Orotic acid,MAPS,positive,0,0.0,0.0
+2183,Orotic acid,NEDC,negative,1,26.411413,1.4379314230727445
+2184,Orotic acid,NEDC,positive,0,0.0,0.0
+2185,Orotic acid,NOR,negative,1,210.18309,2.3246591401226415
+2186,Orotic acid,NOR,positive,0,0.0,0.0
+2187,Orotic acid,pNA,positive,0,0.0,0.0
+2188,Oxalacetic acid,9AA,positive,0,0.0,0.0
+2189,Oxalacetic acid,CHCA,negative,1,36.939205,1.5790882261907428
+2190,Oxalacetic acid,CHCA,positive,0,0.0,0.0
+2191,Oxalacetic acid,CMBT,negative,0,0.0,0.0
+2192,Oxalacetic acid,CMBT,positive,0,0.0,0.0
+2193,Oxalacetic acid,ClCCA,negative,0,0.0,0.0
+2194,Oxalacetic acid,ClCCA,positive,0,0.0,0.0
+2195,Oxalacetic acid,DAN,negative,0,0.0,0.0
+2196,Oxalacetic acid,DAN,positive,0,0.0,0.0
+2197,Oxalacetic acid,DHAP,negative,0,0.0,0.0
+2198,Oxalacetic acid,DHAP,positive,0,0.0,0.0
+2199,Oxalacetic acid,DHB,negative,0,0.0,0.0
+2200,Oxalacetic acid,DHB,positive,0,0.0,0.0
+2201,Oxalacetic acid,MAPS,negative,0,0.0,0.0
+2202,Oxalacetic acid,MAPS,positive,0,0.0,0.0
+2203,Oxalacetic acid,NEDC,negative,0,0.0,0.0
+2204,Oxalacetic acid,NEDC,positive,0,0.0,0.0
+2205,Oxalacetic acid,NOR,negative,0,0.0,0.0
+2206,Oxalacetic acid,NOR,positive,0,0.0,0.0
+2207,Oxalacetic acid,pNA,negative,0,0.0,0.0
+2208,Oxalacetic acid,pNA,positive,0,0.0,0.0
+2209,Oxidized glutathione,9AA,negative,1,350532.75,5.544729838944959
+2210,Oxidized glutathione,9AA,positive,1,109.16313,2.042036266776982
+2211,Oxidized glutathione,CHCA,negative,1,68129.24,4.833339918815987
+2212,Oxidized glutathione,CHCA,positive,1,30296.271,4.4814035115710515
+2213,Oxidized glutathione,CMBT,negative,0,0.0,0.0
+2214,Oxidized glutathione,CMBT,positive,1,7591.5723,3.8803889361637687
+2215,Oxidized glutathione,ClCCA,negative,1,3665.5835,3.5642615797383703
+2216,Oxidized glutathione,ClCCA,positive,1,4274.7524,3.6310125481674427
+2217,Oxidized glutathione,DAN,negative,1,32276.148,4.5088951536032456
+2218,Oxidized glutathione,DAN,positive,0,0.0,0.0
+2219,Oxidized glutathione,DHAP,negative,1,3549.2622,3.550260428494
+2220,Oxidized glutathione,DHAP,positive,1,441.69778,2.6461073441243927
+2221,Oxidized glutathione,DHB,negative,1,11030.875,4.042649332290546
+2222,Oxidized glutathione,DHB,positive,1,20143.967,4.304166560295772
+2223,Oxidized glutathione,MAPS,negative,0,0.0,0.0
+2224,Oxidized glutathione,MAPS,positive,0,0.0,0.0
+2225,Oxidized glutathione,NEDC,negative,0,0.0,0.0
+2226,Oxidized glutathione,NEDC,positive,0,0.0,0.0
+2227,Oxidized glutathione,NOR,negative,1,101785.46,5.007690010433156
+2228,Oxidized glutathione,NOR,positive,1,1937.1179,3.2873801926125688
+2229,Oxidized glutathione,pNA,negative,1,21254.262,4.327466462606034
+2230,Oxidized glutathione,pNA,positive,1,6253.34,3.7961814867742323
+2231,PA 16:0-18:1,9AA,negative,1,45917.63,4.66198892224018
+2232,PA 16:0-18:1,9AA,positive,0,0.0,0.0
+2233,PA 16:0-18:1,CHCA,negative,1,2815.6125,3.4497271023327634
+2234,PA 16:0-18:1,CHCA,positive,1,18.578474,1.2917788386823212
+2235,PA 16:0-18:1,CMBT,negative,0,0.0,0.0
+2236,PA 16:0-18:1,CMBT,positive,0,0.0,0.0
+2237,PA 16:0-18:1,ClCCA,negative,1,82.889565,1.923707942416715
+2238,PA 16:0-18:1,ClCCA,positive,1,40.09707,1.6138108601195853
+2239,PA 16:0-18:1,DAN,negative,1,15240.52,4.183028280303774
+2240,PA 16:0-18:1,DAN,positive,0,0.0,0.0
+2241,PA 16:0-18:1,DHAP,negative,1,1530.3342,3.185069981930667
+2242,PA 16:0-18:1,DHAP,positive,1,5.2144723,0.7934042565612387
+2243,PA 16:0-18:1,DHB,negative,1,684.9279,2.8362784680715167
+2244,PA 16:0-18:1,DHB,positive,1,329.5036,2.519176194386318
+2245,PA 16:0-18:1,MAPS,negative,1,3795.1553,3.579343971024333
+2246,PA 16:0-18:1,MAPS,positive,0,0.0,0.0
+2247,PA 16:0-18:1,NEDC,negative,1,1929.26,3.2856158110596905
+2248,PA 16:0-18:1,NEDC,positive,0,0.0,0.0
+2249,PA 16:0-18:1,NOR,negative,1,18054.115,4.256600258960927
+2250,PA 16:0-18:1,NOR,positive,0,0.0,0.0
+2251,PA 16:0-18:1,pNA,negative,1,2317.4758,3.365202567136584
+2252,PA 16:0-18:1,pNA,positive,0,0.0,0.0
+2253,PC (O) C16-18:1,9AA,negative,0,0.0,0.0
+2254,PC (O) C16-18:1,9AA,positive,1,49122.168,4.691286367102023
+2255,PC (O) C16-18:1,CHCA,negative,0,0.0,0.0
+2256,PC (O) C16-18:1,CHCA,positive,1,33631.055,4.526753404569871
+2257,PC (O) C16-18:1,CMBT,negative,0,0.0,0.0
+2258,PC (O) C16-18:1,CMBT,positive,1,69055.22,4.839202802248729
+2259,PC (O) C16-18:1,ClCCA,negative,0,0.0,0.0
+2260,PC (O) C16-18:1,ClCCA,positive,1,22589.129,4.353918710948172
+2261,PC (O) C16-18:1,DAN,negative,1,68.95044,1.844790450621571
+2262,PC (O) C16-18:1,DAN,positive,1,42663.176,4.630063362247836
+2263,PC (O) C16-18:1,DHAP,negative,0,0.0,0.0
+2264,PC (O) C16-18:1,DHAP,positive,1,8654.312,3.9372827276055347
+2265,PC (O) C16-18:1,DHB,negative,0,0.0,0.0
+2266,PC (O) C16-18:1,DHB,positive,1,42277.59,4.6261204950632395
+2267,PC (O) C16-18:1,MAPS,negative,0,0.0,0.0
+2268,PC (O) C16-18:1,MAPS,positive,1,1659.3104,3.2201892882842102
+2269,PC (O) C16-18:1,NEDC,negative,0,0.0,0.0
+2270,PC (O) C16-18:1,NEDC,positive,1,1656.6288,3.21948728365661
+2271,PC (O) C16-18:1,NOR,negative,0,0.0,0.0
+2272,PC (O) C16-18:1,NOR,positive,1,42428.56,4.6276685281002745
+2273,PC (O) C16-18:1,pNA,negative,0,0.0,0.0
+2274,PC (O) C16-18:1,pNA,positive,1,10950.311,4.039466112416766
+2275,PC 15:0-18:1,9AA,negative,0,0.0,0.0
+2276,PC 15:0-18:1,9AA,positive,1,31784.623,4.502230728046189
+2277,PC 15:0-18:1,CHCA,negative,0,0.0,0.0
+2278,PC 15:0-18:1,CHCA,positive,1,59569.12,4.775028474956748
+2279,PC 15:0-18:1,CMBT,negative,0,0.0,0.0
+2280,PC 15:0-18:1,CMBT,positive,1,66139.07,4.820464650217806
+2281,PC 15:0-18:1,ClCCA,negative,0,0.0,0.0
+2282,PC 15:0-18:1,ClCCA,positive,1,17668.418,4.247222244834939
+2283,PC 15:0-18:1,DAN,negative,1,67.24165,1.8340495189981534
+2284,PC 15:0-18:1,DAN,positive,1,38981.87,4.5908738096220265
+2285,PC 15:0-18:1,DHAP,negative,0,0.0,0.0
+2286,PC 15:0-18:1,DHAP,positive,1,7013.2334,3.8459802130204763
+2287,PC 15:0-18:1,DHB,negative,0,0.0,0.0
+2288,PC 15:0-18:1,DHB,positive,1,59394.836,4.773755999432186
+2289,PC 15:0-18:1,MAPS,negative,0,0.0,0.0
+2290,PC 15:0-18:1,MAPS,positive,1,2038.4896,3.3095214950543745
+2291,PC 15:0-18:1,NEDC,negative,0,0.0,0.0
+2292,PC 15:0-18:1,NEDC,positive,1,2562.81,3.408885837145902
+2293,PC 15:0-18:1,NOR,negative,0,0.0,0.0
+2294,PC 15:0-18:1,NOR,positive,1,32588.39,4.513076231526411
+2295,PC 15:0-18:1,pNA,negative,0,0.0,0.0
+2296,PC 15:0-18:1,pNA,positive,1,25846.45,4.412417703888171
+2297,PE 18:0-20:4,9AA,negative,1,803.40314,2.905473757203187
+2298,PE 18:0-20:4,9AA,positive,0,0.0,0.0
+2299,PE 18:0-20:4,CHCA,negative,1,25.15014,1.4174740182918097
+2300,PE 18:0-20:4,CHCA,positive,1,139.58833,2.1479492721279727
+2301,PE 18:0-20:4,CMBT,negative,0,0.0,0.0
+2302,PE 18:0-20:4,CMBT,positive,1,186.90573,2.2739400236845526
+2303,PE 18:0-20:4,ClCCA,negative,0,0.0,0.0
+2304,PE 18:0-20:4,ClCCA,positive,1,19.230944,1.3060161479426202
+2305,PE 18:0-20:4,DAN,negative,1,816.56494,2.9125222591470337
+2306,PE 18:0-20:4,DAN,positive,0,0.0,0.0
+2307,PE 18:0-20:4,DHAP,negative,1,77.07788,1.8925280126914072
+2308,PE 18:0-20:4,DHAP,positive,1,78.796745,1.9019851763460933
+2309,PE 18:0-20:4,DHB,negative,0,0.0,0.0
+2310,PE 18:0-20:4,DHB,positive,1,518.2106,2.715343550268653
+2311,PE 18:0-20:4,MAPS,negative,1,32.03568,1.5189832506693335
+2312,PE 18:0-20:4,MAPS,positive,0,0.0,0.0
+2313,PE 18:0-20:4,NEDC,negative,1,90.86531,1.9631515449034689
+2314,PE 18:0-20:4,NEDC,positive,0,0.0,0.0
+2315,PE 18:0-20:4,NOR,negative,1,541.04407,2.734034597571135
+2316,PE 18:0-20:4,NOR,positive,0,0.0,0.0
+2317,PE 18:0-20:4,pNA,negative,1,16.396608,1.2404645775648515
+2318,PE 18:0-20:4,pNA,positive,1,65.56692,1.8232584629461237
+2319,PG 16:0-18:1,9AA,negative,1,89724.07,4.952913805825025
+2320,PG 16:0-18:1,9AA,positive,0,0.0,0.0
+2321,PG 16:0-18:1,CHCA,negative,1,9609.221,3.982733374971033
+2322,PG 16:0-18:1,CHCA,positive,1,80.72206,1.9123393055296314
+2323,PG 16:0-18:1,CMBT,negative,1,1978.6624,3.296591134545344
+2324,PG 16:0-18:1,CMBT,positive,1,99.238266,2.0010335452851242
+2325,PG 16:0-18:1,ClCCA,negative,1,258.13412,2.4135245999874986
+2326,PG 16:0-18:1,ClCCA,positive,1,163.42314,2.2159629376998797
+2327,PG 16:0-18:1,DAN,negative,1,14755.066,4.168970589044038
+2328,PG 16:0-18:1,DAN,positive,0,0.0,0.0
+2329,PG 16:0-18:1,DHAP,negative,1,6105.4673,3.785790035803773
+2330,PG 16:0-18:1,DHAP,positive,1,43.830517,1.6515737473188916
+2331,PG 16:0-18:1,DHB,negative,1,1316.6465,3.119798912768458
+2332,PG 16:0-18:1,DHB,positive,1,388.33188,2.5903199668859345
+2333,PG 16:0-18:1,MAPS,negative,1,9073.443,3.9578199770194025
+2334,PG 16:0-18:1,MAPS,positive,0,0.0,0.0
+2335,PG 16:0-18:1,NEDC,negative,1,1112.9741,3.0468750935685525
+2336,PG 16:0-18:1,NEDC,positive,0,0.0,0.0
+2337,PG 16:0-18:1,NOR,negative,1,37660.688,4.575899781231805
+2338,PG 16:0-18:1,NOR,positive,0,0.0,0.0
+2339,PG 16:0-18:1,pNA,negative,1,4420.5454,3.64557408866773
+2340,PG 16:0-18:1,pNA,positive,0,0.0,0.0
+2341,PI 16:0-18:1,9AA,negative,1,97150.44,4.987449242191788
+2342,PI 16:0-18:1,9AA,positive,0,0.0,0.0
+2343,PI 16:0-18:1,CHCA,negative,1,3214.9463,3.5073087882703224
+2344,PI 16:0-18:1,CHCA,positive,0,0.0,0.0
+2345,PI 16:0-18:1,CMBT,negative,1,3767.2654,3.576141482681467
+2346,PI 16:0-18:1,CMBT,positive,0,0.0,0.0
+2347,PI 16:0-18:1,ClCCA,negative,1,540.50323,2.7336010514821014
+2348,PI 16:0-18:1,ClCCA,positive,1,61.57569,1.7964056471183012
+2349,PI 16:0-18:1,DAN,negative,1,30500.533,4.484321667435627
+2350,PI 16:0-18:1,DAN,positive,0,0.0,0.0
+2351,PI 16:0-18:1,DHAP,negative,1,12591.682,4.100118236363143
+2352,PI 16:0-18:1,DHAP,positive,1,39.020462,1.6022820978657226
+2353,PI 16:0-18:1,DHB,negative,1,4160.892,3.6192908061945386
+2354,PI 16:0-18:1,DHB,positive,1,297.40906,2.474812004619246
+2355,PI 16:0-18:1,MAPS,negative,1,2477.6663,3.394218062135448
+2356,PI 16:0-18:1,MAPS,positive,0,0.0,0.0
+2357,PI 16:0-18:1,NEDC,negative,1,355.43753,2.5519834254821077
+2358,PI 16:0-18:1,NEDC,positive,0,0.0,0.0
+2359,PI 16:0-18:1,NOR,negative,1,34726.965,4.540679335134418
+2360,PI 16:0-18:1,NOR,positive,0,0.0,0.0
+2361,PI 16:0-18:1,pNA,negative,0,0.0,0.0
+2362,PI 16:0-18:1,pNA,positive,0,0.0,0.0
+2363,PI(5)P 18:1,9AA,negative,1,45703.918,4.6599629341036595
+2364,PI(5)P 18:1,9AA,positive,0,0.0,0.0
+2365,PI(5)P 18:1,CHCA,negative,1,1810.5011,3.2580386020877983
+2366,PI(5)P 18:1,CHCA,positive,1,19.61465,1.3141759656540386
+2367,PI(5)P 18:1,CMBT,negative,1,299.85138,2.47835200793341
+2368,PI(5)P 18:1,CMBT,positive,0,0.0,0.0
+2369,PI(5)P 18:1,ClCCA,negative,1,222.60362,2.3494788302219813
+2370,PI(5)P 18:1,ClCCA,positive,1,52.129265,1.7253338078417497
+2371,PI(5)P 18:1,DAN,negative,1,2806.3606,3.4482982004975806
+2372,PI(5)P 18:1,DAN,positive,0,0.0,0.0
+2373,PI(5)P 18:1,DHAP,negative,1,655.3923,2.8171634777937236
+2374,PI(5)P 18:1,DHAP,positive,0,0.0,0.0
+2375,PI(5)P 18:1,DHB,negative,1,5441.29,3.7357816800464776
+2376,PI(5)P 18:1,DHB,positive,1,291.24847,2.465752246190433
+2377,PI(5)P 18:1,MAPS,negative,1,390.99292,2.593278223059489
+2378,PI(5)P 18:1,MAPS,positive,0,0.0,0.0
+2379,PI(5)P 18:1,NEDC,negative,1,401.94135,2.6052418371460417
+2380,PI(5)P 18:1,NEDC,positive,0,0.0,0.0
+2381,PI(5)P 18:1,NOR,negative,1,40278.07,4.605079434609215
+2382,PI(5)P 18:1,NOR,positive,0,0.0,0.0
+2383,PI(5)P 18:1,pNA,negative,0,0.0,0.0
+2384,PI(5)P 18:1,pNA,positive,0,0.0,0.0
+2385,PS (POPS) 16:0-18:1,9AA,negative,1,101010.25,5.004369745474085
+2386,PS (POPS) 16:0-18:1,9AA,positive,0,0.0,0.0
+2387,PS (POPS) 16:0-18:1,CHCA,negative,1,10367.45,4.0157138377043555
+2388,PS (POPS) 16:0-18:1,CHCA,positive,1,4662.2812,3.6686916045872726
+2389,PS (POPS) 16:0-18:1,CMBT,negative,1,7611.855,3.881547557981991
+2390,PS (POPS) 16:0-18:1,CMBT,positive,1,4891.3066,3.6895136663764463
+2391,PS (POPS) 16:0-18:1,ClCCA,negative,1,722.17017,2.8592405036515136
+2392,PS (POPS) 16:0-18:1,ClCCA,positive,1,2294.8152,3.3609369269095994
+2393,PS (POPS) 16:0-18:1,DAN,negative,1,27200.055,4.434585748585411
+2394,PS (POPS) 16:0-18:1,DAN,positive,1,534.5768,2.7288217560729735
+2395,PS (POPS) 16:0-18:1,DHAP,negative,1,3633.8071,3.5604813677044076
+2396,PS (POPS) 16:0-18:1,DHAP,positive,1,435.31653,2.63980166669252
+2397,PS (POPS) 16:0-18:1,DHB,negative,1,3278.6663,3.515829657296667
+2398,PS (POPS) 16:0-18:1,DHB,positive,1,6230.6743,3.7946047467490485
+2399,PS (POPS) 16:0-18:1,MAPS,negative,1,6945.8867,3.8417902158218067
+2400,PS (POPS) 16:0-18:1,MAPS,positive,0,0.0,0.0
+2401,PS (POPS) 16:0-18:1,NEDC,negative,1,2560.4438,3.4084848315699086
+2402,PS (POPS) 16:0-18:1,NEDC,positive,1,274.9001,2.440751857889263
+2403,PS (POPS) 16:0-18:1,NOR,negative,1,37065.617,4.568982950602625
+2404,PS (POPS) 16:0-18:1,NOR,positive,0,0.0,0.0
+2405,PS (POPS) 16:0-18:1,pNA,negative,1,7500.335,3.875138560930202
+2406,PS (POPS) 16:0-18:1,pNA,positive,1,1640.6038,3.2152683487418594
+2407,Palmitic acid,9AA,negative,0,0.0,0.0
+2408,Palmitic acid,9AA,positive,0,0.0,0.0
+2409,Palmitic acid,CHCA,negative,0,0.0,0.0
+2410,Palmitic acid,CHCA,positive,0,0.0,0.0
+2411,Palmitic acid,CMBT,negative,0,0.0,0.0
+2412,Palmitic acid,CMBT,positive,0,0.0,0.0
+2413,Palmitic acid,ClCCA,negative,0,0.0,0.0
+2414,Palmitic acid,ClCCA,positive,0,0.0,0.0
+2415,Palmitic acid,DAN,positive,0,0.0,0.0
+2416,Palmitic acid,DHAP,negative,0,0.0,0.0
+2417,Palmitic acid,DHAP,positive,0,0.0,0.0
+2418,Palmitic acid,DHB,negative,0,0.0,0.0
+2419,Palmitic acid,DHB,positive,0,0.0,0.0
+2420,Palmitic acid,MAPS,negative,0,0.0,0.0
+2421,Palmitic acid,MAPS,positive,0,0.0,0.0
+2422,Palmitic acid,NEDC,negative,0,0.0,0.0
+2423,Palmitic acid,NEDC,positive,0,0.0,0.0
+2424,Palmitic acid,NOR,positive,0,0.0,0.0
+2425,Palmitic acid,pNA,negative,1,74.519936,1.8780616132436856
+2426,Palmitic acid,pNA,positive,0,0.0,0.0
+2427,Palmitoyl-CoA,9AA,negative,1,193073.6,5.2857251437669275
+2428,Palmitoyl-CoA,9AA,positive,0,0.0,0.0
+2429,Palmitoyl-CoA,CHCA,negative,1,71757.375,4.85587259535761
+2430,Palmitoyl-CoA,CHCA,positive,1,13913.079,4.143454464823462
+2431,Palmitoyl-CoA,CMBT,negative,0,0.0,0.0
+2432,Palmitoyl-CoA,CMBT,positive,1,12002.003,4.07928991464513
+2433,Palmitoyl-CoA,ClCCA,negative,1,6962.056,3.842799887979427
+2434,Palmitoyl-CoA,ClCCA,positive,1,6208.3096,3.7930433145761286
+2435,Palmitoyl-CoA,DAN,negative,1,17610.023,4.245784584266587
+2436,Palmitoyl-CoA,DAN,positive,1,956.9184,2.9813285154051763
+2437,Palmitoyl-CoA,DHAP,negative,1,19201.61,4.283360261597382
+2438,Palmitoyl-CoA,DHAP,positive,1,4928.4204,3.692795858044056
+2439,Palmitoyl-CoA,DHB,negative,1,39279.016,4.594171656016905
+2440,Palmitoyl-CoA,DHB,positive,1,10759.686,4.031839958739098
+2441,Palmitoyl-CoA,MAPS,negative,1,4125.104,3.6155401703305143
+2442,Palmitoyl-CoA,MAPS,positive,0,0.0,0.0
+2443,Palmitoyl-CoA,NEDC,negative,1,289.89612,2.4637379286247576
+2444,Palmitoyl-CoA,NEDC,positive,1,72.331406,1.8652900119039395
+2445,Palmitoyl-CoA,NOR,negative,1,66211.45,4.820939657988475
+2446,Palmitoyl-CoA,NOR,positive,1,420.9583,2.625269533959945
+2447,Palmitoyl-CoA,pNA,negative,1,94678.27,4.976254900754785
+2448,Palmitoyl-CoA,pNA,positive,1,17149.201,4.234269214330936
+2449,Pantetheine,9AA,negative,1,1256.2687,3.099428103824812
+2450,Pantetheine,9AA,positive,0,0.0,0.0
+2451,Pantetheine,CHCA,negative,1,22.768204,1.3759963663155548
+2452,Pantetheine,CHCA,positive,1,11295.951,4.052961245027455
+2453,Pantetheine,CMBT,negative,0,0.0,0.0
+2454,Pantetheine,CMBT,positive,1,324.99323,2.5132085810367366
+2455,Pantetheine,ClCCA,negative,0,0.0,0.0
+2456,Pantetheine,ClCCA,positive,1,393.55795,2.596110798462878
+2457,Pantetheine,DAN,negative,1,6443.9404,3.809218905541896
+2458,Pantetheine,DAN,positive,1,233.4173,2.369989659467595
+2459,Pantetheine,DHAP,negative,1,158.93376,2.203940147511973
+2460,Pantetheine,DHAP,positive,1,347.94717,2.54275968050011
+2461,Pantetheine,DHB,negative,0,0.0,0.0
+2462,Pantetheine,DHB,positive,1,3268.3115,3.5144563021300903
+2463,Pantetheine,MAPS,negative,0,0.0,0.0
+2464,Pantetheine,MAPS,positive,0,0.0,0.0
+2465,Pantetheine,NEDC,negative,1,11.826818,1.1081189325684533
+2466,Pantetheine,NEDC,positive,0,0.0,0.0
+2467,Pantetheine,NOR,negative,1,13234.742,4.121748293009697
+2468,Pantetheine,NOR,positive,1,93.9969,1.9777094333429475
+2469,Pantetheine,pNA,negative,1,1565.107,3.1948214307245273
+2470,Pantetheine,pNA,positive,0,0.0,0.0
+2471,Pantothenic acid,9AA,negative,1,6729.5522,3.828050696850258
+2472,Pantothenic acid,9AA,positive,0,0.0,0.0
+2473,Pantothenic acid,CHCA,negative,1,66.94423,1.832152581222149
+2474,Pantothenic acid,CHCA,positive,1,5687.637,3.755008221704716
+2475,Pantothenic acid,CMBT,negative,0,0.0,0.0
+2476,Pantothenic acid,CMBT,positive,1,195.23099,2.2927675949052513
+2477,Pantothenic acid,ClCCA,negative,1,31.527039,1.51224453040481
+2478,Pantothenic acid,ClCCA,positive,1,1033.1448,3.0145813525279097
+2479,Pantothenic acid,DAN,negative,1,6307.0205,3.7998930960427897
+2480,Pantothenic acid,DAN,positive,0,0.0,0.0
+2481,Pantothenic acid,DHAP,negative,1,113.11657,2.0573487095986067
+2482,Pantothenic acid,DHAP,positive,1,79.51377,1.9058701626485752
+2483,Pantothenic acid,DHB,negative,0,0.0,0.0
+2484,Pantothenic acid,DHB,positive,1,1547.0767,3.1897924741514996
+2485,Pantothenic acid,MAPS,negative,1,8.13821,0.9608611341085309
+2486,Pantothenic acid,MAPS,positive,0,0.0,0.0
+2487,Pantothenic acid,NEDC,negative,0,0.0,0.0
+2488,Pantothenic acid,NEDC,positive,0,0.0,0.0
+2489,Pantothenic acid,NOR,negative,1,4598.586,3.662718743419205
+2490,Pantothenic acid,NOR,positive,0,0.0,0.0
+2491,Pantothenic acid,pNA,negative,1,825.3776,2.917178536575164
+2492,Pantothenic acid,pNA,positive,1,390.12662,2.5923173749541313
+2493,Phenylalanine,9AA,negative,1,1266.2341,3.1028568508320484
+2494,Phenylalanine,9AA,positive,0,0.0,0.0
+2495,Phenylalanine,CHCA,negative,1,17.086172,1.2573466566774467
+2496,Phenylalanine,CHCA,positive,1,8506.464,3.9298001200206323
+2497,Phenylalanine,CMBT,negative,0,0.0,0.0
+2498,Phenylalanine,CMBT,positive,1,417.58566,2.621784346101221
+2499,Phenylalanine,ClCCA,negative,0,0.0,0.0
+2500,Phenylalanine,ClCCA,positive,1,601.218,2.779753732219327
+2501,Phenylalanine,DAN,negative,1,1960.1442,3.2925095278655725
+2502,Phenylalanine,DAN,positive,0,0.0,0.0
+2503,Phenylalanine,DHAP,negative,1,74.10108,1.8756461824724495
+2504,Phenylalanine,DHAP,positive,1,69.82732,1.8502008090547566
+2505,Phenylalanine,DHB,negative,0,0.0,0.0
+2506,Phenylalanine,DHB,positive,1,3188.406,3.5037098068994337
+2507,Phenylalanine,MAPS,negative,1,233.36057,2.3698845456059763
+2508,Phenylalanine,MAPS,positive,0,0.0,0.0
+2509,Phenylalanine,NEDC,negative,0,0.0,0.0
+2510,Phenylalanine,NEDC,positive,0,0.0,0.0
+2511,Phenylalanine,NOR,negative,1,4612.576,3.6640376791920994
+2512,Phenylalanine,NOR,positive,0,0.0,0.0
+2513,Phenylalanine,pNA,negative,1,734.4019,2.8665247475867592
+2514,Phenylalanine,pNA,positive,1,1048.723,3.0210747129343525
+2515,Phosphocreatine,9AA,negative,1,3024.6895,3.4808243581367546
+2516,Phosphocreatine,9AA,positive,0,0.0,0.0
+2517,Phosphocreatine,CHCA,negative,0,0.0,0.0
+2518,Phosphocreatine,CMBT,negative,0,0.0,0.0
+2519,Phosphocreatine,CMBT,positive,0,0.0,0.0
+2520,Phosphocreatine,ClCCA,negative,0,0.0,0.0
+2521,Phosphocreatine,ClCCA,positive,1,13.683932,1.1668423646569868
+2522,Phosphocreatine,DAN,negative,0,0.0,0.0
+2523,Phosphocreatine,DAN,positive,0,0.0,0.0
+2524,Phosphocreatine,DHAP,negative,0,0.0,0.0
+2525,Phosphocreatine,DHAP,positive,0,0.0,0.0
+2526,Phosphocreatine,DHB,negative,0,0.0,0.0
+2527,Phosphocreatine,DHB,positive,1,51.075954,1.7166372347050585
+2528,Phosphocreatine,MAPS,negative,0,0.0,0.0
+2529,Phosphocreatine,MAPS,positive,0,0.0,0.0
+2530,Phosphocreatine,NEDC,negative,0,0.0,0.0
+2531,Phosphocreatine,NEDC,positive,0,0.0,0.0
+2532,Phosphocreatine,NOR,negative,0,0.0,0.0
+2533,Phosphocreatine,NOR,positive,0,0.0,0.0
+2534,Phosphocreatine,pNA,negative,0,0.0,0.0
+2535,Phosphocreatine,pNA,positive,0,0.0,0.0
+2536,Phosphoenolpyruvic acid,9AA,negative,1,157711.48,5.197866060993347
+2537,Phosphoenolpyruvic acid,9AA,positive,0,0.0,0.0
+2538,Phosphoenolpyruvic acid,CHCA,negative,1,3792.5696,3.5790480564028946
+2539,Phosphoenolpyruvic acid,CHCA,positive,1,158.46207,2.2026573974328842
+2540,Phosphoenolpyruvic acid,CMBT,negative,1,37.20737,1.5821471441056316
+2541,Phosphoenolpyruvic acid,CMBT,positive,0,0.0,0.0
+2542,Phosphoenolpyruvic acid,ClCCA,negative,1,167.92714,2.2276994293540313
+2543,Phosphoenolpyruvic acid,ClCCA,positive,1,36.91804,1.57884588037531
+2544,Phosphoenolpyruvic acid,DAN,negative,1,2378.2358,3.376437485990202
+2545,Phosphoenolpyruvic acid,DAN,positive,0,0.0,0.0
+2546,Phosphoenolpyruvic acid,DHAP,negative,0,0.0,0.0
+2547,Phosphoenolpyruvic acid,DHAP,positive,0,0.0,0.0
+2548,Phosphoenolpyruvic acid,DHB,negative,1,1396.2211,3.145265135471461
+2549,Phosphoenolpyruvic acid,DHB,positive,1,17.049294,1.2564602191003624
+2550,Phosphoenolpyruvic acid,MAPS,negative,1,101.059494,2.008853410816195
+2551,Phosphoenolpyruvic acid,MAPS,positive,0,0.0,0.0
+2552,Phosphoenolpyruvic acid,NEDC,negative,0,0.0,0.0
+2553,Phosphoenolpyruvic acid,NEDC,positive,0,0.0,0.0
+2554,Phosphoenolpyruvic acid,NOR,negative,1,88432.54,4.946617010197699
+2555,Phosphoenolpyruvic acid,NOR,positive,0,0.0,0.0
+2556,Phosphoenolpyruvic acid,pNA,negative,1,1779.2588,3.2504831412088606
+2557,Phosphoenolpyruvic acid,pNA,positive,0,0.0,0.0
+2558,Phylloquinone,9AA,negative,0,0.0,0.0
+2559,Phylloquinone,9AA,positive,0,0.0,0.0
+2560,Phylloquinone,CHCA,negative,0,0.0,0.0
+2561,Phylloquinone,CHCA,positive,1,215.40909,2.335275498827921
+2562,Phylloquinone,CMBT,negative,0,0.0,0.0
+2563,Phylloquinone,CMBT,positive,1,2379.176,3.376609071763552
+2564,Phylloquinone,ClCCA,negative,0,0.0,0.0
+2565,Phylloquinone,ClCCA,positive,1,362.5175,2.560525322954319
+2566,Phylloquinone,DAN,negative,0,0.0,0.0
+2567,Phylloquinone,DAN,positive,1,379.3486,2.5801818220281523
+2568,Phylloquinone,DHAP,negative,1,19.511875,1.3120053612427967
+2569,Phylloquinone,DHAP,positive,1,308.0645,2.490049123667254
+2570,Phylloquinone,DHB,negative,0,0.0,0.0
+2571,Phylloquinone,DHB,positive,1,10614.874,4.02595575523793
+2572,Phylloquinone,MAPS,negative,0,0.0,0.0
+2573,Phylloquinone,MAPS,positive,0,0.0,0.0
+2574,Phylloquinone,NEDC,negative,0,0.0,0.0
+2575,Phylloquinone,NEDC,positive,0,0.0,0.0
+2576,Phylloquinone,NOR,negative,0,0.0,0.0
+2577,Phylloquinone,NOR,positive,1,43.18179,1.645243307084866
+2578,Phylloquinone,pNA,negative,0,0.0,0.0
+2579,Phylloquinone,pNA,positive,0,0.0,0.0
+2580,Proline,9AA,negative,1,698.65674,2.8448850221755446
+2581,Proline,9AA,positive,0,0.0,0.0
+2582,Proline,CHCA,negative,1,32.143715,1.520401185844802
+2583,Proline,CHCA,positive,1,26458.512,4.422581830113706
+2584,Proline,CMBT,negative,0,0.0,0.0
+2585,Proline,CMBT,positive,1,1492.8121,3.174295972937725
+2586,Proline,ClCCA,negative,0,0.0,0.0
+2587,Proline,ClCCA,positive,1,1839.3407,3.264898230853521
+2588,Proline,DAN,negative,1,18350.713,4.263676608736631
+2589,Proline,DAN,positive,1,1684.229,3.226658924007866
+2590,Proline,DHAP,negative,1,117.92181,2.075261510581926
+2591,Proline,DHAP,positive,1,840.1012,2.9248482525843906
+2592,Proline,DHB,negative,0,0.0,0.0
+2593,Proline,DHB,positive,1,7852.2266,3.895048128931985
+2594,Proline,MAPS,negative,0,0.0,0.0
+2595,Proline,MAPS,positive,0,0.0,0.0
+2596,Proline,NEDC,negative,0,0.0,0.0
+2597,Proline,NEDC,positive,0,0.0,0.0
+2598,Proline,NOR,negative,1,1384.5026,3.141607345105326
+2599,Proline,NOR,positive,0,0.0,0.0
+2600,Proline,pNA,negative,1,1105.0508,3.0437750742137286
+2601,Proline,pNA,positive,1,1676.9343,3.2247749519002706
+2602,Propionylcarnitine,9AA,negative,0,0.0,0.0
+2603,Propionylcarnitine,9AA,positive,1,96280.625,4.983543411500973
+2604,Propionylcarnitine,CHCA,negative,0,0.0,0.0
+2605,Propionylcarnitine,CHCA,positive,1,129680.12,5.112876752671113
+2606,Propionylcarnitine,CMBT,negative,0,0.0,0.0
+2607,Propionylcarnitine,CMBT,positive,1,5863.128,3.76820344135459
+2608,Propionylcarnitine,ClCCA,negative,0,0.0,0.0
+2609,Propionylcarnitine,ClCCA,positive,0,0.0,0.0
+2610,Propionylcarnitine,DAN,negative,0,0.0,0.0
+2611,Propionylcarnitine,DAN,positive,1,4054.8894,3.6080861037156646
+2612,Propionylcarnitine,DHAP,negative,0,0.0,0.0
+2613,Propionylcarnitine,DHAP,positive,1,5343.3506,3.727894940981495
+2614,Propionylcarnitine,DHB,negative,0,0.0,0.0
+2615,Propionylcarnitine,DHB,positive,1,115071.93,5.06097317128999
+2616,Propionylcarnitine,MAPS,negative,0,0.0,0.0
+2617,Propionylcarnitine,MAPS,positive,0,0.0,0.0
+2618,Propionylcarnitine,NEDC,negative,0,0.0,0.0
+2619,Propionylcarnitine,NEDC,positive,1,1045.3853,3.0196916298967373
+2620,Propionylcarnitine,NOR,negative,0,0.0,0.0
+2621,Propionylcarnitine,NOR,positive,1,65789.914,4.818165919873385
+2622,Propionylcarnitine,pNA,negative,0,0.0,0.0
+2623,Propionylcarnitine,pNA,positive,1,62581.42,4.796452352870985
+2624,Prostaglandin E1,9AA,negative,1,4348.2993,3.6384192949649106
+2625,Prostaglandin E1,9AA,positive,0,0.0,0.0
+2626,Prostaglandin E1,CHCA,negative,0,0.0,0.0
+2627,Prostaglandin E1,CHCA,positive,0,0.0,0.0
+2628,Prostaglandin E1,CMBT,negative,0,0.0,0.0
+2629,Prostaglandin E1,CMBT,positive,0,0.0,0.0
+2630,Prostaglandin E1,ClCCA,negative,0,0.0,0.0
+2631,Prostaglandin E1,ClCCA,positive,0,0.0,0.0
+2632,Prostaglandin E1,DAN,negative,0,0.0,0.0
+2633,Prostaglandin E1,DAN,positive,0,0.0,0.0
+2634,Prostaglandin E1,DHAP,negative,1,1724.257,3.236853798173504
+2635,Prostaglandin E1,DHAP,positive,0,0.0,0.0
+2636,Prostaglandin E1,DHB,negative,0,0.0,0.0
+2637,Prostaglandin E1,DHB,positive,0,0.0,0.0
+2638,Prostaglandin E1,MAPS,negative,1,407.39243,2.611077683366642
+2639,Prostaglandin E1,MAPS,positive,0,0.0,0.0
+2640,Prostaglandin E1,NEDC,negative,1,118.31403,2.076691514863332
+2641,Prostaglandin E1,NEDC,positive,0,0.0,0.0
+2642,Prostaglandin E1,NOR,negative,0,0.0,0.0
+2643,Prostaglandin E1,NOR,positive,0,0.0,0.0
+2644,Prostaglandin E1,pNA,negative,0,0.0,0.0
+2645,Prostaglandin E1,pNA,positive,0,0.0,0.0
+2646,Putrescine,9AA,negative,0,0.0,0.0
+2647,Putrescine,9AA,positive,0,0.0,0.0
+2648,Putrescine,CHCA,negative,0,0.0,0.0
+2649,Putrescine,CHCA,positive,1,17306.627,4.238237527063589
+2650,Putrescine,CMBT,negative,0,0.0,0.0
+2651,Putrescine,CMBT,positive,1,637.891,2.8054267703079616
+2652,Putrescine,ClCCA,negative,0,0.0,0.0
+2653,Putrescine,ClCCA,positive,1,579.3403,2.763682729895768
+2654,Putrescine,DAN,negative,0,0.0,0.0
+2655,Putrescine,DAN,positive,1,1025.5604,3.0113845071552228
+2656,Putrescine,DHAP,negative,0,0.0,0.0
+2657,Putrescine,DHAP,positive,1,83.30122,1.9258338597425835
+2658,Putrescine,DHB,negative,0,0.0,0.0
+2659,Putrescine,DHB,positive,1,1833.3113,3.2634730414755277
+2660,Putrescine,MAPS,negative,0,0.0,0.0
+2661,Putrescine,MAPS,positive,0,0.0,0.0
+2662,Putrescine,NEDC,negative,0,0.0,0.0
+2663,Putrescine,NEDC,positive,0,0.0,0.0
+2664,Putrescine,NOR,negative,0,0.0,0.0
+2665,Putrescine,NOR,positive,0,0.0,0.0
+2666,Putrescine,pNA,negative,0,0.0,0.0
+2667,Putrescine,pNA,positive,1,2553.5999,3.4073228908391497
+2668,Pyridoxine,9AA,negative,1,5965.04,3.77568616081301
+2669,Pyridoxine,9AA,positive,1,11.003516,1.0793084756925895
+2670,Pyridoxine,CHCA,negative,0,0.0,0.0
+2671,Pyridoxine,CHCA,positive,1,27258.758,4.435521996042634
+2672,Pyridoxine,CMBT,negative,0,0.0,0.0
+2673,Pyridoxine,CMBT,positive,1,1057.4537,3.0246718654028615
+2674,Pyridoxine,ClCCA,negative,0,0.0,0.0
+2675,Pyridoxine,ClCCA,positive,1,915.34375,2.9620584220555704
+2676,Pyridoxine,DAN,negative,1,7154.5103,3.8546406112015146
+2677,Pyridoxine,DAN,positive,1,2073.6697,3.3169489642357646
+2678,Pyridoxine,DHAP,negative,1,123.17217,2.094024270802237
+2679,Pyridoxine,DHAP,positive,1,923.1994,2.9657656822342187
+2680,Pyridoxine,DHB,negative,0,0.0,0.0
+2681,Pyridoxine,DHB,positive,1,2129.669,3.328515987190107
+2682,Pyridoxine,MAPS,negative,0,0.0,0.0
+2683,Pyridoxine,MAPS,positive,0,0.0,0.0
+2684,Pyridoxine,NEDC,negative,0,0.0,0.0
+2685,Pyridoxine,NEDC,positive,0,0.0,0.0
+2686,Pyridoxine,NOR,negative,0,0.0,0.0
+2687,Pyridoxine,NOR,positive,0,0.0,0.0
+2688,Pyridoxine,pNA,negative,1,461.49927,2.6651110515934904
+2689,Pyridoxine,pNA,positive,1,6885.042,3.837969667266798
+2690,Pyruvic acid,9AA,positive,0,0.0,0.0
+2691,Pyruvic acid,CHCA,negative,0,0.0,0.0
+2692,Pyruvic acid,CHCA,positive,0,0.0,0.0
+2693,Pyruvic acid,CMBT,negative,0,0.0,0.0
+2694,Pyruvic acid,CMBT,positive,0,0.0,0.0
+2695,Pyruvic acid,ClCCA,negative,0,0.0,0.0
+2696,Pyruvic acid,ClCCA,positive,0,0.0,0.0
+2697,Pyruvic acid,DAN,positive,0,0.0,0.0
+2698,Pyruvic acid,DHAP,negative,0,0.0,0.0
+2699,Pyruvic acid,DHAP,positive,0,0.0,0.0
+2700,Pyruvic acid,DHB,positive,0,0.0,0.0
+2701,Pyruvic acid,MAPS,positive,0,0.0,0.0
+2702,Pyruvic acid,NEDC,positive,0,0.0,0.0
+2703,Pyruvic acid,NOR,positive,0,0.0,0.0
+2704,Pyruvic acid,pNA,positive,0,0.0,0.0
+2705,Quinolinic acid,9AA,negative,1,25394.08,4.404749585288414
+2706,Quinolinic acid,9AA,positive,0,0.0,0.0
+2707,Quinolinic acid,CHCA,negative,1,651.925,2.8148632977271233
+2708,Quinolinic acid,CHCA,positive,1,876.875,2.9434326814243432
+2709,Quinolinic acid,CMBT,negative,1,66.06822,1.8265167802569173
+2710,Quinolinic acid,CMBT,positive,0,0.0,0.0
+2711,Quinolinic acid,ClCCA,negative,1,41.483265,1.6282178865337182
+2712,Quinolinic acid,ClCCA,positive,1,382.19525,2.583420117025571
+2713,Quinolinic acid,DAN,negative,1,7666.149,3.884633903226109
+2714,Quinolinic acid,DAN,positive,0,0.0,0.0
+2715,Quinolinic acid,DHAP,negative,1,296.54092,2.47354670152044
+2716,Quinolinic acid,DHAP,positive,0,0.0,0.0
+2717,Quinolinic acid,DHB,negative,1,295.66922,2.472272489769537
+2718,Quinolinic acid,DHB,positive,1,848.8489,2.9293417166207214
+2719,Quinolinic acid,MAPS,negative,0,0.0,0.0
+2720,Quinolinic acid,MAPS,positive,0,0.0,0.0
+2721,Quinolinic acid,NEDC,negative,0,0.0,0.0
+2722,Quinolinic acid,NEDC,positive,0,0.0,0.0
+2723,Quinolinic acid,NOR,negative,1,4689.159,3.6711875658818505
+2724,Quinolinic acid,NOR,positive,0,0.0,0.0
+2725,Quinolinic acid,pNA,negative,1,1130.9795,3.0538385619074693
+2726,Quinolinic acid,pNA,positive,0,0.0,0.0
+2727,Retinoic acid,9AA,negative,0,0.0,0.0
+2728,Retinoic acid,9AA,positive,0,0.0,0.0
+2729,Retinoic acid,CHCA,negative,0,0.0,0.0
+2730,Retinoic acid,CHCA,positive,1,99.75559,2.0032691504836886
+2731,Retinoic acid,CMBT,negative,0,0.0,0.0
+2732,Retinoic acid,CMBT,positive,1,71.55448,1.8606642338545167
+2733,Retinoic acid,ClCCA,negative,0,0.0,0.0
+2734,Retinoic acid,ClCCA,positive,1,23.943727,1.3969613446759737
+2735,Retinoic acid,DAN,negative,1,306.90662,2.4884190263457553
+2736,Retinoic acid,DAN,positive,1,24.722427,1.410311943372721
+2737,Retinoic acid,DHAP,negative,0,0.0,0.0
+2738,Retinoic acid,DHAP,positive,1,114.66257,2.0631928380144218
+2739,Retinoic acid,DHB,negative,0,0.0,0.0
+2740,Retinoic acid,DHB,positive,1,188.07419,2.2766322485403983
+2741,Retinoic acid,MAPS,negative,0,0.0,0.0
+2742,Retinoic acid,MAPS,positive,0,0.0,0.0
+2743,Retinoic acid,NEDC,negative,0,0.0,0.0
+2744,Retinoic acid,NEDC,positive,0,0.0,0.0
+2745,Retinoic acid,NOR,negative,0,0.0,0.0
+2746,Retinoic acid,NOR,positive,0,0.0,0.0
+2747,Retinoic acid,pNA,negative,0,0.0,0.0
+2748,Retinoic acid,pNA,positive,0,0.0,0.0
+2749,Riboflavin,9AA,negative,1,8470.334,3.9279518050439046
+2750,Riboflavin,9AA,positive,0,0.0,0.0
+2751,Riboflavin,CHCA,negative,0,0.0,0.0
+2752,Riboflavin,CHCA,positive,1,9437.176,3.974888071663016
+2753,Riboflavin,CMBT,negative,0,0.0,0.0
+2754,Riboflavin,CMBT,positive,1,5232.1855,3.7187661293887286
+2755,Riboflavin,ClCCA,negative,0,0.0,0.0
+2756,Riboflavin,ClCCA,positive,1,1531.9174,3.185518753881985
+2757,Riboflavin,DAN,negative,0,0.0,0.0
+2758,Riboflavin,DAN,positive,1,2098.5923,3.3221349713767077
+2759,Riboflavin,DHAP,negative,1,278.68576,2.4466703551421545
+2760,Riboflavin,DHAP,positive,1,954.9004,2.9804126433390357
+2761,Riboflavin,DHB,negative,1,25.887953,1.4295577403176212
+2762,Riboflavin,DHB,positive,1,22314.936,4.348615107224498
+2763,Riboflavin,MAPS,negative,0,0.0,0.0
+2764,Riboflavin,MAPS,positive,0,0.0,0.0
+2765,Riboflavin,NEDC,negative,1,127.17841,2.107814880038584
+2766,Riboflavin,NEDC,positive,0,0.0,0.0
+2767,Riboflavin,NOR,negative,1,2853.7505,3.4555681576928383
+2768,Riboflavin,NOR,positive,1,7445.032,3.8719248983064345
+2769,Riboflavin,pNA,negative,0,0.0,0.0
+2770,Riboflavin,pNA,positive,1,6131.333,3.7876257300270537
+2771,Ribose 5-phosphate,9AA,negative,1,98147.57,4.991883976420658
+2772,Ribose 5-phosphate,9AA,positive,0,0.0,0.0
+2773,Ribose 5-phosphate,CHCA,negative,1,416.1746,2.620317858202117
+2774,Ribose 5-phosphate,CHCA,positive,0,0.0,0.0
+2775,Ribose 5-phosphate,CMBT,negative,0,0.0,0.0
+2776,Ribose 5-phosphate,CMBT,positive,0,0.0,0.0
+2777,Ribose 5-phosphate,ClCCA,negative,0,0.0,0.0
+2778,Ribose 5-phosphate,ClCCA,positive,0,0.0,0.0
+2779,Ribose 5-phosphate,DAN,negative,1,165.2527,2.2207687071214846
+2780,Ribose 5-phosphate,DAN,positive,0,0.0,0.0
+2781,Ribose 5-phosphate,DHAP,negative,1,70.32578,1.8532465296854916
+2782,Ribose 5-phosphate,DHAP,positive,0,0.0,0.0
+2783,Ribose 5-phosphate,DHB,negative,1,111.94717,2.0528753537266677
+2784,Ribose 5-phosphate,MAPS,negative,0,0.0,0.0
+2785,Ribose 5-phosphate,MAPS,positive,0,0.0,0.0
+2786,Ribose 5-phosphate,NEDC,negative,0,0.0,0.0
+2787,Ribose 5-phosphate,NEDC,positive,0,0.0,0.0
+2788,Ribose 5-phosphate,NOR,negative,1,26224.53,4.418724273748324
+2789,Ribose 5-phosphate,NOR,positive,0,0.0,0.0
+2790,Ribose 5-phosphate,pNA,negative,1,72.15855,1.8642650891876584
+2791,Ribose 5-phosphate,pNA,positive,0,0.0,0.0
+2792,Ribulose,9AA,negative,1,325.76276,2.514232555669227
+2793,Ribulose,9AA,positive,0,0.0,0.0
+2794,Ribulose,CHCA,negative,0,0.0,0.0
+2795,Ribulose,CHCA,positive,0,0.0,0.0
+2796,Ribulose,CMBT,negative,0,0.0,0.0
+2797,Ribulose,CMBT,positive,0,0.0,0.0
+2798,Ribulose,ClCCA,negative,0,0.0,0.0
+2799,Ribulose,ClCCA,positive,0,0.0,0.0
+2800,Ribulose,DAN,negative,1,321.6243,2.508697075261442
+2801,Ribulose,DAN,positive,0,0.0,0.0
+2802,Ribulose,DHAP,negative,0,0.0,0.0
+2803,Ribulose,DHAP,positive,0,0.0,0.0
+2804,Ribulose,DHB,negative,0,0.0,0.0
+2805,Ribulose,DHB,positive,0,0.0,0.0
+2806,Ribulose,MAPS,negative,0,0.0,0.0
+2807,Ribulose,MAPS,positive,0,0.0,0.0
+2808,Ribulose,NEDC,negative,0,0.0,0.0
+2809,Ribulose,NEDC,positive,0,0.0,0.0
+2810,Ribulose,NOR,negative,1,470.80322,2.6737609005670833
+2811,Ribulose,NOR,positive,0,0.0,0.0
+2812,Ribulose,pNA,negative,1,177.57384,2.251817837666885
+2813,Ribulose,pNA,positive,0,0.0,0.0
+2814,Ribulose 5-phosphate,9AA,negative,1,73445.88,4.865973351827255
+2815,Ribulose 5-phosphate,9AA,positive,0,0.0,0.0
+2816,Ribulose 5-phosphate,CHCA,negative,1,514.1914,2.711968604810379
+2817,Ribulose 5-phosphate,CHCA,positive,1,147.88043,2.1728376144641772
+2818,Ribulose 5-phosphate,CMBT,negative,0,0.0,0.0
+2819,Ribulose 5-phosphate,CMBT,positive,0,0.0,0.0
+2820,Ribulose 5-phosphate,ClCCA,negative,1,74.32062,1.8769138862446613
+2821,Ribulose 5-phosphate,ClCCA,positive,1,33.1146,1.532940283462585
+2822,Ribulose 5-phosphate,DAN,negative,1,3466.8638,3.540062032267266
+2823,Ribulose 5-phosphate,DAN,positive,0,0.0,0.0
+2824,Ribulose 5-phosphate,DHAP,negative,1,176.2482,2.248581833507929
+2825,Ribulose 5-phosphate,DHAP,positive,0,0.0,0.0
+2826,Ribulose 5-phosphate,DHB,negative,1,221.76126,2.3478396657157443
+2827,Ribulose 5-phosphate,MAPS,negative,0,0.0,0.0
+2828,Ribulose 5-phosphate,MAPS,positive,0,0.0,0.0
+2829,Ribulose 5-phosphate,NEDC,negative,0,0.0,0.0
+2830,Ribulose 5-phosphate,NEDC,positive,0,0.0,0.0
+2831,Ribulose 5-phosphate,NOR,negative,1,86518.54,4.937114201751881
+2832,Ribulose 5-phosphate,NOR,positive,0,0.0,0.0
+2833,Ribulose 5-phosphate,pNA,negative,1,422.6179,2.626974302962787
+2834,Ribulose 5-phosphate,pNA,positive,0,0.0,0.0
+2835,S-Adenosylhomocysteine,9AA,negative,1,19868.197,4.298180315750183
+2836,S-Adenosylhomocysteine,9AA,positive,0,0.0,0.0
+2837,S-Adenosylhomocysteine,CHCA,negative,1,2618.433,3.4182072945181066
+2838,S-Adenosylhomocysteine,CHCA,positive,1,13897.133,4.142956463401117
+2839,S-Adenosylhomocysteine,CMBT,negative,0,0.0,0.0
+2840,S-Adenosylhomocysteine,CMBT,positive,1,6688.5713,3.825398286974103
+2841,S-Adenosylhomocysteine,ClCCA,negative,1,158.0699,2.2015880080524473
+2842,S-Adenosylhomocysteine,ClCCA,positive,1,5529.6523,3.7427763561842426
+2843,S-Adenosylhomocysteine,DAN,negative,0,0.0,0.0
+2844,S-Adenosylhomocysteine,DAN,positive,1,4089.431,3.611769071102678
+2845,S-Adenosylhomocysteine,DHAP,negative,0,0.0,0.0
+2846,S-Adenosylhomocysteine,DHAP,positive,1,1250.1091,3.097295182964418
+2847,S-Adenosylhomocysteine,DHB,negative,1,2711.622,3.4333892796622263
+2848,S-Adenosylhomocysteine,DHB,positive,1,56556.484,4.75249008131889
+2849,S-Adenosylhomocysteine,MAPS,negative,0,0.0,0.0
+2850,S-Adenosylhomocysteine,MAPS,positive,0,0.0,0.0
+2851,S-Adenosylhomocysteine,NEDC,negative,1,67.8764,1.8380704395345466
+2852,S-Adenosylhomocysteine,NEDC,positive,0,0.0,0.0
+2853,S-Adenosylhomocysteine,pNA,negative,0,0.0,0.0
+2854,S-Adenosylhomocysteine,pNA,positive,1,7480.278,3.873975793177084
+2855,SM d18:1-16:0,9AA,negative,1,184.13017,2.2674771999350427
+2856,SM d18:1-16:0,9AA,positive,1,66704.375,4.82416083000035
+2857,SM d18:1-16:0,CHCA,negative,0,0.0,0.0
+2858,SM d18:1-16:0,CHCA,positive,1,17913.963,4.253215915549161
+2859,SM d18:1-16:0,CMBT,negative,0,0.0,0.0
+2860,SM d18:1-16:0,CMBT,positive,1,31932.152,4.504241788212024
+2861,SM d18:1-16:0,ClCCA,negative,0,0.0,0.0
+2862,SM d18:1-16:0,ClCCA,positive,1,15644.235,4.194382090872225
+2863,SM d18:1-16:0,DAN,negative,1,485.45834,2.687045653478331
+2864,SM d18:1-16:0,DAN,positive,1,42953.656,4.633010245362
+2865,SM d18:1-16:0,DHAP,negative,0,0.0,0.0
+2866,SM d18:1-16:0,DHAP,positive,1,12007.506,4.079488979399932
+2867,SM d18:1-16:0,DHB,negative,0,0.0,0.0
+2868,SM d18:1-16:0,DHB,positive,1,68110.57,4.833220891066314
+2869,SM d18:1-16:0,MAPS,negative,0,0.0,0.0
+2870,SM d18:1-16:0,MAPS,positive,1,847.84314,2.928827443216391
+2871,SM d18:1-16:0,NEDC,negative,0,0.0,0.0
+2872,SM d18:1-16:0,NEDC,positive,1,1332.8806,3.125116956205782
+2873,SM d18:1-16:0,NOR,negative,1,65.82961,1.824968926702892
+2874,SM d18:1-16:0,NOR,positive,1,130759.71,5.116477270031955
+2875,SM d18:1-16:0,pNA,negative,0,0.0,0.0
+2876,SM d18:1-16:0,pNA,positive,1,69643.93,4.842889506213433
+2877,Serine,9AA,negative,1,3993.5476,3.6014676006840505
+2878,Serine,9AA,positive,0,0.0,0.0
+2879,Serine,CHCA,negative,0,0.0,0.0
+2880,Serine,CHCA,positive,1,3537.0767,3.548767243504654
+2881,Serine,CMBT,negative,0,0.0,0.0
+2882,Serine,CMBT,positive,1,95.54575,1.9847331606408094
+2883,Serine,ClCCA,negative,0,0.0,0.0
+2884,Serine,ClCCA,positive,1,1136.338,3.0558895497542147
+2885,Serine,DAN,negative,1,5866.5195,3.768454541598849
+2886,Serine,DAN,positive,0,0.0,0.0
+2887,Serine,DHAP,negative,0,0.0,0.0
+2888,Serine,DHAP,positive,0,0.0,0.0
+2889,Serine,DHB,negative,0,0.0,0.0
+2890,Serine,DHB,positive,1,168.66086,2.2295816640820534
+2891,Serine,MAPS,negative,0,0.0,0.0
+2892,Serine,MAPS,positive,0,0.0,0.0
+2893,Serine,NEDC,negative,1,21.435799,1.3509415405556158
+2894,Serine,NEDC,positive,0,0.0,0.0
+2895,Serine,NOR,negative,1,635.8406,2.804030742848178
+2896,Serine,NOR,positive,0,0.0,0.0
+2897,Serine,pNA,negative,1,895.617,2.9526069688998384
+2898,Serine,pNA,positive,1,239.10413,2.3803996303643333
+2899,Serotonin,9AA,negative,0,0.0,0.0
+2900,Serotonin,9AA,positive,0,0.0,0.0
+2901,Serotonin,CHCA,negative,0,0.0,0.0
+2902,Serotonin,CHCA,positive,1,3378.8428,3.5288965012598412
+2903,Serotonin,CMBT,negative,0,0.0,0.0
+2904,Serotonin,CMBT,positive,1,386.55624,2.5883347338084888
+2905,Serotonin,ClCCA,negative,0,0.0,0.0
+2906,Serotonin,ClCCA,positive,1,585.8966,2.768561593573012
+2907,Serotonin,DAN,negative,1,3041.7778,3.4832702389972483
+2908,Serotonin,DHAP,negative,0,0.0,0.0
+2909,Serotonin,DHAP,positive,1,359.0531,2.556366554479523
+2910,Serotonin,DHB,negative,0,0.0,0.0
+2911,Serotonin,DHB,positive,1,6212.4727,3.793334394526116
+2912,Serotonin,MAPS,negative,0,0.0,0.0
+2913,Serotonin,MAPS,positive,0,0.0,0.0
+2914,Serotonin,NEDC,negative,0,0.0,0.0
+2915,Serotonin,NEDC,positive,0,0.0,0.0
+2916,Serotonin,NOR,negative,1,68.87302,1.8443095144149428
+2917,Serotonin,NOR,positive,0,0.0,0.0
+2918,Serotonin,pNA,negative,0,0.0,0.0
+2919,Spermidine,9AA,negative,0,0.0,0.0
+2920,Spermidine,9AA,positive,1,1796.4735,3.2546624963352504
+2921,Spermidine,CHCA,negative,0,0.0,0.0
+2922,Spermidine,CHCA,positive,1,32277.682,4.5089157933420685
+2923,Spermidine,CMBT,negative,0,0.0,0.0
+2924,Spermidine,CMBT,positive,1,3659.559,3.5635474110987335
+2925,Spermidine,ClCCA,negative,0,0.0,0.0
+2926,Spermidine,ClCCA,positive,1,3123.1765,3.4947355613162627
+2927,Spermidine,DAN,negative,0,0.0,0.0
+2928,Spermidine,DAN,positive,1,1254.1199,3.0986852153956383
+2929,Spermidine,DHAP,negative,0,0.0,0.0
+2930,Spermidine,DHAP,positive,1,1541.9215,3.188343830804512
+2931,Spermidine,DHB,negative,0,0.0,0.0
+2932,Spermidine,DHB,positive,1,35225.145,4.54686511843434
+2933,Spermidine,MAPS,negative,0,0.0,0.0
+2934,Spermidine,MAPS,positive,1,228.01654,2.359866849026924
+2935,Spermidine,NEDC,negative,0,0.0,0.0
+2936,Spermidine,NEDC,positive,1,164.96376,2.220013265448055
+2937,Spermidine,NOR,negative,0,0.0,0.0
+2938,Spermidine,NOR,positive,1,5489.8506,3.7396396271953916
+2939,Spermidine,pNA,negative,0,0.0,0.0
+2940,Spermidine,pNA,positive,1,9661.001,3.9850670780992132
+2941,Spermine,9AA,negative,0,0.0,0.0
+2942,Spermine,9AA,positive,1,2366.1128,3.3742189538523264
+2943,Spermine,CHCA,negative,0,0.0,0.0
+2944,Spermine,CHCA,positive,1,92954.46,4.968274904363204
+2945,Spermine,CMBT,negative,0,0.0,0.0
+2946,Spermine,CMBT,positive,1,2597.7432,3.414763365944589
+2947,Spermine,ClCCA,negative,0,0.0,0.0
+2948,Spermine,ClCCA,positive,1,4398.4326,3.6433966686273687
+2949,Spermine,DAN,negative,0,0.0,0.0
+2950,Spermine,DAN,positive,1,12329.37,4.090976108756913
+2951,Spermine,DHAP,negative,0,0.0,0.0
+2952,Spermine,DHAP,positive,1,1346.941,3.129670883345297
+2953,Spermine,DHB,negative,0,0.0,0.0
+2954,Spermine,DHB,positive,1,16474.262,4.216832329745532
+2955,Spermine,MAPS,negative,0,0.0,0.0
+2956,Spermine,MAPS,positive,0,0.0,0.0
+2957,Spermine,NEDC,negative,0,0.0,0.0
+2958,Spermine,NEDC,positive,1,754.86774,2.8784458102985284
+2959,Spermine,NOR,negative,0,0.0,0.0
+2960,Spermine,NOR,positive,1,10034.413,4.001535250259497
+2961,Spermine,pNA,negative,0,0.0,0.0
+2962,Spermine,pNA,positive,1,22500.63,4.352213979194253
+2963,Succinic acid,9AA,negative,1,60458.562,4.78146499660177
+2964,Succinic acid,9AA,positive,0,0.0,0.0
+2965,Succinic acid,CHCA,negative,1,274.6676,2.4403857252349286
+2966,Succinic acid,CHCA,positive,0,0.0,0.0
+2967,Succinic acid,CMBT,negative,1,184.47578,2.268287206139214
+2968,Succinic acid,CMBT,positive,0,0.0,0.0
+2969,Succinic acid,ClCCA,negative,0,0.0,0.0
+2970,Succinic acid,ClCCA,positive,0,0.0,0.0
+2971,Succinic acid,DAN,negative,1,24203.707,4.383899829837748
+2972,Succinic acid,DAN,positive,0,0.0,0.0
+2973,Succinic acid,DHAP,negative,1,1388.3309,3.1428056949306122
+2974,Succinic acid,DHAP,positive,0,0.0,0.0
+2975,Succinic acid,DHB,negative,1,296.13083,2.4729477161059963
+2976,Succinic acid,DHB,positive,0,0.0,0.0
+2977,Succinic acid,MAPS,negative,0,0.0,0.0
+2978,Succinic acid,MAPS,positive,0,0.0,0.0
+2979,Succinic acid,NEDC,negative,1,130.85376,2.120092518839114
+2980,Succinic acid,NEDC,positive,0,0.0,0.0
+2981,Succinic acid,NOR,negative,1,45143.96,4.654609272559471
+2982,Succinic acid,NOR,positive,0,0.0,0.0
+2983,Succinic acid,pNA,negative,1,3436.0889,3.53619076527081
+2984,Succinic acid,pNA,positive,0,0.0,0.0
+2985,Sulfo GalCer 18:0(2S-OH),9AA,negative,1,341320.16,5.533163212938402
+2986,Sulfo GalCer 18:0(2S-OH),9AA,positive,0,0.0,0.0
+2987,Sulfo GalCer 18:0(2S-OH),CHCA,negative,1,64468.1,4.809351607425904
+2988,Sulfo GalCer 18:0(2S-OH),CHCA,positive,0,0.0,0.0
+2989,Sulfo GalCer 18:0(2S-OH),CMBT,negative,1,24915.404,4.396485364004489
+2990,Sulfo GalCer 18:0(2S-OH),CMBT,positive,1,129.4797,2.1155429494999205
+2991,Sulfo GalCer 18:0(2S-OH),ClCCA,negative,1,13142.933,4.118725336656126
+2992,Sulfo GalCer 18:0(2S-OH),ClCCA,positive,1,644.5242,2.809912528135292
+2993,Sulfo GalCer 18:0(2S-OH),DAN,negative,1,135087.45,5.130618218631971
+2994,Sulfo GalCer 18:0(2S-OH),DAN,positive,0,0.0,0.0
+2995,Sulfo GalCer 18:0(2S-OH),DHAP,negative,1,76387.55,4.883028266370455
+2996,Sulfo GalCer 18:0(2S-OH),DHAP,positive,1,242.81018,2.3870518351032213
+2997,Sulfo GalCer 18:0(2S-OH),DHB,negative,1,69361.55,4.841125050883549
+2998,Sulfo GalCer 18:0(2S-OH),DHB,positive,1,673.8308,2.8291948960344326
+2999,Sulfo GalCer 18:0(2S-OH),MAPS,negative,1,32448.0,4.511201317433035
+3000,Sulfo GalCer 18:0(2S-OH),MAPS,positive,0,0.0,0.0
+3001,Sulfo GalCer 18:0(2S-OH),NEDC,negative,1,1358.2147,3.1332880628109314
+3002,Sulfo GalCer 18:0(2S-OH),NEDC,positive,0,0.0,0.0
+3003,Sulfo GalCer 18:0(2S-OH),NOR,negative,1,237613.52,5.375872975716576
+3004,Sulfo GalCer 18:0(2S-OH),NOR,positive,0,0.0,0.0
+3005,Sulfo GalCer 18:0(2S-OH),pNA,negative,0,0.0,0.0
+3006,Sulfo GalCer 18:0(2S-OH),pNA,positive,1,55.967667,1.7556284341350545
+3007,TG 15:0-18:1-15:0,9AA,negative,0,0.0,0.0
+3008,TG 15:0-18:1-15:0,9AA,positive,0,0.0,0.0
+3009,TG 15:0-18:1-15:0,CHCA,negative,0,0.0,0.0
+3010,TG 15:0-18:1-15:0,CHCA,positive,0,0.0,0.0
+3011,TG 15:0-18:1-15:0,CMBT,negative,0,0.0,0.0
+3012,TG 15:0-18:1-15:0,CMBT,positive,0,0.0,0.0
+3013,TG 15:0-18:1-15:0,ClCCA,negative,0,0.0,0.0
+3014,TG 15:0-18:1-15:0,ClCCA,positive,0,0.0,0.0
+3015,TG 15:0-18:1-15:0,DAN,negative,0,0.0,0.0
+3016,TG 15:0-18:1-15:0,DAN,positive,0,0.0,0.0
+3017,TG 15:0-18:1-15:0,DHAP,negative,0,0.0,0.0
+3018,TG 15:0-18:1-15:0,DHAP,positive,1,20.031687,1.32287410984306
+3019,TG 15:0-18:1-15:0,DHB,negative,0,0.0,0.0
+3020,TG 15:0-18:1-15:0,DHB,positive,1,100.925,2.0082807201241946
+3021,TG 15:0-18:1-15:0,MAPS,negative,0,0.0,0.0
+3022,TG 15:0-18:1-15:0,MAPS,positive,0,0.0,0.0
+3023,TG 15:0-18:1-15:0,NEDC,negative,0,0.0,0.0
+3024,TG 15:0-18:1-15:0,NEDC,positive,0,0.0,0.0
+3025,TG 15:0-18:1-15:0,NOR,negative,0,0.0,0.0
+3026,TG 15:0-18:1-15:0,NOR,positive,0,0.0,0.0
+3027,TG 15:0-18:1-15:0,pNA,negative,0,0.0,0.0
+3028,TG 15:0-18:1-15:0,pNA,positive,0,0.0,0.0
+3029,Taurine,9AA,negative,1,208896.88,5.3199340325654045
+3030,Taurine,9AA,positive,0,0.0,0.0
+3031,Taurine,CHCA,negative,1,8397.929,3.9242239099851393
+3032,Taurine,CHCA,positive,1,3113.1843,3.493344310898941
+3033,Taurine,CMBT,negative,1,341.20837,2.534290627649146
+3034,Taurine,CMBT,positive,0,0.0,0.0
+3035,Taurine,ClCCA,negative,1,105.2851,2.0264723854890563
+3036,Taurine,ClCCA,positive,1,157.44615,2.1998816909604053
+3037,Taurine,DAN,negative,1,12207.921,4.0866772835638425
+3038,Taurine,DAN,positive,0,0.0,0.0
+3039,Taurine,DHAP,negative,1,2252.1897,3.352797757278657
+3040,Taurine,DHAP,positive,1,27.582552,1.4561010022729381
+3041,Taurine,DHB,negative,1,822.2232,2.91551760117372
+3042,Taurine,DHB,positive,1,213.33081,2.3310846052518683
+3043,Taurine,MAPS,negative,0,0.0,0.0
+3044,Taurine,MAPS,positive,0,0.0,0.0
+3045,Taurine,NEDC,negative,0,0.0,0.0
+3046,Taurine,NEDC,positive,0,0.0,0.0
+3047,Taurine,NOR,negative,1,7462.7876,3.8729592720218764
+3048,Taurine,NOR,positive,0,0.0,0.0
+3049,Taurine,pNA,negative,1,5874.721,3.769061165770848
+3050,Taurine,pNA,positive,0,0.0,0.0
+3051,Taurocholic acid,9AA,negative,1,982982.0,5.992546007079303
+3052,Taurocholic acid,9AA,positive,0,0.0,0.0
+3053,Taurocholic acid,CHCA,negative,1,80181.98,4.904082192766415
+3054,Taurocholic acid,CHCA,positive,1,25.726849,1.4269477600069043
+3055,Taurocholic acid,CMBT,negative,1,1709.3027,3.2330729813311003
+3056,Taurocholic acid,CMBT,positive,1,19.288418,1.3072481840143038
+3057,Taurocholic acid,ClCCA,negative,1,8312.093,3.919762639056074
+3058,Taurocholic acid,ClCCA,positive,1,58.665245,1.7757214282823957
+3059,Taurocholic acid,DAN,negative,1,129467.42,5.112163848013489
+3060,Taurocholic acid,DAN,positive,0,0.0,0.0
+3061,Taurocholic acid,DHAP,negative,1,12909.706,4.110949991570897
+3062,Taurocholic acid,DHAP,positive,1,15.780487,1.22480456068479
+3063,Taurocholic acid,DHB,negative,1,32395.162,4.5104935620290645
+3064,Taurocholic acid,DHB,positive,1,51.667393,1.7215418216091314
+3065,Taurocholic acid,MAPS,negative,1,1464.6653,3.1660348059402517
+3066,Taurocholic acid,MAPS,positive,0,0.0,0.0
+3067,Taurocholic acid,NEDC,negative,1,215.57954,2.3356174269670698
+3068,Taurocholic acid,NEDC,positive,0,0.0,0.0
+3069,Taurocholic acid,NOR,negative,1,386473.78,5.587121158631575
+3070,Taurocholic acid,NOR,positive,0,0.0,0.0
+3071,Taurocholic acid,pNA,negative,0,0.0,0.0
+3072,Taurocholic acid,pNA,positive,1,22.461802,1.3703613653499112
+3073,Tetrahydrofolic acid,9AA,negative,0,0.0,0.0
+3074,Tetrahydrofolic acid,9AA,positive,0,0.0,0.0
+3075,Tetrahydrofolic acid,CHCA,negative,0,0.0,0.0
+3076,Tetrahydrofolic acid,CHCA,positive,1,2300.6252,3.3620346039053106
+3077,Tetrahydrofolic acid,CMBT,negative,0,0.0,0.0
+3078,Tetrahydrofolic acid,CMBT,positive,1,111.09996,2.0496054576281364
+3079,Tetrahydrofolic acid,ClCCA,negative,0,0.0,0.0
+3080,Tetrahydrofolic acid,ClCCA,positive,1,1272.2944,3.1049288290373362
+3081,Tetrahydrofolic acid,DAN,negative,0,0.0,0.0
+3082,Tetrahydrofolic acid,DAN,positive,0,0.0,0.0
+3083,Tetrahydrofolic acid,DHAP,negative,0,0.0,0.0
+3084,Tetrahydrofolic acid,DHAP,positive,1,275.80386,2.4421721420166986
+3085,Tetrahydrofolic acid,DHB,negative,0,0.0,0.0
+3086,Tetrahydrofolic acid,DHB,positive,1,4215.799,3.624982900215407
+3087,Tetrahydrofolic acid,MAPS,negative,0,0.0,0.0
+3088,Tetrahydrofolic acid,MAPS,positive,0,0.0,0.0
+3089,Tetrahydrofolic acid,NEDC,negative,0,0.0,0.0
+3090,Tetrahydrofolic acid,NEDC,positive,0,0.0,0.0
+3091,Tetrahydrofolic acid,NOR,negative,0,0.0,0.0
+3092,Tetrahydrofolic acid,NOR,positive,1,257.68106,2.412764631891623
+3093,Tetrahydrofolic acid,pNA,negative,0,0.0,0.0
+3094,Tetrahydrofolic acid,pNA,positive,1,208.07288,2.3202977017310373
+3095,Thymine,9AA,negative,1,18633.424,4.270315973022902
+3096,Thymine,9AA,positive,0,0.0,0.0
+3097,Thymine,CHCA,negative,0,0.0,0.0
+3098,Thymine,CHCA,positive,1,374.60266,2.5747286592576284
+3099,Thymine,CMBT,negative,0,0.0,0.0
+3100,Thymine,CMBT,positive,1,25.212337,1.4185057428450492
+3101,Thymine,ClCCA,negative,0,0.0,0.0
+3102,Thymine,ClCCA,positive,1,86.619354,1.9426000468874711
+3103,Thymine,DAN,negative,1,14535.078,4.162447244712657
+3104,Thymine,DAN,positive,0,0.0,0.0
+3105,Thymine,DHAP,negative,0,0.0,0.0
+3106,Thymine,DHAP,positive,0,0.0,0.0
+3107,Thymine,DHB,negative,0,0.0,0.0
+3108,Thymine,DHB,positive,1,564.1526,2.7521657299251316
+3109,Thymine,MAPS,negative,1,1145.7249,3.0594592428866054
+3110,Thymine,MAPS,positive,0,0.0,0.0
+3111,Thymine,NEDC,negative,0,0.0,0.0
+3112,Thymine,NEDC,positive,0,0.0,0.0
+3113,Thymine,NOR,negative,1,8858.8,3.947423918289224
+3114,Thymine,NOR,positive,0,0.0,0.0
+3115,Thymine,pNA,negative,1,922.1208,2.9652585367145505
+3116,Thymine,pNA,positive,0,0.0,0.0
+3117,Tryptophan,9AA,negative,1,258.6718,2.41442478840722
+3118,Tryptophan,9AA,positive,0,0.0,0.0
+3119,Tryptophan,CHCA,negative,1,9.628314,1.0264643766050898
+3120,Tryptophan,CHCA,positive,1,4505.785,3.6538668401786323
+3121,Tryptophan,CMBT,negative,0,0.0,0.0
+3122,Tryptophan,CMBT,positive,1,194.73853,2.291676322435448
+3123,Tryptophan,ClCCA,negative,0,0.0,0.0
+3124,Tryptophan,ClCCA,positive,1,675.5832,2.8303212097719745
+3125,Tryptophan,DAN,negative,1,1855.993,3.2688102666546413
+3126,Tryptophan,DHAP,negative,1,30.733921,1.5015237362497076
+3127,Tryptophan,DHAP,positive,1,892.04895,2.9508752641878293
+3128,Tryptophan,DHB,negative,0,0.0,0.0
+3129,Tryptophan,DHB,positive,1,4640.716,3.666678564942388
+3130,Tryptophan,MAPS,negative,0,0.0,0.0
+3131,Tryptophan,MAPS,positive,0,0.0,0.0
+3132,Tryptophan,NEDC,negative,0,0.0,0.0
+3133,Tryptophan,NEDC,positive,0,0.0,0.0
+3134,Tryptophan,NOR,negative,1,487.07227,2.6884841337616434
+3135,Tryptophan,NOR,positive,0,0.0,0.0
+3136,Tryptophan,pNA,negative,0,0.0,0.0
+3137,Tyrosine,9AA,negative,1,134.4624,2.131818765774426
+3138,Tyrosine,9AA,positive,0,0.0,0.0
+3139,Tyrosine,CHCA,negative,0,0.0,0.0
+3140,Tyrosine,CHCA,positive,1,528.88995,2.724185682675429
+3141,Tyrosine,CMBT,negative,0,0.0,0.0
+3142,Tyrosine,CMBT,positive,0,0.0,0.0
+3143,Tyrosine,ClCCA,negative,0,0.0,0.0
+3144,Tyrosine,ClCCA,positive,1,34.194004,1.546468679059805
+3145,Tyrosine,DAN,negative,1,743.7864,2.8720317377116324
+3146,Tyrosine,DAN,positive,0,0.0,0.0
+3147,Tyrosine,DHAP,negative,0,0.0,0.0
+3148,Tyrosine,DHAP,positive,0,0.0,0.0
+3149,Tyrosine,DHB,negative,0,0.0,0.0
+3150,Tyrosine,DHB,positive,1,950.2206,2.978281246961195
+3151,Tyrosine,MAPS,negative,0,0.0,0.0
+3152,Tyrosine,MAPS,positive,0,0.0,0.0
+3153,Tyrosine,NEDC,negative,0,0.0,0.0
+3154,Tyrosine,NEDC,positive,0,0.0,0.0
+3155,Tyrosine,NOR,negative,0,0.0,0.0
+3156,Tyrosine,NOR,positive,0,0.0,0.0
+3157,Tyrosine,pNA,negative,1,336.2448,2.5279452619800677
+3158,Tyrosine,pNA,positive,1,1224.2792,3.0882350611114275
+3159,Uracil,9AA,negative,1,32271.092,4.508827118939941
+3160,Uracil,9AA,positive,0,0.0,0.0
+3161,Uracil,CHCA,negative,0,0.0,0.0
+3162,Uracil,CHCA,positive,1,221.87267,2.3480568159189925
+3163,Uracil,CMBT,negative,1,9.399188,1.0169994295981244
+3164,Uracil,CMBT,positive,0,0.0,0.0
+3165,Uracil,ClCCA,negative,0,0.0,0.0
+3166,Uracil,ClCCA,positive,1,71.02282,1.857470121845907
+3167,Uracil,DAN,negative,1,7637.482,3.883007059553876
+3168,Uracil,DAN,positive,0,0.0,0.0
+3169,Uracil,DHAP,negative,1,567.38904,2.754645695023531
+3170,Uracil,DHAP,positive,0,0.0,0.0
+3171,Uracil,DHB,negative,0,0.0,0.0
+3172,Uracil,DHB,positive,1,84.42178,1.9315686169166477
+3173,Uracil,MAPS,negative,1,18.611662,1.2925143997281368
+3174,Uracil,MAPS,positive,0,0.0,0.0
+3175,Uracil,NEDC,negative,1,251.57901,2.402397256670855
+3176,Uracil,NEDC,positive,0,0.0,0.0
+3177,Uracil,NOR,negative,1,17817.967,4.250882523539048
+3178,Uracil,NOR,positive,0,0.0,0.0
+3179,Uracil,pNA,positive,0,0.0,0.0
+3180,Ureidosuccinic acid,9AA,negative,1,29431.266,4.4688236998641875
+3181,Ureidosuccinic acid,9AA,positive,0,0.0,0.0
+3182,Ureidosuccinic acid,CHCA,negative,1,904.91693,2.9570883759366002
+3183,Ureidosuccinic acid,CHCA,positive,1,1661.4679,3.2207532684187767
+3184,Ureidosuccinic acid,CMBT,negative,1,47.730034,1.6877967143980652
+3185,Ureidosuccinic acid,CMBT,positive,0,0.0,0.0
+3186,Ureidosuccinic acid,ClCCA,negative,1,94.42966,1.9796833765108055
+3187,Ureidosuccinic acid,ClCCA,positive,1,243.47162,2.3882284504012685
+3188,Ureidosuccinic acid,DAN,negative,1,2504.7607,3.3989395935408697
+3189,Ureidosuccinic acid,DAN,positive,0,0.0,0.0
+3190,Ureidosuccinic acid,DHAP,negative,1,653.48376,2.815898874676096
+3191,Ureidosuccinic acid,DHAP,positive,0,0.0,0.0
+3192,Ureidosuccinic acid,DHB,negative,1,623.1469,2.795286817809075
+3193,Ureidosuccinic acid,DHB,positive,1,736.3713,2.8676862299690473
+3194,Ureidosuccinic acid,MAPS,negative,0,0.0,0.0
+3195,Ureidosuccinic acid,MAPS,positive,0,0.0,0.0
+3196,Ureidosuccinic acid,NEDC,negative,1,43.508545,1.6484433972751187
+3197,Ureidosuccinic acid,NEDC,positive,0,0.0,0.0
+3198,Ureidosuccinic acid,NOR,negative,1,6133.3125,3.787765896453872
+3199,Ureidosuccinic acid,NOR,positive,0,0.0,0.0
+3200,Ureidosuccinic acid,pNA,negative,1,783.17505,2.894413020290508
+3201,Ureidosuccinic acid,pNA,positive,0,0.0,0.0
+3202,Uric acid,9AA,negative,1,89357.75,4.951137084996772
+3203,Uric acid,9AA,positive,0,0.0,0.0
+3204,Uric acid,CHCA,negative,0,0.0,0.0
+3205,Uric acid,CHCA,positive,1,207.1592,2.318395610134819
+3206,Uric acid,CMBT,negative,0,0.0,0.0
+3207,Uric acid,CMBT,positive,0,0.0,0.0
+3208,Uric acid,ClCCA,negative,1,20.918928,1.3408193100737735
+3209,Uric acid,ClCCA,positive,0,0.0,0.0
+3210,Uric acid,DAN,negative,1,288.77283,2.4620576622454107
+3211,Uric acid,DAN,positive,0,0.0,0.0
+3212,Uric acid,DHAP,negative,1,520.4655,2.7172255809212165
+3213,Uric acid,DHAP,positive,0,0.0,0.0
+3214,Uric acid,DHB,negative,1,1486.6038,3.17248727906911
+3215,Uric acid,DHB,positive,1,85.84878,1.9387637221154221
+3216,Uric acid,MAPS,negative,1,6.7489038,0.8892402693084532
+3217,Uric acid,MAPS,positive,0,0.0,0.0
+3218,Uric acid,NEDC,negative,0,0.0,0.0
+3219,Uric acid,NEDC,positive,0,0.0,0.0
+3220,Uric acid,NOR,negative,1,1970.9716,3.2949006560148772
+3221,Uric acid,NOR,positive,0,0.0,0.0
+3222,Uric acid,pNA,negative,0,0.0,0.0
+3223,Uric acid,pNA,positive,0,0.0,0.0
+3224,Uridine,9AA,negative,1,1501.7017,3.176872777724943
+3225,Uridine,9AA,positive,0,0.0,0.0
+3226,Uridine,CHCA,negative,0,0.0,0.0
+3227,Uridine,CHCA,positive,1,168.55655,2.2293145713120497
+3228,Uridine,CMBT,negative,0,0.0,0.0
+3229,Uridine,CMBT,positive,0,0.0,0.0
+3230,Uridine,ClCCA,negative,0,0.0,0.0
+3231,Uridine,ClCCA,positive,0,0.0,0.0
+3232,Uridine,DAN,negative,1,3952.142,3.596942414825845
+3233,Uridine,DAN,positive,0,0.0,0.0
+3234,Uridine,DHAP,negative,0,0.0,0.0
+3235,Uridine,DHAP,positive,0,0.0,0.0
+3236,Uridine,DHB,negative,0,0.0,0.0
+3237,Uridine,DHB,positive,1,312.33472,2.4960085208598737
+3238,Uridine,MAPS,negative,0,0.0,0.0
+3239,Uridine,MAPS,positive,0,0.0,0.0
+3240,Uridine,NEDC,negative,0,0.0,0.0
+3241,Uridine,NEDC,positive,0,0.0,0.0
+3242,Uridine,NOR,negative,1,306.68707,2.488109246180385
+3243,Uridine,NOR,positive,0,0.0,0.0
+3244,Uridine,pNA,negative,0,0.0,0.0
+3245,Uridine,pNA,positive,0,0.0,0.0
+3246,Uridine diphosphate,9AA,negative,1,861856.56,5.935435495502642
+3247,Uridine diphosphate,9AA,positive,0,0.0,0.0
+3248,Uridine diphosphate,CHCA,negative,1,60566.453,4.782239310970498
+3249,Uridine diphosphate,CHCA,positive,0,0.0,0.0
+3250,Uridine diphosphate,CMBT,negative,0,0.0,0.0
+3251,Uridine diphosphate,CMBT,positive,0,0.0,0.0
+3252,Uridine diphosphate,ClCCA,negative,1,582.04865,2.7657047941158486
+3253,Uridine diphosphate,ClCCA,positive,0,0.0,0.0
+3254,Uridine diphosphate,DAN,negative,1,858.6684,2.9343309630790078
+3255,Uridine diphosphate,DAN,positive,0,0.0,0.0
+3256,Uridine diphosphate,DHAP,negative,0,0.0,0.0
+3257,Uridine diphosphate,DHAP,positive,0,0.0,0.0
+3258,Uridine diphosphate,DHB,negative,1,39380.195,4.595288890421492
+3259,Uridine diphosphate,DHB,positive,1,84.27299,1.9308114912902627
+3260,Uridine diphosphate,MAPS,negative,0,0.0,0.0
+3261,Uridine diphosphate,MAPS,positive,0,0.0,0.0
+3262,Uridine diphosphate,NEDC,negative,0,0.0,0.0
+3263,Uridine diphosphate,NEDC,positive,0,0.0,0.0
+3264,Uridine diphosphate,NOR,negative,1,321298.66,5.506910265980395
+3265,Uridine diphosphate,NOR,positive,0,0.0,0.0
+3266,Uridine diphosphate,pNA,negative,0,0.0,0.0
+3267,Uridine diphosphate,pNA,positive,0,0.0,0.0
+3268,Uridine diphosphate glucose,9AA,negative,1,427027.22,5.630456576161583
+3269,Uridine diphosphate glucose,9AA,positive,0,0.0,0.0
+3270,Uridine diphosphate glucose,CHCA,negative,1,43423.465,4.637734476538155
+3271,Uridine diphosphate glucose,CHCA,positive,0,0.0,0.0
+3272,Uridine diphosphate glucose,CMBT,negative,1,33.133007,1.5331745498075495
+3273,Uridine diphosphate glucose,CMBT,positive,0,0.0,0.0
+3274,Uridine diphosphate glucose,ClCCA,negative,1,1095.5511,3.040028874892635
+3275,Uridine diphosphate glucose,ClCCA,positive,0,0.0,0.0
+3276,Uridine diphosphate glucose,DAN,negative,1,2986.3464,3.475285584467545
+3277,Uridine diphosphate glucose,DAN,positive,0,0.0,0.0
+3278,Uridine diphosphate glucose,DHAP,negative,1,655.4728,2.8172167364352045
+3279,Uridine diphosphate glucose,DHAP,positive,0,0.0,0.0
+3280,Uridine diphosphate glucose,DHB,negative,1,11088.864,4.044926220232866
+3281,Uridine diphosphate glucose,DHB,positive,0,0.0,0.0
+3282,Uridine diphosphate glucose,MAPS,negative,0,0.0,0.0
+3283,Uridine diphosphate glucose,MAPS,positive,0,0.0,0.0
+3284,Uridine diphosphate glucose,NEDC,negative,0,0.0,0.0
+3285,Uridine diphosphate glucose,NEDC,positive,0,0.0,0.0
+3286,Uridine diphosphate glucose,NOR,negative,1,20810.744,4.318308475110259
+3287,Uridine diphosphate glucose,NOR,positive,0,0.0,0.0
+3288,Uridine diphosphate glucose,pNA,negative,1,2630.8625,3.420263196092703
+3289,Uridine diphosphate glucose,pNA,positive,0,0.0,0.0
+3290,Uridine diphosphate glucuronic acid,9AA,negative,1,119620.03,5.077807537596156
+3291,Uridine diphosphate glucuronic acid,9AA,positive,0,0.0,0.0
+3292,Uridine diphosphate glucuronic acid,CHCA,negative,1,11208.607,4.049590386839107
+3293,Uridine diphosphate glucuronic acid,CHCA,positive,0,0.0,0.0
+3294,Uridine diphosphate glucuronic acid,CMBT,negative,0,0.0,0.0
+3295,Uridine diphosphate glucuronic acid,CMBT,positive,0,0.0,0.0
+3296,Uridine diphosphate glucuronic acid,ClCCA,negative,1,369.011,2.568214635332642
+3297,Uridine diphosphate glucuronic acid,ClCCA,positive,0,0.0,0.0
+3298,Uridine diphosphate glucuronic acid,DAN,negative,1,966.68976,2.985736145411938
+3299,Uridine diphosphate glucuronic acid,DAN,positive,0,0.0,0.0
+3300,Uridine diphosphate glucuronic acid,DHAP,negative,1,48.55977,1.695129282208412
+3301,Uridine diphosphate glucuronic acid,DHAP,positive,0,0.0,0.0
+3302,Uridine diphosphate glucuronic acid,DHB,negative,1,1576.1163,3.197863720333277
+3303,Uridine diphosphate glucuronic acid,DHB,positive,0,0.0,0.0
+3304,Uridine diphosphate glucuronic acid,MAPS,negative,0,0.0,0.0
+3305,Uridine diphosphate glucuronic acid,MAPS,positive,0,0.0,0.0
+3306,Uridine diphosphate glucuronic acid,NEDC,negative,0,0.0,0.0
+3307,Uridine diphosphate glucuronic acid,NEDC,positive,0,0.0,0.0
+3308,Uridine diphosphate glucuronic acid,NOR,negative,1,3614.956,3.558223137214425
+3309,Uridine diphosphate glucuronic acid,NOR,positive,0,0.0,0.0
+3310,Uridine diphosphate glucuronic acid,pNA,negative,0,0.0,0.0
+3311,Uridine diphosphate glucuronic acid,pNA,positive,0,0.0,0.0
+3312,Uridine diphosphate-N-acetylglucosamine,9AA,negative,1,1069371.1,6.029128849135831
+3313,Uridine diphosphate-N-acetylglucosamine,9AA,positive,0,0.0,0.0
+3314,Uridine diphosphate-N-acetylglucosamine,CHCA,negative,0,0.0,0.0
+3315,Uridine diphosphate-N-acetylglucosamine,CHCA,positive,0,0.0,0.0
+3316,Uridine diphosphate-N-acetylglucosamine,CMBT,negative,0,0.0,0.0
+3317,Uridine diphosphate-N-acetylglucosamine,CMBT,positive,0,0.0,0.0
+3318,Uridine diphosphate-N-acetylglucosamine,ClCCA,negative,1,1494.2706,3.1747197943007976
+3319,Uridine diphosphate-N-acetylglucosamine,ClCCA,positive,1,37.83007,1.5891681734609673
+3320,Uridine diphosphate-N-acetylglucosamine,DAN,negative,1,3085.9614,3.489531199008558
+3321,Uridine diphosphate-N-acetylglucosamine,DAN,positive,0,0.0,0.0
+3322,Uridine diphosphate-N-acetylglucosamine,DHAP,positive,0,0.0,0.0
+3323,Uridine diphosphate-N-acetylglucosamine,DHB,negative,1,27353.828,4.437033988392021
+3324,Uridine diphosphate-N-acetylglucosamine,MAPS,negative,0,0.0,0.0
+3325,Uridine diphosphate-N-acetylglucosamine,MAPS,positive,0,0.0,0.0
+3326,Uridine diphosphate-N-acetylglucosamine,NEDC,negative,0,0.0,0.0
+3327,Uridine diphosphate-N-acetylglucosamine,NEDC,positive,0,0.0,0.0
+3328,Uridine diphosphate-N-acetylglucosamine,NOR,negative,1,58364.82,4.766158591443824
+3329,Uridine diphosphate-N-acetylglucosamine,NOR,positive,0,0.0,0.0
+3330,Uridine diphosphate-N-acetylglucosamine,pNA,negative,1,2120.0403,3.3265489202380842
+3331,Uridine diphosphate-N-acetylglucosamine,pNA,positive,0,0.0,0.0
+3332,Urocanic acid,9AA,negative,1,33855.312,4.52963964824184
+3333,Urocanic acid,9AA,positive,0,0.0,0.0
+3334,Urocanic acid,CHCA,negative,1,138.47266,2.1444890837758095
+3335,Urocanic acid,CHCA,positive,1,11415.379,4.057528378017984
+3336,Urocanic acid,CMBT,negative,0,0.0,0.0
+3337,Urocanic acid,CMBT,positive,1,818.8971,2.9137593503027674
+3338,Urocanic acid,ClCCA,negative,1,64.56046,1.816641992103477
+3339,Urocanic acid,ClCCA,positive,1,1639.9076,3.21508412648884
+3340,Urocanic acid,DAN,negative,1,10641.838,4.027057451586212
+3341,Urocanic acid,DAN,positive,1,35.01311,1.556460627550609
+3342,Urocanic acid,DHAP,negative,1,257.17123,2.411907843862214
+3343,Urocanic acid,DHAP,positive,1,61.26936,1.7942744020969135
+3344,Urocanic acid,DHB,negative,1,102.22865,2.0138002477766648
+3345,Urocanic acid,DHB,positive,1,6041.9873,3.781251681531972
+3346,Urocanic acid,MAPS,negative,0,0.0,0.0
+3347,Urocanic acid,MAPS,positive,0,0.0,0.0
+3348,Urocanic acid,NEDC,negative,0,0.0,0.0
+3349,Urocanic acid,NEDC,positive,0,0.0,0.0
+3350,Urocanic acid,NOR,negative,1,18395.523,4.264735747759216
+3351,Urocanic acid,NOR,positive,0,0.0,0.0
+3352,Urocanic acid,pNA,positive,0,0.0,0.0
+3353,Valine,9AA,negative,1,1482.8079,3.1713776789954284
+3354,Valine,9AA,positive,0,0.0,0.0
+3355,Valine,CHCA,negative,0,0.0,0.0
+3356,Valine,CHCA,positive,1,6171.6626,3.790472538920319
+3357,Valine,CMBT,negative,0,0.0,0.0
+3358,Valine,CMBT,positive,0,0.0,0.0
+3359,Valine,ClCCA,negative,0,0.0,0.0
+3360,Valine,ClCCA,positive,1,880.0983,2.945024363311091
+3361,Valine,DAN,negative,1,3491.5623,3.543144161759707
+3362,Valine,DAN,positive,0,0.0,0.0
+3363,Valine,DHAP,negative,1,58.896763,1.7774033524523438
+3364,Valine,DHAP,positive,1,70.28215,1.8529807903421518
+3365,Valine,DHB,negative,0,0.0,0.0
+3366,Valine,DHB,positive,1,1025.4415,3.0113342026582264
+3367,Valine,MAPS,negative,0,0.0,0.0
+3368,Valine,MAPS,positive,0,0.0,0.0
+3369,Valine,NEDC,negative,0,0.0,0.0
+3370,Valine,NEDC,positive,0,0.0,0.0
+3371,Valine,NOR,negative,0,0.0,0.0
+3372,Valine,NOR,positive,0,0.0,0.0
+3373,Valine,pNA,negative,1,608.2692,2.7848092240654867
+3374,Valine,pNA,positive,1,828.6462,2.9188929283453002
+3375,Xanthine,9AA,negative,1,72632.41,4.861136433937232
+3376,Xanthine,9AA,positive,0,0.0,0.0
+3377,Xanthine,CHCA,negative,1,121.29794,2.0874191417937062
+3378,Xanthine,CHCA,positive,1,401.86905,2.605163904443446
+3379,Xanthine,CMBT,negative,0,0.0,0.0
+3380,Xanthine,CMBT,positive,0,0.0,0.0
+3381,Xanthine,ClCCA,negative,0,0.0,0.0
+3382,Xanthine,ClCCA,positive,1,43.239365,1.6458088845946706
+3383,Xanthine,DAN,negative,1,8743.456,3.9417327968282057
+3384,Xanthine,DAN,positive,0,0.0,0.0
+3385,Xanthine,DHAP,negative,1,222.33699,2.348960658684842
+3386,Xanthine,DHAP,positive,0,0.0,0.0
+3387,Xanthine,DHB,negative,1,446.99603,2.6512741654340086
+3388,Xanthine,DHB,positive,1,877.106,2.9435469446491713
+3389,Xanthine,MAPS,negative,0,0.0,0.0
+3390,Xanthine,MAPS,positive,0,0.0,0.0
+3391,Xanthine,NEDC,negative,1,166.82407,2.2248542492132084
+3392,Xanthine,NEDC,positive,0,0.0,0.0
+3393,Xanthine,NOR,negative,1,11245.892,4.051032524782073
+3394,Xanthine,NOR,positive,0,0.0,0.0
+3395,Xanthine,pNA,negative,1,2179.375,3.3385311937994806
+3396,Xanthine,pNA,positive,0,0.0,0.0
+3397,alpha-tocopherol,9AA,negative,0,0.0,0.0
+3398,alpha-tocopherol,9AA,positive,0,0.0,0.0
+3399,alpha-tocopherol,CHCA,negative,0,0.0,0.0
+3400,alpha-tocopherol,CHCA,positive,0,0.0,0.0
+3401,alpha-tocopherol,CMBT,negative,0,0.0,0.0
+3402,alpha-tocopherol,CMBT,positive,0,0.0,0.0
+3403,alpha-tocopherol,ClCCA,negative,0,0.0,0.0
+3404,alpha-tocopherol,ClCCA,positive,0,0.0,0.0
+3405,alpha-tocopherol,DAN,negative,0,0.0,0.0
+3406,alpha-tocopherol,DAN,positive,0,0.0,0.0
+3407,alpha-tocopherol,DHAP,negative,0,0.0,0.0
+3408,alpha-tocopherol,DHAP,positive,0,0.0,0.0
+3409,alpha-tocopherol,DHB,negative,0,0.0,0.0
+3410,alpha-tocopherol,DHB,positive,0,0.0,0.0
+3411,alpha-tocopherol,MAPS,negative,0,0.0,0.0
+3412,alpha-tocopherol,MAPS,positive,0,0.0,0.0
+3413,alpha-tocopherol,NEDC,negative,0,0.0,0.0
+3414,alpha-tocopherol,NEDC,positive,0,0.0,0.0
+3415,alpha-tocopherol,NOR,negative,0,0.0,0.0
+3416,alpha-tocopherol,NOR,positive,0,0.0,0.0
+3417,alpha-tocopherol,pNA,negative,0,0.0,0.0
+3418,alpha-tocopherol,pNA,positive,0,0.0,0.0
+3419,cis-Aconitic acid,9AA,negative,1,71186.88,4.852406059687796
+3420,cis-Aconitic acid,9AA,positive,0,0.0,0.0
+3421,cis-Aconitic acid,CHCA,negative,1,56078.61,4.748804984711867
+3422,cis-Aconitic acid,CHCA,positive,1,143.25917,2.1591434291332865
+3423,cis-Aconitic acid,CMBT,negative,1,12374.828,4.09257426488249
+3424,cis-Aconitic acid,CMBT,positive,0,0.0,0.0
+3425,cis-Aconitic acid,ClCCA,negative,1,1799.6367,3.255426097549614
+3426,cis-Aconitic acid,ClCCA,positive,1,45.881115,1.6709979322034818
+3427,cis-Aconitic acid,DAN,negative,1,7394.5703,3.8689716696910033
+3428,cis-Aconitic acid,DAN,positive,0,0.0,0.0
+3429,cis-Aconitic acid,DHAP,negative,1,2597.3706,3.4147010936409754
+3430,cis-Aconitic acid,DHAP,positive,0,0.0,0.0
+3431,cis-Aconitic acid,DHB,negative,1,3467.2754,3.540113575526075
+3432,cis-Aconitic acid,DHB,positive,0,0.0,0.0
+3433,cis-Aconitic acid,MAPS,negative,1,4652.3286,3.6677637218063923
+3434,cis-Aconitic acid,MAPS,positive,0,0.0,0.0
+3435,cis-Aconitic acid,NEDC,negative,0,0.0,0.0
+3436,cis-Aconitic acid,NEDC,positive,0,0.0,0.0
+3437,cis-Aconitic acid,NOR,negative,1,57654.812,4.760843092936919
+3438,cis-Aconitic acid,NOR,positive,0,0.0,0.0
+3439,cis-Aconitic acid,pNA,negative,1,31653.863,4.500440438265868
+3440,cis-Aconitic acid,pNA,positive,0,0.0,0.0
+3441,gamma-Aminobutyric acid,9AA,negative,1,935.67535,2.971589091277522
+3442,gamma-Aminobutyric acid,9AA,positive,0,0.0,0.0
+3443,gamma-Aminobutyric acid,CHCA,negative,0,0.0,0.0
+3444,gamma-Aminobutyric acid,CHCA,positive,1,20236.465,4.306156110664703
+3445,gamma-Aminobutyric acid,CMBT,negative,0,0.0,0.0
+3446,gamma-Aminobutyric acid,CMBT,positive,1,411.84857,2.6157907846514785
+3447,gamma-Aminobutyric acid,ClCCA,negative,0,0.0,0.0
+3448,gamma-Aminobutyric acid,ClCCA,positive,1,1816.1041,3.259379808298966
+3449,gamma-Aminobutyric acid,DAN,negative,1,6429.5737,3.8082497199895156
+3450,gamma-Aminobutyric acid,DAN,positive,1,494.4443,2.6949948362937968
+3451,gamma-Aminobutyric acid,DHAP,negative,0,0.0,0.0
+3452,gamma-Aminobutyric acid,DHAP,positive,1,176.27477,2.2486469305841825
+3453,gamma-Aminobutyric acid,DHB,negative,0,0.0,0.0
+3454,gamma-Aminobutyric acid,DHB,positive,1,4644.461,3.6670288183989297
+3455,gamma-Aminobutyric acid,MAPS,negative,0,0.0,0.0
+3456,gamma-Aminobutyric acid,MAPS,positive,0,0.0,0.0
+3457,gamma-Aminobutyric acid,NEDC,negative,0,0.0,0.0
+3458,gamma-Aminobutyric acid,NEDC,positive,0,0.0,0.0
+3459,gamma-Aminobutyric acid,NOR,negative,1,404.65308,2.6081547777918113
+3460,gamma-Aminobutyric acid,NOR,positive,0,0.0,0.0
+3461,gamma-Aminobutyric acid,pNA,negative,1,288.1345,2.4610999154883078
+3462,gamma-Aminobutyric acid,pNA,positive,1,3065.2517,3.4866078019972924
+3463,myo-Inositol,9AA,negative,1,455.85037,2.659773980980071
+3464,myo-Inositol,9AA,positive,0,0.0,0.0
+3465,myo-Inositol,CHCA,negative,1,11.486426,1.0964381476938823
+3466,myo-Inositol,CHCA,positive,0,0.0,0.0
+3467,myo-Inositol,CMBT,negative,0,0.0,0.0
+3468,myo-Inositol,CMBT,positive,0,0.0,0.0
+3469,myo-Inositol,ClCCA,negative,0,0.0,0.0
+3470,myo-Inositol,ClCCA,positive,0,0.0,0.0
+3471,myo-Inositol,DAN,negative,1,1942.0433,3.288482478799234
+3472,myo-Inositol,DAN,positive,0,0.0,0.0
+3473,myo-Inositol,DHAP,negative,0,0.0,0.0
+3474,myo-Inositol,DHAP,positive,0,0.0,0.0
+3475,myo-Inositol,DHB,negative,0,0.0,0.0
+3476,myo-Inositol,DHB,positive,0,0.0,0.0
+3477,myo-Inositol,MAPS,negative,0,0.0,0.0
+3478,myo-Inositol,MAPS,positive,0,0.0,0.0
+3479,myo-Inositol,NEDC,negative,0,0.0,0.0
+3480,myo-Inositol,NEDC,positive,0,0.0,0.0
+3481,myo-Inositol,NOR,negative,1,318.54172,2.5045275685442547
+3482,myo-Inositol,NOR,positive,0,0.0,0.0
+3483,myo-Inositol,pNA,negative,1,130.82251,2.1199895766773262
+3484,myo-Inositol,pNA,positive,0,0.0,0.0

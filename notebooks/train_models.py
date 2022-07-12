@@ -63,6 +63,8 @@ DO_FEAT_SEL = args.do_feat_sel
 ONLY_SAVE_FEAT = args.only_save_feat
 setups = args.setup_list
 
+PRED_VAL_THRESH = 0.2
+
 # --------------------------------------
 # DEFINE TRAINING FUNCTIONS AND MODELS:
 # --------------------------------------
@@ -70,30 +72,31 @@ setups = args.setup_list
 sets_of_models = {
     "regressor":
         {
-            # 'Lin_reg': LinearRegression(),
+            'Lin_reg': LinearRegression(),
             # 'Lin_regMultiOut': LinearRegression(),
-            # 'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
-            # 'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
-            # 'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
-            # 'KNeighbors': KNeighborsRegressor(n_neighbors=5),
-            # 'DecisionTree': DecisionTreeRegressor(max_depth=5),
+            'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
+            'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
+            'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
+            'KNeighbors': KNeighborsRegressor(n_neighbors=5),
+            'DecisionTree': DecisionTreeRegressor(max_depth=5),
             # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
-            # 'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
+            'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
             # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
             'MLP': MLPRegressor(max_iter=2000),
             # 'MLPMultiOut': MLPRegressor(max_iter=2000),
-            # 'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
+            'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
             # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
         },
+
     "classifier":
         {
-            # 'Logistic_reg': LogisticRegression(),
+            'Logistic_reg': LogisticRegression(),
             # 'SVC_rbf': SVC(kernel='rbf', C=100, gamma='auto'),
-            # 'SVC_poly': SVC(kernel='poly', C=100, gamma='auto', degree=3, coef0=1),
-            # 'KNeighbors': KNeighborsClassifier(n_neighbors=5),
-            # 'DecisionTree': DecisionTreeClassifier(max_depth=5),
+            'SVC_poly': SVC(kernel='poly', C=100, gamma='auto', degree=3, coef0=1),
+            'KNeighbors': KNeighborsClassifier(n_neighbors=5),
+            'DecisionTree': DecisionTreeClassifier(max_depth=5),
             # 'DecisionTreeMultiOut': DecisionTreeClassifier(max_depth=5),
-            # 'RandomForest': RandomForestClassifier(max_depth=5, n_estimators=10),
+            'RandomForest': RandomForestClassifier(max_depth=5, n_estimators=10),
             # 'RandomForestMultiOut': RandomForestClassifier(max_depth=5, n_estimators=10),
             'MLP': MLPClassifier(max_iter=2000),
             # 'MLPMultiOut': MLPClassifier(max_iter=2000),
@@ -554,11 +557,21 @@ missing_molecules = list(mol_properties[~ mol_properties.index.isin(fingerprints
 print(missing_molecules)
 
 # Intensities:
-intensities = pd.read_csv(input_dir / "3june22_ions_no_nl.csv", index_col=0)
-intensities = intensities.rename(columns={"Matrix short": "matrix", "Polarity": "polarity"})
+intensities = pd.read_csv(input_dir / "intensity_data_raw.csv", index_col=0)
+intensities = intensities.rename(columns={"Matrix short": "matrix", "Polarity": "polarity",
+                                          "spot_intensity_bgr_corrected": "spot_intensity",
+                                          "detectability": "detected"})
 
-intensities.loc[intensities["spot_intensity"] < 100, "spot_intensity"] = 0
-intensities.loc[intensities["spot_intensity"] < 100, "detected"] = 0
+# Remove matrix-obscured entries:
+intensities = intensities[intensities.matrix_obscured == 0]
+
+# Remove everything that is not trusted according to pred_val:
+intensities = intensities[(intensities.pred_val <= PRED_VAL_THRESH) | (intensities.pred_val >= (1.-PRED_VAL_THRESH))]
+# Overwrite detected column according to the
+intensities.loc[:, "detected"] = intensities.pred_val >= (1.-PRED_VAL_THRESH)
+
+# Set not-detectable intensities to zero:
+intensities.loc[intensities.detected == 0, "spot_intensity"] = 0
 
 # Sanity checks:
 nb_before = len(intensities.name_short.unique())
@@ -618,24 +631,26 @@ features_norm_df = pd.merge(mol_properties_norm_df, fingerprints, how="inner", r
 
 
 # V2:
-numpy_intensities = intensities[["spot_intensity"]].to_numpy()
-intensities["norm_intensity_seurat"] = np.log2((numpy_intensities.T / numpy_intensities.T.sum()) * 10000 + 1).T
+# numpy_intensities = intensities[["spot_intensity"]].to_numpy()
+# intensities["norm_intensity_seurat"] = np.log2((numpy_intensities.T / numpy_intensities.T.sum()) * 10000 + 1).T
 
-# Digitize intensities into four classes (low, medium, high, very high):
-# Make sure to set noisy predictions (<100) to zero:
-intensities.loc[intensities["spot_intensity"] < 100, "norm_intensity_seurat"] = 0
-# Now digitize intensities that were normalized with Seurat:
-zero_mask = intensities["norm_intensity_seurat"] == 0
-intensities.loc[~zero_mask, "norm_intensity_seurat"].hist(bins=4)
-_, bins = np.histogram(intensities["norm_intensity_seurat"], bins=4)
-bins[-1] += 0.1  # Make sure to include the last point in the last bin
-intensities["digitized_seurat"] = np.digitize(intensities["norm_intensity_seurat"], bins=bins)
-# Mask not detected intensities:
-intensities.loc[zero_mask, "digitized_seurat"] = 0
+intensities["norm_intensities"] = np.log10(intensities['spot_intensity']+1)
 
-# Get max intensities across adducts:
+# # Digitize Seurat intensities into four classes (low, medium, high, very high):
+# # Make sure to set noisy predictions (<100) to zero:
+# intensities.loc[intensities["spot_intensity"] < 100, "norm_intensity_seurat"] = 0
+# # Now digitize intensities that were normalized with Seurat:
+# zero_mask = intensities["norm_intensity_seurat"] == 0
+# intensities.loc[~zero_mask, "norm_intensity_seurat"].hist(bins=4)
+# _, bins = np.histogram(intensities["norm_intensity_seurat"], bins=4)
+# bins[-1] += 0.1  # Make sure to include the last point in the last bin
+# intensities["digitized_seurat"] = np.digitize(intensities["norm_intensity_seurat"], bins=bins)
+# # Mask not detected intensities:
+# intensities.loc[zero_mask, "digitized_seurat"] = 0
+#
+# # Get max intensities across adducts:
 max_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
-    "digitized_seurat"].max()
+    ["norm_intensities", "spot_intensity", "detected"]].max()
 
 # ----------------------------
 # CREATE TRAIN/VAL SPLIT:
@@ -681,9 +696,9 @@ def get_strat_classes(intesity_df, intensity_column="digitized_seurat",
     return strat_df['stratification_class']
 
 
-max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
+# max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
 
-if TASK_TYPE == "detection":
+if "detection" in TASK_TYPE:
     max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol, "detected",
                                                                        stratify_not_detected=False)
     intensities['stratification_class'] = get_strat_classes(intensities, "detected",
@@ -764,15 +779,17 @@ for setup_name in setups:
         if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
             model_results = \
                 train_one_model_per_matrix_polarity(runs_setup[setup_name][0],
-                                                    intensity_column="norm_intensity_seurat",
+                                                    intensity_column="norm_intensity",
                                                     type_of_models="regressor",
                                                     test_split_col_name="stratification_class",
                                                     use_adduct_features=True,
                                                     train_only_on_detected=(TASK_TYPE == "regression_on_detected")
                                                     )
-        elif TASK_TYPE == "detection":
+
+        elif "detection" in TASK_TYPE:
+            assert TASK_TYPE == "detection_per_mol" or TASK_TYPE == "detection_per_ion"
             # Discretize the intensity:
-            max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
+            # max_intesities_per_mol['detected'] = (max_intesities_per_mol['digitized_seurat'] > 0).astype("int")
 
             # Get oversampler:
             sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
@@ -781,6 +798,7 @@ for setup_name in setups:
                                                     intensity_column="detected",
                                                     type_of_models="classifier",
                                                     test_split_col_name="stratification_class",
+                                                    use_adduct_features=TASK_TYPE == "detection_per_ion",
                                                     oversampler=sampler
                                                     )
         else:
