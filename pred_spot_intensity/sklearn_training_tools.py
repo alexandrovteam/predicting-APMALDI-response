@@ -221,15 +221,15 @@ def select_important_features(X, Y, feat_names,
     return mdl_important_features
 
 
-def convert_df_to_training_format(input_df, feat_df,
+def convert_df_to_training_format(intensities_df, feat_df,
                                   gt_column_name,
                                   use_adduct_features=False,
                                   adducts_columns=None):
     col_names = adducts_columns.tolist() + ["adduct"] if use_adduct_features else []
     mol_names_cols = ["name_short", "adduct"] if use_adduct_features else ["name_short"]
-    Y = input_df[gt_column_name].to_numpy()
+    Y = intensities_df[gt_column_name].to_numpy()
     X = \
-        pd.merge(input_df[col_names + ["name_short"]],
+        pd.merge(intensities_df[col_names + ["name_short"]],
                  feat_df,
                  how="left",
                  right_index=True,
@@ -306,6 +306,7 @@ def cross_val_loop(input_df, feat_df, matrix, polarity,
         results_df = pd.concat([results_df, loc_results_df])
     return results_df
 
+
 def train_one_model_per_matrix_polarity(input_df,
                                         features_normalized,
                                         intensity_column="spot_intensity",
@@ -314,7 +315,6 @@ def train_one_model_per_matrix_polarity(input_df,
                                         test_split_col_name='mol_strat_class',
                                         oversampler=None,
                                         test_baseline=False,
-                                        feature_selection=False,
                                         use_adduct_features=False,
                                         train_only_on_detected=False,
                                         adducts_columns=None,
@@ -432,8 +432,8 @@ def train_one_model_per_matrix_polarity(input_df,
                                                                matrix, polarity, intensity_column, type_of_models,
                                                                train_loop_function, test_split_col_name, oversampler,
                                                                test_baseline, train_only_on_detected,
-                                                               use_adduct_features,num_cross_val_folds,
-                                                          adducts_columns)
+                                                               use_adduct_features, num_cross_val_folds,
+                                                               adducts_columns)
                         loc_model_predictions["feat_sel_method"] = feat_sel_method
                         loc_model_predictions["feat_sel_quantile"] = q
                         loc_model_predictions["nb_features"] = len(important_features)
@@ -444,6 +444,7 @@ def train_one_model_per_matrix_polarity(input_df,
         return all_feat_importance
 
     return model_predictions
+
 
 # TODO: generalize to classification
 def train_multi_output_regressors(features_normalized, intensity_column="spot_intensity",

@@ -10,6 +10,7 @@ if __name__ == "__main__":
     parser.add_argument('--do_feat_sel', action='store_true')
     parser.add_argument('--only_save_feat', action='store_true')
     parser.add_argument('--nb_iter', type=int, default=1)
+    parser.add_argument('--nb_splits', type=int, default=10)
     parser.add_argument('--feat_sel_load_dir', type=str, default=None)
     parser.add_argument('-s', '--setup_list', nargs='+', default=[])
     args = parser.parse_args()

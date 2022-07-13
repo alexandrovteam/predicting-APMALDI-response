@@ -11,14 +11,16 @@ from matplotlib import pyplot as plt
 from imblearn.over_sampling import RandomOverSampler
 from tqdm import tqdm
 
-plt.style.use('dark_background')
-
-import seaborn as sns
-
-import torch
 import torch.nn as nn
+
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
+
+import torch.nn.functional as F
+import pytorch_lightning as pl
+import torch
+from pytorch_lightning.callbacks import LearningRateMonitor
+
 
 
 ## train data
@@ -34,6 +36,7 @@ class TrainValData(Dataset):
     def __len__(self):
         return len(self.X_data)
 
+
 class TestData(Dataset):
 
     def __init__(self, X_data):
@@ -46,30 +49,7 @@ class TestData(Dataset):
         return len(self.X_data)
 
 
-# Load data:
-out_dir = Path.cwd() / "../input_data/numpy"
-out_dir.mkdir(exist_ok=True)
-# train_index = np.load(out_dir / "train_indices.npy")
-# test_index = np.load(out_dir / "test_indices.npy")
-X = np.load(out_dir / "X.npy")
-Y = np.load(out_dir / "Y.npy")
-stratification_classes = np.load(out_dir / "stratification_classes.npy")
-
-train_val_dataset = TrainValData(X.astype("float32"), Y.astype("float32"))
-test_data = TestData(X.astype("float32"))
-# %% md
-
-
 # %%
-
-
-# EPOCHS = 50
-BATCH_SIZE = 32
-LEARNING_RATE = 0.001
-
-# %%
-
-import torch.nn as nn
 
 
 def flatten_samples(input_):
@@ -151,30 +131,18 @@ class SorensenDiceLoss(nn.Module):
         return loss
 
 
-# %%
-
-import torch.nn.functional as F
-
-soresen_loss = SorensenDiceLoss()
-# soresen_loss = F.binary_cross_entropy_with_logits
-
-# %%
-
-
-import pytorch_lightning as pl
-import torch
-
-NUM_FEAT = 32
-
-
 class BinaryClassification(pl.LightningModule):
-    def __init__(self, learning_rate=LEARNING_RATE, num_feat=NUM_FEAT):
+    def __init__(self,
+                 num_feat,
+                 nb_in_feat,
+                 nb_out_feat,
+                 loss):
         super(BinaryClassification, self).__init__()
 
         # Number of input features is 12.
-        self.layer_1 = nn.Linear(X.shape[1], num_feat)
+        self.layer_1 = nn.Linear(nb_in_feat, num_feat)
         self.layer_2 = nn.Linear(num_feat, num_feat)
-        self.layer_out = nn.Linear(num_feat, Y.shape[1])
+        self.layer_out = nn.Linear(num_feat, nb_out_feat)
 
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=0.5)
@@ -185,6 +153,8 @@ class BinaryClassification(pl.LightningModule):
 
         self.train_f1 = torchmetrics.F1Score()
         self.val_f1 = torchmetrics.F1Score()
+
+        self.loss = loss
 
         self.save_hyperparameters()
 
@@ -208,7 +178,7 @@ class BinaryClassification(pl.LightningModule):
     def training_step(self, batch, batch_idx):
         x, y = batch
         y_hat = self(x)
-        loss = soresen_loss(y_hat, y)
+        loss = self.loss(y_hat, y)
         self.train_f1(y_hat, y.int())
         self.log('train_f1', self.train_f1, on_step=False, on_epoch=True, prog_bar=True)
         self.log("train_loss", loss)
@@ -217,7 +187,7 @@ class BinaryClassification(pl.LightningModule):
     def validation_step(self, batch, batch_idx):
         x, y = batch
         y_hat = self(x)
-        val_loss = soresen_loss(y_hat, y)
+        val_loss = self.loss(y_hat, y)
         self.val_f1(y_hat, y.int())
         self.log('val_f1', self.val_f1, on_step=False, on_epoch=True, prog_bar=True)
 
@@ -237,67 +207,11 @@ class BinaryClassification(pl.LightningModule):
         lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=80, gamma=0.5)
         return [optimizer], [lr_scheduler]
 
-    def train_dataloader(self):
-        train_loader = DataLoader(dataset=train_val_dataset, batch_size=BATCH_SIZE, sampler=train_sampler)
-        return train_loader
-
-    def val_dataloader(self):
-        val_loader = DataLoader(dataset=train_val_dataset, batch_size=BATCH_SIZE, sampler=valid_sampler)
-        return val_loader
-
-
-# %%
-
-from pytorch_lightning.callbacks import LearningRateMonitor
-
-
-# Do stratification and cross-val-loop:
-
-NUM_SPLITS = 10
-skf = sklearn.model_selection.StratifiedKFold(n_splits=NUM_SPLITS)
-skf.get_n_splits()
-
-
-pbar_cross_split = tqdm(skf.split(range(X.shape[0]), stratification_classes),
-                                leave=False, total=NUM_SPLITS)
-
-all_results = pd.DataFrame()
-
-for fold, (train_index, test_index) in enumerate(pbar_cross_split):
-    # Using PyTorch sampler:
-    train_sampler = torch.utils.data.SubsetRandomSampler(train_index.tolist())
-    valid_sampler = torch.utils.data.SubsetRandomSampler(test_index.tolist())
-
-    lr_monitor = LearningRateMonitor(logging_interval='epoch')
-
-    model = BinaryClassification()
-
-    # train model
-    trainer = pl.Trainer(
-        callbacks=[lr_monitor],
-        default_root_dir=Path.cwd() / "../training_data_torch",
-        gradient_clip_algorithm="norm",
-        enable_progress_bar=True,
-        max_epochs=300,
-        detect_anomaly=True,
-        #    auto_lr_find=True,
-        # ckpt_path="path",
-    )
-
-    trainer.fit(model=model)
-
-    test_loader = DataLoader(dataset=test_data, batch_size=BATCH_SIZE, sampler=valid_sampler)
-
-    prediction = trainer.predict(model, dataloaders=test_loader)
-
-    # Save predictions:
-    nb_batches = len(prediction)
-    pred_array = np.concatenate([tensor[0].numpy() for tensor in prediction])
-    pred_indices = np.concatenate([tensor[1].numpy() for tensor in prediction])
-
-    lc_results = pd.DataFrame(pred_array, index=pred_indices)
-    lc_results["fold"] = fold
-    all_results = pd.concat([all_results, lc_results])
-
-all_results.to_csv(Path.cwd() / "../results/nn_results.csv")
+    # def train_dataloader(self):
+    #     train_loader = DataLoader(dataset=train_val_dataset, batch_size=BATCH_SIZE, sampler=train_sampler)
+    #     return train_loader
+    #
+    # def val_dataloader(self):
+    #     val_loader = DataLoader(dataset=train_val_dataset, batch_size=BATCH_SIZE, sampler=valid_sampler)
+    #     return val_loader
 

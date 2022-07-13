@@ -7,7 +7,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 import os
 
-from pred_spot_intensity.training_tools import train_one_model_per_matrix_polarity, get_strat_classes
+from pred_spot_intensity.sklearn_training_tools import train_one_model_per_matrix_polarity, get_strat_classes
+from pred_spot_intensity.train_pytorch_models import train_NN_with_rank_loss
 
 plt.style.use('dark_background')
 
@@ -16,6 +17,8 @@ def train_models(args):
     TASK_TYPE = args.task_type
     DO_FEAT_SEL = args.do_feat_sel
     ONLY_SAVE_FEAT = args.only_save_feat
+    NUM_SPLITS = args.nb_splits
+
     setups = args.setup_list
 
     PRED_VAL_THRESH = 0.2
@@ -72,6 +75,7 @@ def train_models(args):
                                               "spot_intensity_bgr_corrected": "spot_intensity",
                                               "detectability": "detected"})
 
+    # 14583 removed
     # Remove matrix-obscured entries:
     intensities = intensities[intensities.matrix_obscured == 0]
 
@@ -94,9 +98,14 @@ def train_models(args):
     remove_not_detected_adducts = False
 
     # Convert adducts to one-hot encoding:
-    adducts_one_hot = pd.get_dummies(intensities.adduct, prefix='adduct')
+    adducts = intensities[['adduct']].drop_duplicates()
+    adducts["adduct_name"] = adducts.adduct
+    adducts = adducts.set_index("adduct", drop=True)
+    adducts_one_hot = pd.get_dummies(adducts.adduct_name, prefix='adduct')
     adducts_columns = adducts_one_hot.columns
-    intensities = intensities.merge(right=adducts_one_hot, right_index=True, left_index=True)
+
+    # TODO: avoid merging with intensity df
+    intensities = intensities.merge(adducts_one_hot, how="right", on="adduct")
 
     # ## Methods for standartization/normalization
     # First, normalize features
@@ -166,9 +175,6 @@ def train_models(args):
     # START TRAINING:
     # ----------------------------
 
-    # Define cross-validation objects:
-    NUM_SPLITS = 10
-
     # Now, train regressors using:
     # - Only fingerprints
     # - Only mol features
@@ -183,10 +189,8 @@ def train_models(args):
     dir_out = result_dir / TASK_TYPE
     dir_out.mkdir(exist_ok=True, parents=True)
 
-    random_features = features_norm_df[mol_properties_cols[[1]]]
-    random_features.iloc[:, :] = np.random.normal(size=random_features.shape)
-    zero_features = features_norm_df[mol_properties_cols[[1]]]
-    zero_features.iloc[:, :] = np.zeros(shape=zero_features.shape, dtype="float")
+    random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
+    zero_features = pd.DataFrame(np.zeros(shape=features_norm_df.shape[0], dtype="float"), index=features_norm_df.index)
 
     runs_setup = {
         "fingerprints": [features_norm_df[fingerprints_cols]],
@@ -205,6 +209,8 @@ def train_models(args):
                 FEATURES_TYPE = "categorical"
             elif setup_name == "mol":
                 FEATURES_TYPE = "numerical"
+            else:
+                raise ValueError(f"{setup_name} not supported for feature selection")
 
         for iter in range(args.nb_iter):
             if not DO_FEAT_SEL:
@@ -258,6 +264,15 @@ def train_models(args):
                                                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
                                                         num_cross_val_folds=NUM_SPLITS
                                                         )
+            elif TASK_TYPE == "rank_matrices":
+                model_results = train_NN_with_rank_loss(intensities,
+                                                     runs_setup[setup_name][0],
+                                                     adducts_one_hot=adducts_one_hot,
+                                                     do_feature_selection=DO_FEAT_SEL,
+                                                     path_feature_importance_csv=FEAT_SEL_CSV_FILE,
+                                                     num_cross_val_folds=NUM_SPLITS
+                                                     )
+
             else:
                 raise ValueError(f"Task type not recognized {TASK_TYPE}")
 
@@ -265,6 +280,3 @@ def train_models(args):
 
             # Write results:
             model_results.to_csv(dir_out / out_filename)
-
-
-
