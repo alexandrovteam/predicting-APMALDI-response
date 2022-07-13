@@ -12,7 +12,7 @@ from pytorch_lightning.callbacks import LearningRateMonitor
 from torch.utils.data import DataLoader
 
 from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, BinaryClassification
-from pred_spot_intensity.sklearn_training_tools import convert_df_to_training_format
+from pred_spot_intensity.sklearn_training_utils import convert_df_to_training_format
 import scipy.cluster.hierarchy
 
 

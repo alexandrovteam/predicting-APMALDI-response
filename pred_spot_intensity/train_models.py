@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 import os
 
-from pred_spot_intensity.sklearn_training_tools import train_one_model_per_matrix_polarity, get_strat_classes
+from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matrix_polarity, get_strat_classes
 from pred_spot_intensity.train_pytorch_models import train_NN_with_rank_loss
 
 plt.style.use('dark_background')
