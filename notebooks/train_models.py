@@ -72,31 +72,32 @@ PRED_VAL_THRESH = 0.2
 sets_of_models = {
     "regressor":
         {
-            'Lin_reg': LinearRegression(),
-            # 'Lin_regMultiOut': LinearRegression(),
-            'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
-            'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
-            'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
-            'KNeighbors': KNeighborsRegressor(n_neighbors=5),
-            'DecisionTree': DecisionTreeRegressor(max_depth=5),
-            # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
-            'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
-            # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
+            # 'Lin_reg': LinearRegression(),
+            # # 'Lin_regMultiOut': LinearRegression(),
+            # 'SVR_rbf': SVR(kernel='rbf', C=100, gamma='auto'),
+            # 'SVR_lin': SVR(kernel='linear', C=100, gamma='auto'), # This works terribly
+            # 'SVR_poly': SVR(kernel='poly', C=100, gamma='auto', degree=3, epsilon=.1, coef0=1),
+            # 'KNeighbors': KNeighborsRegressor(n_neighbors=5),
+            # 'DecisionTree': DecisionTreeRegressor(max_depth=5),
+            # # 'DecisionTreeMultiOut': DecisionTreeRegressor(max_depth=5),
+            # 'RandomForest': RandomForestRegressor(max_depth=5, n_estimators=10),
+            # # 'RandomForestMultiOut': RandomForestRegressor(max_depth=5, n_estimators=10),
             'MLP': MLPRegressor(max_iter=2000),
-            # 'MLPMultiOut': MLPRegressor(max_iter=2000),
-            'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
-            # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
+            # # 'MLPMultiOut': MLPRegressor(max_iter=2000),
+            # 'GaussianProcess': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel()),
+            # # 'GaussianProcessMultiOut': GaussianProcessRegressor(kernel=DotProduct() + WhiteKernel())
         },
+
 
     "classifier":
         {
-            'Logistic_reg': LogisticRegression(),
-            # 'SVC_rbf': SVC(kernel='rbf', C=100, gamma='auto'),
-            'SVC_poly': SVC(kernel='poly', C=100, gamma='auto', degree=3, coef0=1),
-            'KNeighbors': KNeighborsClassifier(n_neighbors=5),
-            'DecisionTree': DecisionTreeClassifier(max_depth=5),
-            # 'DecisionTreeMultiOut': DecisionTreeClassifier(max_depth=5),
-            'RandomForest': RandomForestClassifier(max_depth=5, n_estimators=10),
+            # 'Logistic_reg': LogisticRegression(),
+            # # 'SVC_rbf': SVC(kernel='rbf', C=100, gamma='auto'),
+            # 'SVC_poly': SVC(kernel='poly', C=100, gamma='auto', degree=3, coef0=1),
+            # 'KNeighbors': KNeighborsClassifier(n_neighbors=5),
+            # 'DecisionTree': DecisionTreeClassifier(max_depth=5),
+            # # 'DecisionTreeMultiOut': DecisionTreeClassifier(max_depth=5),
+            # 'RandomForest': RandomForestClassifier(max_depth=5, n_estimators=10),
             # 'RandomForestMultiOut': RandomForestClassifier(max_depth=5, n_estimators=10),
             'MLP': MLPClassifier(max_iter=2000),
             # 'MLPMultiOut': MLPClassifier(max_iter=2000),
@@ -634,7 +635,7 @@ features_norm_df = pd.merge(mol_properties_norm_df, fingerprints, how="inner", r
 # numpy_intensities = intensities[["spot_intensity"]].to_numpy()
 # intensities["norm_intensity_seurat"] = np.log2((numpy_intensities.T / numpy_intensities.T.sum()) * 10000 + 1).T
 
-intensities["norm_intensities"] = np.log10(intensities['spot_intensity']+1)
+intensities["norm_intensity"] = np.log10(intensities['spot_intensity']+1)
 
 # # Digitize Seurat intensities into four classes (low, medium, high, very high):
 # # Make sure to set noisy predictions (<100) to zero:
@@ -650,7 +651,7 @@ intensities["norm_intensities"] = np.log10(intensities['spot_intensity']+1)
 #
 # # Get max intensities across adducts:
 max_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
-    ["norm_intensities", "spot_intensity", "detected"]].max()
+    ["norm_intensity", "spot_intensity", "detected"]].max()
 
 # ----------------------------
 # CREATE TRAIN/VAL SPLIT:
@@ -768,10 +769,10 @@ for setup_name in setups:
             else:
                 out_filename = f"results_{setup_name}_feat_{iter}.csv"
         else:
-            out_filename = f"results_{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection'}.csv"
+            out_filename = f"{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection_results'}.csv"
 
         if args.feat_sel_load_dir is not None:
-            FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"results_{setup_name}_feature_importance.csv"
+            FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"{setup_name}_feature_importance.csv"
 
         # Start running:
         tick = time.time()
