@@ -45,20 +45,24 @@ def run_torch_model_training(X, Y, stratification_classes,
     # soresen_loss = F.binary_cross_entropy_with_logits
 
     # Define cross-val split:
-    # TODO: if SPOLITS == 2, use other function...?
     skf = sklearn.model_selection.StratifiedKFold(n_splits=num_cross_val_folds)
     skf.get_n_splits()
     pbar_cross_split = tqdm.tqdm(skf.split(range(X.shape[0]), stratification_classes),
-                                 leave=False, total=num_cross_val_folds)
+                             leave=False, total=num_cross_val_folds)
 
     # Loop over cross-val folds:
     for fold, (train_index, test_index) in enumerate(pbar_cross_split):
         # Define data-loaders:
         train_sampler = torch.utils.data.SubsetRandomSampler(train_index.tolist())
         valid_sampler = torch.utils.data.SubsetRandomSampler(test_index.tolist())
-        train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler)
-        val_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=valid_sampler)
-        test_loader = DataLoader(dataset=test_data, batch_size=batch_size, sampler=valid_sampler)
+        # TODO: increase number of workers?
+        num_workers = 0
+        train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler,
+                                  num_workers=num_workers)
+        val_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=valid_sampler,
+                                num_workers=num_workers)
+        test_loader = DataLoader(dataset=test_data, batch_size=batch_size, sampler=valid_sampler,
+                                 num_workers=num_workers)
 
         # Define model:
         model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
@@ -71,11 +75,12 @@ def run_torch_model_training(X, Y, stratification_classes,
         lr_monitor = LearningRateMonitor(logging_interval='epoch')
         trainer = pl.Trainer(
             callbacks=[lr_monitor],
-            default_root_dir=str(Path.cwd() / "../training_data_torch"),
+            default_root_dir=str(Path.cwd() / "training_data_torch"),
             gradient_clip_algorithm="norm",
             enable_progress_bar=True,
             max_epochs=max_epochs,
             detect_anomaly=True,
+            log_every_n_steps=5,
             #    auto_lr_find=True,
             # ckpt_path="path",
         )
@@ -114,12 +119,14 @@ def train_NN_with_rank_loss(intensities_df,
     Y_detected = intensities_df.pivot(index=['name_short', 'adduct'], columns=["matrix", "polarity"], values="detected")
 
     # Mask NaN values (ion-intensity values not provided for a given matrix-polarity):
-    Y_detected[Y_detected.isna()] = False
+    Y_is_na = Y_detected.isna()
+    Y_detected[Y_is_na] = False
 
     # Remove ions that are never detected:
     detected_ion_mask = Y_detected.sum(axis=1) > 0
     Y = Y[detected_ion_mask]
     Y_detected = Y_detected[detected_ion_mask]
+    Y_is_na = Y_is_na[detected_ion_mask]
 
     # Set not-detected intensities to zero:
     Y[Y_detected == False] = 0
@@ -143,10 +150,34 @@ def train_NN_with_rank_loss(intensities_df,
     # np.argsort(Y.to_numpy(), axis=1, )
 
     # Not-detected intensities are masked to value -1 and will be ignored in the ranking loss:
-    Y[Y_detected == False] = -1
+    Y[Y_is_na] = -1
 
-    results = run_torch_model_training(X, Y,
-                                       stratification_classes=out_clustering)
+    out = run_torch_model_training(X.to_numpy(), Y.to_numpy(),
+                                       stratification_classes=out_clustering,
+                                       num_cross_val_folds=num_cross_val_folds,
+                                       max_epochs=20,
+                                       # max_epochs=1,
+                                       batch_size=8,
+                                       # batch_size=32,
+                                       learning_rate=0.01,
+                                       num_hidden_layer_features=32)
+
 
     # TODO: reshape results
-    return results
+    # Reshape results:
+    matrix_multi_index = Y.columns
+    training_results = out.sort_index()
+    # Set index with molecule/adduct names:
+    training_results = pd.DataFrame(training_results.to_numpy(), index=Y.index, columns=training_results.columns)
+    reshaped_gt = Y.stack([i for i in range(len(matrix_multi_index.levels))], )
+    reshaped_gt.name = "observed_value"
+    reshaped_prediction = pd.DataFrame(training_results.drop(columns="fold").to_numpy(), index=Y.index, columns=matrix_multi_index).stack([i for i in range(len(matrix_multi_index.levels))])
+    reshaped_prediction.name = "prediction"
+    reshaped_out = reshaped_gt.to_frame().join(reshaped_prediction.to_frame(), how="inner")
+
+    # Add back fold info:
+    reshaped_out["fold"] = training_results.loc[[i for i in zip(reshaped_out.index.get_level_values(0), reshaped_out.index.get_level_values(1))], "fold"].to_numpy()
+    reshaped_out["model_type"] = "NN"
+    reshaped_out.reset_index(inplace=True)
+
+    return reshaped_out

@@ -270,7 +270,7 @@ def train_models(args):
                                                      adducts_one_hot=adducts_one_hot,
                                                      do_feature_selection=DO_FEAT_SEL,
                                                      path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                     num_cross_val_folds=NUM_SPLITS
+                                                     num_cross_val_folds=2 # TODO: update
                                                      )
 
             else:

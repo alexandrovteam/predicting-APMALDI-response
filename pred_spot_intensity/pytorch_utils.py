@@ -153,8 +153,8 @@ class SimpleTwoLayersNN(pl.LightningModule):
         self.batchnorm2 = nn.BatchNorm1d(num_feat)
         self.final_activation = final_activation
 
-        self.train_f1 = torchmetrics.F1Score()
-        self.val_f1 = torchmetrics.F1Score()
+        # self.train_f1 = torchmetrics.F1Score()
+        # self.val_f1 = torchmetrics.F1Score()
 
         self.loss = loss
 
@@ -182,21 +182,21 @@ class SimpleTwoLayersNN(pl.LightningModule):
         x, y = batch
         y_hat = self(x)
         loss = self.loss(y_hat, y)
-        self.train_f1(y_hat, y.int())
-        self.log('train_f1', self.train_f1, on_step=False, on_epoch=True, prog_bar=True)
+        # self.train_f1(y_hat, y.int())
+        # self.log('train_f1', self.train_f1, on_step=False, on_epoch=True, prog_bar=True)
         self.log("train_loss", loss)
         return loss
 
     def validation_step(self, batch, batch_idx):
         x, y = batch
         y_hat = self(x)
-        val_loss = self.loss(y_hat, y)
-        self.val_f1(y_hat, y.int())
-        self.log('val_f1', self.val_f1, on_step=False, on_epoch=True, prog_bar=True)
+        # self.val_f1(y_hat, y.int())
+        # self.log('val_f1', self.val_f1, on_step=False, on_epoch=True, prog_bar=True)
 
         # metric = torchmetrics.F1Score(multiclass=False, average='macro', num_classes=2)
         # metric(y_hat, y.int())
 
+        val_loss = self.loss(y_hat, y)
         self.log("val_loss", val_loss)
 
     # def test_step(self, batch, batch_idx):
