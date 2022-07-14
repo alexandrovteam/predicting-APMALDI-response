@@ -8,7 +8,7 @@ from sklearn.preprocessing import PowerTransformer
 import os
 
 from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matrix_polarity, get_strat_classes
-from pred_spot_intensity.train_pytorch_models import train_pytorch_NN
+from pred_spot_intensity.train_pytorch_models import train_pytorch_model_on_intensities
 
 plt.style.use('dark_background')
 
@@ -272,14 +272,14 @@ def train_models(args):
                 }
                 if TASK_TYPE == "rank_matrices":
                     task_name = "ranking"
-                model_results = train_pytorch_NN(intensities,
-                                                 runs_setup[setup_name][0],
-                                                 adducts_one_hot,
-                                                 task_names[TASK_TYPE],
-                                                 do_feature_selection=DO_FEAT_SEL,
-                                                 path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                 num_cross_val_folds=2  # TODO: update
-                                                 )
+                model_results = train_pytorch_model_on_intensities(intensities,
+                                                                   runs_setup[setup_name][0],
+                                                                   adducts_one_hot,
+                                                                   task_names[TASK_TYPE],
+                                                                   do_feature_selection=DO_FEAT_SEL,
+                                                                   path_feature_importance_csv=FEAT_SEL_CSV_FILE,
+                                                                   num_cross_val_folds=2  # TODO: update
+                                                                   )
 
             else:
                 raise ValueError(f"Task type not recognized {TASK_TYPE}")

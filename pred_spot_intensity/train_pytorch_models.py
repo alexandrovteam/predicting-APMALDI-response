@@ -31,15 +31,18 @@ class NeuralNDCGLoss:
         return neuralNDCG(pred, gt, **self.loss_kwargs)
 
 
-def run_torch_model_training(X, Y, task_name,
-                             stratification_classes,
-                             ignore_mask=None,
-                             max_epochs=1000,
-                             batch_size=32,
-                             learning_rate=0.001,
-                             num_cross_val_folds=10,
-                             num_hidden_layer_features=32
-                             ):
+def train_torch_model_cross_val_loop(X, Y, task_name,
+                                     stratification_classes,
+                                     ignore_mask=None,
+                                     max_epochs=1000,
+                                     batch_size=32,
+                                     learning_rate=0.001,
+                                     num_cross_val_folds=10,
+                                     num_hidden_layer_features=32
+                                     ):
+    """
+    TODO: Refactor arguments: remove task name and add final_activation/loss as arguments
+    """
     # Initial definitions:
     ignore_mask = ignore_mask if ignore_mask is None else ignore_mask.astype("float32")
     train_val_dataset = TrainValData(X.astype("float32"), Y.astype("float32"),
@@ -66,7 +69,6 @@ def run_torch_model_training(X, Y, task_name,
         # Define data-loaders:
         train_sampler = torch.utils.data.SubsetRandomSampler(train_index.tolist())
         valid_sampler = torch.utils.data.SubsetRandomSampler(test_index.tolist())
-        # TODO: increase number of workers?
         num_workers = 0
         train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler,
                                   num_workers=num_workers, drop_last=True)
@@ -114,15 +116,15 @@ def run_torch_model_training(X, Y, task_name,
     return all_results
 
 
-def train_pytorch_NN(intensities_df,
-                     features_df,
-                     adducts_one_hot,
-                     task_name,
-                     do_feature_selection=False,
-                     path_feature_importance_csv=None,
-                     num_cross_val_folds=10,
-                     intensity_column="norm_intensity"
-                     ):
+def train_pytorch_model_on_intensities(intensities_df,
+                                       features_df,
+                                       adducts_one_hot,
+                                       task_name,
+                                       do_feature_selection=False,
+                                       path_feature_importance_csv=None,
+                                       num_cross_val_folds=10,
+                                       intensity_column="norm_intensity"
+                                       ):
     assert not do_feature_selection, "Feature selection not implemented yet"
     assert path_feature_importance_csv is None, "Feature selection not implemented yet"
 
@@ -174,20 +176,24 @@ def train_pytorch_NN(intensities_df,
     else:
         raise ValueError
 
-    out = run_torch_model_training(X.to_numpy(), Y.to_numpy(),
-                                   task_name,
-                                   stratification_classes=out_clustering,
-                                   ignore_mask=ignore_mask,
-                                   num_cross_val_folds=num_cross_val_folds,
-                                   max_epochs=20,
-                                   # max_epochs=1,
-                                   batch_size=8,
-                                   # batch_size=32,
-                                   learning_rate=0.01,
-                                   num_hidden_layer_features=32)
+    # -------------------------
+    # Train:
+    # -------------------------
+    out = train_torch_model_cross_val_loop(X.to_numpy(), Y.to_numpy(),
+                                           task_name,
+                                           stratification_classes=out_clustering,
+                                           ignore_mask=ignore_mask,
+                                           num_cross_val_folds=num_cross_val_folds,
+                                           max_epochs=20,
+                                           # max_epochs=1,
+                                           batch_size=8,
+                                           # batch_size=32,
+                                           learning_rate=0.01,
+                                           num_hidden_layer_features=32)
 
-    # TODO: reshape results
+    # -------------------------
     # Reshape results:
+    # -------------------------
     matrix_multi_index = Y.columns
     training_results = out.sort_index()
     # Set index with molecule/adduct names:
