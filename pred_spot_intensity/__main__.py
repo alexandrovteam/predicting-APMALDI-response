@@ -1,9 +1,17 @@
 import argparse
+import os
+from pathlib import Path
+
 from pred_spot_intensity.train_models import train_models
 
-if __name__ == "__main__":
-    # For the moment it only supports model training
+import sys
 
+if __name__ == "__main__":
+    # FIXME: add allRank repo to the path
+    current_dir_path = Path(os.path.dirname(os.path.realpath(__file__)))
+    sys.path.append(str(os.path.normpath(current_dir_path / "../../allRank")))
+
+    # For the moment it only supports model training
     parser = argparse.ArgumentParser()
     parser.add_argument('--task_type', type=str, default="regression_on_all")
     # parser.add_argument('--feature_selection', type=str, default=None)

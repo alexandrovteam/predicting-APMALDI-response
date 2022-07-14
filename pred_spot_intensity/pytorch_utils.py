@@ -131,13 +131,15 @@ class SorensenDiceLoss(nn.Module):
         return loss
 
 
-class BinaryClassification(pl.LightningModule):
+class SimpleTwoLayersNN(pl.LightningModule):
     def __init__(self,
                  num_feat,
                  nb_in_feat,
                  nb_out_feat,
-                 loss):
-        super(BinaryClassification, self).__init__()
+                 loss,
+                 final_activation=None,
+                 learning_rate=0.001):
+        super(SimpleTwoLayersNN, self).__init__()
 
         # Number of input features is 12.
         self.layer_1 = nn.Linear(nb_in_feat, num_feat)
@@ -149,7 +151,7 @@ class BinaryClassification(pl.LightningModule):
         self.dropout2 = nn.Dropout(p=0.5)
         self.batchnorm1 = nn.BatchNorm1d(num_feat)
         self.batchnorm2 = nn.BatchNorm1d(num_feat)
-        self.sigmoid = nn.Sigmoid()
+        self.final_activation = final_activation
 
         self.train_f1 = torchmetrics.F1Score()
         self.val_f1 = torchmetrics.F1Score()
@@ -166,13 +168,14 @@ class BinaryClassification(pl.LightningModule):
         x = self.batchnorm2(x)
         x = self.dropout2(x)
         x = self.layer_out(x)
-        x = self.sigmoid(x)
+        if self.final_activation is not None:
+            x = self.final_activation(x)
 
         # for i in range(20):
         #     self.log("prediction_{}".format(i), x[:,i].mean())
         return x
 
-    def predict_step(self, batch, batch_idx):
+    def predict_step(self, batch, batch_idx, dataloader_idx=0):
         return self.forward(batch[0]), batch[1]
 
     def training_step(self, batch, batch_idx):
