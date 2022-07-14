@@ -26,12 +26,16 @@ from pytorch_lightning.callbacks import LearningRateMonitor
 ## train data
 class TrainValData(Dataset):
 
-    def __init__(self, X_data, y_data):
+    def __init__(self, X_data, y_data, ignore_mask=None):
         self.X_data = X_data
         self.y_data = y_data
+        self.ignore_maks = ignore_mask
 
     def __getitem__(self, index):
-        return self.X_data[index], self.y_data[index]
+        if self.ignore_maks is not None:
+            return self.X_data[index], self.y_data[index], self.ignore_maks[index]
+        else:
+            return self.X_data[index], self.y_data[index]
 
     def __len__(self):
         return len(self.X_data)
@@ -138,7 +142,8 @@ class SimpleTwoLayersNN(pl.LightningModule):
                  nb_out_feat,
                  loss,
                  final_activation=None,
-                 learning_rate=0.001):
+                 learning_rate=0.001,
+                 has_ignore_mask=False):
         super(SimpleTwoLayersNN, self).__init__()
 
         # Number of input features is 12.
@@ -179,8 +184,12 @@ class SimpleTwoLayersNN(pl.LightningModule):
         return self.forward(batch[0]), batch[1]
 
     def training_step(self, batch, batch_idx):
-        x, y = batch
+        x, y = batch[:2]
         y_hat = self(x)
+        if self.hparams.has_ignore_mask:
+            background_mask = (1-batch[2])
+            y_hat = background_mask * y_hat
+            y = background_mask * y
         loss = self.loss(y_hat, y)
         # self.train_f1(y_hat, y.int())
         # self.log('train_f1', self.train_f1, on_step=False, on_epoch=True, prog_bar=True)
@@ -188,8 +197,12 @@ class SimpleTwoLayersNN(pl.LightningModule):
         return loss
 
     def validation_step(self, batch, batch_idx):
-        x, y = batch
+        x, y = batch[:2]
         y_hat = self(x)
+        if self.hparams.has_ignore_mask:
+            background_mask = (1-batch[2])
+            y_hat = background_mask * y_hat
+            y = background_mask * y
         # self.val_f1(y_hat, y.int())
         # self.log('val_f1', self.val_f1, on_step=False, on_epoch=True, prog_bar=True)
 

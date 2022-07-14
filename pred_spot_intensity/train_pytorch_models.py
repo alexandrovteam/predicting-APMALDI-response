@@ -7,6 +7,7 @@ import tqdm
 
 import torch.nn.functional as F
 import pytorch_lightning as pl
+import torch.nn as nn
 import torch
 from pytorch_lightning.callbacks import LearningRateMonitor
 from torch.utils.data import DataLoader
@@ -30,7 +31,9 @@ class NeuralNDCGLoss:
         return neuralNDCG(pred, gt, **self.loss_kwargs)
 
 
-def run_torch_model_training(X, Y, stratification_classes,
+def run_torch_model_training(X, Y, task_name,
+                             stratification_classes,
+                             ignore_mask=None,
                              max_epochs=1000,
                              batch_size=32,
                              learning_rate=0.001,
@@ -38,17 +41,25 @@ def run_torch_model_training(X, Y, stratification_classes,
                              num_hidden_layer_features=32
                              ):
     # Initial definitions:
-    train_val_dataset = TrainValData(X.astype("float32"), Y.astype("float32"))
+    ignore_mask = ignore_mask if ignore_mask is None else ignore_mask.astype("float32")
+    train_val_dataset = TrainValData(X.astype("float32"), Y.astype("float32"),
+                                     ignore_mask=ignore_mask)
     test_data = TestData(X.astype("float32"))
     all_results = pd.DataFrame()
-    NDCG_rank_loss = NeuralNDCGLoss()
-    # soresen_loss = F.binary_cross_entropy_with_logits
-
+    if task_name == "ranking":
+        final_activation = None
+        loss_function = NeuralNDCGLoss()
+    elif task_name == "detection":
+        final_activation = nn.Sigmoid()
+        loss_function = SorensenDiceLoss()
+        # soresen_loss = F.binary_cross_entropy_with_logits
+    else:
+        raise ValueError(task_name)
     # Define cross-val split:
     skf = sklearn.model_selection.StratifiedKFold(n_splits=num_cross_val_folds)
     skf.get_n_splits()
     pbar_cross_split = tqdm.tqdm(skf.split(range(X.shape[0]), stratification_classes),
-                             leave=False, total=num_cross_val_folds)
+                                 leave=False, total=num_cross_val_folds)
 
     # Loop over cross-val folds:
     for fold, (train_index, test_index) in enumerate(pbar_cross_split):
@@ -58,7 +69,7 @@ def run_torch_model_training(X, Y, stratification_classes,
         # TODO: increase number of workers?
         num_workers = 0
         train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler,
-                                  num_workers=num_workers)
+                                  num_workers=num_workers, drop_last=True)
         val_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=valid_sampler,
                                 num_workers=num_workers)
         test_loader = DataLoader(dataset=test_data, batch_size=batch_size, sampler=valid_sampler,
@@ -68,8 +79,10 @@ def run_torch_model_training(X, Y, stratification_classes,
         model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
                                   nb_in_feat=X.shape[1],
                                   nb_out_feat=Y.shape[1],
-                                  loss=NDCG_rank_loss,
-                                  learning_rate=learning_rate)
+                                  loss=loss_function,
+                                  learning_rate=learning_rate,
+                                  final_activation=final_activation,
+                                  has_ignore_mask=task_name=="detection")
 
         # Train model using Lightning:
         lr_monitor = LearningRateMonitor(logging_interval='epoch')
@@ -101,14 +114,15 @@ def run_torch_model_training(X, Y, stratification_classes,
     return all_results
 
 
-def train_NN_with_rank_loss(intensities_df,
-                            features_df,
-                            adducts_one_hot,
-                            do_feature_selection=False,
-                            path_feature_importance_csv=None,
-                            num_cross_val_folds=10,
-                            intensity_column="norm_intensity"
-                            ):
+def train_pytorch_NN(intensities_df,
+                     features_df,
+                     adducts_one_hot,
+                     task_name,
+                     do_feature_selection=False,
+                     path_feature_importance_csv=None,
+                     num_cross_val_folds=10,
+                     intensity_column="norm_intensity"
+                     ):
     assert not do_feature_selection, "Feature selection not implemented yet"
     assert path_feature_importance_csv is None, "Feature selection not implemented yet"
 
@@ -122,11 +136,12 @@ def train_NN_with_rank_loss(intensities_df,
     Y_is_na = Y_detected.isna()
     Y_detected[Y_is_na] = False
 
-    # Remove ions that are never detected:
     detected_ion_mask = Y_detected.sum(axis=1) > 0
-    Y = Y[detected_ion_mask]
-    Y_detected = Y_detected[detected_ion_mask]
-    Y_is_na = Y_is_na[detected_ion_mask]
+    if task_name == "ranking":
+        # Remove ions that are never detected:
+        Y = Y[detected_ion_mask]
+        Y_detected = Y_detected[detected_ion_mask]
+        Y_is_na = Y_is_na[detected_ion_mask]
 
     # Set not-detected intensities to zero:
     Y[Y_detected == False] = 0
@@ -149,19 +164,27 @@ def train_NN_with_rank_loss(intensities_df,
     # np.ma.argsort()
     # np.argsort(Y.to_numpy(), axis=1, )
 
-    # Not-detected intensities are masked to value -1 and will be ignored in the ranking loss:
-    Y[Y_is_na] = -1
+    ignore_mask = None
+    if task_name == "ranking":
+        # Not-detected intensities are masked to value -1 and will be ignored in the ranking loss:
+        Y[Y_is_na] = -1
+    elif task_name == "detection":
+        Y = Y_detected
+        ignore_mask = Y_is_na.to_numpy()
+    else:
+        raise ValueError
 
     out = run_torch_model_training(X.to_numpy(), Y.to_numpy(),
-                                       stratification_classes=out_clustering,
-                                       num_cross_val_folds=num_cross_val_folds,
-                                       max_epochs=20,
-                                       # max_epochs=1,
-                                       batch_size=8,
-                                       # batch_size=32,
-                                       learning_rate=0.01,
-                                       num_hidden_layer_features=32)
-
+                                   task_name,
+                                   stratification_classes=out_clustering,
+                                   ignore_mask=ignore_mask,
+                                   num_cross_val_folds=num_cross_val_folds,
+                                   max_epochs=20,
+                                   # max_epochs=1,
+                                   batch_size=8,
+                                   # batch_size=32,
+                                   learning_rate=0.01,
+                                   num_hidden_layer_features=32)
 
     # TODO: reshape results
     # Reshape results:
@@ -171,12 +194,16 @@ def train_NN_with_rank_loss(intensities_df,
     training_results = pd.DataFrame(training_results.to_numpy(), index=Y.index, columns=training_results.columns)
     reshaped_gt = Y.stack([i for i in range(len(matrix_multi_index.levels))], )
     reshaped_gt.name = "observed_value"
-    reshaped_prediction = pd.DataFrame(training_results.drop(columns="fold").to_numpy(), index=Y.index, columns=matrix_multi_index).stack([i for i in range(len(matrix_multi_index.levels))])
+    reshaped_prediction = pd.DataFrame(training_results.drop(columns="fold").to_numpy(), index=Y.index,
+                                       columns=matrix_multi_index).stack(
+        [i for i in range(len(matrix_multi_index.levels))])
     reshaped_prediction.name = "prediction"
     reshaped_out = reshaped_gt.to_frame().join(reshaped_prediction.to_frame(), how="inner")
 
     # Add back fold info:
-    reshaped_out["fold"] = training_results.loc[[i for i in zip(reshaped_out.index.get_level_values(0), reshaped_out.index.get_level_values(1))], "fold"].to_numpy()
+    reshaped_out["fold"] = training_results.loc[[i for i in zip(reshaped_out.index.get_level_values(0),
+                                                                reshaped_out.index.get_level_values(
+                                                                    1))], "fold"].to_numpy()
     reshaped_out["model_type"] = "NN"
     reshaped_out.reset_index(inplace=True)
 
