@@ -5,18 +5,22 @@ import numpy as np
 import sklearn
 import tqdm
 
-import torch.nn.functional as F
-import pytorch_lightning as pl
-import torch.nn as nn
-import torch
-from pytorch_lightning.callbacks import LearningRateMonitor
-from torch.utils.data import DataLoader
-
-from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN
-from pred_spot_intensity.sklearn_training_utils import convert_df_to_training_format
+try:
+    import torch.nn.functional as F
+    import pytorch_lightning as pl
+    import torch.nn as nn
+    import torch
+    from pytorch_lightning.callbacks import LearningRateMonitor
+    from torch.utils.data import DataLoader
+    from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN
+except ImportError:
+    torch = None
 import scipy.cluster.hierarchy
 
-from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
+try:
+    from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
+except ImportError:
+    neuralNDCG = None
 
 
 class NeuralNDCGLoss:
@@ -25,6 +29,7 @@ class NeuralNDCGLoss:
     """
 
     def __init__(self, **loss_kwargs):
+        assert neuralNDCG is not None, "allRnak package is required"
         self.loss_kwargs = loss_kwargs
 
     def __call__(self, pred, gt):
@@ -125,6 +130,7 @@ def train_pytorch_model_on_intensities(intensities_df,
                                        num_cross_val_folds=10,
                                        intensity_column="norm_intensity"
                                        ):
+    assert torch is not None
     assert not do_feature_selection, "Feature selection not implemented yet"
     assert path_feature_importance_csv is None, "Feature selection not implemented yet"
 
@@ -134,7 +140,7 @@ def train_pytorch_model_on_intensities(intensities_df,
     Y = intensities_df.pivot(index=['name_short', 'adduct'], columns=["matrix", "polarity"], values=intensity_column)
     Y_detected = intensities_df.pivot(index=['name_short', 'adduct'], columns=["matrix", "polarity"], values="detected")
 
-    # Mask NaN values (ion-intensity values not provided for a given matrix-polarity):
+    # Mask NaN values (ion-intensity32 values not provided for a given matrix-polarity):
     Y_is_na = Y_detected.isna()
     Y_detected[Y_is_na] = False
 

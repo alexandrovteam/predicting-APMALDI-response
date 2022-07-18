@@ -22,6 +22,7 @@ def train_models(args):
     setups = args.setup_list
 
     PRED_VAL_THRESH = 0.2
+    ION_AGGREGATE_RULE = args.ion_aggregate_rul
 
     # ----------------------------
     # LOAD AND NORMALIZE DATA:
@@ -123,8 +124,18 @@ def train_models(args):
     intensities["norm_intensity"] = np.log10(intensities['spot_intensity'] + 1)
 
     # # Get max intensities across adducts:
-    max_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
-        ["norm_intensity", "spot_intensity", "detected"]].max()
+    if ION_AGGREGATE_RULE == "max":
+        aggregated_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
+            ["norm_intensity", "spot_intensity", "detected"]].max()
+    elif ION_AGGREGATE_RULE == "sum":
+        aggregated_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
+            ["spot_intensity"]].sum()
+        aggregated_intesities_per_mol["detected"] = intensities.groupby(["name_short", "matrix", "polarity"],
+                                                                        as_index=False)[
+            ["detected"]].max()["detected"]
+        aggregated_intesities_per_mol["norm_intensity"] = np.log10(aggregated_intesities_per_mol['spot_intensity'] + 1)
+    else:
+        raise ValueError(ION_AGGREGATE_RULE)
 
     # ----------------------------
     # CREATE TRAIN/VAL SPLIT:
@@ -135,8 +146,8 @@ def train_models(args):
     # We only select only some features, otherwise there are not enough data in each of the splits:
     selected_stratification_features = [
         "pka_strongest_basic",
-        "polar_surface_area",
-        "polarizability"
+        # "polar_surface_area",
+        # "polarizability"
     ]
     # selected_stratification_features = mol_properties_cols
 
@@ -147,29 +158,35 @@ def train_models(args):
     digitized_mol_properties['mol_strat_class'] = digitized_mol_properties.astype(str).sum(axis=1).astype('category')
 
     if "detection" in TASK_TYPE:
-        max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol,
-                                                                           digitized_mol_properties,
-                                                                           "detected",
-                                                                           stratify_not_detected=False)
+        aggregated_intesities_per_mol['stratification_class'] = get_strat_classes(aggregated_intesities_per_mol,
+                                                                                  digitized_mol_properties,
+                                                                                  "detected",
+                                                                                  stratify_not_detected=False)
         intensities['stratification_class'] = get_strat_classes(intensities,
                                                                 digitized_mol_properties,
                                                                 "detected",
                                                                 stratify_not_detected=False)
     elif TASK_TYPE == "intensity_classification":
-        max_intesities_per_mol['stratification_class'] = get_strat_classes(max_intesities_per_mol,
-                                                                           digitized_mol_properties,
-                                                                           "digitized_seurat")
+        aggregated_intesities_per_mol['stratification_class'] = get_strat_classes(aggregated_intesities_per_mol,
+                                                                                  digitized_mol_properties,
+                                                                                  "digitized_seurat")
         intensities['stratification_class'] = get_strat_classes(intensities,
                                                                 digitized_mol_properties,
                                                                 "digitized_seurat")
-    elif TASK_TYPE == "regression_on_detected":
+    elif "regression" in TASK_TYPE:
         intensities['stratification_class'] = intensities.merge(digitized_mol_properties,
                                                                 left_on="name_short",
                                                                 right_index=True,
                                                                 how="left")["mol_strat_class"]
+        aggregated_intesities_per_mol['stratification_class'] = aggregated_intesities_per_mol.merge(digitized_mol_properties,
+                                                                left_on="name_short",
+                                                                right_index=True,
+                                                                how="left")["mol_strat_class"]
+
     elif TASK_TYPE == "regression_on_all":
-        intensities['stratification_class'] = get_strat_classes(intensities, digitized_mol_properties,
-                                                                "detected")
+        raise DeprecationWarning()
+        # intensities['stratification_class'] = get_strat_classes(intensities, digitized_mol_properties,
+        #                                                         "detected")
 
     # ----------------------------
     # START TRAINING:
@@ -183,10 +200,11 @@ def train_models(args):
     # All features:
     import time
 
-    # FIXME: refactor this mess...
     FEATURES_TYPE = None
 
     dir_out = result_dir / TASK_TYPE
+    if "per_mol" in TASK_TYPE:
+        dir_out = result_dir / f"{TASK_TYPE}_{ION_AGGREGATE_RULE}"
     dir_out.mkdir(exist_ok=True, parents=True)
 
     random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
@@ -227,15 +245,17 @@ def train_models(args):
             # Start running:
             tick = time.time()
             print(f"Running setup {setup_name}...")
-            if TASK_TYPE == "regression_on_all" or TASK_TYPE == "regression_on_detected":
+            if "regression" in TASK_TYPE:
+                assert TASK_TYPE == "regression_on_detected" or TASK_TYPE == "regression_on_detected_per_mol"
+                use_adduct_features = "per_mol" not in TASK_TYPE
                 model_results = \
-                    train_one_model_per_matrix_polarity(intensities,
+                    train_one_model_per_matrix_polarity(intensities if use_adduct_features else aggregated_intesities_per_mol,
                                                         runs_setup[setup_name][0],
                                                         intensity_column="norm_intensity",
                                                         type_of_models="regressor",
                                                         test_split_col_name="stratification_class",
-                                                        use_adduct_features=True,
-                                                        train_only_on_detected=(TASK_TYPE == "regression_on_detected"),
+                                                        use_adduct_features=use_adduct_features,
+                                                        train_only_on_detected="on_detected" in TASK_TYPE,
                                                         adducts_columns=adducts_columns,
                                                         do_feature_selection=DO_FEAT_SEL,
                                                         only_save_feat_sel_results=ONLY_SAVE_FEAT,
@@ -251,19 +271,20 @@ def train_models(args):
                 sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
                 use_adduct_features = TASK_TYPE == "detection_per_ion"
                 model_results = \
-                    train_one_model_per_matrix_polarity(intensities if use_adduct_features else max_intesities_per_mol,
-                                                        runs_setup[setup_name][0],
-                                                        intensity_column="detected",
-                                                        type_of_models="classifier",
-                                                        test_split_col_name="stratification_class",
-                                                        use_adduct_features=use_adduct_features,
-                                                        oversampler=sampler, adducts_columns=adducts_columns,
-                                                        do_feature_selection=DO_FEAT_SEL,
-                                                        only_save_feat_sel_results=ONLY_SAVE_FEAT,
-                                                        features_type=FEATURES_TYPE,
-                                                        path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                        num_cross_val_folds=NUM_SPLITS
-                                                        )
+                    train_one_model_per_matrix_polarity(
+                        intensities if use_adduct_features else aggregated_intesities_per_mol,
+                        runs_setup[setup_name][0],
+                        intensity_column="detected",
+                        type_of_models="classifier",
+                        test_split_col_name="stratification_class",
+                        use_adduct_features=use_adduct_features,
+                        oversampler=sampler, adducts_columns=adducts_columns,
+                        do_feature_selection=DO_FEAT_SEL,
+                        only_save_feat_sel_results=ONLY_SAVE_FEAT,
+                        features_type=FEATURES_TYPE,
+                        path_feature_importance_csv=FEAT_SEL_CSV_FILE,
+                        num_cross_val_folds=NUM_SPLITS
+                        )
             elif TASK_TYPE == "rank_matrices" or TASK_TYPE == "pytorch_nn_detect":
                 # TODO: rename TASK_TYPE and name...
                 task_names = {
