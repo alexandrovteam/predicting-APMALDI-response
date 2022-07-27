@@ -8,7 +8,6 @@ import pandas as pd
 import sklearn.model_selection
 from matplotlib import pyplot as plt
 
-from imblearn.over_sampling import RandomOverSampler
 from tqdm import tqdm
 
 import torch.nn as nn
@@ -149,6 +148,9 @@ class SimpleTwoLayersNN(pl.LightningModule):
         # Number of input features is 12.
         self.layer_1 = nn.Linear(nb_in_feat, num_feat)
         self.layer_2 = nn.Linear(num_feat, num_feat)
+        # self.layer_3 = nn.Linear(num_feat, num_feat)
+        # self.layer_4 = nn.Linear(num_feat, num_feat)
+        # self.layer_5 = nn.Linear(num_feat, num_feat)
         self.layer_out = nn.Linear(num_feat, nb_out_feat)
 
         self.relu = nn.ReLU()
@@ -156,6 +158,9 @@ class SimpleTwoLayersNN(pl.LightningModule):
         self.dropout2 = nn.Dropout(p=0.5)
         self.batchnorm1 = nn.BatchNorm1d(num_feat)
         self.batchnorm2 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm3 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm4 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm5 = nn.BatchNorm1d(num_feat)
         self.final_activation = final_activation
 
         # self.train_f1 = torchmetrics.F1Score()
@@ -171,6 +176,12 @@ class SimpleTwoLayersNN(pl.LightningModule):
         x = self.dropout(x)
         x = self.relu(self.layer_2(x))
         x = self.batchnorm2(x)
+        # x = self.relu(self.layer_3(x))
+        # x = self.batchnorm3(x)
+        # x = self.relu(self.layer_4(x))
+        # x = self.batchnorm4(x)
+        # x = self.relu(self.layer_5(x))
+        # x = self.batchnorm5(x)
         x = self.dropout2(x)
         x = self.layer_out(x)
         if self.final_activation is not None:

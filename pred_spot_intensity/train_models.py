@@ -2,7 +2,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-from imblearn.over_sampling import RandomOverSampler
+try:
+    from imblearn.over_sampling import RandomOverSampler
+except ImportError:
+    RandomOverSampler = None
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 import os
@@ -16,13 +19,17 @@ plt.style.use('dark_background')
 def train_models(args):
     TASK_TYPE = args.task_type
     DO_FEAT_SEL = args.do_feat_sel
-    ONLY_SAVE_FEAT = args.only_save_feat
     NUM_SPLITS = args.nb_splits
+    postfix = args.postfix
+    PRED_VAL_THRESH = args.pred_val_thresh
 
     setups = args.setup_list
 
-    PRED_VAL_THRESH = 0.2
     ION_AGGREGATE_RULE = args.ion_aggregate_rul
+
+    ONLY_SAVE_FEAT = args.only_save_feat
+    # TODO: update
+    if "torch" in TASK_TYPE: ONLY_SAVE_FEAT = True
 
     # ----------------------------
     # LOAD AND NORMALIZE DATA:
@@ -123,6 +130,11 @@ def train_models(args):
 
     intensities["norm_intensity"] = np.log10(intensities['spot_intensity'] + 1)
 
+
+    # Set everything below a certain intensity as not detected:
+    # # TODO: delete or use script argument
+    # intensities.loc[intensities["norm_intensity"] < 2, "detected"] = False
+
     # # Get max intensities across adducts:
     if ION_AGGREGATE_RULE == "max":
         aggregated_intesities_per_mol = intensities.groupby(["name_short", "matrix", "polarity"], as_index=False)[
@@ -201,10 +213,13 @@ def train_models(args):
     import time
 
     FEATURES_TYPE = None
-
-    dir_out = result_dir / TASK_TYPE
+    out_folder = TASK_TYPE
     if "per_mol" in TASK_TYPE:
-        dir_out = result_dir / f"{TASK_TYPE}_{ION_AGGREGATE_RULE}"
+        out_folder += f"_{ION_AGGREGATE_RULE}"
+    dir_out = result_dir / out_folder
+    if postfix is not None:
+        # out_folder += f"_{postfix}"
+        dir_out = dir_out / postfix
     dir_out.mkdir(exist_ok=True, parents=True)
 
     random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
@@ -227,7 +242,10 @@ def train_models(args):
                 FEATURES_TYPE = "categorical"
             elif setup_name == "mol":
                 FEATURES_TYPE = "numerical"
-            else:
+            elif setup_name == "all" and args.feat_sel_load_dir is not None:
+                FEATURES_TYPE = None
+                print("Warning: doing features selection on ALL feature, loading importance from file!")
+            elif "torch" not in TASK_TYPE:
                 raise ValueError(f"{setup_name} not supported for feature selection")
 
         for iter in range(args.nb_iter):
@@ -239,13 +257,14 @@ def train_models(args):
             else:
                 out_filename = f"{setup_name}_{'feature_importance' if ONLY_SAVE_FEAT else 'feat_selection_results'}.csv"
 
+
             if args.feat_sel_load_dir is not None:
                 FEAT_SEL_CSV_FILE = result_dir / args.feat_sel_load_dir / f"{setup_name}_feature_importance.csv"
 
             # Start running:
             tick = time.time()
             print(f"Running setup {setup_name}...")
-            if "regression" in TASK_TYPE:
+            if "regression" in TASK_TYPE and "torch" not in TASK_TYPE:
                 assert TASK_TYPE == "regression_on_detected" or TASK_TYPE == "regression_on_detected_per_mol"
                 use_adduct_features = "per_mol" not in TASK_TYPE
                 model_results = \
@@ -264,10 +283,11 @@ def train_models(args):
                                                         num_cross_val_folds=NUM_SPLITS
                                                         )
 
-            elif "detection" in TASK_TYPE:
+            elif "detection" in TASK_TYPE and "torch" not in TASK_TYPE:
                 assert TASK_TYPE == "detection_per_mol" or TASK_TYPE == "detection_per_ion"
                 # Discretize the intensity:
                 # Get oversampler:
+                assert RandomOverSampler is not None
                 sampler = RandomOverSampler(sampling_strategy="not majority", random_state=43)
                 use_adduct_features = TASK_TYPE == "detection_per_ion"
                 model_results = \
@@ -285,21 +305,28 @@ def train_models(args):
                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
                         num_cross_val_folds=NUM_SPLITS
                         )
-            elif TASK_TYPE == "rank_matrices" or TASK_TYPE == "pytorch_nn_detect":
+            elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...
-                task_names = {
-                    "rank_matrices": "ranking",
-                    "pytorch_nn_detect": "detection"
-                }
+                # task_names = {
+                #     "rank_matrices": "ranking",
+                #     "pytorch_nn_detect": "detection"
+                # }
                 if TASK_TYPE == "rank_matrices":
                     task_name = "ranking"
-                model_results = train_pytorch_model_on_intensities(intensities,
+                elif "detection" in TASK_TYPE:
+                    task_name = "detection"
+                elif "regression" in TASK_TYPE:
+                    task_name = "regression"
+                use_adduct_features = "per_mol" not in TASK_TYPE
+                model_results = train_pytorch_model_on_intensities(intensities if use_adduct_features else aggregated_intesities_per_mol,
                                                                    runs_setup[setup_name][0],
                                                                    adducts_one_hot,
-                                                                   task_names[TASK_TYPE],
+                                                                   task_name,
                                                                    do_feature_selection=DO_FEAT_SEL,
                                                                    path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                                   num_cross_val_folds=2  # TODO: update
+                                                                   num_cross_val_folds=2,  # TODO: update
+                                                                   use_adduct_features=use_adduct_features,
+                                                                   adducts_columns=adducts_columns
                                                                    )
 
             else:

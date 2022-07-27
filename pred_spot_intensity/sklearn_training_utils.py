@@ -7,10 +7,7 @@ import pandas as pd
 import sklearn.model_selection
 from matplotlib import pyplot as plt
 
-from imblearn.over_sampling import RandomOverSampler
 from sklearn.feature_selection import SelectKBest, mutual_info_classif, mutual_info_regression
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import PowerTransformer
 
 plt.style.use('dark_background')
 from tqdm import tqdm
