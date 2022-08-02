@@ -6,6 +6,11 @@ try:
     from imblearn.over_sampling import RandomOverSampler
 except ImportError:
     RandomOverSampler = None
+
+try:
+    from .train_pytorch_models import train_pytorch_model_wrapper
+except ImportError:
+    train_pytorch_model_wrapper = None
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 import os
@@ -13,7 +18,8 @@ import os
 from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matrix_polarity, get_strat_classes
 from pred_spot_intensity.train_pytorch_models import train_pytorch_model_on_intensities
 
-plt.style.use('dark_background')
+# plt.style.use('dark_background')
+
 
 
 def train_models(args):
@@ -62,9 +68,11 @@ def train_models(args):
     mol_properties_cols = mol_properties.columns
 
     # Check for NaN values:
-    # FIXME: temporarely set NaN to zero
-    is_null = mol_properties.isnull()
-    mol_properties[is_null] = 0.
+    null_mask_pka_acidic = mol_properties.pka_strongest_acidic.isnull()
+    mol_properties.loc[null_mask_pka_acidic, "pka_strongest_acidic"] = mol_properties.pka_strongest_acidic[~null_mask_pka_acidic].max()
+
+    null_mask_pka_basic = mol_properties.pka_strongest_basic.isnull()
+    mol_properties.loc[null_mask_pka_basic, "pka_strongest_basic"] = mol_properties.pka_strongest_basic[~null_mask_pka_basic].min()
 
     # Perform some basic checks:
     assert fingerprints.index.is_unique
@@ -246,7 +254,8 @@ def train_models(args):
                 FEATURES_TYPE = None
                 print("Warning: doing features selection on ALL feature, loading importance from file!")
             elif "torch" not in TASK_TYPE:
-                raise ValueError(f"{setup_name} not supported for feature selection")
+                print("Warning!!! Doing features selection on ALL feature!")
+                # raise ValueError(f"{setup_name} not supported for feature selection")
 
         for iter in range(args.nb_iter):
             if not DO_FEAT_SEL:
@@ -280,7 +289,8 @@ def train_models(args):
                                                         only_save_feat_sel_results=ONLY_SAVE_FEAT,
                                                         features_type=FEATURES_TYPE,
                                                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                        num_cross_val_folds=NUM_SPLITS
+                                                        num_cross_val_folds=NUM_SPLITS,
+                                                        train_loop_function=train_pytorch_model_wrapper
                                                         )
 
             elif "detection" in TASK_TYPE and "torch" not in TASK_TYPE:
@@ -303,7 +313,8 @@ def train_models(args):
                         only_save_feat_sel_results=ONLY_SAVE_FEAT,
                         features_type=FEATURES_TYPE,
                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                        num_cross_val_folds=NUM_SPLITS
+                        num_cross_val_folds=NUM_SPLITS,
+                        train_loop_function=train_pytorch_model_wrapper
                         )
             elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...
@@ -328,6 +339,7 @@ def train_models(args):
                                                                    use_adduct_features=use_adduct_features,
                                                                    adducts_columns=adducts_columns
                                                                    )
+
 
             else:
                 raise ValueError(f"Task type not recognized {TASK_TYPE}")

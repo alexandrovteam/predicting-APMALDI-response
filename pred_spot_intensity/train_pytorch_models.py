@@ -1,10 +1,13 @@
+import os
 from pathlib import Path
 
 import pandas as pd
 import numpy as np
 import sklearn
 import tqdm
+from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
+import logging
 
 try:
     import torch.nn.functional as F
@@ -24,6 +27,8 @@ try:
 except ImportError:
     neuralNDCG = None
 
+from skorch import NeuralNetClassifier, NeuralNetRegressor
+
 # TODO: give as argument
 DEVICE = "cpu"
 
@@ -42,15 +47,17 @@ class NeuralNDCGLoss:
 
 
 def train_torch_model(model, train_loader, val_loader=None, test_loader=None,
-                      max_epochs=1000):
+                      max_epochs=1000, verbose=True):
     # Train model using Lightning:
     lr_monitor = LearningRateMonitor(logging_interval='epoch')
-
     trainer = pl.Trainer(
-        callbacks=[lr_monitor],
+        callbacks=[lr_monitor] if verbose else None,
         default_root_dir=str(Path.cwd() / "training_data_torch"),
         gradient_clip_algorithm="norm",
-        enable_progress_bar=True,
+        enable_progress_bar=True if verbose else False,
+        enable_model_summary=True if verbose else False,
+        enable_checkpointing=True if verbose else False,
+        logger=True if verbose else False,  # Disable tensorboard logs
         max_epochs=max_epochs,
         detect_anomaly=True,
         log_every_n_steps=5,
@@ -59,6 +66,9 @@ def train_torch_model(model, train_loader, val_loader=None, test_loader=None,
         #    auto_lr_find=True,
         # ckpt_path="path",
     )
+    if not verbose:
+        logging.getLogger("pytorch_lightning").setLevel(logging.WARNING)
+
     trainer.fit(model=model,
                 train_dataloaders=train_loader,
                 val_dataloaders=val_loader)
@@ -72,6 +82,178 @@ def train_torch_model(model, train_loader, val_loader=None, test_loader=None,
         return trainer, pred_array, pred_indices
     else:
         return trainer
+
+
+def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
+                                type_of_models="regressor",
+                                out_multi_index=None,
+                                model_set=(),
+                                name_test=None,
+                                train=True,
+                                test_multioutout_models=True,
+                                y_is_multioutput=True,
+                                max_epochs=50,
+                                batch_size=8,
+                                learning_rate=0.001,
+                                num_hidden_layer_features=32,
+                                do_feature_selection=False,
+                                feature_names=None,
+                                matrix=None,
+                                polarity=None,
+                                molecule_names=None
+                                ):
+    """
+    Temp wrapper for compatibility with sklearn model training
+    """
+    assert out_multi_index is None
+    assert model_set == ()
+    assert train
+    assert not y_is_multioutput
+
+    do_test = test_x is not None
+
+    if train_y.ndim == 1:
+        train_y = train_y[:, None]
+        if do_test: test_y = test_y[:, None]
+
+    # Initial definitions:
+    # ignore_mask = ignore_mask if ignore_mask is None else ignore_mask.astype("float32")
+    if type_of_models == "classifier":
+        # TODO: make sure that this is up to date
+        final_activation = nn.Sigmoid()
+        # loss_function = SorensenDiceLoss()
+        loss_function = nn.BCELoss()
+        # soresen_loss = F.binary_cross_entropy_with_logits
+        skorch_trainer_class = NeuralNetClassifier
+    elif type_of_models == "regressor":
+        final_activation = None
+        loss_function = nn.MSELoss()
+        skorch_trainer_class = NeuralNetRegressor
+        # loss_function = nn.L1Loss() # Does not work
+    else:
+        raise ValueError(type_of_models)
+
+    # Define model:
+    model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
+                              nb_in_feat=train_x.shape[1],
+                              nb_out_feat=train_y.shape[1],
+                              final_activation=final_activation,
+                              # keep_channel_dim_out=type_of_models != "classifier"
+                              )
+
+    skorch_trainer = skorch_trainer_class(
+        model,
+        max_epochs=200,
+        lr=0.1,
+        train_split=None,
+        # Shuffle training data on each epoch
+        iterator_train__shuffle=True,
+        criterion=loss_function,
+        verbose=False)
+
+    # if type_of_models == "classifier":
+    #     train_y = train_y.astype("int64")[:, 0]
+        # train_y = train_y.astype("float32")[:, 0]
+    # else:
+    train_y = train_y.astype("float32")
+    skorch_trainer.fit(train_x.astype("float32"), train_y)
+
+
+    if do_feature_selection:
+        out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}/{matrix}_{polarity}')
+        out_plot_dir.mkdir(exist_ok=True, parents=True)
+
+        # SHAP:
+        explainer = shap.DeepExplainer(
+            model,
+            torch.from_numpy(train_x[np.random.choice(np.arange(train_x.shape[0]), 100, replace=False)]
+                             ).to(DEVICE).float())
+        shap_values = explainer.shap_values(
+            torch.from_numpy(train_x).to(DEVICE).float()
+        )
+
+        # Filter out the features related to adducts:
+        features_mask = ["adduct" not in feat for feat in feature_names]
+        selected_features = [feat for feat in feature_names if "adduct" not in feat]
+
+        # explainer = shap.KernelExplainer(model.predict, X_train)
+        # shap_values = explainer.shap_values(X_test, nsamples=100)
+        shap.initjs()
+        # for i in range(10):
+        #     fig = plt.gcf()
+        #     shap.force_plot(explainer.expected_value, shap_values[i, features_mask], np.around(train_x[i, features_mask], decimals=2), feature_names=selected_features, matplotlib=True, show=False)
+        #     plt.savefig(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance/{matrix}_{polarity}_{i}_force_plot.png')
+
+        # plot the explanation of the first prediction
+        # Note the model is "multi-output" because it is rank-2 but only has one column
+        # shap.force_plot(explainer.expected_value[0], shap_values[0][0], x_test_words[0])
+        plt.show()
+        fig = plt.gcf()
+        shap.summary_plot(shap_values[:, features_mask], train_x[:, features_mask], feature_names=selected_features, show=False)
+        plt.savefig(out_plot_dir / 'summary_plot_global.png')
+
+        # Now return the actual values
+        result_df = pd.DataFrame({
+            "mean_abs_shap_value": np.mean(np.abs(shap_values[:, features_mask]), axis=0),
+            "std_abs_shap_value": np.std(np.abs(shap_values[:, features_mask]), axis=0),
+            # "matrix": matrix,
+            # "polarity": polarity,
+            "feature_name": selected_features,
+            "adduct": "all",
+        })
+
+        if "adduct" in molecule_names.columns.to_list():
+            molecule_names.reset_index(drop=True, inplace=True)
+            for adduct in molecule_names.adduct.unique():
+                molecule_mask = (molecule_names.adduct == adduct).to_list()
+                plt.show()
+                fig = plt.gcf()
+                shap.summary_plot(shap_values[molecule_mask][:, features_mask], train_x[molecule_mask][:, features_mask], feature_names=selected_features,
+                                  show=False)
+                plt.savefig(out_plot_dir / f'summary_plot_{adduct}.png')
+
+                loc_df = pd.DataFrame({
+                    "mean_abs_shap_value": np.mean(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
+                    "std_abs_shap_value": np.std(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
+                    # "matrix": matrix,
+                    # "polarity": polarity,
+                    "feature_name": selected_features,
+                    "adduct": adduct,
+                })
+                result_df = pd.concat([result_df, loc_df])
+
+        return result_df
+
+    # # Define data-loaders:
+    # train_dataset = TrainValData(train_x.astype("float32"), train_y.astype("float32"))
+    # val_dataset = TrainValData(test_x.astype("float32"), test_y.astype("float32"))
+    # test_dataset = TestData(test_x.astype("float32"))
+    # num_workers = 0
+    # train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size,
+    #                           num_workers=num_workers, drop_last=True)
+    # val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size,
+    #                           num_workers=num_workers)
+    # test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size,
+    #                           num_workers=num_workers)
+
+    # _, pred_array, pred_indices = train_torch_model(model, train_loader=train_loader,
+    #                                                 val_loader=val_loader,
+    #                                                 test_loader=test_loader,
+    #                                                 max_epochs=max_epochs, verbose=False)
+    #
+    # # Sort predictions in original order:
+    # predictions = pred_array[:, 0][pred_indices]
+
+    if do_test:
+        predictions = skorch_trainer.predict_proba(test_x.astype("float32"))
+        results_df = pd.DataFrame({"prediction": predictions[:, 0] if predictions.ndim > 1 else predictions,
+                               "observed_value": test_y[:, 0] if test_y.ndim > 1 else test_y,
+                               type_of_models: "pytorch_NN"})
+
+        if name_test is not None:
+            results_df = results_df.merge(name_test, left_index=True, right_index=True)
+
+        return results_df
 
 
 def train_torch_model_cross_val_loop(X, Y, task_name,
@@ -128,7 +310,7 @@ def train_torch_model_cross_val_loop(X, Y, task_name,
                                   loss=loss_function,
                                   learning_rate=learning_rate,
                                   final_activation=final_activation,
-                                  has_ignore_mask=task_name=="detection")
+                                  has_ignore_mask=ignore_mask is not None)
 
         _, pred_array, pred_indices = train_torch_model(model, train_loader, val_loader, test_loader, max_epochs)
 
@@ -139,17 +321,16 @@ def train_torch_model_cross_val_loop(X, Y, task_name,
     return all_results
 
 
-
 def features_selection_torch_model(X, Y, task_name,
-                                     ignore_mask=None,
-                                     max_epochs=1000,
-                                     batch_size=32,
-                                     learning_rate=0.001,
-                                     num_cross_val_folds=10,
-                                     num_hidden_layer_features=32,
-                                     checkpoint_path=None,
-                                     only_train=False
-                                     ):
+                                   ignore_mask=None,
+                                   max_epochs=1000,
+                                   batch_size=32,
+                                   learning_rate=0.001,
+                                   num_cross_val_folds=10,
+                                   num_hidden_layer_features=32,
+                                   checkpoint_path=None,
+                                   only_train=False
+                                   ):
     """
     TODO: Refactor arguments: remove task name and add final_activation/loss as arguments
     """
@@ -186,9 +367,9 @@ def features_selection_torch_model(X, Y, task_name,
                                   loss=loss_function,
                                   learning_rate=learning_rate,
                                   final_activation=final_activation,
-                                  has_ignore_mask=task_name=="detection")
+                                  has_ignore_mask=ignore_mask is not None)
 
-        trainer = train_torch_model(model, train_loader, max_epochs=max_epochs) # TODO: epochs
+        trainer = train_torch_model(model, train_loader, max_epochs=max_epochs)  # TODO: epochs
         # model = trainer.model
         from torchmetrics import SpearmanCorrCoef
         spearman = SpearmanCorrCoef()
@@ -197,11 +378,11 @@ def features_selection_torch_model(X, Y, task_name,
                                  num_workers=num_workers)
         predictions = trainer.predict(model, dataloaders=test_loader)
         ignore_mask_flatten = ignore_mask.flatten().astype("bool")
-        pred_array = np.concatenate([tensor[0].numpy() for tensor in predictions]).astype("float32").flatten()[~ignore_mask_flatten]
+        pred_array = np.concatenate([tensor[0].numpy() for tensor in predictions]).astype("float32").flatten()[
+            ~ignore_mask_flatten]
         print("Score MSE: ", scipy.stats.spearmanr(pred_array, Y.astype("float32").flatten()[~ignore_mask_flatten]))
     else:
         model = SimpleTwoLayersNN.load_from_checkpoint(checkpoint_path)
-
 
     e = shap.DeepExplainer(
         model,
@@ -212,7 +393,6 @@ def features_selection_torch_model(X, Y, task_name,
     )
 
     return shap_values
-
 
 
 def train_pytorch_model_on_intensities(intensities_df,
@@ -254,7 +434,7 @@ def train_pytorch_model_on_intensities(intensities_df,
     X = pd.DataFrame(features_df.loc[Y.index.get_level_values(0)].to_numpy(), index=Y.index)
     if use_adduct_features:
         X = X.join(pd.DataFrame(adducts_one_hot.loc[Y.index.get_level_values(1)].to_numpy(), index=Y.index),
-               how="inner", rsuffix="adduct")
+                   how="inner", rsuffix="adduct")
 
     # -------------------------
     # Find stratification classes and start training:
@@ -290,16 +470,16 @@ def train_pytorch_model_on_intensities(intensities_df,
     # -------------------------
     if not do_feature_selection:
         out = train_torch_model_cross_val_loop(X.to_numpy(), Y.to_numpy(),
-                                           task_name,
-                                           stratification_classes=out_clustering,
-                                           ignore_mask=ignore_mask,
-                                           num_cross_val_folds=num_cross_val_folds,
-                                           max_epochs=20,
-                                           # max_epochs=1,
-                                           batch_size=8,
-                                           # batch_size=32,
-                                           learning_rate=0.01,
-                                           num_hidden_layer_features=32)
+                                               task_name,
+                                               stratification_classes=out_clustering,
+                                               ignore_mask=ignore_mask,
+                                               num_cross_val_folds=num_cross_val_folds,
+                                               max_epochs=20,
+                                               # max_epochs=1,
+                                               batch_size=8,
+                                               # batch_size=32,
+                                               learning_rate=0.01,
+                                               num_hidden_layer_features=32)
         # -------------------------
         # Reshape results:
         # -------------------------
@@ -326,16 +506,16 @@ def train_pytorch_model_on_intensities(intensities_df,
 
     else:
         shap_values = features_selection_torch_model(X.to_numpy(), Y.to_numpy(),
-                                               task_name,
-                                               ignore_mask=ignore_mask,
-                                               num_cross_val_folds=num_cross_val_folds,
-                                               max_epochs=100, # TODO: change
-                                               # max_epochs=1,
-                                               batch_size=8,
-                                               # batch_size=32,
-                                               learning_rate=0.01,
-                                               num_hidden_layer_features=128,
-                                             checkpoint_path=checkpoint_path)
+                                                     task_name,
+                                                     ignore_mask=ignore_mask,
+                                                     num_cross_val_folds=num_cross_val_folds,
+                                                     max_epochs=100,  # TODO: change
+                                                     # max_epochs=1,
+                                                     batch_size=8,
+                                                     # batch_size=32,
+                                                     learning_rate=0.01,
+                                                     num_hidden_layer_features=128,
+                                                     checkpoint_path=checkpoint_path)
         print("done")
 
         feat_names = features_df.columns.tolist()
@@ -358,6 +538,6 @@ def train_pytorch_model_on_intensities(intensities_df,
                 "feature_name": feat_names
             })
             df_feat_importance = pd.concat([df_feat_importance, loc_df])
-        df_feat_importance = df_feat_importance.sort_values("mean_abs_shap", ascending=False).set_index("feature_name", drop=True)
+        df_feat_importance = df_feat_importance.sort_values("mean_abs_shap", ascending=False).set_index("feature_name",
+                                                                                                        drop=True)
         return df_feat_importance
-

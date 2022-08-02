@@ -21,7 +21,6 @@ import torch
 from pytorch_lightning.callbacks import LearningRateMonitor
 
 
-
 ## train data
 class TrainValData(Dataset):
 
@@ -64,7 +63,9 @@ def flatten_samples(input_):
         (N, C) --> (C, N)
     The input must be atleast 2d.
     """
-    assert input_.dim() >= 2, "Tensor or variable must be atleast 2D. Got one of dim {}.".format(input_.dim())
+    if input_.dim() == 1:
+        input_ = input_[:, None]
+    # assert input_.dim() >= 2, "Tensor or variable must be atleast 2D. Got one of dim {}.".format(input_.dim())
     # Get number of channels
     num_channels = input_.size(1)
     # Permute the channel axis to first
@@ -134,7 +135,66 @@ class SorensenDiceLoss(nn.Module):
         return loss
 
 
-class SimpleTwoLayersNN(pl.LightningModule):
+class SimpleTwoLayersNN(nn.Module):
+    def __init__(self,
+                 num_feat,
+                 nb_in_feat,
+                 nb_out_feat,
+                 final_activation=None,
+                 keep_channel_dim_out=True):
+        super(SimpleTwoLayersNN, self).__init__()
+
+        # Number of input features is 12.
+        self.layer_1 = nn.Linear(nb_in_feat, num_feat)
+        self.layer_2 = nn.Linear(num_feat, num_feat)
+        # self.layer_3 = nn.Linear(num_feat, num_feat)
+        # self.layer_4 = nn.Linear(num_feat, num_feat)
+        # self.layer_5 = nn.Linear(num_feat, num_feat)
+        self.layer_out = nn.Linear(num_feat, nb_out_feat)
+
+        self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(p=0.5)
+        self.dropout2 = nn.Dropout(p=0.5)
+        self.batchnorm1 = nn.BatchNorm1d(num_feat)
+        self.batchnorm2 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm3 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm4 = nn.BatchNorm1d(num_feat)
+        # self.batchnorm5 = nn.BatchNorm1d(num_feat)
+        self.final_activation = final_activation
+
+        self.nb_out_feat = nb_out_feat
+        self.keep_channel_dim_out = keep_channel_dim_out
+
+        # self.train_f1 = torchmetrics.F1Score()
+        # self.val_f1 = torchmetrics.F1Score()
+
+    def forward(self, inputs):
+        x = self.relu(self.layer_1(inputs))
+        x = self.batchnorm1(x)
+        x = self.dropout(x)
+        x = self.relu(self.layer_2(x))
+        x = self.batchnorm2(x)
+        # x = self.relu(self.layer_3(x))
+        # x = self.batchnorm3(x)
+        # x = self.relu(self.layer_4(x))
+        # x = self.batchnorm4(x)
+        # x = self.relu(self.layer_5(x))
+        # x = self.batchnorm5(x)
+        x = self.dropout2(x)
+        x = self.layer_out(x)
+        if self.final_activation is not None:
+            x = self.final_activation(x)
+
+        # for i in range(20):
+        #     self.log("prediction_{}".format(i), x[:,i].mean())
+        if self.keep_channel_dim_out:
+            return x
+        else:
+            assert x.shape[1] == 1
+            return x[:, 0]
+
+
+class SimpleTwoLayersNNLighting(pl.LightningModule):
     def __init__(self,
                  num_feat,
                  nb_in_feat,
@@ -143,7 +203,7 @@ class SimpleTwoLayersNN(pl.LightningModule):
                  final_activation=None,
                  learning_rate=0.001,
                  has_ignore_mask=False):
-        super(SimpleTwoLayersNN, self).__init__()
+        super(SimpleTwoLayersNNLighting, self).__init__()
 
         # Number of input features is 12.
         self.layer_1 = nn.Linear(nb_in_feat, num_feat)
@@ -198,7 +258,7 @@ class SimpleTwoLayersNN(pl.LightningModule):
         x, y = batch[:2]
         y_hat = self(x)
         if self.hparams.has_ignore_mask:
-            background_mask = (1-batch[2])
+            background_mask = (1 - batch[2])
             y_hat = background_mask * y_hat
             y = background_mask * y
         loss = self.loss(y_hat, y)
@@ -211,7 +271,7 @@ class SimpleTwoLayersNN(pl.LightningModule):
         x, y = batch[:2]
         y_hat = self(x)
         if self.hparams.has_ignore_mask:
-            background_mask = (1-batch[2])
+            background_mask = (1 - batch[2])
             y_hat = background_mask * y_hat
             y = background_mask * y
         # self.val_f1(y_hat, y.int())
@@ -241,4 +301,3 @@ class SimpleTwoLayersNN(pl.LightningModule):
     # def val_dataloader(self):
     #     val_loader = DataLoader(dataset=train_val_dataset, batch_size=BATCH_SIZE, sampler=valid_sampler)
     #     return val_loader
-

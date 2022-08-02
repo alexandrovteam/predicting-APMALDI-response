@@ -9,7 +9,9 @@ from matplotlib import pyplot as plt
 
 from sklearn.feature_selection import SelectKBest, mutual_info_classif, mutual_info_regression
 
-plt.style.use('dark_background')
+from pred_spot_intensity.train_pytorch_models import train_pytorch_model_wrapper
+
+# plt.style.use('dark_background')
 from tqdm import tqdm
 
 from sklearn.svm import SVR
@@ -372,13 +374,24 @@ def train_one_model_per_matrix_polarity(input_df,
                 #     mdl_important_features = mdl_important_features[col].astype('float')
             else:
                 # Get all data in training format X, Y:
-                X_global, Y_global, _ = convert_df_to_training_format(rows, features_normalized,
+                X_global, Y_global, mol_names = convert_df_to_training_format(rows, features_normalized,
                                                                       intensity_column, use_adduct_features,
                                                                       adducts_columns)
 
+                # TODO: generalize and fix this mess
                 # Get feature scores:
-                mdl_important_features = select_important_features(X_global, Y_global, feat_names,
-                                                                   feature_type=features_type)
+                # mdl_important_features = select_important_features(X_global, Y_global, feat_names,
+                #                                                    feature_type=features_type)
+                mdl_important_features = train_pytorch_model_wrapper(train_x=X_global,
+                                                                     train_y=Y_global,
+                                                                     feature_names=feat_names,
+                                                                     type_of_models=type_of_models,
+                                                                     do_feature_selection=True,
+                                                                     y_is_multioutput=False,
+                                                                     matrix=matrix,
+                                                                     polarity=polarity,
+                                                                     molecule_names=mol_names)
+                #
 
             # ----------------------------------------------
             # Next, train models using different quantile thresholds for feature importance:
