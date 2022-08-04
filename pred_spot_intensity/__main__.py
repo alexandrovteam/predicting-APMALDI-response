@@ -7,6 +7,8 @@ import sys
 current_dir_path = Path(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(str(os.path.normpath(current_dir_path / "../../allRank")))
 
+print(str(os.path.normpath(current_dir_path / "../../allRank")))
+
 from pred_spot_intensity.train_models import train_models
 
 

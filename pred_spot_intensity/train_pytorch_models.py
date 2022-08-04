@@ -23,9 +23,13 @@ except ImportError:
 import scipy.cluster.hierarchy
 
 try:
-    from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
+    # from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
+    # from allrank.models.losses.lambdaLoss import lambdaLoss as rankingLossFct
+    from allrank.models.losses.rankNet import rankNet as rankingLossFct
+
 except ImportError:
     neuralNDCG = None
+    rankingLossFct = None
 
 from skorch import NeuralNetClassifier, NeuralNetRegressor
 
@@ -33,17 +37,19 @@ from skorch import NeuralNetClassifier, NeuralNetRegressor
 DEVICE = "cpu"
 
 
-class NeuralNDCGLoss:
+class RankingLossWrapper(nn.Module):
     """
-    Simple class wrapper of neuralNDCG loss
+    Simple class wrapper of ranking loss
     """
 
-    def __init__(self, **loss_kwargs):
-        assert neuralNDCG is not None, "allRnak package is required"
-        self.loss_kwargs = loss_kwargs
+    # def __init__(self, **loss_kwargs):
+    #     assert neuralNDCG is not None, "allRnak package is required"
+    #     self.loss_kwargs = loss_kwargs
 
     def __call__(self, pred, gt):
-        return neuralNDCG(pred, gt, **self.loss_kwargs)
+        assert rankingLossFct is not None
+        # return neuralNDCG(pred, gt, **self.loss_kwargs)
+        return rankingLossFct(pred, gt)
 
 
 def train_torch_model(model, train_loader, val_loader=None, test_loader=None,
@@ -274,9 +280,10 @@ def train_torch_model_cross_val_loop(X, Y, task_name,
                                      ignore_mask=ignore_mask)
     test_data = TestData(X.astype("float32"))
     all_results = pd.DataFrame()
+    skorch_trainer_class = NeuralNetRegressor
     if task_name == "ranking":
         final_activation = None
-        loss_function = NeuralNDCGLoss()
+        loss_function = RankingLossWrapper()
     elif task_name == "detection":
         final_activation = nn.Sigmoid()
         loss_function = SorensenDiceLoss()
@@ -292,29 +299,65 @@ def train_torch_model_cross_val_loop(X, Y, task_name,
 
     # Loop over cross-val folds:
     for fold, (train_index, test_index) in enumerate(pbar_cross_split):
-        # Define data-loaders:
-        train_sampler = torch.utils.data.SubsetRandomSampler(train_index.tolist())
-        valid_sampler = torch.utils.data.SubsetRandomSampler(test_index.tolist())
-        num_workers = 0
-        train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler,
-                                  num_workers=num_workers, drop_last=True)
-        val_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=valid_sampler,
-                                num_workers=num_workers)
-        test_loader = DataLoader(dataset=test_data, batch_size=batch_size, sampler=valid_sampler,
-                                 num_workers=num_workers)
-
+        train_x = X[train_index]
+        train_y = Y[train_index]
         # Define model:
         model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
                                   nb_in_feat=X.shape[1],
                                   nb_out_feat=Y.shape[1],
-                                  loss=loss_function,
-                                  learning_rate=learning_rate,
                                   final_activation=final_activation,
-                                  has_ignore_mask=ignore_mask is not None)
+                                  # keep_channel_dim_out=type_of_models != "classifier"
+                                  )
 
-        _, pred_array, pred_indices = train_torch_model(model, train_loader, val_loader, test_loader, max_epochs)
+        skorch_trainer = skorch_trainer_class(
+            model,
+            max_epochs=300,
+            lr=0.1, # TODO: update
+            train_split=None,
+            # Shuffle training data on each epoch
+            iterator_train__shuffle=True,
+            criterion=loss_function,
+            verbose=True)
 
-        lc_results = pd.DataFrame(pred_array, index=pred_indices)
+        # if type_of_models == "classifier":
+        #     train_y = train_y.astype("int64")[:, 0]
+        # train_y = train_y.astype("float32")[:, 0]
+        # else:
+        train_y = train_y.astype("float32")
+        skorch_trainer.fit(train_x.astype("float32"), train_y)
+
+        # Prediction on test:
+        test_x = X[test_index]
+        # test_y = Y[test_index]
+        predictions = skorch_trainer.predict_proba(test_x.astype("float32"))
+        lc_results = pd.DataFrame(predictions, index=test_index)
+
+        # -------------------------------
+        # OLD PYTORCH LIGHTNING TRAINING:
+        # # Define data-loaders:
+        # train_sampler = torch.utils.data.SubsetRandomSampler(train_index.tolist())
+        # valid_sampler = torch.utils.data.SubsetRandomSampler(test_index.tolist())
+        # num_workers = 0
+        # train_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=train_sampler,
+        #                           num_workers=num_workers, drop_last=True)
+        # val_loader = DataLoader(dataset=train_val_dataset, batch_size=batch_size, sampler=valid_sampler,
+        #                         num_workers=num_workers)
+        # test_loader = DataLoader(dataset=test_data, batch_size=batch_size, sampler=valid_sampler,
+        #                          num_workers=num_workers)
+        #
+        # # Define model:
+        # model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
+        #                           nb_in_feat=X.shape[1],
+        #                           nb_out_feat=Y.shape[1],
+        #                           loss=loss_function,
+        #                           learning_rate=learning_rate,
+        #                           final_activation=final_activation,
+        #                           has_ignore_mask=ignore_mask is not None)
+        #
+        # _, pred_array, pred_indices = train_torch_model(model, train_loader, val_loader, test_loader, max_epochs)
+        # lc_results = pd.DataFrame(pred_array, index=pred_indices)
+        # -------------------------------
+
         lc_results["fold"] = fold
         all_results = pd.concat([all_results, lc_results])
 
@@ -342,7 +385,7 @@ def features_selection_torch_model(X, Y, task_name,
     all_results = pd.DataFrame()
     if task_name == "ranking":
         final_activation = None
-        loss_function = NeuralNDCGLoss()
+        loss_function = RankingLossWrapper()
     elif task_name == "detection":
         final_activation = nn.Sigmoid()
         loss_function = SorensenDiceLoss()
@@ -439,7 +482,6 @@ def train_pytorch_model_on_intensities(intensities_df,
     # -------------------------
     # Find stratification classes and start training:
     # -------------------------
-    # # TODO: use alternative stratification
     # Z_clust = scipy.cluster.hierarchy.linkage(Y, method="ward")
     # out_clustering = scipy.cluster.hierarchy.fcluster(Z_clust, t=9, criterion="distance")
 

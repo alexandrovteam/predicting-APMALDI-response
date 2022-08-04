@@ -328,6 +328,8 @@ def train_models(args):
                     task_name = "detection"
                 elif "regression" in TASK_TYPE:
                     task_name = "regression"
+                else:
+                    raise ValueError(TASK_TYPE)
                 use_adduct_features = "per_mol" not in TASK_TYPE
                 model_results = train_pytorch_model_on_intensities(intensities if use_adduct_features else aggregated_intesities_per_mol,
                                                                    runs_setup[setup_name][0],
@@ -335,7 +337,7 @@ def train_models(args):
                                                                    task_name,
                                                                    do_feature_selection=DO_FEAT_SEL,
                                                                    path_feature_importance_csv=FEAT_SEL_CSV_FILE,
-                                                                   num_cross_val_folds=2,  # TODO: update
+                                                                   num_cross_val_folds=10,  # TODO: update
                                                                    use_adduct_features=use_adduct_features,
                                                                    adducts_columns=adducts_columns
                                                                    )
