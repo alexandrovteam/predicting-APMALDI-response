@@ -349,4 +349,9 @@ def train_models(args):
             print('Took {} s'.format(time.time() - tick))
 
             # Write results:
-            model_results.to_csv(dir_out / out_filename)
+            if DO_FEAT_SEL and ONLY_SAVE_FEAT:
+                model_results = model_results.sort_values(model_results.columns[0], ascending=False)
+                model_results.to_csv(dir_out / out_filename, index=False)
+            else:
+                # TODO: maybe here the index is also not needed...?
+                model_results.to_csv(dir_out / out_filename)

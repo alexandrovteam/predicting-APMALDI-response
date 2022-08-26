@@ -198,35 +198,44 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         shap.summary_plot(shap_values[:, features_mask], train_x[:, features_mask], feature_names=selected_features, show=False)
         plt.savefig(out_plot_dir / 'summary_plot_global.png')
 
+        # Collect stats for high and low features separately:
+        filtered_x = train_x[:, features_mask]
+        # Normalize features between 0 and 1:
+        norm_x = filtered_x - filtered_x.min(axis=0)
+        norm_x /= norm_x.max(axis=0)
+        high_value_x = norm_x > 0.5
+
         # Now return the actual values
         result_df = pd.DataFrame({
-            "mean_abs_shap_value": np.mean(np.abs(shap_values[:, features_mask]), axis=0),
-            "std_abs_shap_value": np.std(np.abs(shap_values[:, features_mask]), axis=0),
+            "Feature importance (mean abs value of shap-value)": np.mean(np.abs(shap_values[:, features_mask]), axis=0),
+            "Model-impact of points with high-value features": np.mean(shap_values[:, features_mask][high_value_x], axis=0),
+            "Model-impact of points with low-value features": np.mean(shap_values[:, features_mask][~high_value_x], axis=0),
+            # "std_abs_shap_value": np.std(np.abs(shap_values[:, features_mask]), axis=0),
             # "matrix": matrix,
             # "polarity": polarity,
-            "feature_name": selected_features,
-            "adduct": "all",
+            "Feature name": selected_features,
+            # "adduct": "all",
         })
 
-        if "adduct" in molecule_names.columns.to_list():
-            molecule_names.reset_index(drop=True, inplace=True)
-            for adduct in molecule_names.adduct.unique():
-                molecule_mask = (molecule_names.adduct == adduct).to_list()
-                plt.show()
-                fig = plt.gcf()
-                shap.summary_plot(shap_values[molecule_mask][:, features_mask], train_x[molecule_mask][:, features_mask], feature_names=selected_features,
-                                  show=False)
-                plt.savefig(out_plot_dir / f'summary_plot_{adduct}.png')
-
-                loc_df = pd.DataFrame({
-                    "mean_abs_shap_value": np.mean(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
-                    "std_abs_shap_value": np.std(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
-                    # "matrix": matrix,
-                    # "polarity": polarity,
-                    "feature_name": selected_features,
-                    "adduct": adduct,
-                })
-                result_df = pd.concat([result_df, loc_df])
+        # if "adduct" in molecule_names.columns.to_list():
+        #     molecule_names.reset_index(drop=True, inplace=True)
+        #     for adduct in molecule_names.adduct.unique():
+        #         molecule_mask = (molecule_names.adduct == adduct).to_list()
+        #         plt.show()
+        #         fig = plt.gcf()
+        #         shap.summary_plot(shap_values[molecule_mask][:, features_mask], train_x[molecule_mask][:, features_mask], feature_names=selected_features,
+        #                           show=False)
+        #         plt.savefig(out_plot_dir / f'summary_plot_{adduct}.png')
+        #
+        #         loc_df = pd.DataFrame({
+        #             "Feature importance (avg abs value of shap-value)": np.mean(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
+        #             # "std_abs_shap_value": np.std(np.abs(shap_values[molecule_mask][:, features_mask]), axis=0),
+        #             # "matrix": matrix,
+        #             # "polarity": polarity,
+        #             "Feature name": selected_features,
+        #             "adduct": adduct,
+        #         })
+        #         result_df = pd.concat([result_df, loc_df])
 
         return result_df
 
@@ -450,6 +459,7 @@ def train_pytorch_model_on_intensities(intensities_df,
                                        use_adduct_features=True,
                                        adducts_columns=None
                                        ):
+    raise DeprecationWarning
     assert torch is not None
 
     # -------------------------
