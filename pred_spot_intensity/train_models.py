@@ -15,7 +15,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import PowerTransformer
 import os
 
-from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matrix_polarity, get_strat_classes
+from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matrix_polarity, get_strat_classes, \
+    train_multiple_models
 from pred_spot_intensity.train_pytorch_models import train_pytorch_model_on_intensities
 
 # plt.style.use('dark_background')
@@ -290,8 +291,10 @@ def train_models(args):
                                                         features_type=FEATURES_TYPE,
                                                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
                                                         num_cross_val_folds=NUM_SPLITS,
-                                                        train_loop_function=train_pytorch_model_wrapper
+                                                        # train_loop_function=train_pytorch_model_wrapper,
+                                                        train_loop_function=train_multiple_models,
                                                         )
+
 
             elif "detection" in TASK_TYPE and "torch" not in TASK_TYPE:
                 assert TASK_TYPE == "detection_per_mol" or TASK_TYPE == "detection_per_ion"
@@ -314,7 +317,8 @@ def train_models(args):
                         features_type=FEATURES_TYPE,
                         path_feature_importance_csv=FEAT_SEL_CSV_FILE,
                         num_cross_val_folds=NUM_SPLITS,
-                        train_loop_function=train_pytorch_model_wrapper
+                        # train_loop_function=train_pytorch_model_wrapper,
+                        train_loop_function=train_multiple_models,
                         )
             elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...

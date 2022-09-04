@@ -24,7 +24,9 @@ if __name__ == "__main__":
     parser.add_argument('--feat_sel_load_dir', type=str, default=None)
     parser.add_argument('--postfix', type=str, default=None)
     parser.add_argument('--pred_val_thresh', type=float, default=0.2)
-    parser.add_argument('--ion_aggregate_rul', type=str, default="max")
+    parser.add_argument('--ion_aggregate_rul', type=str, default="sum")
     parser.add_argument('-s', '--setup_list', nargs='+', default=[])
     args = parser.parse_args()
+
+    print(args.ion_aggregate_rul)
     train_models(args)

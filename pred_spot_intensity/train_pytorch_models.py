@@ -8,6 +8,7 @@ import tqdm
 from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
 import logging
+from sklearn.neural_network import MLPClassifier, MLPRegressor
 
 try:
     import torch.nn.functional as F
@@ -131,52 +132,79 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         loss_function = nn.BCELoss()
         # soresen_loss = F.binary_cross_entropy_with_logits
         skorch_trainer_class = NeuralNetClassifier
+        sklearn_model = MLPClassifier(max_iter=2000)
     elif type_of_models == "regressor":
         final_activation = None
         loss_function = nn.MSELoss()
         skorch_trainer_class = NeuralNetRegressor
         # loss_function = nn.L1Loss() # Does not work
+        sklearn_model = MLPRegressor(max_iter=2000)
     else:
         raise ValueError(type_of_models)
 
-    # Define model:
-    model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
-                              nb_in_feat=train_x.shape[1],
-                              nb_out_feat=train_y.shape[1],
-                              final_activation=final_activation,
-                              # keep_channel_dim_out=type_of_models != "classifier"
-                              )
 
-    skorch_trainer = skorch_trainer_class(
-        model,
-        max_epochs=200,
-        lr=0.1,
-        train_split=None,
-        # Shuffle training data on each epoch
-        iterator_train__shuffle=True,
-        criterion=loss_function,
-        verbose=False)
+    # # ----------------------------
+    # # SKORCH:
+    # # ----------------------------
+    # # Define model:
+    # model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
+    #                           nb_in_feat=train_x.shape[1],
+    #                           nb_out_feat=train_y.shape[1],
+    #                           final_activation=final_activation,
+    #                           # keep_channel_dim_out=type_of_models != "classifier"
+    #                           )
+    #
+    # skorch_trainer = skorch_trainer_class(
+    #     model,
+    #     max_epochs=200,
+    #     lr=0.1,
+    #     train_split=None,
+    #     # Shuffle training data on each epoch
+    #     iterator_train__shuffle=True,
+    #     criterion=loss_function,
+    #     verbose=False)
+    #
+    # # if type_of_models == "classifier":
+    # #     train_y = train_y.astype("int64")[:, 0]
+    #     # train_y = train_y.astype("float32")[:, 0]
+    # # else:
+    # train_y = train_y.astype("float32")
+    # skorch_trainer.fit(train_x.astype("float32"), train_y)
 
-    # if type_of_models == "classifier":
-    #     train_y = train_y.astype("int64")[:, 0]
-        # train_y = train_y.astype("float32")[:, 0]
-    # else:
-    train_y = train_y.astype("float32")
-    skorch_trainer.fit(train_x.astype("float32"), train_y)
+
+    # ----------------------------
+    # sklearn:
+    # ----------------------------
+    if type_of_models == "classifier":
+        train_y = train_y.astype("int64")[:, 0]
+    sklearn_model.fit(train_x, train_y)
+    model = sklearn_model
+
 
 
     if do_feature_selection:
-        out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}/{matrix}_{polarity}')
+        out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}_sklearn')
+        # out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}/{matrix}_{polarity}')
         out_plot_dir.mkdir(exist_ok=True, parents=True)
 
+        # --------------
         # SHAP:
-        explainer = shap.DeepExplainer(
-            model,
-            torch.from_numpy(train_x[np.random.choice(np.arange(train_x.shape[0]), 100, replace=False)]
-                             ).to(DEVICE).float())
-        shap_values = explainer.shap_values(
-            torch.from_numpy(train_x).to(DEVICE).float()
+        # --------------
+        train_x_summary = shap.kmeans(train_x, 10)
+        explainer = shap.KernelExplainer(
+            model.predict,
+            train_x_summary
+            # train_x[np.random.choice(np.arange(train_x.shape[0]), 100, replace=False)]
         )
+        shap_values = explainer.shap_values(train_x)
+        # OLD PYTORCH code:
+        # explainer = shap.DeepExplainer(
+        #     model,
+        #     torch.from_numpy(train_x[np.random.choice(np.arange(train_x.shape[0]), 100, replace=False)]
+        #                      ).to(DEVICE).float())
+        # shap_values = explainer.shap_values(
+        #     torch.from_numpy(train_x).to(DEVICE).float()
+        # )
 
         # Filter out the features related to adducts:
         features_mask = ["adduct" not in feat for feat in feature_names]
@@ -196,7 +224,7 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         plt.show()
         fig = plt.gcf()
         shap.summary_plot(shap_values[:, features_mask], train_x[:, features_mask], feature_names=selected_features, show=False)
-        plt.savefig(out_plot_dir / 'summary_plot_global.png')
+        plt.savefig(out_plot_dir / f'{matrix}_{polarity}_summary_plot.png')
 
         # Collect stats for high and low features separately:
         filtered_x = train_x[:, features_mask]
