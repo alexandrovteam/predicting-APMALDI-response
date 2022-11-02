@@ -164,7 +164,7 @@ def train_models(args):
 
     # Since not all the bins have enough datapoints, use quantiles to define the size of the bins:
 
-    # We only select only some features, otherwise there are not enough data in each of the splits:
+    # We only select some features, otherwise there are not enough data in each of the splits:
     selected_stratification_features = [
         "pka_strongest_basic",
         # "polar_surface_area",
@@ -293,6 +293,7 @@ def train_models(args):
                                                         num_cross_val_folds=NUM_SPLITS,
                                                         # train_loop_function=train_pytorch_model_wrapper,
                                                         train_loop_function=train_multiple_models,
+                                                        feature_selection_out_dir=dir_out / "feature_selection",
                                                         )
 
 
@@ -319,6 +320,7 @@ def train_models(args):
                         num_cross_val_folds=NUM_SPLITS,
                         # train_loop_function=train_pytorch_model_wrapper,
                         train_loop_function=train_multiple_models,
+                        feature_selection_out_dir=dir_out / "feature_selection"
                         )
             elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...

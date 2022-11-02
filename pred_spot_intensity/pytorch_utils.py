@@ -20,6 +20,14 @@ import pytorch_lightning as pl
 import torch
 from pytorch_lightning.callbacks import LearningRateMonitor
 
+try:
+    # from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
+    # from allrank.models.losses.lambdaLoss import lambdaLoss as rankingLossFct
+    from allrank.models.losses.rankNet import rankNet as rankingLossFct
+except ImportError:
+    neuralNDCG = None
+    rankingLossFct = None
+
 
 ## train data
 class TrainValData(Dataset):
@@ -52,6 +60,20 @@ class TestData(Dataset):
 
 
 # %%
+class RankingLossWrapper(nn.Module):
+    """
+    Simple class wrapper of ranking loss
+    """
+
+    # def __init__(self, **loss_kwargs):
+    #     assert neuralNDCG is not None, "allRnak package is required"
+    #     self.loss_kwargs = loss_kwargs
+
+    def __call__(self, pred, gt):
+        assert rankingLossFct is not None
+        # return neuralNDCG(pred, gt, **self.loss_kwargs)
+        return rankingLossFct(pred, gt)
+
 
 
 def flatten_samples(input_):
