@@ -27,7 +27,7 @@ def train_models(args):
     TASK_TYPE = args.task_type
     DO_FEAT_SEL = args.do_feat_sel
     NUM_SPLITS = args.nb_splits
-    postfix = args.postfix
+    experiment_name = args.experiment_name
     PRED_VAL_THRESH = args.pred_val_thresh
 
     setups = args.setup_list
@@ -225,10 +225,8 @@ def train_models(args):
     out_folder = TASK_TYPE
     if "per_mol" in TASK_TYPE:
         out_folder += f"_{ION_AGGREGATE_RULE}"
-    dir_out = result_dir / out_folder
-    if postfix is not None:
-        # out_folder += f"_{postfix}"
-        dir_out = dir_out / postfix
+    assert experiment_name is not None
+    dir_out = result_dir / experiment_name / out_folder
     dir_out.mkdir(exist_ok=True, parents=True)
 
     random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
