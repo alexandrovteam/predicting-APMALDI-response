@@ -5,7 +5,6 @@ import sys
 from pred_spot_intensity.combine_results import combine_results_from_multiple_experiments
 
 # TODO:
-#   - save model
 #   - notebook to predict with model
 #   - clean notebook to create plots
 #   - clean inputs / results / plots
