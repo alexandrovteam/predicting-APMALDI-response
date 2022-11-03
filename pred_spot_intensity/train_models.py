@@ -30,6 +30,10 @@ def train_models(args):
     experiment_name = args.experiment_name
     PRED_VAL_THRESH = args.pred_val_thresh
 
+    if not DO_FEAT_SEL:
+        print("Note: To save a global model and use it later for prediction, please run the script with "
+              "the additional argument --do_feat_sel")
+
     setups = args.setup_list
 
     ION_AGGREGATE_RULE = args.ion_aggregate_rul

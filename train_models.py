@@ -20,8 +20,8 @@ if __name__ == "__main__":
     #  - update iters number
     #  - reactivate command to run model training
     all_options_to_run = [
-        f"-s mol random --task_type regression_on_detected_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
-        f"-s mol random --task_type detection_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
+        # f"-s mol random --task_type regression_on_detected_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
+        # f"-s mol random --task_type detection_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
         f"-s mol --task_type regression_on_detected_per_mol --do_feat_sel --only_save_feat --experiment_name {EXP_NAME}",
         f"-s mol --task_type detection_per_mol --do_feat_sel --only_save_feat --experiment_name {EXP_NAME}",
     ]
@@ -33,7 +33,7 @@ if __name__ == "__main__":
         )
         print(f"\n\n\n####### Running set of experiments {i + 1}/{len(all_options_to_run)}... ###### ")
         print(full_command)
-        # subprocess.run(full_command, shell=True, check=True)
+        subprocess.run(full_command, shell=True, check=True)
 
     # TODO: merge results from multiple iterations using the other script
     all_exp_names = [
