@@ -32,13 +32,13 @@ if __name__ == "__main__":
         )
         print(f"\n\n\n####### Running set of experiments {i + 1}/{len(all_options_to_run)}... ###### ")
         print(full_command)
-        subprocess.run(full_command, shell=True, check=True)
+        # subprocess.run(full_command, shell=True, check=True)
 
     # TODO: merge results from multiple iterations using the other script
     all_exp_names = [
-        (f"./results/{EXP_NAME}/regression_on_detected_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
-        (f"./results/{EXP_NAME}/detection_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
+        (f"./training_results/{EXP_NAME}/regression_on_detected_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
+        (f"./training_results/{EXP_NAME}/detection_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
     ]
 
     all_results = combine_results_from_multiple_experiments(all_exp_names)
-    all_results.to_csv(f"./results/{EXP_NAME}/all_paper_results.csv")
+    all_results.to_csv(f"./training_results/{EXP_NAME}/collected_predictions.csv")

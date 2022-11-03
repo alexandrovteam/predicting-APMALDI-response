@@ -143,12 +143,11 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
     if do_feature_selection:
         assert feature_selection_out_dir is not None
         if not isinstance(feature_selection_out_dir, Path): feature_selection_out_dir = Path(feature_selection_out_dir)
-        feature_selection_out_dir = feature_selection_out_dir / type_of_models
         feature_selection_out_dir.mkdir(exist_ok=True, parents=True)
 
         # Save model:
         # TODO: save model in another place of the code...?
-        saved_model_path = feature_selection_out_dir / f'../../trained_{type_of_models}_model.pkl'
+        saved_model_path = feature_selection_out_dir / f'../trained_{type_of_models}_model.pkl'
         pickle.dump(model, open(saved_model_path, 'wb'))
         print(f"Model saved to {saved_model_path}!")
 

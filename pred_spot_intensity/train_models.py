@@ -51,7 +51,7 @@ def train_models(args):
     input_dir = current_dir_path / "../input_data"
     plots_dir = current_dir_path / "../plots"
     plots_dir.mkdir(exist_ok=True)
-    result_dir = current_dir_path / "../results"
+    result_dir = current_dir_path / "../training_results"
     result_dir.mkdir(exist_ok=True, parents=True)
 
     # ## Loading data
@@ -295,7 +295,7 @@ def train_models(args):
                                                         num_cross_val_folds=NUM_SPLITS,
                                                         # train_loop_function=train_pytorch_model_wrapper,
                                                         train_loop_function=train_multiple_models,
-                                                        feature_selection_out_dir=dir_out / "feature_selection",
+                                                        feature_selection_out_dir=dir_out / "feature_selection_plots",
                                                         )
 
 
@@ -322,7 +322,7 @@ def train_models(args):
                         num_cross_val_folds=NUM_SPLITS,
                         # train_loop_function=train_pytorch_model_wrapper,
                         train_loop_function=train_multiple_models,
-                        feature_selection_out_dir=dir_out / "feature_selection"
+                        feature_selection_out_dir=dir_out / "feature_selection_plots"
                         )
             elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...
