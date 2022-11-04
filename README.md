@@ -11,8 +11,8 @@ The trained models and predictions can be found in the [training_results/paper_r
 Follow the instructions in the notebook [predict_intensities.ipynb](./predict_intensities.ipynb) to predict matrix intensities on your custom set of molecules.
 
 ### Reproducing paper results
-To reproduce the paper results by following these steps:
-- Retrain the models by running `python train_models.py --exp_name <YOUR_NEW_EXPERIMENT_NAME>`, where `YOUR_NEW_EXPERIMENT_NAME` could be `reproduce_paper_results`
+To reproduce the paper results, follow these steps:
+- Retrain the models by running `python train_models.py --exp_name <YOUR_NEW_EXPERIMENT_NAME>`
 - After training is done, models and predictions can be found in the `training_results/YOUR_NEW_EXPERIMENT_NAME` folder
 - To compute scores and make plots, use the [evaluate_trained_models.ipynb](./evaluate_trained_models.ipynb) notebook
 

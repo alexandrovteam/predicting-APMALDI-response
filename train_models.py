@@ -1,14 +1,8 @@
 import argparse
-import os
 import subprocess
 import sys
 
 from pred_spot_intensity.combine_results import combine_results_from_multiple_experiments
-
-# TODO:
-#   - clean notebook to create plots
-#   - clean inputs / results / plots
-#   - clean package code
 
 
 if __name__ == "__main__":
@@ -19,12 +13,9 @@ if __name__ == "__main__":
     EXP_NAME = args.exp_name
 
     python_interpreter = sys.executable
-    # TODO:
-    #  - update iters number
-    #  - reactivate command to run model training
     all_options_to_run = [
-        # f"-s mol random --task_type regression_on_detected_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
-        # f"-s mol random --task_type detection_per_mol --nb_iter 2 --experiment_name {EXP_NAME}",
+        f"-s mol random --task_type regression_on_detected_per_mol --nb_iter 10 --experiment_name {EXP_NAME}",
+        f"-s mol random --task_type detection_per_mol --nb_iter 10 --experiment_name {EXP_NAME}",
         f"-s mol --task_type regression_on_detected_per_mol --do_feat_sel --only_save_feat --experiment_name {EXP_NAME}",
         f"-s mol --task_type detection_per_mol --do_feat_sel --only_save_feat --experiment_name {EXP_NAME}",
     ]
@@ -38,7 +29,6 @@ if __name__ == "__main__":
         print(full_command)
         subprocess.run(full_command, shell=True, check=True)
 
-    # TODO: merge results from multiple iterations using the other script
     all_exp_names = [
         (f"./training_results/{EXP_NAME}/regression_on_detected_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
         (f"./training_results/{EXP_NAME}/detection_per_mol_sum", ["results_mol_feat", "results_random_feat"]),
