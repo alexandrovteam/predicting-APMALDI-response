@@ -1,4 +1,5 @@
 import os
+import pickle
 from pathlib import Path
 
 import pandas as pd
@@ -10,6 +11,8 @@ from sklearn.cluster import KMeans
 import logging
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 
+import shap
+
 try:
     import torch.nn.functional as F
     import pytorch_lightning as pl
@@ -17,40 +20,26 @@ try:
     import torch
     from pytorch_lightning.callbacks import LearningRateMonitor
     from torch.utils.data import DataLoader
-    from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN
-    import shap
+    from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN, RankingLossWrapper
+    import skorch
 except ImportError:
     torch = None
+    skorch = None
 import scipy.cluster.hierarchy
 
 try:
     # from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed
     # from allrank.models.losses.lambdaLoss import lambdaLoss as rankingLossFct
     from allrank.models.losses.rankNet import rankNet as rankingLossFct
-
 except ImportError:
     neuralNDCG = None
     rankingLossFct = None
 
-from skorch import NeuralNetClassifier, NeuralNetRegressor
 
 # TODO: give as argument
 DEVICE = "cpu"
 
 
-class RankingLossWrapper(nn.Module):
-    """
-    Simple class wrapper of ranking loss
-    """
-
-    # def __init__(self, **loss_kwargs):
-    #     assert neuralNDCG is not None, "allRnak package is required"
-    #     self.loss_kwargs = loss_kwargs
-
-    def __call__(self, pred, gt):
-        assert rankingLossFct is not None
-        # return neuralNDCG(pred, gt, **self.loss_kwargs)
-        return rankingLossFct(pred, gt)
 
 
 def train_torch_model(model, train_loader, val_loader=None, test_loader=None,
@@ -107,7 +96,8 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
                                 feature_names=None,
                                 matrix=None,
                                 polarity=None,
-                                molecule_names=None
+                                molecule_names=None,
+                                feature_selection_out_dir=None
                                 ):
     """
     Temp wrapper for compatibility with sklearn model training
@@ -127,50 +117,20 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
     # ignore_mask = ignore_mask if ignore_mask is None else ignore_mask.astype("float32")
     if type_of_models == "classifier":
         # TODO: make sure that this is up to date
-        final_activation = nn.Sigmoid()
+        # final_activation = nn.Sigmoid()
         # loss_function = SorensenDiceLoss()
-        loss_function = nn.BCELoss()
+        # loss_function = nn.BCELoss()
         # soresen_loss = F.binary_cross_entropy_with_logits
-        skorch_trainer_class = NeuralNetClassifier
+        # skorch_trainer_class = skorch.NeuralNetClassifier
         sklearn_model = MLPClassifier(max_iter=2000)
     elif type_of_models == "regressor":
-        final_activation = None
-        loss_function = nn.MSELoss()
-        skorch_trainer_class = NeuralNetRegressor
+        # final_activation = None
+        # loss_function = nn.MSELoss()
+        # skorch_trainer_class = skorch.NeuralNetRegressor
         # loss_function = nn.L1Loss() # Does not work
         sklearn_model = MLPRegressor(max_iter=2000)
     else:
         raise ValueError(type_of_models)
-
-
-    # # ----------------------------
-    # # SKORCH:
-    # # ----------------------------
-    # # Define model:
-    # model = SimpleTwoLayersNN(num_feat=num_hidden_layer_features,
-    #                           nb_in_feat=train_x.shape[1],
-    #                           nb_out_feat=train_y.shape[1],
-    #                           final_activation=final_activation,
-    #                           # keep_channel_dim_out=type_of_models != "classifier"
-    #                           )
-    #
-    # skorch_trainer = skorch_trainer_class(
-    #     model,
-    #     max_epochs=200,
-    #     lr=0.1,
-    #     train_split=None,
-    #     # Shuffle training data on each epoch
-    #     iterator_train__shuffle=True,
-    #     criterion=loss_function,
-    #     verbose=False)
-    #
-    # # if type_of_models == "classifier":
-    # #     train_y = train_y.astype("int64")[:, 0]
-    #     # train_y = train_y.astype("float32")[:, 0]
-    # # else:
-    # train_y = train_y.astype("float32")
-    # skorch_trainer.fit(train_x.astype("float32"), train_y)
-
 
     # ----------------------------
     # sklearn:
@@ -180,12 +140,17 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
     sklearn_model.fit(train_x, train_y)
     model = sklearn_model
 
-
-
     if do_feature_selection:
-        out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}_sklearn')
-        # out_plot_dir = Path(f'/Users/alberto-mac/EMBL_repos/spotting-project-regression/plots/feature_importance_{type_of_models}/{matrix}_{polarity}')
-        out_plot_dir.mkdir(exist_ok=True, parents=True)
+        assert feature_selection_out_dir is not None
+        if not isinstance(feature_selection_out_dir, Path): feature_selection_out_dir = Path(feature_selection_out_dir)
+        feature_selection_out_dir.mkdir(exist_ok=True, parents=True)
+
+        # Save model:
+        saved_models_dir = feature_selection_out_dir / "../trained_models"
+        saved_models_dir.mkdir(exist_ok=True, parents=True)
+        saved_model_path = saved_models_dir / f'trained_{type_of_models}_model_{matrix}_{polarity}.pkl'
+        pickle.dump(model, open(saved_model_path, 'wb'))
+        # print(f"Model saved to {saved_model_path}!")
 
         # --------------
         # SHAP:
@@ -221,10 +186,16 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         # plot the explanation of the first prediction
         # Note the model is "multi-output" because it is rank-2 but only has one column
         # shap.force_plot(explainer.expected_value[0], shap_values[0][0], x_test_words[0])
-        plt.show()
-        fig = plt.gcf()
         shap.summary_plot(shap_values[:, features_mask], train_x[:, features_mask], feature_names=selected_features, show=False)
-        plt.savefig(out_plot_dir / f'{matrix}_{polarity}_summary_plot.png')
+        plt.savefig(feature_selection_out_dir / f'{matrix}_{polarity}_summary_plot.png')
+
+        # Make sure that matplolib clears the history for next plots:
+        plt.show(block=False)
+        fig = plt.gcf()
+        fig.gca().clear()
+        plt.cla()
+        plt.close(fig)
+
 
         # Collect stats for high and low features separately:
         filtered_x = train_x[:, features_mask]
@@ -287,16 +258,16 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
     # # Sort predictions in original order:
     # predictions = pred_array[:, 0][pred_indices]
 
-    if do_test:
-        predictions = skorch_trainer.predict_proba(test_x.astype("float32"))
-        results_df = pd.DataFrame({"prediction": predictions[:, 0] if predictions.ndim > 1 else predictions,
-                               "observed_value": test_y[:, 0] if test_y.ndim > 1 else test_y,
-                               type_of_models: "pytorch_NN"})
-
-        if name_test is not None:
-            results_df = results_df.merge(name_test, left_index=True, right_index=True)
-
-        return results_df
+    # if do_test:
+    #     predictions = skorch_trainer.predict_proba(test_x.astype("float32"))
+    #     results_df = pd.DataFrame({"prediction": predictions[:, 0] if predictions.ndim > 1 else predictions,
+    #                            "observed_value": test_y[:, 0] if test_y.ndim > 1 else test_y,
+    #                            type_of_models: "pytorch_NN"})
+    #
+    #     if name_test is not None:
+    #         results_df = results_df.merge(name_test, left_index=True, right_index=True)
+    #
+    #     return results_df
 
 
 def train_torch_model_cross_val_loop(X, Y, task_name,
@@ -317,7 +288,7 @@ def train_torch_model_cross_val_loop(X, Y, task_name,
                                      ignore_mask=ignore_mask)
     test_data = TestData(X.astype("float32"))
     all_results = pd.DataFrame()
-    skorch_trainer_class = NeuralNetRegressor
+    skorch_trainer_class = skorch.NeuralNetRegressor
     if task_name == "ranking":
         final_activation = None
         loss_function = RankingLossWrapper()

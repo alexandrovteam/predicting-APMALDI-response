@@ -1,0 +1,13 @@
+matplotlib
+imbalanced-learn
+datashader
+bokeh
+holoviews
+scikit-image
+colorcet
+tqdm
+scikit-learn
+umap-learn
+shap
+notebook
+pandas

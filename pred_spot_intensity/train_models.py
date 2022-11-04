@@ -2,10 +2,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-try:
-    from imblearn.over_sampling import RandomOverSampler
-except ImportError:
-    RandomOverSampler = None
+from imblearn.over_sampling import RandomOverSampler
+# except ImportError:
+#     RandomOverSampler = None
 
 try:
     from .train_pytorch_models import train_pytorch_model_wrapper
@@ -20,15 +19,19 @@ from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matri
 from pred_spot_intensity.train_pytorch_models import train_pytorch_model_on_intensities
 
 # plt.style.use('dark_background')
-
+from .io import load_molecule_features
 
 
 def train_models(args):
     TASK_TYPE = args.task_type
     DO_FEAT_SEL = args.do_feat_sel
     NUM_SPLITS = args.nb_splits
-    postfix = args.postfix
+    experiment_name = args.experiment_name
     PRED_VAL_THRESH = args.pred_val_thresh
+
+    if not DO_FEAT_SEL:
+        print("Note: To save a global model and use it later for prediction, please run the script with "
+              "the additional argument --do_feat_sel")
 
     setups = args.setup_list
 
@@ -44,40 +47,30 @@ def train_models(args):
     # Paths:
     current_dir_path = Path(os.path.dirname(os.path.realpath(__file__)))
 
-    input_dir = current_dir_path / "../input_data"
+    input_dir = current_dir_path / "../training_data"
     plots_dir = current_dir_path / "../plots"
     plots_dir.mkdir(exist_ok=True)
-    result_dir = current_dir_path / "../results"
+    result_dir = current_dir_path / "../training_results"
     result_dir.mkdir(exist_ok=True, parents=True)
 
     # ## Loading data
     # Loading fingerprints, and molecule properties
 
     # Load fingerprints:
-    fingerprints = pd.read_csv(input_dir / "fingerprints.csv", index_col=0)
+    fingerprints = pd.read_csv(input_dir / "molecule_fingerprints.csv", index_col=0)
     fingerprints.sort_index(inplace=True)
     # There seems to be some duplicates in the rows:
     fingerprints.drop_duplicates(inplace=True)
     # Save columns names:
     fingerprints_cols = fingerprints.columns
+    assert fingerprints.index.is_unique
 
     # Load properties:
-    mol_properties = pd.read_csv(input_dir / "physchem_properties.csv", index_col=0)
-    mol_properties.sort_index(inplace=True)
-    mol_properties.drop_duplicates(inplace=True)
-    # mol_properties.set_index("name_short", inplace=True)
+    mol_properties = load_molecule_features(input_dir / "physchem_molecule_properties.csv",
+                           molecule_name_column="molecule_name",
+                                            normalize=False)
     mol_properties_cols = mol_properties.columns
 
-    # Check for NaN values:
-    null_mask_pka_acidic = mol_properties.pka_strongest_acidic.isnull()
-    mol_properties.loc[null_mask_pka_acidic, "pka_strongest_acidic"] = mol_properties.pka_strongest_acidic[~null_mask_pka_acidic].max()
-
-    null_mask_pka_basic = mol_properties.pka_strongest_basic.isnull()
-    mol_properties.loc[null_mask_pka_basic, "pka_strongest_basic"] = mol_properties.pka_strongest_basic[~null_mask_pka_basic].min()
-
-    # Perform some basic checks:
-    assert fingerprints.index.is_unique
-    assert mol_properties.index.is_unique
 
     print("Number of fingerprints: ", len(fingerprints))
     print("Number of mol properties: ", len(mol_properties))
@@ -164,7 +157,7 @@ def train_models(args):
 
     # Since not all the bins have enough datapoints, use quantiles to define the size of the bins:
 
-    # We only select only some features, otherwise there are not enough data in each of the splits:
+    # We only select some features, otherwise there are not enough data in each of the splits:
     selected_stratification_features = [
         "pka_strongest_basic",
         # "polar_surface_area",
@@ -225,10 +218,8 @@ def train_models(args):
     out_folder = TASK_TYPE
     if "per_mol" in TASK_TYPE:
         out_folder += f"_{ION_AGGREGATE_RULE}"
-    dir_out = result_dir / out_folder
-    if postfix is not None:
-        # out_folder += f"_{postfix}"
-        dir_out = dir_out / postfix
+    assert experiment_name is not None
+    dir_out = result_dir / experiment_name / out_folder
     dir_out.mkdir(exist_ok=True, parents=True)
 
     random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
@@ -293,6 +284,7 @@ def train_models(args):
                                                         num_cross_val_folds=NUM_SPLITS,
                                                         # train_loop_function=train_pytorch_model_wrapper,
                                                         train_loop_function=train_multiple_models,
+                                                        feature_selection_out_dir=dir_out / "feature_selection_plots",
                                                         )
 
 
@@ -319,6 +311,7 @@ def train_models(args):
                         num_cross_val_folds=NUM_SPLITS,
                         # train_loop_function=train_pytorch_model_wrapper,
                         train_loop_function=train_multiple_models,
+                        feature_selection_out_dir=dir_out / "feature_selection_plots"
                         )
             elif TASK_TYPE == "rank_matrices" or "torch" in TASK_TYPE:
                 # TODO: rename TASK_TYPE and name...

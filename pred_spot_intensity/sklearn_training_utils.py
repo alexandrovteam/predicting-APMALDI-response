@@ -321,18 +321,11 @@ def train_one_model_per_matrix_polarity(input_df,
                                         only_save_feat_sel_results=False,
                                         features_type="categorical",
                                         path_feature_importance_csv=None,
-                                        num_cross_val_folds=10
+                                        num_cross_val_folds=10,
+                                        feature_selection_out_dir=None
                                         ):
     """
-
-    :param features_normalized:
-    :param intensity_column:
-    :param type_of_models:
-    :param train_loop_function:
-    :param test_split_col_name:
-    :param oversampler:
     :param test_baseline: Set all input features to zero
-    :return:
     """
     model_predictions = pd.DataFrame()
 
@@ -390,7 +383,8 @@ def train_one_model_per_matrix_polarity(input_df,
                                                                      y_is_multioutput=False,
                                                                      matrix=matrix,
                                                                      polarity=polarity,
-                                                                     molecule_names=mol_names)
+                                                                     molecule_names=mol_names,
+                                                                     feature_selection_out_dir=feature_selection_out_dir)
                 #
 
             # ----------------------------------------------
