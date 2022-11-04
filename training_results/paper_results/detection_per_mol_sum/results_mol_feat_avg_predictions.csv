@@ -1,0 +1,3555 @@
+,matrix,polarity,name_short,observed_value,prediction
+0,9AA,negative,2-Oxoglutaric acid,1,1
+1,9AA,negative,3-Hydroxyanthranilic acid,1,1
+2,9AA,negative,3-Hydroxymethylglutaric acid,0,1
+3,9AA,negative,3-Phosphoglyceric acid,1,1
+4,9AA,negative,"4,5-Dihydroorotic acid",1,1
+5,9AA,negative,4-Hydroxyproline,1,1
+6,9AA,negative,5-Hydroxyindoleacetic acid,1,1
+7,9AA,negative,6-Phosphogluconic acid,1,1
+8,9AA,negative,Acetoacetic acid,0,0
+9,9AA,negative,Acetyl-CoA,1,1
+10,9AA,negative,Acetylcarnitine,0,0
+11,9AA,negative,Acetylcholine,0,0
+12,9AA,negative,Adenine,1,1
+13,9AA,negative,Adenosine diphosphate,1,0
+14,9AA,negative,Adenosine monophosphate,1,0
+15,9AA,negative,Agmatine,0,0
+16,9AA,negative,Arginine,1,1
+17,9AA,negative,Argininosuccinic acid,1,1
+18,9AA,negative,Ascorbic acid,1,1
+19,9AA,negative,Asparagine,1,1
+20,9AA,negative,Aspartic acid,1,1
+21,9AA,negative,Biotin,0,1
+22,9AA,negative,Butyric acid,0,0
+23,9AA,negative,CAR 16:0,0,0
+24,9AA,negative,Cardiolipin 18:1,1,1
+25,9AA,negative,Carnitine,1,0
+26,9AA,negative,Carnosine,1,1
+27,9AA,negative,Cer d8:1/22:0 Cer,1,1
+28,9AA,negative,Cholecalciferol,0,0
+29,9AA,negative,Cholesterol,0,0
+30,9AA,negative,Cholesteryl acetate,0,0
+31,9AA,negative,Cholic acid,1,1
+32,9AA,negative,Choline,0,0
+33,9AA,negative,Citric acid,1,1
+34,9AA,negative,Citrulline,1,1
+35,9AA,negative,Coenzyme A,1,1
+36,9AA,negative,Creatine,1,1
+37,9AA,negative,Creatinine,1,1
+38,9AA,negative,Cyclic adenosine monophosphate,0,1
+39,9AA,negative,Cysteine,1,1
+40,9AA,negative,Cystine,1,1
+41,9AA,negative,Cytidine,1,0
+42,9AA,negative,Cytidine monophosphate,0,1
+43,9AA,negative,Cytosine,1,1
+44,9AA,negative,Dihydroxyacetone,0,1
+45,9AA,negative,Dihydroxyacetone phosphate,1,1
+46,9AA,negative,Dopamine,1,0
+47,9AA,negative,Epinephrine,1,0
+48,9AA,negative,Estradiol,0,0
+49,9AA,negative,Flavin adenine dinucleotide,1,1
+50,9AA,negative,Flavin mononucleotide,1,1
+51,9AA,negative,Folic acid,0,0
+52,9AA,negative,"Fructose 1,6-bisphosphate",1,1
+53,9AA,negative,Fumaric acid,0,0
+54,9AA,negative,GM3 Ganglioside 18:0,1,1
+55,9AA,negative,GlcCer d18:1/18:0,1,0
+56,9AA,negative,Gluconic acid,1,1
+57,9AA,negative,Glucosamine,0,1
+58,9AA,negative,Glucosamine 6-phosphate,1,1
+59,9AA,negative,Glucose,1,1
+60,9AA,negative,Glucose 6-phosphate,1,1
+61,9AA,negative,Glucosyl cholesterol,1,1
+62,9AA,negative,Glutamic acid,1,1
+63,9AA,negative,Glutamine,1,1
+64,9AA,negative,Glutathione,1,1
+65,9AA,negative,Glycerol 3-phosphate,1,1
+66,9AA,negative,Glycerophosphocholine,0,1
+67,9AA,negative,Glycine,1,1
+68,9AA,negative,Guanine,1,1
+69,9AA,negative,Histamine,1,0
+70,9AA,negative,Histidine,1,1
+71,9AA,negative,Homocysteine,0,1
+72,9AA,negative,Hypoxanthine,1,1
+73,9AA,negative,Kynurenic acid,1,0
+74,9AA,negative,Kynurenine,1,1
+75,9AA,negative,L-Dopa,1,1
+76,9AA,negative,Lactic acid,0,0
+77,9AA,negative,Lyso PA 18:1,1,1
+78,9AA,negative,Lyso PC 15:0,1,1
+79,9AA,negative,Lyso PE 18:0,1,1
+80,9AA,negative,Lyso PG 16:0,1,1
+81,9AA,negative,Lyso PI 17:1,1,1
+82,9AA,negative,Lyso PS 17:1,1,1
+83,9AA,negative,MG 18:1,0,1
+84,9AA,negative,Malic acid,1,1
+85,9AA,negative,Malonic acid,1,0
+86,9AA,negative,Melatonin,1,0
+87,9AA,negative,Methionine,1,1
+88,9AA,negative,Mevalonic acid,1,1
+89,9AA,negative,Myo-inositol 1-phosphate,1,1
+90,9AA,negative,N-Acetylaspartic acid,1,0
+91,9AA,negative,N-Acetylaspartylglutamic acid,1,1
+92,9AA,negative,N-Acetylgalactosamine 6-phosphate,1,1
+93,9AA,negative,N-Acetylglucosamine,1,1
+94,9AA,negative,"N6,N6,N6-Trimethyllysine",1,1
+95,9AA,negative,Niacinamide,0,0
+96,9AA,negative,Nicotinamide adenine dinucleotide (NAD),1,0
+97,9AA,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+98,9AA,negative,Nicotinamide riboside,0,1
+99,9AA,negative,Nicotinamide ribotide,0,1
+100,9AA,negative,Nicotinic acid,0,0
+101,9AA,negative,Ornithine,1,1
+102,9AA,negative,Orotic acid,1,1
+103,9AA,negative,Oxalacetic acid,0,1
+104,9AA,negative,Oxidized glutathione,1,1
+105,9AA,negative,PA 16:0-18:1,1,1
+106,9AA,negative,PC (O) C16-18:1,1,0
+107,9AA,negative,PC 15:0-18:1,1,0
+108,9AA,negative,PE 18:0-20:4,1,1
+109,9AA,negative,PG 16:0-18:1,1,1
+110,9AA,negative,PI 16:0-18:1,1,1
+111,9AA,negative,PI(5)P 18:1,1,1
+112,9AA,negative,PS (POPS) 16:0-18:1,1,1
+113,9AA,negative,Palmitic acid,0,0
+114,9AA,negative,Palmitoyl-CoA,1,1
+115,9AA,negative,Pantetheine,1,1
+116,9AA,negative,Pantothenic acid,1,1
+117,9AA,negative,Phenylalanine,1,1
+118,9AA,negative,Phosphocreatine,1,1
+119,9AA,negative,Phosphoenolpyruvic acid,1,1
+120,9AA,negative,Phylloquinone,0,0
+121,9AA,negative,Proline,1,1
+122,9AA,negative,Propionylcarnitine,0,0
+123,9AA,negative,Prostaglandin E1,1,1
+124,9AA,negative,Putrescine,0,0
+125,9AA,negative,Pyridoxine,1,1
+126,9AA,negative,Pyruvic acid,0,0
+127,9AA,negative,Quinolinic acid,1,1
+128,9AA,negative,Retinoic acid,0,0
+129,9AA,negative,Riboflavin,1,0
+130,9AA,negative,Ribulose,1,1
+131,9AA,negative,Ribulose 5-phosphate,1,1
+132,9AA,negative,S-Adenosylhomocysteine,1,1
+133,9AA,negative,S-Adenosylmethionine,0,1
+134,9AA,negative,SM d18:1-16:0,1,1
+135,9AA,negative,Serine,1,1
+136,9AA,negative,Serotonin,0,1
+137,9AA,negative,Spermidine,0,0
+138,9AA,negative,Succinic acid,1,0
+139,9AA,negative,Sulfo GalCer 18:0(2S-OH),1,1
+140,9AA,negative,TG 15:0-18:1-15:0,0,0
+141,9AA,negative,Taurine,1,1
+142,9AA,negative,Taurocholic acid,1,1
+143,9AA,negative,Tetrahydrofolic acid,0,1
+144,9AA,negative,Thiamine,0,0
+145,9AA,negative,Thymine,1,0
+146,9AA,negative,Tryptophan,1,1
+147,9AA,negative,Tyrosine,1,1
+148,9AA,negative,Uracil,1,0
+149,9AA,negative,Ureidosuccinic acid,1,1
+150,9AA,negative,Uric acid,1,1
+151,9AA,negative,Uridine,1,1
+152,9AA,negative,Uridine diphosphate,1,1
+153,9AA,negative,Uridine diphosphate glucose,1,1
+154,9AA,negative,Uridine diphosphate glucuronic acid,1,1
+155,9AA,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+156,9AA,negative,Urocanic acid,1,0
+157,9AA,negative,Valine,1,1
+158,9AA,negative,Xanthine,1,1
+159,9AA,negative,alpha-tocopherol,0,0
+160,9AA,negative,cis-Aconitic acid,1,1
+161,9AA,negative,gamma-Aminobutyric acid,1,1
+162,9AA,negative,myo-Inositol,1,1
+163,9AA,positive,2-Oxoglutaric acid,0,0
+164,9AA,positive,3-Hydroxyanthranilic acid,0,0
+165,9AA,positive,3-Hydroxymethylglutaric acid,0,0
+166,9AA,positive,3-Phosphoglyceric acid,0,0
+167,9AA,positive,"4,5-Dihydroorotic acid",0,0
+168,9AA,positive,4-Hydroxyproline,1,0
+169,9AA,positive,5-Hydroxyindoleacetic acid,0,0
+170,9AA,positive,Acetoacetic acid,0,0
+171,9AA,positive,Acetyl-CoA,0,0
+172,9AA,positive,Acetylcarnitine,1,1
+173,9AA,positive,Acetylcholine,1,0
+174,9AA,positive,Adenine,0,1
+175,9AA,positive,Adenosine diphosphate,0,1
+176,9AA,positive,Adenosine monophosphate,1,1
+177,9AA,positive,Agmatine,1,0
+178,9AA,positive,Arginine,1,0
+179,9AA,positive,Argininosuccinic acid,1,1
+180,9AA,positive,Ascorbic acid,0,0
+181,9AA,positive,Asparagine,0,1
+182,9AA,positive,Aspartic acid,0,0
+183,9AA,positive,Biotin,0,1
+184,9AA,positive,Butyric acid,0,0
+185,9AA,positive,CAR 16:0,1,1
+186,9AA,positive,Cardiolipin 18:1,0,1
+187,9AA,positive,Carnitine,1,1
+188,9AA,positive,Carnosine,1,1
+189,9AA,positive,Cer d8:1/22:0 Cer,1,1
+190,9AA,positive,Cholecalciferol,0,0
+191,9AA,positive,Cholesterol,0,0
+192,9AA,positive,Cholesteryl acetate,0,0
+193,9AA,positive,Cholesteryl ester 17:0,0,0
+194,9AA,positive,Cholic acid,1,1
+195,9AA,positive,Choline,1,0
+196,9AA,positive,Citric acid,0,0
+197,9AA,positive,Citrulline,1,1
+198,9AA,positive,Coenzyme A,0,0
+199,9AA,positive,Creatine,1,1
+200,9AA,positive,Creatinine,1,1
+201,9AA,positive,Cyclic adenosine monophosphate,1,1
+202,9AA,positive,Cysteine,0,0
+203,9AA,positive,Cytidine,1,1
+204,9AA,positive,Cytidine monophosphate,1,0
+205,9AA,positive,Cytosine,1,0
+206,9AA,positive,DG 18:0-22:6,0,1
+207,9AA,positive,Dihydroxyacetone,0,0
+208,9AA,positive,Dihydroxyacetone phosphate,0,0
+209,9AA,positive,Dopamine,0,0
+210,9AA,positive,Epinephrine,0,1
+211,9AA,positive,Flavin adenine dinucleotide,0,0
+212,9AA,positive,Flavin mononucleotide,1,0
+213,9AA,positive,Folic acid,1,1
+214,9AA,positive,"Fructose 1,6-bisphosphate",0,0
+215,9AA,positive,Fumaric acid,0,0
+216,9AA,positive,GM3 Ganglioside 18:0,0,1
+217,9AA,positive,GlcCer d18:1/18:0,1,1
+218,9AA,positive,Gluconic acid,0,0
+219,9AA,positive,Glucosamine,0,1
+220,9AA,positive,Glucosamine 6-phosphate,0,1
+221,9AA,positive,Glucose,0,0
+222,9AA,positive,Glucosyl cholesterol,1,1
+223,9AA,positive,Glutamic acid,0,0
+224,9AA,positive,Glutamine,1,1
+225,9AA,positive,Glutathione,1,1
+226,9AA,positive,Glycerol 3-phosphate,0,0
+227,9AA,positive,Glycerophosphocholine,1,1
+228,9AA,positive,Glycine,0,0
+229,9AA,positive,Guanine,1,1
+230,9AA,positive,Histamine,1,0
+231,9AA,positive,Histidine,1,1
+232,9AA,positive,Homocysteine,0,0
+233,9AA,positive,Hypoxanthine,1,1
+234,9AA,positive,Kynurenic acid,0,1
+235,9AA,positive,Kynurenine,1,1
+236,9AA,positive,L-Dopa,0,1
+237,9AA,positive,Lactic acid,0,0
+238,9AA,positive,Lyso PA 18:1,1,1
+239,9AA,positive,Lyso PC 15:0,1,1
+240,9AA,positive,Lyso PE 18:0,1,1
+241,9AA,positive,Lyso PG 16:0,1,1
+242,9AA,positive,Lyso PI 17:1,1,0
+243,9AA,positive,Lyso PS 17:1,1,1
+244,9AA,positive,MG 18:1,1,0
+245,9AA,positive,Malic acid,0,0
+246,9AA,positive,Malonic acid,0,0
+247,9AA,positive,Melatonin,0,0
+248,9AA,positive,Methionine,0,0
+249,9AA,positive,Mevalonic acid,1,0
+250,9AA,positive,N-Acetylaspartic acid,0,0
+251,9AA,positive,N-Acetylaspartylglutamic acid,1,1
+252,9AA,positive,N-Acetylgalactosamine 6-phosphate,0,0
+253,9AA,positive,N-Acetylglucosamine,1,0
+254,9AA,positive,"N6,N6,N6-Trimethyllysine",1,1
+255,9AA,positive,Niacinamide,0,1
+256,9AA,positive,Nicotinamide adenine dinucleotide (NAD),1,0
+257,9AA,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,0
+258,9AA,positive,Nicotinamide riboside,1,1
+259,9AA,positive,Nicotinamide ribotide,1,0
+260,9AA,positive,Nicotinic acid,0,1
+261,9AA,positive,Ornithine,0,1
+262,9AA,positive,Orotic acid,0,0
+263,9AA,positive,Oxalacetic acid,0,0
+264,9AA,positive,Oxidized glutathione,1,0
+265,9AA,positive,PA 16:0-18:1,1,1
+266,9AA,positive,PC (O) C16-18:1,1,1
+267,9AA,positive,PC 15:0-18:1,1,1
+268,9AA,positive,PE 18:0-20:4,0,1
+269,9AA,positive,PG 16:0-18:1,1,1
+270,9AA,positive,PI 16:0-18:1,0,1
+271,9AA,positive,PI(5)P 18:1,0,0
+272,9AA,positive,PS (POPS) 16:0-18:1,1,1
+273,9AA,positive,Palmitic acid,0,0
+274,9AA,positive,Palmitoyl-CoA,0,0
+275,9AA,positive,Pantetheine,1,1
+276,9AA,positive,Pantothenic acid,0,1
+277,9AA,positive,Phenylalanine,0,0
+278,9AA,positive,Phosphoenolpyruvic acid,0,0
+279,9AA,positive,Proline,0,0
+280,9AA,positive,Propionylcarnitine,1,1
+281,9AA,positive,Prostaglandin E1,1,1
+282,9AA,positive,Putrescine,0,1
+283,9AA,positive,Pyridoxine,1,1
+284,9AA,positive,Pyruvic acid,0,0
+285,9AA,positive,Quinolinic acid,0,0
+286,9AA,positive,Retinoic acid,0,0
+287,9AA,positive,Riboflavin,1,1
+288,9AA,positive,Ribulose,0,0
+289,9AA,positive,S-Adenosylhomocysteine,1,1
+290,9AA,positive,S-Adenosylmethionine,1,1
+291,9AA,positive,SM d18:1-16:0,1,1
+292,9AA,positive,Serine,0,0
+293,9AA,positive,Serotonin,0,0
+294,9AA,positive,Spermidine,1,1
+295,9AA,positive,Succinic acid,0,0
+296,9AA,positive,Sulfo GalCer 18:0(2S-OH),0,0
+297,9AA,positive,TG 15:0-18:1-15:0,1,0
+298,9AA,positive,Taurine,0,0
+299,9AA,positive,Taurocholic acid,0,0
+300,9AA,positive,Tetrahydrofolic acid,1,1
+301,9AA,positive,Thiamine,1,1
+302,9AA,positive,Thymine,0,0
+303,9AA,positive,Tryptophan,1,0
+304,9AA,positive,Tyrosine,0,1
+305,9AA,positive,Uracil,0,0
+306,9AA,positive,Ureidosuccinic acid,0,0
+307,9AA,positive,Uric acid,0,0
+308,9AA,positive,Uridine,0,1
+309,9AA,positive,Uridine diphosphate,0,0
+310,9AA,positive,Uridine diphosphate glucose,0,0
+311,9AA,positive,Uridine diphosphate glucuronic acid,0,0
+312,9AA,positive,Uridine diphosphate-N-acetylglucosamine,0,0
+313,9AA,positive,Urocanic acid,1,0
+314,9AA,positive,Valine,0,0
+315,9AA,positive,Xanthine,0,0
+316,9AA,positive,alpha-tocopherol,0,0
+317,9AA,positive,cis-Aconitic acid,0,0
+318,9AA,positive,gamma-Aminobutyric acid,0,0
+319,9AA,positive,myo-Inositol,0,0
+320,CHCA,negative,2-Oxoglutaric acid,1,1
+321,CHCA,negative,3-Hydroxyanthranilic acid,0,1
+322,CHCA,negative,3-Hydroxymethylglutaric acid,0,1
+323,CHCA,negative,3-Phosphoglyceric acid,1,1
+324,CHCA,negative,"4,5-Dihydroorotic acid",1,1
+325,CHCA,negative,4-Hydroxyproline,0,0
+326,CHCA,negative,5-Hydroxyindoleacetic acid,0,0
+327,CHCA,negative,6-Phosphogluconic acid,1,1
+328,CHCA,negative,Acetoacetic acid,0,0
+329,CHCA,negative,Acetyl-CoA,1,1
+330,CHCA,negative,Acetylcarnitine,0,0
+331,CHCA,negative,Acetylcholine,0,0
+332,CHCA,negative,Adenine,0,0
+333,CHCA,negative,Adenosine diphosphate,1,0
+334,CHCA,negative,Adenosine monophosphate,0,0
+335,CHCA,negative,Agmatine,0,0
+336,CHCA,negative,Arginine,1,1
+337,CHCA,negative,Argininosuccinic acid,1,0
+338,CHCA,negative,Ascorbic acid,1,1
+339,CHCA,negative,Asparagine,0,0
+340,CHCA,negative,Aspartic acid,1,1
+341,CHCA,negative,Biotin,0,0
+342,CHCA,negative,Butyric acid,0,0
+343,CHCA,negative,CAR 16:0,0,0
+344,CHCA,negative,Cardiolipin 18:1,1,1
+345,CHCA,negative,Carnitine,0,0
+346,CHCA,negative,Carnosine,1,0
+347,CHCA,negative,Cer d8:1/22:0 Cer,0,0
+348,CHCA,negative,Cholecalciferol,0,0
+349,CHCA,negative,Cholic acid,1,0
+350,CHCA,negative,Choline,0,0
+351,CHCA,negative,Citric acid,1,1
+352,CHCA,negative,Citrulline,1,0
+353,CHCA,negative,Coenzyme A,1,1
+354,CHCA,negative,Creatine,0,0
+355,CHCA,negative,Creatinine,0,0
+356,CHCA,negative,Cyclic adenosine monophosphate,0,0
+357,CHCA,negative,Cysteine,1,0
+358,CHCA,negative,Cystine,0,0
+359,CHCA,negative,Cytidine,0,0
+360,CHCA,negative,Cytidine monophosphate,0,0
+361,CHCA,negative,Cytosine,0,0
+362,CHCA,negative,Dihydroxyacetone,0,0
+363,CHCA,negative,Dihydroxyacetone phosphate,1,1
+364,CHCA,negative,Dopamine,0,0
+365,CHCA,negative,Epinephrine,0,0
+366,CHCA,negative,Estradiol,0,0
+367,CHCA,negative,Flavin adenine dinucleotide,1,1
+368,CHCA,negative,Flavin mononucleotide,0,1
+369,CHCA,negative,Folic acid,0,0
+370,CHCA,negative,"Fructose 1,6-bisphosphate",1,1
+371,CHCA,negative,Fumaric acid,1,1
+372,CHCA,negative,GM3 Ganglioside 18:0,1,1
+373,CHCA,negative,GlcCer d18:1/18:0,0,0
+374,CHCA,negative,Gluconic acid,1,1
+375,CHCA,negative,Glucosamine,0,0
+376,CHCA,negative,Glucosamine 6-phosphate,1,0
+377,CHCA,negative,Glucose,0,0
+378,CHCA,negative,Glucose 6-phosphate,1,1
+379,CHCA,negative,Glutamic acid,1,1
+380,CHCA,negative,Glutamine,0,0
+381,CHCA,negative,Glutathione,0,1
+382,CHCA,negative,Glycerol 3-phosphate,1,1
+383,CHCA,negative,Glycerophosphocholine,0,0
+384,CHCA,negative,Glycine,0,1
+385,CHCA,negative,Guanine,0,0
+386,CHCA,negative,Histamine,0,0
+387,CHCA,negative,Histidine,1,0
+388,CHCA,negative,Homocysteine,0,1
+389,CHCA,negative,Hypoxanthine,1,0
+390,CHCA,negative,Kynurenic acid,0,0
+391,CHCA,negative,Kynurenine,0,0
+392,CHCA,negative,L-Dopa,0,0
+393,CHCA,negative,Lactic acid,0,1
+394,CHCA,negative,Lyso PA 18:1,1,1
+395,CHCA,negative,Lyso PC 15:0,0,0
+396,CHCA,negative,Lyso PE 18:0,0,1
+397,CHCA,negative,Lyso PG 16:0,1,1
+398,CHCA,negative,Lyso PI 17:1,1,1
+399,CHCA,negative,Lyso PS 17:1,1,1
+400,CHCA,negative,MG 18:1,0,0
+401,CHCA,negative,Malic acid,1,1
+402,CHCA,negative,Malonic acid,1,1
+403,CHCA,negative,Melatonin,0,0
+404,CHCA,negative,Methionine,0,1
+405,CHCA,negative,Mevalonic acid,1,0
+406,CHCA,negative,Myo-inositol 1-phosphate,1,1
+407,CHCA,negative,N-Acetylaspartic acid,1,0
+408,CHCA,negative,N-Acetylaspartylglutamic acid,1,0
+409,CHCA,negative,N-Acetylgalactosamine 6-phosphate,0,0
+410,CHCA,negative,N-Acetylglucosamine,0,0
+411,CHCA,negative,"N6,N6,N6-Trimethyllysine",0,0
+412,CHCA,negative,Niacinamide,0,0
+413,CHCA,negative,Nicotinamide adenine dinucleotide (NAD),0,1
+414,CHCA,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+415,CHCA,negative,Nicotinamide riboside,0,0
+416,CHCA,negative,Nicotinamide ribotide,0,1
+417,CHCA,negative,Nicotinic acid,0,0
+418,CHCA,negative,Ornithine,0,0
+419,CHCA,negative,Orotic acid,1,1
+420,CHCA,negative,Oxalacetic acid,1,1
+421,CHCA,negative,Oxidized glutathione,1,1
+422,CHCA,negative,PA 16:0-18:1,1,1
+423,CHCA,negative,PE 18:0-20:4,1,0
+424,CHCA,negative,PG 16:0-18:1,1,1
+425,CHCA,negative,PI 16:0-18:1,1,1
+426,CHCA,negative,PI(5)P 18:1,1,1
+427,CHCA,negative,PS (POPS) 16:0-18:1,1,1
+428,CHCA,negative,Palmitic acid,0,0
+429,CHCA,negative,Palmitoyl-CoA,1,1
+430,CHCA,negative,Pantetheine,1,0
+431,CHCA,negative,Pantothenic acid,1,1
+432,CHCA,negative,Phenylalanine,1,0
+433,CHCA,negative,Phosphocreatine,0,1
+434,CHCA,negative,Phosphoenolpyruvic acid,1,1
+435,CHCA,negative,Phylloquinone,0,0
+436,CHCA,negative,Proline,1,0
+437,CHCA,negative,Propionylcarnitine,0,0
+438,CHCA,negative,Prostaglandin E1,0,1
+439,CHCA,negative,Putrescine,0,0
+440,CHCA,negative,Pyridoxine,0,0
+441,CHCA,negative,Pyruvic acid,0,0
+442,CHCA,negative,Quinolinic acid,1,0
+443,CHCA,negative,Retinoic acid,0,0
+444,CHCA,negative,Riboflavin,0,0
+445,CHCA,negative,Ribulose,0,0
+446,CHCA,negative,Ribulose 5-phosphate,1,1
+447,CHCA,negative,S-Adenosylhomocysteine,1,0
+448,CHCA,negative,S-Adenosylmethionine,0,1
+449,CHCA,negative,Serine,0,0
+450,CHCA,negative,Serotonin,0,0
+451,CHCA,negative,Spermidine,0,0
+452,CHCA,negative,Succinic acid,1,1
+453,CHCA,negative,Sulfo GalCer 18:0(2S-OH),1,0
+454,CHCA,negative,Taurine,1,0
+455,CHCA,negative,Taurocholic acid,1,0
+456,CHCA,negative,Tetrahydrofolic acid,0,0
+457,CHCA,negative,Thiamine,0,0
+458,CHCA,negative,Thymine,0,0
+459,CHCA,negative,Tryptophan,1,0
+460,CHCA,negative,Tyrosine,0,0
+461,CHCA,negative,Uracil,0,0
+462,CHCA,negative,Ureidosuccinic acid,1,1
+463,CHCA,negative,Uric acid,0,1
+464,CHCA,negative,Uridine,0,0
+465,CHCA,negative,Uridine diphosphate,1,1
+466,CHCA,negative,Uridine diphosphate glucose,1,1
+467,CHCA,negative,Uridine diphosphate glucuronic acid,1,1
+468,CHCA,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+469,CHCA,negative,Urocanic acid,1,0
+470,CHCA,negative,Valine,0,0
+471,CHCA,negative,Xanthine,1,1
+472,CHCA,negative,alpha-tocopherol,0,0
+473,CHCA,negative,cis-Aconitic acid,1,1
+474,CHCA,negative,gamma-Aminobutyric acid,0,0
+475,CHCA,negative,myo-Inositol,1,0
+476,CHCA,positive,2-Oxoglutaric acid,1,0
+477,CHCA,positive,3-Hydroxyanthranilic acid,1,1
+478,CHCA,positive,3-Hydroxymethylglutaric acid,0,1
+479,CHCA,positive,3-Phosphoglyceric acid,1,1
+480,CHCA,positive,"4,5-Dihydroorotic acid",1,0
+481,CHCA,positive,4-Hydroxyproline,1,1
+482,CHCA,positive,6-Phosphogluconic acid,1,1
+483,CHCA,positive,Acetoacetic acid,0,0
+484,CHCA,positive,Acetyl-CoA,1,1
+485,CHCA,positive,Acetylcarnitine,1,1
+486,CHCA,positive,Acetylcholine,1,1
+487,CHCA,positive,Adenine,1,1
+488,CHCA,positive,Adenosine diphosphate,1,1
+489,CHCA,positive,Adenosine monophosphate,1,1
+490,CHCA,positive,Agmatine,1,1
+491,CHCA,positive,Arginine,1,1
+492,CHCA,positive,Argininosuccinic acid,1,1
+493,CHCA,positive,Ascorbic acid,1,0
+494,CHCA,positive,Asparagine,1,1
+495,CHCA,positive,Aspartic acid,1,1
+496,CHCA,positive,Biotin,1,1
+497,CHCA,positive,Butyric acid,0,0
+498,CHCA,positive,CAR 16:0,1,1
+499,CHCA,positive,Cardiolipin 18:1,1,1
+500,CHCA,positive,Carnitine,1,1
+501,CHCA,positive,Carnosine,1,1
+502,CHCA,positive,Cer d8:1/22:0 Cer,1,1
+503,CHCA,positive,Cholecalciferol,0,0
+504,CHCA,positive,Cholesterol,0,0
+505,CHCA,positive,Cholesteryl acetate,0,1
+506,CHCA,positive,Cholesteryl ester 17:0,1,0
+507,CHCA,positive,Cholic acid,1,1
+508,CHCA,positive,Choline,1,1
+509,CHCA,positive,Citric acid,1,1
+510,CHCA,positive,Citrulline,1,1
+511,CHCA,positive,Coenzyme A,1,1
+512,CHCA,positive,Creatine,1,1
+513,CHCA,positive,Creatinine,1,1
+514,CHCA,positive,Cyclic adenosine monophosphate,1,1
+515,CHCA,positive,Cysteine,1,1
+516,CHCA,positive,Cystine,1,1
+517,CHCA,positive,Cytidine,1,1
+518,CHCA,positive,Cytidine monophosphate,1,1
+519,CHCA,positive,Cytosine,1,1
+520,CHCA,positive,DG 18:0-22:6,1,1
+521,CHCA,positive,Dihydroxyacetone,0,0
+522,CHCA,positive,Dihydroxyacetone phosphate,1,1
+523,CHCA,positive,Dopamine,1,1
+524,CHCA,positive,Epinephrine,1,1
+525,CHCA,positive,Estradiol,1,1
+526,CHCA,positive,Flavin adenine dinucleotide,1,1
+527,CHCA,positive,Flavin mononucleotide,1,1
+528,CHCA,positive,Folic acid,1,1
+529,CHCA,positive,"Fructose 1,6-bisphosphate",1,1
+530,CHCA,positive,Fumaric acid,1,0
+531,CHCA,positive,GM3 Ganglioside 18:0,1,0
+532,CHCA,positive,GlcCer d18:1/18:0,1,1
+533,CHCA,positive,Gluconic acid,1,0
+534,CHCA,positive,Glucosamine,1,1
+535,CHCA,positive,Glucosamine 6-phosphate,1,1
+536,CHCA,positive,Glucose,0,0
+537,CHCA,positive,Glucose 6-phosphate,1,1
+538,CHCA,positive,Glucosyl cholesterol,1,1
+539,CHCA,positive,Glutamic acid,1,1
+540,CHCA,positive,Glutamine,1,1
+541,CHCA,positive,Glutathione,1,1
+542,CHCA,positive,Glycerol 3-phosphate,1,1
+543,CHCA,positive,Glycerophosphocholine,1,1
+544,CHCA,positive,Glycine,1,1
+545,CHCA,positive,Guanine,0,1
+546,CHCA,positive,Histamine,1,1
+547,CHCA,positive,Histidine,1,1
+548,CHCA,positive,Homocysteine,1,1
+549,CHCA,positive,Hypoxanthine,1,1
+550,CHCA,positive,Kynurenic acid,0,1
+551,CHCA,positive,Kynurenine,1,1
+552,CHCA,positive,L-Dopa,1,1
+553,CHCA,positive,Lactic acid,0,1
+554,CHCA,positive,Lyso PA 18:1,1,1
+555,CHCA,positive,Lyso PC 15:0,1,1
+556,CHCA,positive,Lyso PE 18:0,1,1
+557,CHCA,positive,Lyso PG 16:0,1,1
+558,CHCA,positive,Lyso PI 17:1,1,1
+559,CHCA,positive,Lyso PS 17:1,1,1
+560,CHCA,positive,MG 18:1,1,1
+561,CHCA,positive,Malic acid,1,0
+562,CHCA,positive,Malonic acid,1,0
+563,CHCA,positive,Melatonin,1,1
+564,CHCA,positive,Methionine,1,1
+565,CHCA,positive,Mevalonic acid,1,0
+566,CHCA,positive,Myo-inositol 1-phosphate,1,1
+567,CHCA,positive,N-Acetylaspartic acid,1,0
+568,CHCA,positive,N-Acetylaspartylglutamic acid,1,1
+569,CHCA,positive,N-Acetylgalactosamine 6-phosphate,1,1
+570,CHCA,positive,N-Acetylglucosamine,1,1
+571,CHCA,positive,"N6,N6,N6-Trimethyllysine",1,1
+572,CHCA,positive,Niacinamide,1,1
+573,CHCA,positive,Nicotinamide adenine dinucleotide (NAD),1,1
+574,CHCA,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+575,CHCA,positive,Nicotinamide riboside,1,1
+576,CHCA,positive,Nicotinamide ribotide,1,1
+577,CHCA,positive,Nicotinic acid,1,1
+578,CHCA,positive,Ornithine,1,1
+579,CHCA,positive,Orotic acid,0,1
+580,CHCA,positive,Oxalacetic acid,0,1
+581,CHCA,positive,Oxidized glutathione,1,1
+582,CHCA,positive,PA 16:0-18:1,1,1
+583,CHCA,positive,PC (O) C16-18:1,1,1
+584,CHCA,positive,PC 15:0-18:1,1,1
+585,CHCA,positive,PE 18:0-20:4,1,1
+586,CHCA,positive,PG 16:0-18:1,1,1
+587,CHCA,positive,PI 16:0-18:1,1,1
+588,CHCA,positive,PI(5)P 18:1,1,1
+589,CHCA,positive,PS (POPS) 16:0-18:1,1,1
+590,CHCA,positive,Palmitic acid,0,1
+591,CHCA,positive,Palmitoyl-CoA,1,1
+592,CHCA,positive,Pantetheine,1,1
+593,CHCA,positive,Pantothenic acid,1,1
+594,CHCA,positive,Phenylalanine,1,1
+595,CHCA,positive,Phosphocreatine,0,1
+596,CHCA,positive,Phosphoenolpyruvic acid,1,1
+597,CHCA,positive,Phylloquinone,1,1
+598,CHCA,positive,Proline,1,1
+599,CHCA,positive,Propionylcarnitine,1,1
+600,CHCA,positive,Prostaglandin E1,1,1
+601,CHCA,positive,Putrescine,1,1
+602,CHCA,positive,Pyridoxine,1,1
+603,CHCA,positive,Pyruvic acid,0,0
+604,CHCA,positive,Quinolinic acid,1,1
+605,CHCA,positive,Retinoic acid,1,0
+606,CHCA,positive,Riboflavin,1,1
+607,CHCA,positive,Ribulose,0,0
+608,CHCA,positive,Ribulose 5-phosphate,1,1
+609,CHCA,positive,S-Adenosylhomocysteine,1,1
+610,CHCA,positive,S-Adenosylmethionine,1,1
+611,CHCA,positive,SM d18:1-16:0,1,1
+612,CHCA,positive,Serine,1,1
+613,CHCA,positive,Serotonin,1,1
+614,CHCA,positive,Spermidine,1,1
+615,CHCA,positive,Succinic acid,1,1
+616,CHCA,positive,Sulfo GalCer 18:0(2S-OH),1,1
+617,CHCA,positive,TG 15:0-18:1-15:0,1,1
+618,CHCA,positive,Taurine,1,1
+619,CHCA,positive,Taurocholic acid,1,1
+620,CHCA,positive,Tetrahydrofolic acid,1,1
+621,CHCA,positive,Thiamine,1,1
+622,CHCA,positive,Thymine,1,1
+623,CHCA,positive,Tryptophan,1,1
+624,CHCA,positive,Tyrosine,1,1
+625,CHCA,positive,Uracil,1,1
+626,CHCA,positive,Ureidosuccinic acid,1,1
+627,CHCA,positive,Uric acid,1,1
+628,CHCA,positive,Uridine,1,1
+629,CHCA,positive,Uridine diphosphate,1,0
+630,CHCA,positive,Uridine diphosphate glucose,1,0
+631,CHCA,positive,Uridine diphosphate glucuronic acid,1,1
+632,CHCA,positive,Uridine diphosphate-N-acetylglucosamine,0,1
+633,CHCA,positive,Urocanic acid,1,1
+634,CHCA,positive,Valine,1,1
+635,CHCA,positive,Xanthine,1,1
+636,CHCA,positive,alpha-tocopherol,1,1
+637,CHCA,positive,cis-Aconitic acid,1,1
+638,CHCA,positive,gamma-Aminobutyric acid,1,1
+639,CHCA,positive,myo-Inositol,0,0
+640,CMBT,negative,2-Oxoglutaric acid,1,1
+641,CMBT,negative,3-Hydroxyanthranilic acid,0,0
+642,CMBT,negative,3-Hydroxymethylglutaric acid,1,1
+643,CMBT,negative,3-Phosphoglyceric acid,0,1
+644,CMBT,negative,"4,5-Dihydroorotic acid",1,0
+645,CMBT,negative,4-Hydroxyproline,0,0
+646,CMBT,negative,5-Hydroxyindoleacetic acid,0,1
+647,CMBT,negative,6-Phosphogluconic acid,0,0
+648,CMBT,negative,Acetoacetic acid,0,0
+649,CMBT,negative,Acetyl-CoA,0,1
+650,CMBT,negative,Acetylcarnitine,0,0
+651,CMBT,negative,Acetylcholine,0,0
+652,CMBT,negative,Adenine,0,0
+653,CMBT,negative,Adenosine diphosphate,0,0
+654,CMBT,negative,Adenosine monophosphate,0,0
+655,CMBT,negative,Agmatine,0,0
+656,CMBT,negative,Arginine,0,0
+657,CMBT,negative,Argininosuccinic acid,0,0
+658,CMBT,negative,Ascorbic acid,0,1
+659,CMBT,negative,Asparagine,1,0
+660,CMBT,negative,Aspartic acid,1,1
+661,CMBT,negative,Biotin,1,1
+662,CMBT,negative,Butyric acid,0,0
+663,CMBT,negative,Cardiolipin 18:1,1,1
+664,CMBT,negative,Carnitine,0,0
+665,CMBT,negative,Carnosine,1,0
+666,CMBT,negative,Cer d8:1/22:0 Cer,1,0
+667,CMBT,negative,Cholecalciferol,0,0
+668,CMBT,negative,Cholic acid,0,1
+669,CMBT,negative,Choline,0,0
+670,CMBT,negative,Citric acid,1,1
+671,CMBT,negative,Citrulline,1,1
+672,CMBT,negative,Coenzyme A,0,0
+673,CMBT,negative,Creatine,0,0
+674,CMBT,negative,Creatinine,0,0
+675,CMBT,negative,Cyclic adenosine monophosphate,0,0
+676,CMBT,negative,Cysteine,0,0
+677,CMBT,negative,Cystine,0,0
+678,CMBT,negative,Cytidine,0,1
+679,CMBT,negative,Cytidine monophosphate,0,0
+680,CMBT,negative,Cytosine,0,0
+681,CMBT,negative,Dihydroxyacetone,0,0
+682,CMBT,negative,Dihydroxyacetone phosphate,0,0
+683,CMBT,negative,Dopamine,0,0
+684,CMBT,negative,Epinephrine,0,0
+685,CMBT,negative,Estradiol,0,0
+686,CMBT,negative,Flavin adenine dinucleotide,1,0
+687,CMBT,negative,Flavin mononucleotide,1,0
+688,CMBT,negative,Folic acid,1,0
+689,CMBT,negative,"Fructose 1,6-bisphosphate",0,0
+690,CMBT,negative,Fumaric acid,1,1
+691,CMBT,negative,GM3 Ganglioside 18:0,1,1
+692,CMBT,negative,GlcCer d18:1/18:0,0,1
+693,CMBT,negative,Gluconic acid,1,0
+694,CMBT,negative,Glucosamine,0,0
+695,CMBT,negative,Glucosamine 6-phosphate,0,0
+696,CMBT,negative,Glucose,0,0
+697,CMBT,negative,Glucose 6-phosphate,0,0
+698,CMBT,negative,Glucosyl cholesterol,1,1
+699,CMBT,negative,Glutamic acid,1,1
+700,CMBT,negative,Glutamine,0,1
+701,CMBT,negative,Glutathione,0,0
+702,CMBT,negative,Glycerol 3-phosphate,0,0
+703,CMBT,negative,Glycerophosphocholine,0,0
+704,CMBT,negative,Glycine,0,0
+705,CMBT,negative,Guanine,0,0
+706,CMBT,negative,Histamine,0,0
+707,CMBT,negative,Histidine,1,0
+708,CMBT,negative,Homocysteine,0,0
+709,CMBT,negative,Hypoxanthine,0,0
+710,CMBT,negative,Kynurenic acid,1,0
+711,CMBT,negative,Kynurenine,0,1
+712,CMBT,negative,L-Dopa,0,0
+713,CMBT,negative,Lactic acid,0,0
+714,CMBT,negative,Lyso PA 18:1,1,0
+715,CMBT,negative,Lyso PC 15:0,0,0
+716,CMBT,negative,Lyso PE 18:0,0,0
+717,CMBT,negative,Lyso PG 16:0,1,1
+718,CMBT,negative,Lyso PI 17:1,1,1
+719,CMBT,negative,Lyso PS 17:1,1,0
+720,CMBT,negative,Malic acid,1,0
+721,CMBT,negative,Malonic acid,0,0
+722,CMBT,negative,Melatonin,0,0
+723,CMBT,negative,Methionine,0,0
+724,CMBT,negative,Mevalonic acid,0,0
+725,CMBT,negative,Myo-inositol 1-phosphate,0,0
+726,CMBT,negative,N-Acetylaspartic acid,1,1
+727,CMBT,negative,N-Acetylaspartylglutamic acid,1,1
+728,CMBT,negative,N-Acetylgalactosamine 6-phosphate,0,0
+729,CMBT,negative,N-Acetylglucosamine,1,0
+730,CMBT,negative,"N6,N6,N6-Trimethyllysine",0,0
+731,CMBT,negative,Niacinamide,0,0
+732,CMBT,negative,Nicotinamide adenine dinucleotide (NAD),0,0
+733,CMBT,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,1
+734,CMBT,negative,Nicotinamide riboside,0,0
+735,CMBT,negative,Nicotinamide ribotide,0,1
+736,CMBT,negative,Nicotinic acid,0,0
+737,CMBT,negative,Ornithine,0,0
+738,CMBT,negative,Orotic acid,0,1
+739,CMBT,negative,Oxalacetic acid,0,1
+740,CMBT,negative,Oxidized glutathione,0,0
+741,CMBT,negative,PA 16:0-18:1,0,1
+742,CMBT,negative,PC (O) C16-18:1,0,0
+743,CMBT,negative,PC 15:0-18:1,0,0
+744,CMBT,negative,PE 18:0-20:4,0,0
+745,CMBT,negative,PG 16:0-18:1,1,1
+746,CMBT,negative,PI 16:0-18:1,1,1
+747,CMBT,negative,PI(5)P 18:1,1,1
+748,CMBT,negative,PS (POPS) 16:0-18:1,1,1
+749,CMBT,negative,Palmitic acid,0,0
+750,CMBT,negative,Palmitoyl-CoA,1,1
+751,CMBT,negative,Pantetheine,1,1
+752,CMBT,negative,Pantothenic acid,1,1
+753,CMBT,negative,Phenylalanine,0,0
+754,CMBT,negative,Phosphocreatine,0,0
+755,CMBT,negative,Phosphoenolpyruvic acid,1,0
+756,CMBT,negative,Proline,0,0
+757,CMBT,negative,Propionylcarnitine,0,0
+758,CMBT,negative,Putrescine,0,0
+759,CMBT,negative,Pyridoxine,0,0
+760,CMBT,negative,Pyruvic acid,0,0
+761,CMBT,negative,Quinolinic acid,1,1
+762,CMBT,negative,Retinoic acid,0,0
+763,CMBT,negative,Riboflavin,0,1
+764,CMBT,negative,Ribulose,0,0
+765,CMBT,negative,Ribulose 5-phosphate,0,0
+766,CMBT,negative,S-Adenosylhomocysteine,0,0
+767,CMBT,negative,SM d18:1-16:0,0,0
+768,CMBT,negative,Serine,0,0
+769,CMBT,negative,Serotonin,0,0
+770,CMBT,negative,Spermidine,0,0
+771,CMBT,negative,Succinic acid,1,1
+772,CMBT,negative,Sulfo GalCer 18:0(2S-OH),1,0
+773,CMBT,negative,TG 15:0-18:1-15:0,0,0
+774,CMBT,negative,Taurine,1,0
+775,CMBT,negative,Taurocholic acid,1,0
+776,CMBT,negative,Tetrahydrofolic acid,0,1
+777,CMBT,negative,Thiamine,0,0
+778,CMBT,negative,Thymine,0,0
+779,CMBT,negative,Tryptophan,0,0
+780,CMBT,negative,Tyrosine,0,0
+781,CMBT,negative,Uracil,1,0
+782,CMBT,negative,Ureidosuccinic acid,1,1
+783,CMBT,negative,Uric acid,0,1
+784,CMBT,negative,Uridine,1,0
+785,CMBT,negative,Uridine diphosphate,0,0
+786,CMBT,negative,Uridine diphosphate glucose,1,1
+787,CMBT,negative,Uridine diphosphate glucuronic acid,0,1
+788,CMBT,negative,Uridine diphosphate-N-acetylglucosamine,0,1
+789,CMBT,negative,Urocanic acid,0,0
+790,CMBT,negative,Valine,0,0
+791,CMBT,negative,Xanthine,0,0
+792,CMBT,negative,cis-Aconitic acid,1,1
+793,CMBT,negative,gamma-Aminobutyric acid,0,0
+794,CMBT,negative,myo-Inositol,0,1
+795,CMBT,positive,2-Oxoglutaric acid,0,0
+796,CMBT,positive,3-Hydroxyanthranilic acid,0,0
+797,CMBT,positive,3-Hydroxymethylglutaric acid,1,1
+798,CMBT,positive,3-Phosphoglyceric acid,0,0
+799,CMBT,positive,"4,5-Dihydroorotic acid",1,0
+800,CMBT,positive,4-Hydroxyproline,1,0
+801,CMBT,positive,5-Hydroxyindoleacetic acid,1,0
+802,CMBT,positive,6-Phosphogluconic acid,0,0
+803,CMBT,positive,Acetoacetic acid,0,0
+804,CMBT,positive,Acetyl-CoA,0,1
+805,CMBT,positive,Acetylcarnitine,1,1
+806,CMBT,positive,Acetylcholine,1,0
+807,CMBT,positive,Adenine,1,1
+808,CMBT,positive,Adenosine diphosphate,0,1
+809,CMBT,positive,Adenosine monophosphate,1,0
+810,CMBT,positive,Agmatine,1,1
+811,CMBT,positive,Arginine,1,1
+812,CMBT,positive,Argininosuccinic acid,1,0
+813,CMBT,positive,Ascorbic acid,0,0
+814,CMBT,positive,Asparagine,1,1
+815,CMBT,positive,Aspartic acid,1,0
+816,CMBT,positive,Biotin,1,1
+817,CMBT,positive,Butyric acid,0,0
+818,CMBT,positive,CAR 16:0,1,1
+819,CMBT,positive,Cardiolipin 18:1,1,1
+820,CMBT,positive,Carnitine,1,1
+821,CMBT,positive,Carnosine,1,1
+822,CMBT,positive,Cer d8:1/22:0 Cer,1,1
+823,CMBT,positive,Cholecalciferol,0,0
+824,CMBT,positive,Cholesterol,0,0
+825,CMBT,positive,Cholesteryl acetate,0,1
+826,CMBT,positive,Cholesteryl ester 17:0,1,0
+827,CMBT,positive,Cholic acid,1,1
+828,CMBT,positive,Choline,1,0
+829,CMBT,positive,Citric acid,1,1
+830,CMBT,positive,Citrulline,1,1
+831,CMBT,positive,Coenzyme A,1,0
+832,CMBT,positive,Creatine,1,1
+833,CMBT,positive,Creatinine,1,1
+834,CMBT,positive,Cyclic adenosine monophosphate,1,1
+835,CMBT,positive,Cysteine,0,0
+836,CMBT,positive,Cystine,0,1
+837,CMBT,positive,Cytidine,1,1
+838,CMBT,positive,Cytidine monophosphate,1,0
+839,CMBT,positive,Cytosine,1,1
+840,CMBT,positive,DG 18:0-22:6,1,1
+841,CMBT,positive,Dihydroxyacetone,0,1
+842,CMBT,positive,Dihydroxyacetone phosphate,0,0
+843,CMBT,positive,Dopamine,1,1
+844,CMBT,positive,Epinephrine,1,1
+845,CMBT,positive,Estradiol,0,0
+846,CMBT,positive,Flavin adenine dinucleotide,1,0
+847,CMBT,positive,Flavin mononucleotide,1,0
+848,CMBT,positive,Folic acid,1,1
+849,CMBT,positive,"Fructose 1,6-bisphosphate",0,1
+850,CMBT,positive,Fumaric acid,1,0
+851,CMBT,positive,GM3 Ganglioside 18:0,1,0
+852,CMBT,positive,GlcCer d18:1/18:0,1,1
+853,CMBT,positive,Gluconic acid,1,0
+854,CMBT,positive,Glucosamine,1,1
+855,CMBT,positive,Glucosamine 6-phosphate,1,0
+856,CMBT,positive,Glucose,0,1
+857,CMBT,positive,Glucose 6-phosphate,0,0
+858,CMBT,positive,Glucosyl cholesterol,1,1
+859,CMBT,positive,Glutamic acid,1,0
+860,CMBT,positive,Glutamine,1,1
+861,CMBT,positive,Glutathione,1,0
+862,CMBT,positive,Glycerol 3-phosphate,0,0
+863,CMBT,positive,Glycerophosphocholine,1,1
+864,CMBT,positive,Glycine,0,1
+865,CMBT,positive,Guanine,1,1
+866,CMBT,positive,Histamine,1,1
+867,CMBT,positive,Histidine,1,1
+868,CMBT,positive,Homocysteine,0,1
+869,CMBT,positive,Hypoxanthine,1,1
+870,CMBT,positive,Kynurenic acid,1,0
+871,CMBT,positive,Kynurenine,1,1
+872,CMBT,positive,L-Dopa,0,1
+873,CMBT,positive,Lactic acid,0,0
+874,CMBT,positive,Lyso PA 18:1,1,1
+875,CMBT,positive,Lyso PC 15:0,1,1
+876,CMBT,positive,Lyso PE 18:0,1,1
+877,CMBT,positive,Lyso PG 16:0,1,1
+878,CMBT,positive,Lyso PI 17:1,1,1
+879,CMBT,positive,Lyso PS 17:1,1,1
+880,CMBT,positive,MG 18:1,1,1
+881,CMBT,positive,Malic acid,1,0
+882,CMBT,positive,Malonic acid,0,0
+883,CMBT,positive,Melatonin,1,1
+884,CMBT,positive,Methionine,1,0
+885,CMBT,positive,Mevalonic acid,0,0
+886,CMBT,positive,Myo-inositol 1-phosphate,0,0
+887,CMBT,positive,N-Acetylaspartic acid,1,1
+888,CMBT,positive,N-Acetylaspartylglutamic acid,1,1
+889,CMBT,positive,N-Acetylgalactosamine 6-phosphate,1,0
+890,CMBT,positive,N-Acetylglucosamine,1,1
+891,CMBT,positive,"N6,N6,N6-Trimethyllysine",1,1
+892,CMBT,positive,Niacinamide,1,1
+893,CMBT,positive,Nicotinamide adenine dinucleotide (NAD),0,1
+894,CMBT,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,1
+895,CMBT,positive,Nicotinamide riboside,1,1
+896,CMBT,positive,Nicotinamide ribotide,0,1
+897,CMBT,positive,Nicotinic acid,1,0
+898,CMBT,positive,Ornithine,1,1
+899,CMBT,positive,Orotic acid,0,0
+900,CMBT,positive,Oxalacetic acid,0,0
+901,CMBT,positive,Oxidized glutathione,1,0
+902,CMBT,positive,PA 16:0-18:1,1,1
+903,CMBT,positive,PC (O) C16-18:1,1,1
+904,CMBT,positive,PC 15:0-18:1,1,1
+905,CMBT,positive,PE 18:0-20:4,1,1
+906,CMBT,positive,PG 16:0-18:1,1,1
+907,CMBT,positive,PI 16:0-18:1,1,1
+908,CMBT,positive,PI(5)P 18:1,1,1
+909,CMBT,positive,PS (POPS) 16:0-18:1,1,1
+910,CMBT,positive,Palmitic acid,0,1
+911,CMBT,positive,Palmitoyl-CoA,1,1
+912,CMBT,positive,Pantetheine,1,1
+913,CMBT,positive,Pantothenic acid,1,1
+914,CMBT,positive,Phenylalanine,1,1
+915,CMBT,positive,Phosphocreatine,0,0
+916,CMBT,positive,Phosphoenolpyruvic acid,1,0
+917,CMBT,positive,Phylloquinone,1,1
+918,CMBT,positive,Proline,1,0
+919,CMBT,positive,Propionylcarnitine,1,1
+920,CMBT,positive,Prostaglandin E1,1,1
+921,CMBT,positive,Putrescine,1,1
+922,CMBT,positive,Pyridoxine,1,1
+923,CMBT,positive,Pyruvic acid,0,0
+924,CMBT,positive,Quinolinic acid,0,1
+925,CMBT,positive,Retinoic acid,1,1
+926,CMBT,positive,Riboflavin,1,1
+927,CMBT,positive,Ribulose,0,1
+928,CMBT,positive,Ribulose 5-phosphate,1,0
+929,CMBT,positive,S-Adenosylhomocysteine,1,1
+930,CMBT,positive,S-Adenosylmethionine,1,1
+931,CMBT,positive,SM d18:1-16:0,1,1
+932,CMBT,positive,Serine,1,0
+933,CMBT,positive,Serotonin,1,1
+934,CMBT,positive,Spermidine,1,1
+935,CMBT,positive,Succinic acid,1,0
+936,CMBT,positive,Sulfo GalCer 18:0(2S-OH),1,0
+937,CMBT,positive,TG 15:0-18:1-15:0,1,1
+938,CMBT,positive,Taurine,1,0
+939,CMBT,positive,Taurocholic acid,1,0
+940,CMBT,positive,Tetrahydrofolic acid,1,1
+941,CMBT,positive,Thiamine,1,1
+942,CMBT,positive,Thymine,1,0
+943,CMBT,positive,Tryptophan,1,1
+944,CMBT,positive,Tyrosine,0,1
+945,CMBT,positive,Uracil,1,0
+946,CMBT,positive,Ureidosuccinic acid,1,0
+947,CMBT,positive,Uric acid,0,1
+948,CMBT,positive,Uridine,1,1
+949,CMBT,positive,Uridine diphosphate,0,0
+950,CMBT,positive,Uridine diphosphate glucose,0,0
+951,CMBT,positive,Uridine diphosphate glucuronic acid,0,0
+952,CMBT,positive,Uridine diphosphate-N-acetylglucosamine,0,0
+953,CMBT,positive,Urocanic acid,1,1
+954,CMBT,positive,Valine,0,1
+955,CMBT,positive,Xanthine,1,1
+956,CMBT,positive,alpha-tocopherol,1,0
+957,CMBT,positive,cis-Aconitic acid,1,0
+958,CMBT,positive,gamma-Aminobutyric acid,1,1
+959,CMBT,positive,myo-Inositol,1,0
+960,ClCCA,negative,2-Oxoglutaric acid,1,0
+961,ClCCA,negative,3-Hydroxyanthranilic acid,0,1
+962,ClCCA,negative,3-Hydroxymethylglutaric acid,1,1
+963,ClCCA,negative,3-Phosphoglyceric acid,1,1
+964,ClCCA,negative,"4,5-Dihydroorotic acid",1,1
+965,ClCCA,negative,4-Hydroxyproline,0,0
+966,ClCCA,negative,5-Hydroxyindoleacetic acid,0,0
+967,ClCCA,negative,6-Phosphogluconic acid,1,1
+968,ClCCA,negative,Acetoacetic acid,0,0
+969,ClCCA,negative,Acetyl-CoA,1,1
+970,ClCCA,negative,Acetylcarnitine,0,0
+971,ClCCA,negative,Acetylcholine,0,0
+972,ClCCA,negative,Adenine,0,0
+973,ClCCA,negative,Adenosine diphosphate,1,0
+974,ClCCA,negative,Adenosine monophosphate,1,0
+975,ClCCA,negative,Agmatine,0,0
+976,ClCCA,negative,Arginine,0,0
+977,ClCCA,negative,Argininosuccinic acid,0,1
+978,ClCCA,negative,Ascorbic acid,1,1
+979,ClCCA,negative,Asparagine,0,0
+980,ClCCA,negative,Aspartic acid,0,1
+981,ClCCA,negative,Biotin,0,0
+982,ClCCA,negative,Butyric acid,0,0
+983,ClCCA,negative,CAR 16:0,0,0
+984,ClCCA,negative,Cardiolipin 18:1,0,1
+985,ClCCA,negative,Carnitine,0,0
+986,ClCCA,negative,Carnosine,1,0
+987,ClCCA,negative,Cer d8:1/22:0 Cer,0,0
+988,ClCCA,negative,Cholecalciferol,0,0
+989,ClCCA,negative,Cholesterol,0,0
+990,ClCCA,negative,Cholic acid,1,0
+991,ClCCA,negative,Choline,0,0
+992,ClCCA,negative,Citric acid,1,1
+993,ClCCA,negative,Citrulline,1,1
+994,ClCCA,negative,Coenzyme A,1,1
+995,ClCCA,negative,Creatine,0,0
+996,ClCCA,negative,Creatinine,0,0
+997,ClCCA,negative,Cyclic adenosine monophosphate,0,1
+998,ClCCA,negative,Cysteine,1,0
+999,ClCCA,negative,Cystine,0,0
+1000,ClCCA,negative,Cytidine,0,1
+1001,ClCCA,negative,Cytidine monophosphate,0,1
+1002,ClCCA,negative,Cytosine,0,0
+1003,ClCCA,negative,Dihydroxyacetone,0,0
+1004,ClCCA,negative,Dihydroxyacetone phosphate,0,1
+1005,ClCCA,negative,Dopamine,0,0
+1006,ClCCA,negative,Epinephrine,0,0
+1007,ClCCA,negative,Estradiol,0,0
+1008,ClCCA,negative,Flavin adenine dinucleotide,1,1
+1009,ClCCA,negative,Flavin mononucleotide,0,1
+1010,ClCCA,negative,Folic acid,0,1
+1011,ClCCA,negative,"Fructose 1,6-bisphosphate",1,1
+1012,ClCCA,negative,Fumaric acid,1,0
+1013,ClCCA,negative,GM3 Ganglioside 18:0,0,1
+1014,ClCCA,negative,GlcCer d18:1/18:0,1,1
+1015,ClCCA,negative,Gluconic acid,1,1
+1016,ClCCA,negative,Glucosamine,0,0
+1017,ClCCA,negative,Glucosamine 6-phosphate,0,0
+1018,ClCCA,negative,Glucose,0,0
+1019,ClCCA,negative,Glucose 6-phosphate,0,1
+1020,ClCCA,negative,Glutamic acid,1,0
+1021,ClCCA,negative,Glutamine,0,0
+1022,ClCCA,negative,Glutathione,1,1
+1023,ClCCA,negative,Glycerol 3-phosphate,0,1
+1024,ClCCA,negative,Glycerophosphocholine,0,0
+1025,ClCCA,negative,Glycine,0,0
+1026,ClCCA,negative,Guanine,0,0
+1027,ClCCA,negative,Histamine,0,0
+1028,ClCCA,negative,Histidine,0,0
+1029,ClCCA,negative,Homocysteine,0,0
+1030,ClCCA,negative,Hypoxanthine,0,0
+1031,ClCCA,negative,Kynurenic acid,0,0
+1032,ClCCA,negative,Kynurenine,0,0
+1033,ClCCA,negative,L-Dopa,0,0
+1034,ClCCA,negative,Lactic acid,0,0
+1035,ClCCA,negative,Lyso PC 15:0,0,0
+1036,ClCCA,negative,Lyso PE 18:0,1,1
+1037,ClCCA,negative,Lyso PG 16:0,1,1
+1038,ClCCA,negative,Lyso PI 17:1,1,1
+1039,ClCCA,negative,Lyso PS 17:1,1,1
+1040,ClCCA,negative,MG 18:1,0,0
+1041,ClCCA,negative,Malic acid,1,1
+1042,ClCCA,negative,Malonic acid,1,1
+1043,ClCCA,negative,Melatonin,0,0
+1044,ClCCA,negative,Methionine,0,0
+1045,ClCCA,negative,Mevalonic acid,0,0
+1046,ClCCA,negative,Myo-inositol 1-phosphate,1,1
+1047,ClCCA,negative,N-Acetylaspartic acid,1,1
+1048,ClCCA,negative,N-Acetylaspartylglutamic acid,1,1
+1049,ClCCA,negative,N-Acetylgalactosamine 6-phosphate,1,0
+1050,ClCCA,negative,N-Acetylglucosamine,1,0
+1051,ClCCA,negative,"N6,N6,N6-Trimethyllysine",0,0
+1052,ClCCA,negative,Niacinamide,0,0
+1053,ClCCA,negative,Nicotinamide adenine dinucleotide (NAD),0,1
+1054,ClCCA,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+1055,ClCCA,negative,Nicotinamide riboside,0,0
+1056,ClCCA,negative,Nicotinamide ribotide,0,1
+1057,ClCCA,negative,Nicotinic acid,0,0
+1058,ClCCA,negative,Ornithine,0,0
+1059,ClCCA,negative,Orotic acid,1,1
+1060,ClCCA,negative,Oxalacetic acid,0,1
+1061,ClCCA,negative,Oxidized glutathione,1,1
+1062,ClCCA,negative,PA 16:0-18:1,1,0
+1063,ClCCA,negative,PC (O) C16-18:1,0,0
+1064,ClCCA,negative,PG 16:0-18:1,1,0
+1065,ClCCA,negative,PI 16:0-18:1,1,1
+1066,ClCCA,negative,PI(5)P 18:1,1,1
+1067,ClCCA,negative,PS (POPS) 16:0-18:1,1,1
+1068,ClCCA,negative,Palmitic acid,0,0
+1069,ClCCA,negative,Palmitoyl-CoA,1,1
+1070,ClCCA,negative,Pantetheine,0,1
+1071,ClCCA,negative,Pantothenic acid,1,1
+1072,ClCCA,negative,Phenylalanine,0,0
+1073,ClCCA,negative,Phosphocreatine,0,1
+1074,ClCCA,negative,Phosphoenolpyruvic acid,1,1
+1075,ClCCA,negative,Proline,0,0
+1076,ClCCA,negative,Propionylcarnitine,0,0
+1077,ClCCA,negative,Prostaglandin E1,0,0
+1078,ClCCA,negative,Putrescine,0,0
+1079,ClCCA,negative,Pyridoxine,0,0
+1080,ClCCA,negative,Pyruvic acid,0,0
+1081,ClCCA,negative,Quinolinic acid,1,1
+1082,ClCCA,negative,Retinoic acid,0,0
+1083,ClCCA,negative,Riboflavin,1,0
+1084,ClCCA,negative,Ribulose,0,0
+1085,ClCCA,negative,Ribulose 5-phosphate,1,0
+1086,ClCCA,negative,S-Adenosylhomocysteine,1,0
+1087,ClCCA,negative,S-Adenosylmethionine,0,1
+1088,ClCCA,negative,Serine,0,0
+1089,ClCCA,negative,Serotonin,0,0
+1090,ClCCA,negative,Spermidine,0,0
+1091,ClCCA,negative,Succinic acid,0,1
+1092,ClCCA,negative,Sulfo GalCer 18:0(2S-OH),1,0
+1093,ClCCA,negative,TG 15:0-18:1-15:0,0,0
+1094,ClCCA,negative,Taurine,1,0
+1095,ClCCA,negative,Taurocholic acid,1,0
+1096,ClCCA,negative,Tetrahydrofolic acid,0,1
+1097,ClCCA,negative,Thiamine,0,0
+1098,ClCCA,negative,Thymine,0,0
+1099,ClCCA,negative,Tryptophan,0,1
+1100,ClCCA,negative,Tyrosine,0,0
+1101,ClCCA,negative,Uracil,0,0
+1102,ClCCA,negative,Ureidosuccinic acid,1,1
+1103,ClCCA,negative,Uric acid,1,0
+1104,ClCCA,negative,Uridine,0,0
+1105,ClCCA,negative,Uridine diphosphate,1,1
+1106,ClCCA,negative,Uridine diphosphate glucose,1,1
+1107,ClCCA,negative,Uridine diphosphate glucuronic acid,1,1
+1108,ClCCA,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+1109,ClCCA,negative,Urocanic acid,1,0
+1110,ClCCA,negative,Valine,0,0
+1111,ClCCA,negative,Xanthine,0,0
+1112,ClCCA,negative,alpha-tocopherol,0,0
+1113,ClCCA,negative,cis-Aconitic acid,1,1
+1114,ClCCA,negative,gamma-Aminobutyric acid,0,0
+1115,ClCCA,negative,myo-Inositol,0,1
+1116,ClCCA,positive,2-Oxoglutaric acid,1,0
+1117,ClCCA,positive,3-Hydroxyanthranilic acid,1,1
+1118,ClCCA,positive,3-Hydroxymethylglutaric acid,1,1
+1119,ClCCA,positive,3-Phosphoglyceric acid,1,1
+1120,ClCCA,positive,"4,5-Dihydroorotic acid",1,0
+1121,ClCCA,positive,4-Hydroxyproline,1,1
+1122,ClCCA,positive,5-Hydroxyindoleacetic acid,1,0
+1123,ClCCA,positive,6-Phosphogluconic acid,1,1
+1124,ClCCA,positive,Acetoacetic acid,0,0
+1125,ClCCA,positive,Acetyl-CoA,1,1
+1126,ClCCA,positive,Acetylcarnitine,1,1
+1127,ClCCA,positive,Acetylcholine,1,1
+1128,ClCCA,positive,Adenine,1,1
+1129,ClCCA,positive,Adenosine diphosphate,1,1
+1130,ClCCA,positive,Adenosine monophosphate,1,1
+1131,ClCCA,positive,Agmatine,1,1
+1132,ClCCA,positive,Arginine,1,1
+1133,ClCCA,positive,Argininosuccinic acid,1,1
+1134,ClCCA,positive,Ascorbic acid,1,1
+1135,ClCCA,positive,Asparagine,1,1
+1136,ClCCA,positive,Aspartic acid,1,1
+1137,ClCCA,positive,Biotin,1,1
+1138,ClCCA,positive,Butyric acid,0,0
+1139,ClCCA,positive,CAR 16:0,1,1
+1140,ClCCA,positive,Cardiolipin 18:1,1,1
+1141,ClCCA,positive,Carnitine,1,1
+1142,ClCCA,positive,Carnosine,1,1
+1143,ClCCA,positive,Cer d8:1/22:0 Cer,1,1
+1144,ClCCA,positive,Cholecalciferol,1,1
+1145,ClCCA,positive,Cholesterol,0,1
+1146,ClCCA,positive,Cholesteryl acetate,0,1
+1147,ClCCA,positive,Cholesteryl ester 17:0,1,1
+1148,ClCCA,positive,Cholic acid,1,1
+1149,ClCCA,positive,Choline,1,1
+1150,ClCCA,positive,Citric acid,1,1
+1151,ClCCA,positive,Citrulline,1,1
+1152,ClCCA,positive,Coenzyme A,1,1
+1153,ClCCA,positive,Creatine,1,1
+1154,ClCCA,positive,Creatinine,1,1
+1155,ClCCA,positive,Cyclic adenosine monophosphate,1,1
+1156,ClCCA,positive,Cysteine,1,1
+1157,ClCCA,positive,Cystine,0,1
+1158,ClCCA,positive,Cytidine,1,1
+1159,ClCCA,positive,Cytidine monophosphate,1,1
+1160,ClCCA,positive,Cytosine,1,1
+1161,ClCCA,positive,DG 18:0-22:6,1,1
+1162,ClCCA,positive,Dihydroxyacetone,0,1
+1163,ClCCA,positive,Dihydroxyacetone phosphate,1,1
+1164,ClCCA,positive,Dopamine,1,1
+1165,ClCCA,positive,Epinephrine,1,1
+1166,ClCCA,positive,Estradiol,1,1
+1167,ClCCA,positive,Flavin adenine dinucleotide,1,1
+1168,ClCCA,positive,Flavin mononucleotide,1,1
+1169,ClCCA,positive,Folic acid,1,1
+1170,ClCCA,positive,"Fructose 1,6-bisphosphate",1,1
+1171,ClCCA,positive,Fumaric acid,0,0
+1172,ClCCA,positive,GM3 Ganglioside 18:0,1,1
+1173,ClCCA,positive,GlcCer d18:1/18:0,1,1
+1174,ClCCA,positive,Gluconic acid,1,1
+1175,ClCCA,positive,Glucosamine,1,1
+1176,ClCCA,positive,Glucosamine 6-phosphate,1,1
+1177,ClCCA,positive,Glucose,1,0
+1178,ClCCA,positive,Glucose 6-phosphate,1,1
+1179,ClCCA,positive,Glucosyl cholesterol,1,1
+1180,ClCCA,positive,Glutamic acid,1,1
+1181,ClCCA,positive,Glutamine,1,1
+1182,ClCCA,positive,Glutathione,1,1
+1183,ClCCA,positive,Glycerol 3-phosphate,1,1
+1184,ClCCA,positive,Glycerophosphocholine,1,1
+1185,ClCCA,positive,Glycine,1,1
+1186,ClCCA,positive,Guanine,1,1
+1187,ClCCA,positive,Histamine,1,1
+1188,ClCCA,positive,Histidine,1,1
+1189,ClCCA,positive,Homocysteine,1,1
+1190,ClCCA,positive,Hypoxanthine,1,1
+1191,ClCCA,positive,Kynurenic acid,1,1
+1192,ClCCA,positive,Kynurenine,1,1
+1193,ClCCA,positive,L-Dopa,1,1
+1194,ClCCA,positive,Lactic acid,0,0
+1195,ClCCA,positive,Lyso PA 18:1,1,1
+1196,ClCCA,positive,Lyso PC 15:0,1,1
+1197,ClCCA,positive,Lyso PE 18:0,1,1
+1198,ClCCA,positive,Lyso PG 16:0,1,1
+1199,ClCCA,positive,Lyso PI 17:1,1,1
+1200,ClCCA,positive,Lyso PS 17:1,1,1
+1201,ClCCA,positive,MG 18:1,1,1
+1202,ClCCA,positive,Malic acid,1,1
+1203,ClCCA,positive,Malonic acid,1,0
+1204,ClCCA,positive,Melatonin,1,1
+1205,ClCCA,positive,Methionine,1,1
+1206,ClCCA,positive,Mevalonic acid,0,1
+1207,ClCCA,positive,Myo-inositol 1-phosphate,1,1
+1208,ClCCA,positive,N-Acetylaspartic acid,1,1
+1209,ClCCA,positive,N-Acetylaspartylglutamic acid,1,1
+1210,ClCCA,positive,N-Acetylgalactosamine 6-phosphate,1,1
+1211,ClCCA,positive,N-Acetylglucosamine,1,1
+1212,ClCCA,positive,"N6,N6,N6-Trimethyllysine",1,1
+1213,ClCCA,positive,Niacinamide,1,1
+1214,ClCCA,positive,Nicotinamide adenine dinucleotide (NAD),1,1
+1215,ClCCA,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+1216,ClCCA,positive,Nicotinamide riboside,1,1
+1217,ClCCA,positive,Nicotinamide ribotide,1,1
+1218,ClCCA,positive,Nicotinic acid,1,1
+1219,ClCCA,positive,Ornithine,1,1
+1220,ClCCA,positive,Orotic acid,0,1
+1221,ClCCA,positive,Oxalacetic acid,0,1
+1222,ClCCA,positive,Oxidized glutathione,1,1
+1223,ClCCA,positive,PA 16:0-18:1,1,1
+1224,ClCCA,positive,PC (O) C16-18:1,1,1
+1225,ClCCA,positive,PC 15:0-18:1,1,1
+1226,ClCCA,positive,PE 18:0-20:4,1,1
+1227,ClCCA,positive,PG 16:0-18:1,1,1
+1228,ClCCA,positive,PI 16:0-18:1,1,1
+1229,ClCCA,positive,PI(5)P 18:1,1,1
+1230,ClCCA,positive,PS (POPS) 16:0-18:1,1,1
+1231,ClCCA,positive,Palmitic acid,0,1
+1232,ClCCA,positive,Palmitoyl-CoA,1,1
+1233,ClCCA,positive,Pantetheine,1,1
+1234,ClCCA,positive,Pantothenic acid,1,1
+1235,ClCCA,positive,Phenylalanine,1,1
+1236,ClCCA,positive,Phosphocreatine,1,1
+1237,ClCCA,positive,Phosphoenolpyruvic acid,1,1
+1238,ClCCA,positive,Phylloquinone,1,0
+1239,ClCCA,positive,Proline,1,1
+1240,ClCCA,positive,Propionylcarnitine,1,1
+1241,ClCCA,positive,Prostaglandin E1,1,1
+1242,ClCCA,positive,Putrescine,1,1
+1243,ClCCA,positive,Pyridoxine,1,1
+1244,ClCCA,positive,Pyruvic acid,0,0
+1245,ClCCA,positive,Quinolinic acid,1,1
+1246,ClCCA,positive,Retinoic acid,1,0
+1247,ClCCA,positive,Riboflavin,1,1
+1248,ClCCA,positive,Ribulose,0,0
+1249,ClCCA,positive,Ribulose 5-phosphate,1,1
+1250,ClCCA,positive,S-Adenosylhomocysteine,1,0
+1251,ClCCA,positive,S-Adenosylmethionine,1,0
+1252,ClCCA,positive,SM d18:1-16:0,1,1
+1253,ClCCA,positive,Serine,1,1
+1254,ClCCA,positive,Serotonin,1,1
+1255,ClCCA,positive,Spermidine,1,1
+1256,ClCCA,positive,Succinic acid,1,0
+1257,ClCCA,positive,Sulfo GalCer 18:0(2S-OH),1,1
+1258,ClCCA,positive,TG 15:0-18:1-15:0,1,1
+1259,ClCCA,positive,Taurine,1,1
+1260,ClCCA,positive,Taurocholic acid,1,1
+1261,ClCCA,positive,Tetrahydrofolic acid,1,1
+1262,ClCCA,positive,Thiamine,1,1
+1263,ClCCA,positive,Thymine,1,1
+1264,ClCCA,positive,Tryptophan,1,1
+1265,ClCCA,positive,Tyrosine,1,1
+1266,ClCCA,positive,Uracil,1,0
+1267,ClCCA,positive,Ureidosuccinic acid,1,1
+1268,ClCCA,positive,Uric acid,0,0
+1269,ClCCA,positive,Uridine,0,1
+1270,ClCCA,positive,Uridine diphosphate,1,1
+1271,ClCCA,positive,Uridine diphosphate glucose,1,1
+1272,ClCCA,positive,Uridine diphosphate glucuronic acid,1,1
+1273,ClCCA,positive,Uridine diphosphate-N-acetylglucosamine,1,1
+1274,ClCCA,positive,Urocanic acid,1,1
+1275,ClCCA,positive,Valine,1,1
+1276,ClCCA,positive,Xanthine,1,1
+1277,ClCCA,positive,alpha-tocopherol,1,1
+1278,ClCCA,positive,cis-Aconitic acid,1,1
+1279,ClCCA,positive,gamma-Aminobutyric acid,1,1
+1280,ClCCA,positive,myo-Inositol,1,1
+1281,DAN,negative,2-Oxoglutaric acid,1,0
+1282,DAN,negative,3-Hydroxyanthranilic acid,0,1
+1283,DAN,negative,3-Hydroxymethylglutaric acid,0,1
+1284,DAN,negative,3-Phosphoglyceric acid,1,1
+1285,DAN,negative,"4,5-Dihydroorotic acid",1,1
+1286,DAN,negative,4-Hydroxyproline,1,1
+1287,DAN,negative,5-Hydroxyindoleacetic acid,1,1
+1288,DAN,negative,6-Phosphogluconic acid,0,1
+1289,DAN,negative,Acetoacetic acid,0,0
+1290,DAN,negative,Acetyl-CoA,1,0
+1291,DAN,negative,Acetylcarnitine,0,0
+1292,DAN,negative,Acetylcholine,0,0
+1293,DAN,negative,Adenine,1,1
+1294,DAN,negative,Adenosine diphosphate,0,1
+1295,DAN,negative,Adenosine monophosphate,0,0
+1296,DAN,negative,Agmatine,0,1
+1297,DAN,negative,Arginine,1,1
+1298,DAN,negative,Argininosuccinic acid,1,1
+1299,DAN,negative,Ascorbic acid,1,1
+1300,DAN,negative,Asparagine,1,1
+1301,DAN,negative,Aspartic acid,1,1
+1302,DAN,negative,Biotin,0,1
+1303,DAN,negative,Butyric acid,0,0
+1304,DAN,negative,CAR 16:0,0,0
+1305,DAN,negative,Cardiolipin 18:1,1,1
+1306,DAN,negative,Carnitine,0,0
+1307,DAN,negative,Carnosine,1,1
+1308,DAN,negative,Cer d8:1/22:0 Cer,1,1
+1309,DAN,negative,Cholecalciferol,0,0
+1310,DAN,negative,Cholesterol,0,0
+1311,DAN,negative,Cholesteryl acetate,0,0
+1312,DAN,negative,Cholesteryl ester 17:0,0,0
+1313,DAN,negative,Cholic acid,1,1
+1314,DAN,negative,Choline,0,0
+1315,DAN,negative,Citric acid,1,0
+1316,DAN,negative,Citrulline,1,1
+1317,DAN,negative,Coenzyme A,1,0
+1318,DAN,negative,Creatine,1,1
+1319,DAN,negative,Creatinine,1,1
+1320,DAN,negative,Cyclic adenosine monophosphate,0,0
+1321,DAN,negative,Cysteine,1,1
+1322,DAN,negative,Cystine,1,1
+1323,DAN,negative,Cytidine,1,1
+1324,DAN,negative,Cytidine monophosphate,0,0
+1325,DAN,negative,Cytosine,1,0
+1326,DAN,negative,Dihydroxyacetone,0,0
+1327,DAN,negative,Dihydroxyacetone phosphate,0,0
+1328,DAN,negative,Dopamine,1,1
+1329,DAN,negative,Epinephrine,1,1
+1330,DAN,negative,Estradiol,1,0
+1331,DAN,negative,Flavin adenine dinucleotide,1,1
+1332,DAN,negative,Flavin mononucleotide,0,1
+1333,DAN,negative,Folic acid,0,1
+1334,DAN,negative,"Fructose 1,6-bisphosphate",0,1
+1335,DAN,negative,Fumaric acid,1,0
+1336,DAN,negative,GM3 Ganglioside 18:0,1,1
+1337,DAN,negative,GlcCer d18:1/18:0,1,1
+1338,DAN,negative,Gluconic acid,1,1
+1339,DAN,negative,Glucosamine,1,1
+1340,DAN,negative,Glucosamine 6-phosphate,1,1
+1341,DAN,negative,Glucose,1,1
+1342,DAN,negative,Glucose 6-phosphate,1,1
+1343,DAN,negative,Glucosyl cholesterol,1,1
+1344,DAN,negative,Glutamic acid,1,1
+1345,DAN,negative,Glutamine,1,1
+1346,DAN,negative,Glutathione,1,1
+1347,DAN,negative,Glycerol 3-phosphate,1,0
+1348,DAN,negative,Glycerophosphocholine,0,1
+1349,DAN,negative,Glycine,0,1
+1350,DAN,negative,Guanine,1,1
+1351,DAN,negative,Histamine,1,0
+1352,DAN,negative,Histidine,1,1
+1353,DAN,negative,Homocysteine,1,1
+1354,DAN,negative,Hypoxanthine,1,0
+1355,DAN,negative,Kynurenic acid,0,0
+1356,DAN,negative,Kynurenine,1,1
+1357,DAN,negative,L-Dopa,1,1
+1358,DAN,negative,Lactic acid,0,0
+1359,DAN,negative,Lyso PA 18:1,0,1
+1360,DAN,negative,Lyso PC 15:0,1,1
+1361,DAN,negative,Lyso PE 18:0,0,1
+1362,DAN,negative,Lyso PG 16:0,1,1
+1363,DAN,negative,Lyso PI 17:1,1,1
+1364,DAN,negative,Lyso PS 17:1,1,0
+1365,DAN,negative,MG 18:1,0,1
+1366,DAN,negative,Malic acid,1,1
+1367,DAN,negative,Malonic acid,0,0
+1368,DAN,negative,Melatonin,1,0
+1369,DAN,negative,Methionine,1,1
+1370,DAN,negative,Mevalonic acid,1,1
+1371,DAN,negative,Myo-inositol 1-phosphate,1,1
+1372,DAN,negative,N-Acetylaspartic acid,1,1
+1373,DAN,negative,N-Acetylaspartylglutamic acid,1,1
+1374,DAN,negative,N-Acetylgalactosamine 6-phosphate,1,0
+1375,DAN,negative,N-Acetylglucosamine,1,1
+1376,DAN,negative,"N6,N6,N6-Trimethyllysine",1,0
+1377,DAN,negative,Niacinamide,0,0
+1378,DAN,negative,Nicotinamide adenine dinucleotide (NAD),1,0
+1379,DAN,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,0
+1380,DAN,negative,Nicotinamide riboside,1,1
+1381,DAN,negative,Nicotinamide ribotide,0,1
+1382,DAN,negative,Nicotinic acid,1,0
+1383,DAN,negative,Ornithine,1,1
+1384,DAN,negative,Orotic acid,1,1
+1385,DAN,negative,Oxalacetic acid,0,0
+1386,DAN,negative,Oxidized glutathione,1,0
+1387,DAN,negative,PA 16:0-18:1,1,1
+1388,DAN,negative,PC (O) C16-18:1,1,0
+1389,DAN,negative,PC 15:0-18:1,1,0
+1390,DAN,negative,PE 18:0-20:4,1,1
+1391,DAN,negative,PG 16:0-18:1,1,1
+1392,DAN,negative,PI 16:0-18:1,1,1
+1393,DAN,negative,PI(5)P 18:1,1,1
+1394,DAN,negative,PS (POPS) 16:0-18:1,1,1
+1395,DAN,negative,Palmitic acid,0,0
+1396,DAN,negative,Palmitoyl-CoA,1,0
+1397,DAN,negative,Pantetheine,1,1
+1398,DAN,negative,Pantothenic acid,1,1
+1399,DAN,negative,Phenylalanine,1,1
+1400,DAN,negative,Phosphocreatine,0,1
+1401,DAN,negative,Phosphoenolpyruvic acid,1,0
+1402,DAN,negative,Phylloquinone,0,0
+1403,DAN,negative,Proline,1,1
+1404,DAN,negative,Propionylcarnitine,0,0
+1405,DAN,negative,Prostaglandin E1,1,1
+1406,DAN,negative,Putrescine,0,0
+1407,DAN,negative,Pyridoxine,1,1
+1408,DAN,negative,Pyruvic acid,0,0
+1409,DAN,negative,Quinolinic acid,1,0
+1410,DAN,negative,Retinoic acid,1,0
+1411,DAN,negative,Riboflavin,1,1
+1412,DAN,negative,Ribulose,1,1
+1413,DAN,negative,Ribulose 5-phosphate,1,0
+1414,DAN,negative,S-Adenosylhomocysteine,0,1
+1415,DAN,negative,S-Adenosylmethionine,0,1
+1416,DAN,negative,SM d18:1-16:0,1,1
+1417,DAN,negative,Serine,1,1
+1418,DAN,negative,Serotonin,1,1
+1419,DAN,negative,Spermidine,0,0
+1420,DAN,negative,Succinic acid,1,0
+1421,DAN,negative,Sulfo GalCer 18:0(2S-OH),1,0
+1422,DAN,negative,Taurine,1,1
+1423,DAN,negative,Taurocholic acid,1,0
+1424,DAN,negative,Tetrahydrofolic acid,0,1
+1425,DAN,negative,Thiamine,0,0
+1426,DAN,negative,Thymine,1,0
+1427,DAN,negative,Tryptophan,1,1
+1428,DAN,negative,Tyrosine,1,1
+1429,DAN,negative,Uracil,1,0
+1430,DAN,negative,Ureidosuccinic acid,1,1
+1431,DAN,negative,Uric acid,1,1
+1432,DAN,negative,Uridine,1,1
+1433,DAN,negative,Uridine diphosphate,1,1
+1434,DAN,negative,Uridine diphosphate glucose,1,1
+1435,DAN,negative,Uridine diphosphate glucuronic acid,1,1
+1436,DAN,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+1437,DAN,negative,Urocanic acid,1,1
+1438,DAN,negative,Valine,1,1
+1439,DAN,negative,Xanthine,1,1
+1440,DAN,negative,alpha-tocopherol,0,0
+1441,DAN,negative,cis-Aconitic acid,1,1
+1442,DAN,negative,gamma-Aminobutyric acid,1,1
+1443,DAN,negative,myo-Inositol,1,1
+1444,DAN,positive,2-Oxoglutaric acid,1,0
+1445,DAN,positive,3-Hydroxyanthranilic acid,0,0
+1446,DAN,positive,3-Hydroxymethylglutaric acid,0,0
+1447,DAN,positive,3-Phosphoglyceric acid,0,0
+1448,DAN,positive,"4,5-Dihydroorotic acid",1,0
+1449,DAN,positive,4-Hydroxyproline,1,1
+1450,DAN,positive,5-Hydroxyindoleacetic acid,1,0
+1451,DAN,positive,6-Phosphogluconic acid,0,0
+1452,DAN,positive,Acetoacetic acid,0,0
+1453,DAN,positive,Acetyl-CoA,0,0
+1454,DAN,positive,Acetylcarnitine,1,1
+1455,DAN,positive,Acetylcholine,1,0
+1456,DAN,positive,Adenine,0,1
+1457,DAN,positive,Adenosine diphosphate,0,0
+1458,DAN,positive,Adenosine monophosphate,1,0
+1459,DAN,positive,Agmatine,1,1
+1460,DAN,positive,Arginine,1,1
+1461,DAN,positive,Argininosuccinic acid,0,1
+1462,DAN,positive,Ascorbic acid,0,0
+1463,DAN,positive,Asparagine,1,1
+1464,DAN,positive,Aspartic acid,1,0
+1465,DAN,positive,Biotin,1,1
+1466,DAN,positive,Butyric acid,0,0
+1467,DAN,positive,CAR 16:0,1,1
+1468,DAN,positive,Cardiolipin 18:1,1,1
+1469,DAN,positive,Carnitine,1,1
+1470,DAN,positive,Carnosine,1,1
+1471,DAN,positive,Cer d8:1/22:0 Cer,1,1
+1472,DAN,positive,Cholecalciferol,1,0
+1473,DAN,positive,Cholesterol,0,1
+1474,DAN,positive,Cholesteryl acetate,0,1
+1475,DAN,positive,Cholesteryl ester 17:0,1,0
+1476,DAN,positive,Cholic acid,1,1
+1477,DAN,positive,Choline,1,0
+1478,DAN,positive,Citric acid,0,0
+1479,DAN,positive,Citrulline,1,1
+1480,DAN,positive,Coenzyme A,1,0
+1481,DAN,positive,Creatine,1,1
+1482,DAN,positive,Creatinine,1,1
+1483,DAN,positive,Cyclic adenosine monophosphate,1,1
+1484,DAN,positive,Cysteine,0,1
+1485,DAN,positive,Cystine,0,1
+1486,DAN,positive,Cytidine,1,1
+1487,DAN,positive,Cytidine monophosphate,1,0
+1488,DAN,positive,Cytosine,1,0
+1489,DAN,positive,DG 18:0-22:6,0,1
+1490,DAN,positive,Dihydroxyacetone,0,0
+1491,DAN,positive,Dihydroxyacetone phosphate,0,0
+1492,DAN,positive,Dopamine,1,1
+1493,DAN,positive,Epinephrine,1,1
+1494,DAN,positive,Estradiol,0,1
+1495,DAN,positive,Flavin adenine dinucleotide,1,0
+1496,DAN,positive,Flavin mononucleotide,1,0
+1497,DAN,positive,Folic acid,1,1
+1498,DAN,positive,"Fructose 1,6-bisphosphate",0,0
+1499,DAN,positive,Fumaric acid,1,0
+1500,DAN,positive,GM3 Ganglioside 18:0,1,1
+1501,DAN,positive,GlcCer d18:1/18:0,1,1
+1502,DAN,positive,Gluconic acid,1,0
+1503,DAN,positive,Glucosamine,1,1
+1504,DAN,positive,Glucosamine 6-phosphate,0,1
+1505,DAN,positive,Glucose,1,1
+1506,DAN,positive,Glucose 6-phosphate,0,0
+1507,DAN,positive,Glucosyl cholesterol,1,1
+1508,DAN,positive,Glutamic acid,1,0
+1509,DAN,positive,Glutamine,1,1
+1510,DAN,positive,Glutathione,1,1
+1511,DAN,positive,Glycerol 3-phosphate,0,0
+1512,DAN,positive,Glycerophosphocholine,1,1
+1513,DAN,positive,Glycine,0,1
+1514,DAN,positive,Guanine,1,1
+1515,DAN,positive,Histamine,1,1
+1516,DAN,positive,Histidine,1,1
+1517,DAN,positive,Homocysteine,1,1
+1518,DAN,positive,Hypoxanthine,1,1
+1519,DAN,positive,Kynurenic acid,1,0
+1520,DAN,positive,Kynurenine,1,1
+1521,DAN,positive,L-Dopa,0,1
+1522,DAN,positive,Lactic acid,0,0
+1523,DAN,positive,Lyso PA 18:1,1,1
+1524,DAN,positive,Lyso PC 15:0,1,1
+1525,DAN,positive,Lyso PE 18:0,1,1
+1526,DAN,positive,Lyso PG 16:0,1,1
+1527,DAN,positive,Lyso PI 17:1,1,1
+1528,DAN,positive,Lyso PS 17:1,1,1
+1529,DAN,positive,MG 18:1,1,1
+1530,DAN,positive,Malic acid,1,0
+1531,DAN,positive,Malonic acid,0,0
+1532,DAN,positive,Melatonin,1,1
+1533,DAN,positive,Methionine,1,1
+1534,DAN,positive,Mevalonic acid,1,0
+1535,DAN,positive,Myo-inositol 1-phosphate,0,0
+1536,DAN,positive,N-Acetylaspartic acid,1,0
+1537,DAN,positive,N-Acetylaspartylglutamic acid,1,0
+1538,DAN,positive,N-Acetylgalactosamine 6-phosphate,0,0
+1539,DAN,positive,N-Acetylglucosamine,1,1
+1540,DAN,positive,"N6,N6,N6-Trimethyllysine",1,1
+1541,DAN,positive,Niacinamide,0,1
+1542,DAN,positive,Nicotinamide adenine dinucleotide (NAD),0,1
+1543,DAN,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+1544,DAN,positive,Nicotinamide riboside,1,1
+1545,DAN,positive,Nicotinamide ribotide,0,0
+1546,DAN,positive,Nicotinic acid,0,0
+1547,DAN,positive,Ornithine,1,1
+1548,DAN,positive,Orotic acid,0,0
+1549,DAN,positive,Oxalacetic acid,0,0
+1550,DAN,positive,Oxidized glutathione,1,1
+1551,DAN,positive,PA 16:0-18:1,1,1
+1552,DAN,positive,PC (O) C16-18:1,1,1
+1553,DAN,positive,PC 15:0-18:1,1,1
+1554,DAN,positive,PE 18:0-20:4,1,1
+1555,DAN,positive,PG 16:0-18:1,1,1
+1556,DAN,positive,PI 16:0-18:1,1,1
+1557,DAN,positive,PI(5)P 18:1,1,1
+1558,DAN,positive,PS (POPS) 16:0-18:1,1,1
+1559,DAN,positive,Palmitic acid,0,1
+1560,DAN,positive,Palmitoyl-CoA,1,0
+1561,DAN,positive,Pantetheine,1,1
+1562,DAN,positive,Pantothenic acid,1,1
+1563,DAN,positive,Phenylalanine,1,1
+1564,DAN,positive,Phosphocreatine,0,0
+1565,DAN,positive,Phosphoenolpyruvic acid,0,0
+1566,DAN,positive,Phylloquinone,1,1
+1567,DAN,positive,Proline,1,1
+1568,DAN,positive,Propionylcarnitine,1,1
+1569,DAN,positive,Prostaglandin E1,1,1
+1570,DAN,positive,Putrescine,1,1
+1571,DAN,positive,Pyridoxine,1,1
+1572,DAN,positive,Pyruvic acid,0,0
+1573,DAN,positive,Quinolinic acid,0,0
+1574,DAN,positive,Retinoic acid,1,1
+1575,DAN,positive,Riboflavin,1,1
+1576,DAN,positive,Ribulose,1,1
+1577,DAN,positive,Ribulose 5-phosphate,0,0
+1578,DAN,positive,S-Adenosylhomocysteine,1,1
+1579,DAN,positive,S-Adenosylmethionine,1,1
+1580,DAN,positive,SM d18:1-16:0,1,1
+1581,DAN,positive,Serine,1,0
+1582,DAN,positive,Serotonin,0,1
+1583,DAN,positive,Spermidine,1,1
+1584,DAN,positive,Succinic acid,1,0
+1585,DAN,positive,Sulfo GalCer 18:0(2S-OH),0,0
+1586,DAN,positive,TG 15:0-18:1-15:0,1,1
+1587,DAN,positive,Taurine,1,0
+1588,DAN,positive,Taurocholic acid,1,0
+1589,DAN,positive,Tetrahydrofolic acid,1,0
+1590,DAN,positive,Thiamine,1,1
+1591,DAN,positive,Thymine,1,0
+1592,DAN,positive,Tryptophan,1,1
+1593,DAN,positive,Tyrosine,1,1
+1594,DAN,positive,Uracil,0,0
+1595,DAN,positive,Ureidosuccinic acid,0,0
+1596,DAN,positive,Uridine,1,1
+1597,DAN,positive,Uridine diphosphate,0,0
+1598,DAN,positive,Uridine diphosphate glucose,0,1
+1599,DAN,positive,Uridine diphosphate glucuronic acid,0,0
+1600,DAN,positive,Uridine diphosphate-N-acetylglucosamine,0,1
+1601,DAN,positive,Urocanic acid,1,0
+1602,DAN,positive,Valine,1,1
+1603,DAN,positive,Xanthine,1,1
+1604,DAN,positive,alpha-tocopherol,1,1
+1605,DAN,positive,cis-Aconitic acid,0,0
+1606,DAN,positive,gamma-Aminobutyric acid,1,1
+1607,DAN,positive,myo-Inositol,1,1
+1608,DHAP,negative,2-Oxoglutaric acid,1,0
+1609,DHAP,negative,3-Hydroxyanthranilic acid,0,1
+1610,DHAP,negative,3-Hydroxymethylglutaric acid,1,1
+1611,DHAP,negative,3-Phosphoglyceric acid,1,1
+1612,DHAP,negative,"4,5-Dihydroorotic acid",1,1
+1613,DHAP,negative,4-Hydroxyproline,1,1
+1614,DHAP,negative,5-Hydroxyindoleacetic acid,1,0
+1615,DHAP,negative,6-Phosphogluconic acid,0,1
+1616,DHAP,negative,Acetoacetic acid,0,0
+1617,DHAP,negative,Acetyl-CoA,0,1
+1618,DHAP,negative,Acetylcarnitine,0,0
+1619,DHAP,negative,Acetylcholine,0,0
+1620,DHAP,negative,Adenine,0,1
+1621,DHAP,negative,Adenosine diphosphate,0,0
+1622,DHAP,negative,Adenosine monophosphate,1,1
+1623,DHAP,negative,Agmatine,0,0
+1624,DHAP,negative,Arginine,1,1
+1625,DHAP,negative,Argininosuccinic acid,1,1
+1626,DHAP,negative,Ascorbic acid,1,1
+1627,DHAP,negative,Asparagine,1,0
+1628,DHAP,negative,Aspartic acid,0,1
+1629,DHAP,negative,Biotin,0,1
+1630,DHAP,negative,Butyric acid,0,0
+1631,DHAP,negative,Cardiolipin 18:1,1,1
+1632,DHAP,negative,Carnitine,0,0
+1633,DHAP,negative,Carnosine,1,0
+1634,DHAP,negative,Cer d8:1/22:0 Cer,1,1
+1635,DHAP,negative,Cholecalciferol,0,0
+1636,DHAP,negative,Cholesterol,0,0
+1637,DHAP,negative,Cholesteryl acetate,0,0
+1638,DHAP,negative,Cholesteryl ester 17:0,0,0
+1639,DHAP,negative,Cholic acid,1,1
+1640,DHAP,negative,Choline,0,0
+1641,DHAP,negative,Citric acid,1,1
+1642,DHAP,negative,Citrulline,0,1
+1643,DHAP,negative,Coenzyme A,1,1
+1644,DHAP,negative,Creatine,1,1
+1645,DHAP,negative,Creatinine,0,0
+1646,DHAP,negative,Cyclic adenosine monophosphate,1,0
+1647,DHAP,negative,Cysteine,1,0
+1648,DHAP,negative,Cystine,0,1
+1649,DHAP,negative,Cytidine,0,0
+1650,DHAP,negative,Cytidine monophosphate,0,0
+1651,DHAP,negative,Cytosine,0,1
+1652,DHAP,negative,Dihydroxyacetone,0,1
+1653,DHAP,negative,Dihydroxyacetone phosphate,0,0
+1654,DHAP,negative,Dopamine,1,0
+1655,DHAP,negative,Epinephrine,1,0
+1656,DHAP,negative,Estradiol,0,0
+1657,DHAP,negative,Flavin adenine dinucleotide,0,0
+1658,DHAP,negative,Flavin mononucleotide,0,1
+1659,DHAP,negative,Folic acid,0,0
+1660,DHAP,negative,"Fructose 1,6-bisphosphate",1,0
+1661,DHAP,negative,Fumaric acid,0,0
+1662,DHAP,negative,GM3 Ganglioside 18:0,1,1
+1663,DHAP,negative,GlcCer d18:1/18:0,1,1
+1664,DHAP,negative,Gluconic acid,1,1
+1665,DHAP,negative,Glucosamine,0,0
+1666,DHAP,negative,Glucosamine 6-phosphate,1,1
+1667,DHAP,negative,Glucose,1,0
+1668,DHAP,negative,Glucose 6-phosphate,0,0
+1669,DHAP,negative,Glucosyl cholesterol,1,1
+1670,DHAP,negative,Glutamic acid,1,0
+1671,DHAP,negative,Glutamine,1,0
+1672,DHAP,negative,Glutathione,1,1
+1673,DHAP,negative,Glycerol 3-phosphate,0,1
+1674,DHAP,negative,Glycerophosphocholine,0,0
+1675,DHAP,negative,Glycine,0,0
+1676,DHAP,negative,Guanine,0,0
+1677,DHAP,negative,Histamine,0,0
+1678,DHAP,negative,Histidine,1,0
+1679,DHAP,negative,Homocysteine,0,1
+1680,DHAP,negative,Hypoxanthine,1,0
+1681,DHAP,negative,Kynurenic acid,0,0
+1682,DHAP,negative,Kynurenine,0,0
+1683,DHAP,negative,L-Dopa,1,0
+1684,DHAP,negative,Lactic acid,0,0
+1685,DHAP,negative,Lyso PA 18:1,1,1
+1686,DHAP,negative,Lyso PC 15:0,1,0
+1687,DHAP,negative,Lyso PE 18:0,1,1
+1688,DHAP,negative,Lyso PG 16:0,1,1
+1689,DHAP,negative,Lyso PI 17:1,1,1
+1690,DHAP,negative,Lyso PS 17:1,1,1
+1691,DHAP,negative,MG 18:1,0,1
+1692,DHAP,negative,Malic acid,1,1
+1693,DHAP,negative,Malonic acid,1,0
+1694,DHAP,negative,Melatonin,0,0
+1695,DHAP,negative,Methionine,0,1
+1696,DHAP,negative,Mevalonic acid,1,1
+1697,DHAP,negative,Myo-inositol 1-phosphate,0,0
+1698,DHAP,negative,N-Acetylaspartic acid,1,1
+1699,DHAP,negative,N-Acetylaspartylglutamic acid,1,1
+1700,DHAP,negative,N-Acetylgalactosamine 6-phosphate,1,0
+1701,DHAP,negative,N-Acetylglucosamine,0,0
+1702,DHAP,negative,"N6,N6,N6-Trimethyllysine",0,1
+1703,DHAP,negative,Niacinamide,0,0
+1704,DHAP,negative,Nicotinamide adenine dinucleotide (NAD),0,0
+1705,DHAP,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+1706,DHAP,negative,Nicotinamide riboside,0,0
+1707,DHAP,negative,Nicotinamide ribotide,0,1
+1708,DHAP,negative,Nicotinic acid,1,1
+1709,DHAP,negative,Ornithine,0,1
+1710,DHAP,negative,Orotic acid,1,1
+1711,DHAP,negative,Oxalacetic acid,0,1
+1712,DHAP,negative,Oxidized glutathione,1,0
+1713,DHAP,negative,PA 16:0-18:1,1,1
+1714,DHAP,negative,PC (O) C16-18:1,1,1
+1715,DHAP,negative,PC 15:0-18:1,0,1
+1716,DHAP,negative,PE 18:0-20:4,1,1
+1717,DHAP,negative,PG 16:0-18:1,1,1
+1718,DHAP,negative,PI 16:0-18:1,1,1
+1719,DHAP,negative,PI(5)P 18:1,1,1
+1720,DHAP,negative,PS (POPS) 16:0-18:1,1,1
+1721,DHAP,negative,Palmitic acid,0,0
+1722,DHAP,negative,Palmitoyl-CoA,1,1
+1723,DHAP,negative,Pantetheine,1,1
+1724,DHAP,negative,Pantothenic acid,1,1
+1725,DHAP,negative,Phenylalanine,1,0
+1726,DHAP,negative,Phosphocreatine,0,1
+1727,DHAP,negative,Phosphoenolpyruvic acid,0,1
+1728,DHAP,negative,Phylloquinone,1,0
+1729,DHAP,negative,Proline,1,1
+1730,DHAP,negative,Propionylcarnitine,0,0
+1731,DHAP,negative,Prostaglandin E1,1,1
+1732,DHAP,negative,Putrescine,0,0
+1733,DHAP,negative,Pyridoxine,1,1
+1734,DHAP,negative,Pyruvic acid,0,0
+1735,DHAP,negative,Quinolinic acid,1,1
+1736,DHAP,negative,Retinoic acid,0,0
+1737,DHAP,negative,Riboflavin,1,1
+1738,DHAP,negative,Ribulose,0,1
+1739,DHAP,negative,Ribulose 5-phosphate,1,0
+1740,DHAP,negative,S-Adenosylhomocysteine,0,0
+1741,DHAP,negative,S-Adenosylmethionine,0,0
+1742,DHAP,negative,SM d18:1-16:0,1,1
+1743,DHAP,negative,Serine,0,1
+1744,DHAP,negative,Serotonin,0,0
+1745,DHAP,negative,Spermidine,0,0
+1746,DHAP,negative,Succinic acid,0,0
+1747,DHAP,negative,Sulfo GalCer 18:0(2S-OH),1,0
+1748,DHAP,negative,TG 15:0-18:1-15:0,0,0
+1749,DHAP,negative,Taurine,1,0
+1750,DHAP,negative,Taurocholic acid,1,0
+1751,DHAP,negative,Tetrahydrofolic acid,0,1
+1752,DHAP,negative,Thiamine,0,0
+1753,DHAP,negative,Thymine,0,0
+1754,DHAP,negative,Tryptophan,1,0
+1755,DHAP,negative,Tyrosine,0,1
+1756,DHAP,negative,Uracil,1,0
+1757,DHAP,negative,Ureidosuccinic acid,1,1
+1758,DHAP,negative,Uric acid,1,1
+1759,DHAP,negative,Uridine,0,0
+1760,DHAP,negative,Uridine diphosphate,0,0
+1761,DHAP,negative,Uridine diphosphate glucose,1,0
+1762,DHAP,negative,Uridine diphosphate glucuronic acid,1,0
+1763,DHAP,negative,Uridine diphosphate-N-acetylglucosamine,0,0
+1764,DHAP,negative,Urocanic acid,1,1
+1765,DHAP,negative,Valine,1,0
+1766,DHAP,negative,Xanthine,1,1
+1767,DHAP,negative,alpha-tocopherol,0,1
+1768,DHAP,negative,cis-Aconitic acid,1,1
+1769,DHAP,negative,gamma-Aminobutyric acid,0,0
+1770,DHAP,negative,myo-Inositol,0,1
+1771,DHAP,positive,2-Oxoglutaric acid,1,0
+1772,DHAP,positive,3-Hydroxyanthranilic acid,1,0
+1773,DHAP,positive,3-Hydroxymethylglutaric acid,1,1
+1774,DHAP,positive,3-Phosphoglyceric acid,0,0
+1775,DHAP,positive,"4,5-Dihydroorotic acid",1,0
+1776,DHAP,positive,4-Hydroxyproline,1,1
+1777,DHAP,positive,5-Hydroxyindoleacetic acid,1,1
+1778,DHAP,positive,6-Phosphogluconic acid,0,0
+1779,DHAP,positive,Acetoacetic acid,0,0
+1780,DHAP,positive,Acetyl-CoA,0,1
+1781,DHAP,positive,Acetylcarnitine,1,1
+1782,DHAP,positive,Acetylcholine,1,1
+1783,DHAP,positive,Adenine,1,1
+1784,DHAP,positive,Adenosine diphosphate,0,0
+1785,DHAP,positive,Adenosine monophosphate,1,0
+1786,DHAP,positive,Agmatine,1,1
+1787,DHAP,positive,Arginine,1,1
+1788,DHAP,positive,Argininosuccinic acid,1,1
+1789,DHAP,positive,Ascorbic acid,0,0
+1790,DHAP,positive,Asparagine,1,1
+1791,DHAP,positive,Aspartic acid,0,0
+1792,DHAP,positive,Biotin,1,1
+1793,DHAP,positive,Butyric acid,0,0
+1794,DHAP,positive,CAR 16:0,1,1
+1795,DHAP,positive,Cardiolipin 18:1,1,1
+1796,DHAP,positive,Carnitine,1,1
+1797,DHAP,positive,Carnosine,1,1
+1798,DHAP,positive,Cer d8:1/22:0 Cer,1,1
+1799,DHAP,positive,Cholecalciferol,0,0
+1800,DHAP,positive,Cholesterol,0,0
+1801,DHAP,positive,Cholesteryl acetate,0,1
+1802,DHAP,positive,Cholesteryl ester 17:0,1,0
+1803,DHAP,positive,Cholic acid,1,1
+1804,DHAP,positive,Choline,1,1
+1805,DHAP,positive,Citric acid,1,0
+1806,DHAP,positive,Citrulline,1,1
+1807,DHAP,positive,Coenzyme A,1,0
+1808,DHAP,positive,Creatine,1,1
+1809,DHAP,positive,Creatinine,1,1
+1810,DHAP,positive,Cyclic adenosine monophosphate,1,0
+1811,DHAP,positive,Cysteine,1,1
+1812,DHAP,positive,Cystine,0,1
+1813,DHAP,positive,Cytidine,1,0
+1814,DHAP,positive,Cytidine monophosphate,0,0
+1815,DHAP,positive,Cytosine,1,1
+1816,DHAP,positive,DG 18:0-22:6,1,1
+1817,DHAP,positive,Dihydroxyacetone,0,1
+1818,DHAP,positive,Dihydroxyacetone phosphate,1,0
+1819,DHAP,positive,Dopamine,1,1
+1820,DHAP,positive,Epinephrine,1,1
+1821,DHAP,positive,Estradiol,1,1
+1822,DHAP,positive,Flavin adenine dinucleotide,1,0
+1823,DHAP,positive,Flavin mononucleotide,0,1
+1824,DHAP,positive,Folic acid,1,0
+1825,DHAP,positive,"Fructose 1,6-bisphosphate",1,0
+1826,DHAP,positive,Fumaric acid,0,0
+1827,DHAP,positive,GM3 Ganglioside 18:0,1,0
+1828,DHAP,positive,GlcCer d18:1/18:0,1,1
+1829,DHAP,positive,Gluconic acid,0,0
+1830,DHAP,positive,Glucosamine,1,1
+1831,DHAP,positive,Glucosamine 6-phosphate,1,0
+1832,DHAP,positive,Glucose,1,0
+1833,DHAP,positive,Glucose 6-phosphate,0,0
+1834,DHAP,positive,Glucosyl cholesterol,1,1
+1835,DHAP,positive,Glutamic acid,0,0
+1836,DHAP,positive,Glutamine,1,1
+1837,DHAP,positive,Glutathione,1,1
+1838,DHAP,positive,Glycerol 3-phosphate,0,0
+1839,DHAP,positive,Glycerophosphocholine,1,1
+1840,DHAP,positive,Glycine,1,1
+1841,DHAP,positive,Guanine,0,1
+1842,DHAP,positive,Histamine,1,1
+1843,DHAP,positive,Histidine,1,1
+1844,DHAP,positive,Homocysteine,1,1
+1845,DHAP,positive,Hypoxanthine,1,1
+1846,DHAP,positive,Kynurenic acid,1,1
+1847,DHAP,positive,Kynurenine,1,1
+1848,DHAP,positive,L-Dopa,1,1
+1849,DHAP,positive,Lactic acid,0,0
+1850,DHAP,positive,Lyso PA 18:1,1,1
+1851,DHAP,positive,Lyso PC 15:0,1,1
+1852,DHAP,positive,Lyso PE 18:0,1,1
+1853,DHAP,positive,Lyso PG 16:0,1,1
+1854,DHAP,positive,Lyso PI 17:1,1,1
+1855,DHAP,positive,Lyso PS 17:1,1,1
+1856,DHAP,positive,MG 18:1,1,1
+1857,DHAP,positive,Malic acid,1,0
+1858,DHAP,positive,Malonic acid,1,0
+1859,DHAP,positive,Melatonin,1,1
+1860,DHAP,positive,Methionine,1,1
+1861,DHAP,positive,Mevalonic acid,1,1
+1862,DHAP,positive,Myo-inositol 1-phosphate,1,0
+1863,DHAP,positive,N-Acetylaspartic acid,1,1
+1864,DHAP,positive,N-Acetylaspartylglutamic acid,1,1
+1865,DHAP,positive,N-Acetylgalactosamine 6-phosphate,1,0
+1866,DHAP,positive,N-Acetylglucosamine,1,1
+1867,DHAP,positive,"N6,N6,N6-Trimethyllysine",1,1
+1868,DHAP,positive,Niacinamide,1,1
+1869,DHAP,positive,Nicotinamide adenine dinucleotide (NAD),0,1
+1870,DHAP,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+1871,DHAP,positive,Nicotinamide riboside,1,1
+1872,DHAP,positive,Nicotinamide ribotide,1,0
+1873,DHAP,positive,Nicotinic acid,1,1
+1874,DHAP,positive,Ornithine,1,1
+1875,DHAP,positive,Orotic acid,0,0
+1876,DHAP,positive,Oxalacetic acid,0,1
+1877,DHAP,positive,Oxidized glutathione,1,1
+1878,DHAP,positive,PA 16:0-18:1,1,1
+1879,DHAP,positive,PC (O) C16-18:1,1,1
+1880,DHAP,positive,PC 15:0-18:1,1,1
+1881,DHAP,positive,PE 18:0-20:4,1,1
+1882,DHAP,positive,PG 16:0-18:1,1,1
+1883,DHAP,positive,PI 16:0-18:1,1,1
+1884,DHAP,positive,PI(5)P 18:1,1,1
+1885,DHAP,positive,PS (POPS) 16:0-18:1,1,1
+1886,DHAP,positive,Palmitic acid,0,1
+1887,DHAP,positive,Palmitoyl-CoA,1,1
+1888,DHAP,positive,Pantetheine,1,1
+1889,DHAP,positive,Pantothenic acid,1,1
+1890,DHAP,positive,Phenylalanine,1,1
+1891,DHAP,positive,Phosphocreatine,0,0
+1892,DHAP,positive,Phosphoenolpyruvic acid,0,1
+1893,DHAP,positive,Phylloquinone,1,1
+1894,DHAP,positive,Proline,1,1
+1895,DHAP,positive,Propionylcarnitine,1,1
+1896,DHAP,positive,Prostaglandin E1,1,1
+1897,DHAP,positive,Putrescine,1,1
+1898,DHAP,positive,Pyridoxine,1,1
+1899,DHAP,positive,Pyruvic acid,0,0
+1900,DHAP,positive,Quinolinic acid,0,0
+1901,DHAP,positive,Retinoic acid,1,0
+1902,DHAP,positive,Riboflavin,1,1
+1903,DHAP,positive,Ribulose,0,0
+1904,DHAP,positive,Ribulose 5-phosphate,0,0
+1905,DHAP,positive,S-Adenosylhomocysteine,1,1
+1906,DHAP,positive,S-Adenosylmethionine,1,1
+1907,DHAP,positive,SM d18:1-16:0,1,1
+1908,DHAP,positive,Serine,0,1
+1909,DHAP,positive,Serotonin,1,1
+1910,DHAP,positive,Spermidine,1,1
+1911,DHAP,positive,Succinic acid,1,0
+1912,DHAP,positive,Sulfo GalCer 18:0(2S-OH),1,0
+1913,DHAP,positive,TG 15:0-18:1-15:0,1,1
+1914,DHAP,positive,Taurine,1,0
+1915,DHAP,positive,Taurocholic acid,1,1
+1916,DHAP,positive,Tetrahydrofolic acid,1,1
+1917,DHAP,positive,Thiamine,1,1
+1918,DHAP,positive,Thymine,1,0
+1919,DHAP,positive,Tryptophan,1,1
+1920,DHAP,positive,Tyrosine,0,1
+1921,DHAP,positive,Uracil,1,0
+1922,DHAP,positive,Ureidosuccinic acid,1,0
+1923,DHAP,positive,Uric acid,0,1
+1924,DHAP,positive,Uridine,0,1
+1925,DHAP,positive,Uridine diphosphate,0,0
+1926,DHAP,positive,Uridine diphosphate glucose,0,0
+1927,DHAP,positive,Uridine diphosphate glucuronic acid,0,0
+1928,DHAP,positive,Uridine diphosphate-N-acetylglucosamine,0,0
+1929,DHAP,positive,Urocanic acid,1,1
+1930,DHAP,positive,Valine,1,1
+1931,DHAP,positive,Xanthine,1,1
+1932,DHAP,positive,alpha-tocopherol,1,0
+1933,DHAP,positive,cis-Aconitic acid,1,0
+1934,DHAP,positive,gamma-Aminobutyric acid,1,1
+1935,DHAP,positive,myo-Inositol,1,0
+1936,DHB,negative,2-Oxoglutaric acid,1,1
+1937,DHB,negative,3-Hydroxyanthranilic acid,0,0
+1938,DHB,negative,3-Hydroxymethylglutaric acid,0,1
+1939,DHB,negative,3-Phosphoglyceric acid,1,1
+1940,DHB,negative,"4,5-Dihydroorotic acid",1,1
+1941,DHB,negative,4-Hydroxyproline,0,0
+1942,DHB,negative,5-Hydroxyindoleacetic acid,0,0
+1943,DHB,negative,6-Phosphogluconic acid,1,1
+1944,DHB,negative,Acetoacetic acid,0,0
+1945,DHB,negative,Acetyl-CoA,1,1
+1946,DHB,negative,Acetylcarnitine,0,0
+1947,DHB,negative,Acetylcholine,0,0
+1948,DHB,negative,Adenine,0,1
+1949,DHB,negative,Adenosine diphosphate,1,1
+1950,DHB,negative,Adenosine monophosphate,1,1
+1951,DHB,negative,Agmatine,0,0
+1952,DHB,negative,Arginine,0,0
+1953,DHB,negative,Argininosuccinic acid,0,1
+1954,DHB,negative,Ascorbic acid,1,1
+1955,DHB,negative,Asparagine,0,0
+1956,DHB,negative,Aspartic acid,1,1
+1957,DHB,negative,Biotin,0,0
+1958,DHB,negative,Butyric acid,0,0
+1959,DHB,negative,Cardiolipin 18:1,1,1
+1960,DHB,negative,Carnitine,0,0
+1961,DHB,negative,Carnosine,1,0
+1962,DHB,negative,Cholesteryl acetate,0,0
+1963,DHB,negative,Cholic acid,0,0
+1964,DHB,negative,Choline,0,0
+1965,DHB,negative,Citric acid,1,1
+1966,DHB,negative,Citrulline,0,0
+1967,DHB,negative,Coenzyme A,1,1
+1968,DHB,negative,Creatine,0,0
+1969,DHB,negative,Creatinine,1,0
+1970,DHB,negative,Cyclic adenosine monophosphate,1,1
+1971,DHB,negative,Cysteine,0,0
+1972,DHB,negative,Cystine,0,0
+1973,DHB,negative,Cytidine,0,0
+1974,DHB,negative,Cytidine monophosphate,0,1
+1975,DHB,negative,Cytosine,0,1
+1976,DHB,negative,DG 18:0-22:6,0,0
+1977,DHB,negative,Dihydroxyacetone,0,1
+1978,DHB,negative,Dihydroxyacetone phosphate,1,0
+1979,DHB,negative,Dopamine,0,0
+1980,DHB,negative,Epinephrine,0,0
+1981,DHB,negative,Estradiol,0,0
+1982,DHB,negative,Flavin adenine dinucleotide,1,1
+1983,DHB,negative,Flavin mononucleotide,0,1
+1984,DHB,negative,Folic acid,0,1
+1985,DHB,negative,"Fructose 1,6-bisphosphate",1,1
+1986,DHB,negative,Fumaric acid,1,1
+1987,DHB,negative,GM3 Ganglioside 18:0,1,1
+1988,DHB,negative,Gluconic acid,1,0
+1989,DHB,negative,Glucosamine,0,0
+1990,DHB,negative,Glucosamine 6-phosphate,1,0
+1991,DHB,negative,Glucose,0,0
+1992,DHB,negative,Glucose 6-phosphate,0,1
+1993,DHB,negative,Glutamic acid,1,1
+1994,DHB,negative,Glutamine,0,0
+1995,DHB,negative,Glutathione,1,0
+1996,DHB,negative,Glycerol 3-phosphate,0,1
+1997,DHB,negative,Glycerophosphocholine,0,0
+1998,DHB,negative,Glycine,0,0
+1999,DHB,negative,Guanine,0,0
+2000,DHB,negative,Histamine,0,0
+2001,DHB,negative,Histidine,0,0
+2002,DHB,negative,Homocysteine,0,0
+2003,DHB,negative,Hypoxanthine,1,0
+2004,DHB,negative,Kynurenic acid,0,0
+2005,DHB,negative,Kynurenine,0,0
+2006,DHB,negative,L-Dopa,0,0
+2007,DHB,negative,Lactic acid,0,0
+2008,DHB,negative,Lyso PC 15:0,0,0
+2009,DHB,negative,Lyso PE 18:0,1,0
+2010,DHB,negative,Lyso PG 16:0,1,1
+2011,DHB,negative,Lyso PI 17:1,1,1
+2012,DHB,negative,Lyso PS 17:1,1,1
+2013,DHB,negative,MG 18:1,0,0
+2014,DHB,negative,Malic acid,1,1
+2015,DHB,negative,Malonic acid,1,0
+2016,DHB,negative,Melatonin,0,0
+2017,DHB,negative,Methionine,0,0
+2018,DHB,negative,Mevalonic acid,0,0
+2019,DHB,negative,Myo-inositol 1-phosphate,1,1
+2020,DHB,negative,N-Acetylaspartic acid,1,1
+2021,DHB,negative,N-Acetylaspartylglutamic acid,1,1
+2022,DHB,negative,N-Acetylgalactosamine 6-phosphate,1,0
+2023,DHB,negative,N-Acetylglucosamine,0,0
+2024,DHB,negative,"N6,N6,N6-Trimethyllysine",0,0
+2025,DHB,negative,Niacinamide,0,1
+2026,DHB,negative,Nicotinamide adenine dinucleotide (NAD),1,1
+2027,DHB,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+2028,DHB,negative,Nicotinamide riboside,0,0
+2029,DHB,negative,Nicotinamide ribotide,0,1
+2030,DHB,negative,Nicotinic acid,0,1
+2031,DHB,negative,Ornithine,0,0
+2032,DHB,negative,Orotic acid,1,1
+2033,DHB,negative,Oxalacetic acid,0,1
+2034,DHB,negative,Oxidized glutathione,1,1
+2035,DHB,negative,PA 16:0-18:1,1,0
+2036,DHB,negative,PC (O) C16-18:1,0,0
+2037,DHB,negative,PE 18:0-20:4,0,1
+2038,DHB,negative,PG 16:0-18:1,1,1
+2039,DHB,negative,PI 16:0-18:1,1,1
+2040,DHB,negative,PI(5)P 18:1,1,1
+2041,DHB,negative,PS (POPS) 16:0-18:1,1,1
+2042,DHB,negative,Palmitic acid,0,0
+2043,DHB,negative,Palmitoyl-CoA,1,1
+2044,DHB,negative,Pantetheine,0,0
+2045,DHB,negative,Pantothenic acid,0,0
+2046,DHB,negative,Phenylalanine,0,0
+2047,DHB,negative,Phosphocreatine,0,1
+2048,DHB,negative,Phosphoenolpyruvic acid,1,1
+2049,DHB,negative,Phylloquinone,1,0
+2050,DHB,negative,Proline,0,0
+2051,DHB,negative,Propionylcarnitine,0,0
+2052,DHB,negative,Putrescine,0,0
+2053,DHB,negative,Pyruvic acid,0,0
+2054,DHB,negative,Quinolinic acid,1,1
+2055,DHB,negative,Retinoic acid,0,0
+2056,DHB,negative,Riboflavin,1,0
+2057,DHB,negative,Ribulose,0,0
+2058,DHB,negative,Ribulose 5-phosphate,1,1
+2059,DHB,negative,S-Adenosylhomocysteine,1,0
+2060,DHB,negative,S-Adenosylmethionine,0,1
+2061,DHB,negative,Serine,0,0
+2062,DHB,negative,Serotonin,0,0
+2063,DHB,negative,Spermidine,0,0
+2064,DHB,negative,Succinic acid,1,1
+2065,DHB,negative,Sulfo GalCer 18:0(2S-OH),1,0
+2066,DHB,negative,TG 15:0-18:1-15:0,0,1
+2067,DHB,negative,Taurine,1,0
+2068,DHB,negative,Taurocholic acid,1,0
+2069,DHB,negative,Tetrahydrofolic acid,0,0
+2070,DHB,negative,Thiamine,0,0
+2071,DHB,negative,Thymine,0,0
+2072,DHB,negative,Tryptophan,0,0
+2073,DHB,negative,Tyrosine,0,0
+2074,DHB,negative,Uracil,0,0
+2075,DHB,negative,Ureidosuccinic acid,1,1
+2076,DHB,negative,Uric acid,1,1
+2077,DHB,negative,Uridine,0,0
+2078,DHB,negative,Uridine diphosphate,1,1
+2079,DHB,negative,Uridine diphosphate glucose,1,1
+2080,DHB,negative,Uridine diphosphate glucuronic acid,1,1
+2081,DHB,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+2082,DHB,negative,Urocanic acid,1,0
+2083,DHB,negative,Valine,0,0
+2084,DHB,negative,Xanthine,1,0
+2085,DHB,negative,alpha-tocopherol,0,0
+2086,DHB,negative,cis-Aconitic acid,1,1
+2087,DHB,negative,gamma-Aminobutyric acid,0,0
+2088,DHB,negative,myo-Inositol,0,0
+2089,DHB,positive,2-Oxoglutaric acid,1,1
+2090,DHB,positive,3-Hydroxyanthranilic acid,1,1
+2091,DHB,positive,3-Hydroxymethylglutaric acid,0,1
+2092,DHB,positive,3-Phosphoglyceric acid,1,1
+2093,DHB,positive,"4,5-Dihydroorotic acid",1,0
+2094,DHB,positive,4-Hydroxyproline,1,1
+2095,DHB,positive,5-Hydroxyindoleacetic acid,1,1
+2096,DHB,positive,6-Phosphogluconic acid,1,1
+2097,DHB,positive,Acetoacetic acid,0,0
+2098,DHB,positive,Acetyl-CoA,1,1
+2099,DHB,positive,Acetylcarnitine,1,1
+2100,DHB,positive,Acetylcholine,1,0
+2101,DHB,positive,Adenine,1,1
+2102,DHB,positive,Adenosine diphosphate,1,1
+2103,DHB,positive,Adenosine monophosphate,1,1
+2104,DHB,positive,Agmatine,1,1
+2105,DHB,positive,Arginine,1,1
+2106,DHB,positive,Argininosuccinic acid,1,1
+2107,DHB,positive,Ascorbic acid,1,1
+2108,DHB,positive,Asparagine,1,1
+2109,DHB,positive,Aspartic acid,1,1
+2110,DHB,positive,Biotin,1,1
+2111,DHB,positive,Butyric acid,0,0
+2112,DHB,positive,CAR 16:0,1,1
+2113,DHB,positive,Cardiolipin 18:1,1,1
+2114,DHB,positive,Carnitine,1,1
+2115,DHB,positive,Carnosine,1,1
+2116,DHB,positive,Cer d8:1/22:0 Cer,1,1
+2117,DHB,positive,Cholecalciferol,1,1
+2118,DHB,positive,Cholesterol,0,1
+2119,DHB,positive,Cholesteryl acetate,0,1
+2120,DHB,positive,Cholesteryl ester 17:0,1,0
+2121,DHB,positive,Cholic acid,1,1
+2122,DHB,positive,Choline,1,1
+2123,DHB,positive,Citric acid,1,1
+2124,DHB,positive,Citrulline,1,1
+2125,DHB,positive,Coenzyme A,1,1
+2126,DHB,positive,Creatine,1,1
+2127,DHB,positive,Creatinine,1,1
+2128,DHB,positive,Cyclic adenosine monophosphate,1,1
+2129,DHB,positive,Cysteine,1,1
+2130,DHB,positive,Cystine,1,1
+2131,DHB,positive,Cytidine,1,1
+2132,DHB,positive,Cytidine monophosphate,1,1
+2133,DHB,positive,Cytosine,1,1
+2134,DHB,positive,DG 18:0-22:6,1,1
+2135,DHB,positive,Dihydroxyacetone,0,0
+2136,DHB,positive,Dihydroxyacetone phosphate,1,0
+2137,DHB,positive,Dopamine,1,1
+2138,DHB,positive,Epinephrine,1,1
+2139,DHB,positive,Estradiol,1,1
+2140,DHB,positive,Flavin adenine dinucleotide,1,1
+2141,DHB,positive,Flavin mononucleotide,1,1
+2142,DHB,positive,Folic acid,1,1
+2143,DHB,positive,"Fructose 1,6-bisphosphate",1,1
+2144,DHB,positive,Fumaric acid,1,0
+2145,DHB,positive,GM3 Ganglioside 18:0,1,1
+2146,DHB,positive,GlcCer d18:1/18:0,1,1
+2147,DHB,positive,Gluconic acid,1,0
+2148,DHB,positive,Glucosamine,1,1
+2149,DHB,positive,Glucosamine 6-phosphate,1,1
+2150,DHB,positive,Glucose,0,0
+2151,DHB,positive,Glucose 6-phosphate,0,0
+2152,DHB,positive,Glucosyl cholesterol,1,1
+2153,DHB,positive,Glutamic acid,1,1
+2154,DHB,positive,Glutamine,1,1
+2155,DHB,positive,Glutathione,1,1
+2156,DHB,positive,Glycerol 3-phosphate,0,1
+2157,DHB,positive,Glycerophosphocholine,1,1
+2158,DHB,positive,Glycine,1,1
+2159,DHB,positive,Guanine,1,1
+2160,DHB,positive,Histamine,1,1
+2161,DHB,positive,Histidine,1,1
+2162,DHB,positive,Homocysteine,1,1
+2163,DHB,positive,Hypoxanthine,1,1
+2164,DHB,positive,Kynurenic acid,1,0
+2165,DHB,positive,Kynurenine,1,1
+2166,DHB,positive,L-Dopa,1,1
+2167,DHB,positive,Lactic acid,0,1
+2168,DHB,positive,Lyso PA 18:1,1,1
+2169,DHB,positive,Lyso PC 15:0,1,1
+2170,DHB,positive,Lyso PE 18:0,1,1
+2171,DHB,positive,Lyso PG 16:0,1,1
+2172,DHB,positive,Lyso PI 17:1,1,1
+2173,DHB,positive,Lyso PS 17:1,1,1
+2174,DHB,positive,MG 18:1,1,1
+2175,DHB,positive,Malic acid,1,0
+2176,DHB,positive,Malonic acid,1,0
+2177,DHB,positive,Melatonin,1,1
+2178,DHB,positive,Methionine,1,1
+2179,DHB,positive,Mevalonic acid,1,1
+2180,DHB,positive,Myo-inositol 1-phosphate,0,0
+2181,DHB,positive,N-Acetylaspartic acid,1,0
+2182,DHB,positive,N-Acetylaspartylglutamic acid,1,1
+2183,DHB,positive,N-Acetylgalactosamine 6-phosphate,1,1
+2184,DHB,positive,N-Acetylglucosamine,1,1
+2185,DHB,positive,"N6,N6,N6-Trimethyllysine",1,1
+2186,DHB,positive,Niacinamide,1,1
+2187,DHB,positive,Nicotinamide adenine dinucleotide (NAD),1,1
+2188,DHB,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+2189,DHB,positive,Nicotinamide riboside,1,1
+2190,DHB,positive,Nicotinamide ribotide,1,1
+2191,DHB,positive,Nicotinic acid,1,1
+2192,DHB,positive,Ornithine,1,1
+2193,DHB,positive,Orotic acid,0,1
+2194,DHB,positive,Oxalacetic acid,0,1
+2195,DHB,positive,Oxidized glutathione,1,1
+2196,DHB,positive,PA 16:0-18:1,1,1
+2197,DHB,positive,PC (O) C16-18:1,1,1
+2198,DHB,positive,PC 15:0-18:1,1,1
+2199,DHB,positive,PE 18:0-20:4,1,1
+2200,DHB,positive,PG 16:0-18:1,1,1
+2201,DHB,positive,PI 16:0-18:1,1,1
+2202,DHB,positive,PI(5)P 18:1,1,1
+2203,DHB,positive,PS (POPS) 16:0-18:1,1,1
+2204,DHB,positive,Palmitic acid,0,1
+2205,DHB,positive,Palmitoyl-CoA,1,1
+2206,DHB,positive,Pantetheine,1,1
+2207,DHB,positive,Pantothenic acid,1,1
+2208,DHB,positive,Phenylalanine,1,1
+2209,DHB,positive,Phosphocreatine,1,1
+2210,DHB,positive,Phosphoenolpyruvic acid,1,1
+2211,DHB,positive,Phylloquinone,1,0
+2212,DHB,positive,Proline,1,1
+2213,DHB,positive,Propionylcarnitine,1,1
+2214,DHB,positive,Prostaglandin E1,1,1
+2215,DHB,positive,Putrescine,1,1
+2216,DHB,positive,Pyridoxine,1,1
+2217,DHB,positive,Pyruvic acid,0,0
+2218,DHB,positive,Quinolinic acid,1,1
+2219,DHB,positive,Retinoic acid,1,0
+2220,DHB,positive,Riboflavin,1,1
+2221,DHB,positive,Ribulose,0,0
+2222,DHB,positive,Ribulose 5-phosphate,1,0
+2223,DHB,positive,S-Adenosylhomocysteine,1,1
+2224,DHB,positive,S-Adenosylmethionine,1,1
+2225,DHB,positive,SM d18:1-16:0,1,1
+2226,DHB,positive,Serine,1,1
+2227,DHB,positive,Serotonin,1,1
+2228,DHB,positive,Spermidine,1,1
+2229,DHB,positive,Succinic acid,1,1
+2230,DHB,positive,Sulfo GalCer 18:0(2S-OH),1,1
+2231,DHB,positive,TG 15:0-18:1-15:0,1,1
+2232,DHB,positive,Taurine,1,1
+2233,DHB,positive,Taurocholic acid,1,1
+2234,DHB,positive,Tetrahydrofolic acid,1,1
+2235,DHB,positive,Thiamine,1,1
+2236,DHB,positive,Thymine,1,1
+2237,DHB,positive,Tryptophan,1,1
+2238,DHB,positive,Tyrosine,1,1
+2239,DHB,positive,Uracil,1,1
+2240,DHB,positive,Ureidosuccinic acid,1,1
+2241,DHB,positive,Uric acid,1,1
+2242,DHB,positive,Uridine,1,1
+2243,DHB,positive,Uridine diphosphate,1,1
+2244,DHB,positive,Uridine diphosphate glucose,1,1
+2245,DHB,positive,Uridine diphosphate glucuronic acid,1,1
+2246,DHB,positive,Uridine diphosphate-N-acetylglucosamine,1,1
+2247,DHB,positive,Urocanic acid,1,1
+2248,DHB,positive,Valine,1,1
+2249,DHB,positive,Xanthine,1,1
+2250,DHB,positive,alpha-tocopherol,1,1
+2251,DHB,positive,cis-Aconitic acid,1,1
+2252,DHB,positive,gamma-Aminobutyric acid,1,1
+2253,DHB,positive,myo-Inositol,0,0
+2254,MAPS,negative,2-Oxoglutaric acid,1,0
+2255,MAPS,negative,3-Hydroxyanthranilic acid,1,0
+2256,MAPS,negative,3-Hydroxymethylglutaric acid,1,1
+2257,MAPS,negative,3-Phosphoglyceric acid,0,0
+2258,MAPS,negative,"4,5-Dihydroorotic acid",0,1
+2259,MAPS,negative,4-Hydroxyproline,0,0
+2260,MAPS,negative,5-Hydroxyindoleacetic acid,0,1
+2261,MAPS,negative,6-Phosphogluconic acid,0,0
+2262,MAPS,negative,Acetoacetic acid,0,0
+2263,MAPS,negative,Acetyl-CoA,0,0
+2264,MAPS,negative,Acetylcarnitine,0,0
+2265,MAPS,negative,Acetylcholine,0,0
+2266,MAPS,negative,Adenine,1,0
+2267,MAPS,negative,Adenosine diphosphate,0,0
+2268,MAPS,negative,Adenosine monophosphate,0,0
+2269,MAPS,negative,Agmatine,0,0
+2270,MAPS,negative,Arginine,0,0
+2271,MAPS,negative,Argininosuccinic acid,0,0
+2272,MAPS,negative,Ascorbic acid,0,0
+2273,MAPS,negative,Asparagine,0,0
+2274,MAPS,negative,Aspartic acid,0,0
+2275,MAPS,negative,Biotin,0,1
+2276,MAPS,negative,Butyric acid,0,0
+2277,MAPS,negative,CAR 16:0,0,0
+2278,MAPS,negative,Cardiolipin 18:1,1,1
+2279,MAPS,negative,Carnitine,0,0
+2280,MAPS,negative,Carnosine,0,0
+2281,MAPS,negative,Cer d8:1/22:0 Cer,1,0
+2282,MAPS,negative,Cholecalciferol,0,0
+2283,MAPS,negative,Cholesterol,0,0
+2284,MAPS,negative,Cholesteryl acetate,0,0
+2285,MAPS,negative,Cholic acid,1,1
+2286,MAPS,negative,Choline,0,0
+2287,MAPS,negative,Citric acid,0,0
+2288,MAPS,negative,Citrulline,0,0
+2289,MAPS,negative,Coenzyme A,0,0
+2290,MAPS,negative,Creatine,0,0
+2291,MAPS,negative,Creatinine,0,0
+2292,MAPS,negative,Cyclic adenosine monophosphate,0,0
+2293,MAPS,negative,Cysteine,1,0
+2294,MAPS,negative,Cystine,0,0
+2295,MAPS,negative,Cytidine,0,0
+2296,MAPS,negative,Cytidine monophosphate,0,0
+2297,MAPS,negative,Cytosine,0,1
+2298,MAPS,negative,Dihydroxyacetone,0,1
+2299,MAPS,negative,Dihydroxyacetone phosphate,0,0
+2300,MAPS,negative,Dopamine,0,0
+2301,MAPS,negative,Epinephrine,0,0
+2302,MAPS,negative,Estradiol,0,0
+2303,MAPS,negative,Flavin adenine dinucleotide,0,0
+2304,MAPS,negative,Flavin mononucleotide,0,1
+2305,MAPS,negative,Folic acid,0,0
+2306,MAPS,negative,"Fructose 1,6-bisphosphate",0,0
+2307,MAPS,negative,Fumaric acid,0,0
+2308,MAPS,negative,GM3 Ganglioside 18:0,0,0
+2309,MAPS,negative,GlcCer d18:1/18:0,1,0
+2310,MAPS,negative,Gluconic acid,0,0
+2311,MAPS,negative,Glucosamine,0,0
+2312,MAPS,negative,Glucosamine 6-phosphate,0,0
+2313,MAPS,negative,Glucose,0,0
+2314,MAPS,negative,Glucose 6-phosphate,0,0
+2315,MAPS,negative,Glucosyl cholesterol,1,1
+2316,MAPS,negative,Glutamic acid,0,0
+2317,MAPS,negative,Glutamine,0,0
+2318,MAPS,negative,Glutathione,0,0
+2319,MAPS,negative,Glycerol 3-phosphate,0,0
+2320,MAPS,negative,Glycerophosphocholine,0,1
+2321,MAPS,negative,Glycine,0,0
+2322,MAPS,negative,Guanine,0,0
+2323,MAPS,negative,Histamine,0,0
+2324,MAPS,negative,Histidine,0,0
+2325,MAPS,negative,Homocysteine,0,1
+2326,MAPS,negative,Hypoxanthine,0,1
+2327,MAPS,negative,Kynurenic acid,1,0
+2328,MAPS,negative,Kynurenine,1,0
+2329,MAPS,negative,L-Dopa,0,0
+2330,MAPS,negative,Lactic acid,0,0
+2331,MAPS,negative,Lyso PA 18:1,1,1
+2332,MAPS,negative,Lyso PC 15:0,0,1
+2333,MAPS,negative,Lyso PE 18:0,1,1
+2334,MAPS,negative,Lyso PG 16:0,1,1
+2335,MAPS,negative,Lyso PI 17:1,1,1
+2336,MAPS,negative,Lyso PS 17:1,1,1
+2337,MAPS,negative,MG 18:1,0,0
+2338,MAPS,negative,Malic acid,1,0
+2339,MAPS,negative,Malonic acid,0,0
+2340,MAPS,negative,Melatonin,0,0
+2341,MAPS,negative,Methionine,0,0
+2342,MAPS,negative,Mevalonic acid,0,1
+2343,MAPS,negative,Myo-inositol 1-phosphate,0,0
+2344,MAPS,negative,N-Acetylaspartic acid,1,1
+2345,MAPS,negative,N-Acetylaspartylglutamic acid,0,0
+2346,MAPS,negative,N-Acetylgalactosamine 6-phosphate,0,0
+2347,MAPS,negative,N-Acetylglucosamine,0,0
+2348,MAPS,negative,"N6,N6,N6-Trimethyllysine",0,0
+2349,MAPS,negative,Niacinamide,0,0
+2350,MAPS,negative,Nicotinamide adenine dinucleotide (NAD),0,0
+2351,MAPS,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+2352,MAPS,negative,Nicotinamide riboside,0,0
+2353,MAPS,negative,Nicotinamide ribotide,0,0
+2354,MAPS,negative,Nicotinic acid,0,0
+2355,MAPS,negative,Ornithine,0,0
+2356,MAPS,negative,Orotic acid,0,0
+2357,MAPS,negative,Oxalacetic acid,0,1
+2358,MAPS,negative,Oxidized glutathione,0,0
+2359,MAPS,negative,PA 16:0-18:1,1,1
+2360,MAPS,negative,PE 18:0-20:4,1,1
+2361,MAPS,negative,PG 16:0-18:1,1,1
+2362,MAPS,negative,PI 16:0-18:1,1,1
+2363,MAPS,negative,PI(5)P 18:1,1,1
+2364,MAPS,negative,PS (POPS) 16:0-18:1,1,1
+2365,MAPS,negative,Palmitic acid,0,0
+2366,MAPS,negative,Palmitoyl-CoA,1,0
+2367,MAPS,negative,Pantetheine,0,1
+2368,MAPS,negative,Pantothenic acid,1,1
+2369,MAPS,negative,Phenylalanine,1,0
+2370,MAPS,negative,Phosphocreatine,0,0
+2371,MAPS,negative,Phosphoenolpyruvic acid,1,1
+2372,MAPS,negative,Phylloquinone,0,0
+2373,MAPS,negative,Proline,0,0
+2374,MAPS,negative,Propionylcarnitine,0,0
+2375,MAPS,negative,Prostaglandin E1,1,1
+2376,MAPS,negative,Putrescine,0,0
+2377,MAPS,negative,Pyridoxine,0,0
+2378,MAPS,negative,Pyruvic acid,0,0
+2379,MAPS,negative,Quinolinic acid,0,1
+2380,MAPS,negative,Retinoic acid,0,0
+2381,MAPS,negative,Riboflavin,0,0
+2382,MAPS,negative,Ribulose,0,0
+2383,MAPS,negative,Ribulose 5-phosphate,0,0
+2384,MAPS,negative,S-Adenosylhomocysteine,0,0
+2385,MAPS,negative,S-Adenosylmethionine,0,0
+2386,MAPS,negative,Serine,0,0
+2387,MAPS,negative,Serotonin,0,0
+2388,MAPS,negative,Spermidine,0,0
+2389,MAPS,negative,Succinic acid,0,1
+2390,MAPS,negative,Sulfo GalCer 18:0(2S-OH),1,1
+2391,MAPS,negative,Taurine,0,0
+2392,MAPS,negative,Taurocholic acid,1,1
+2393,MAPS,negative,Tetrahydrofolic acid,0,0
+2394,MAPS,negative,Thiamine,0,0
+2395,MAPS,negative,Thymine,1,0
+2396,MAPS,negative,Tryptophan,0,1
+2397,MAPS,negative,Tyrosine,0,1
+2398,MAPS,negative,Uracil,1,0
+2399,MAPS,negative,Ureidosuccinic acid,0,0
+2400,MAPS,negative,Uric acid,1,0
+2401,MAPS,negative,Uridine,0,0
+2402,MAPS,negative,Uridine diphosphate,0,0
+2403,MAPS,negative,Uridine diphosphate glucose,0,0
+2404,MAPS,negative,Uridine diphosphate glucuronic acid,0,0
+2405,MAPS,negative,Uridine diphosphate-N-acetylglucosamine,0,0
+2406,MAPS,negative,Urocanic acid,0,1
+2407,MAPS,negative,Valine,0,0
+2408,MAPS,negative,Xanthine,0,0
+2409,MAPS,negative,cis-Aconitic acid,1,1
+2410,MAPS,negative,gamma-Aminobutyric acid,0,0
+2411,MAPS,negative,myo-Inositol,0,0
+2412,MAPS,positive,2-Oxoglutaric acid,0,0
+2413,MAPS,positive,3-Hydroxyanthranilic acid,0,0
+2414,MAPS,positive,3-Hydroxymethylglutaric acid,1,0
+2415,MAPS,positive,3-Phosphoglyceric acid,0,0
+2416,MAPS,positive,"4,5-Dihydroorotic acid",0,0
+2417,MAPS,positive,4-Hydroxyproline,0,0
+2418,MAPS,positive,5-Hydroxyindoleacetic acid,0,0
+2419,MAPS,positive,6-Phosphogluconic acid,0,0
+2420,MAPS,positive,Acetoacetic acid,0,0
+2421,MAPS,positive,Acetyl-CoA,0,0
+2422,MAPS,positive,Acetylcarnitine,0,0
+2423,MAPS,positive,Acetylcholine,1,1
+2424,MAPS,positive,Adenine,0,0
+2425,MAPS,positive,Adenosine diphosphate,0,0
+2426,MAPS,positive,Adenosine monophosphate,0,0
+2427,MAPS,positive,Agmatine,0,0
+2428,MAPS,positive,Arginine,1,0
+2429,MAPS,positive,Argininosuccinic acid,0,0
+2430,MAPS,positive,Ascorbic acid,0,0
+2431,MAPS,positive,Asparagine,0,0
+2432,MAPS,positive,Aspartic acid,0,0
+2433,MAPS,positive,Biotin,0,0
+2434,MAPS,positive,Butyric acid,0,0
+2435,MAPS,positive,CAR 16:0,1,1
+2436,MAPS,positive,Cardiolipin 18:1,0,1
+2437,MAPS,positive,Carnitine,0,0
+2438,MAPS,positive,Carnosine,0,1
+2439,MAPS,positive,Cer d8:1/22:0 Cer,1,0
+2440,MAPS,positive,Cholesterol,0,0
+2441,MAPS,positive,Cholesteryl acetate,0,0
+2442,MAPS,positive,Cholic acid,1,1
+2443,MAPS,positive,Choline,1,0
+2444,MAPS,positive,Citric acid,0,1
+2445,MAPS,positive,Citrulline,0,0
+2446,MAPS,positive,Coenzyme A,0,0
+2447,MAPS,positive,Creatine,0,0
+2448,MAPS,positive,Creatinine,0,0
+2449,MAPS,positive,Cyclic adenosine monophosphate,0,0
+2450,MAPS,positive,Cysteine,0,0
+2451,MAPS,positive,Cystine,0,0
+2452,MAPS,positive,Cytidine,0,0
+2453,MAPS,positive,Cytidine monophosphate,0,0
+2454,MAPS,positive,Cytosine,0,0
+2455,MAPS,positive,Dihydroxyacetone,0,0
+2456,MAPS,positive,Dihydroxyacetone phosphate,0,0
+2457,MAPS,positive,Dopamine,0,0
+2458,MAPS,positive,Epinephrine,0,0
+2459,MAPS,positive,Estradiol,0,0
+2460,MAPS,positive,Flavin adenine dinucleotide,0,0
+2461,MAPS,positive,Flavin mononucleotide,1,0
+2462,MAPS,positive,Folic acid,0,0
+2463,MAPS,positive,"Fructose 1,6-bisphosphate",0,0
+2464,MAPS,positive,Fumaric acid,0,0
+2465,MAPS,positive,GM3 Ganglioside 18:0,0,0
+2466,MAPS,positive,GlcCer d18:1/18:0,1,1
+2467,MAPS,positive,Gluconic acid,0,0
+2468,MAPS,positive,Glucosamine,0,0
+2469,MAPS,positive,Glucosamine 6-phosphate,0,0
+2470,MAPS,positive,Glucose,0,0
+2471,MAPS,positive,Glucose 6-phosphate,0,0
+2472,MAPS,positive,Glucosyl cholesterol,1,1
+2473,MAPS,positive,Glutamic acid,0,0
+2474,MAPS,positive,Glutamine,0,0
+2475,MAPS,positive,Glutathione,0,0
+2476,MAPS,positive,Glycerol 3-phosphate,0,0
+2477,MAPS,positive,Glycerophosphocholine,0,0
+2478,MAPS,positive,Glycine,0,0
+2479,MAPS,positive,Guanine,0,0
+2480,MAPS,positive,Histamine,0,0
+2481,MAPS,positive,Histidine,0,0
+2482,MAPS,positive,Homocysteine,0,0
+2483,MAPS,positive,Hypoxanthine,0,0
+2484,MAPS,positive,Kynurenic acid,0,0
+2485,MAPS,positive,Kynurenine,0,0
+2486,MAPS,positive,L-Dopa,0,0
+2487,MAPS,positive,Lactic acid,0,0
+2488,MAPS,positive,Lyso PA 18:1,0,1
+2489,MAPS,positive,Lyso PC 15:0,1,1
+2490,MAPS,positive,Lyso PE 18:0,1,0
+2491,MAPS,positive,Lyso PG 16:0,1,1
+2492,MAPS,positive,Lyso PI 17:1,0,0
+2493,MAPS,positive,Lyso PS 17:1,1,1
+2494,MAPS,positive,MG 18:1,0,1
+2495,MAPS,positive,Malic acid,0,0
+2496,MAPS,positive,Malonic acid,0,0
+2497,MAPS,positive,Melatonin,0,0
+2498,MAPS,positive,Methionine,0,0
+2499,MAPS,positive,Mevalonic acid,0,0
+2500,MAPS,positive,Myo-inositol 1-phosphate,0,0
+2501,MAPS,positive,N-Acetylaspartic acid,0,1
+2502,MAPS,positive,N-Acetylaspartylglutamic acid,0,1
+2503,MAPS,positive,N-Acetylgalactosamine 6-phosphate,0,0
+2504,MAPS,positive,N-Acetylglucosamine,0,0
+2505,MAPS,positive,"N6,N6,N6-Trimethyllysine",0,0
+2506,MAPS,positive,Niacinamide,0,0
+2507,MAPS,positive,Nicotinamide adenine dinucleotide (NAD),0,0
+2508,MAPS,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+2509,MAPS,positive,Nicotinamide riboside,0,0
+2510,MAPS,positive,Nicotinamide ribotide,0,0
+2511,MAPS,positive,Nicotinic acid,0,0
+2512,MAPS,positive,Ornithine,0,0
+2513,MAPS,positive,Orotic acid,0,0
+2514,MAPS,positive,Oxalacetic acid,0,0
+2515,MAPS,positive,Oxidized glutathione,0,0
+2516,MAPS,positive,PA 16:0-18:1,1,1
+2517,MAPS,positive,PC (O) C16-18:1,1,1
+2518,MAPS,positive,PC 15:0-18:1,1,1
+2519,MAPS,positive,PE 18:0-20:4,0,1
+2520,MAPS,positive,PG 16:0-18:1,1,1
+2521,MAPS,positive,PI 16:0-18:1,0,1
+2522,MAPS,positive,PI(5)P 18:1,0,1
+2523,MAPS,positive,PS (POPS) 16:0-18:1,1,1
+2524,MAPS,positive,Palmitic acid,0,0
+2525,MAPS,positive,Palmitoyl-CoA,0,0
+2526,MAPS,positive,Pantetheine,0,0
+2527,MAPS,positive,Pantothenic acid,0,0
+2528,MAPS,positive,Phenylalanine,0,0
+2529,MAPS,positive,Phosphocreatine,0,0
+2530,MAPS,positive,Phosphoenolpyruvic acid,0,0
+2531,MAPS,positive,Phylloquinone,0,1
+2532,MAPS,positive,Proline,0,0
+2533,MAPS,positive,Propionylcarnitine,0,0
+2534,MAPS,positive,Prostaglandin E1,1,1
+2535,MAPS,positive,Putrescine,0,0
+2536,MAPS,positive,Pyridoxine,0,0
+2537,MAPS,positive,Pyruvic acid,0,0
+2538,MAPS,positive,Quinolinic acid,0,0
+2539,MAPS,positive,Retinoic acid,0,0
+2540,MAPS,positive,Riboflavin,1,0
+2541,MAPS,positive,Ribulose,0,0
+2542,MAPS,positive,Ribulose 5-phosphate,0,0
+2543,MAPS,positive,S-Adenosylhomocysteine,0,1
+2544,MAPS,positive,S-Adenosylmethionine,0,1
+2545,MAPS,positive,SM d18:1-16:0,1,1
+2546,MAPS,positive,Serine,0,0
+2547,MAPS,positive,Serotonin,0,0
+2548,MAPS,positive,Spermidine,1,0
+2549,MAPS,positive,Succinic acid,0,0
+2550,MAPS,positive,TG 15:0-18:1-15:0,1,0
+2551,MAPS,positive,Taurine,0,0
+2552,MAPS,positive,Taurocholic acid,0,0
+2553,MAPS,positive,Tetrahydrofolic acid,0,0
+2554,MAPS,positive,Thiamine,0,0
+2555,MAPS,positive,Thymine,0,0
+2556,MAPS,positive,Tryptophan,0,0
+2557,MAPS,positive,Tyrosine,0,0
+2558,MAPS,positive,Uracil,0,0
+2559,MAPS,positive,Ureidosuccinic acid,0,0
+2560,MAPS,positive,Uric acid,0,0
+2561,MAPS,positive,Uridine,0,0
+2562,MAPS,positive,Uridine diphosphate,0,0
+2563,MAPS,positive,Uridine diphosphate glucose,0,0
+2564,MAPS,positive,Uridine diphosphate glucuronic acid,0,0
+2565,MAPS,positive,Uridine diphosphate-N-acetylglucosamine,0,0
+2566,MAPS,positive,Urocanic acid,0,0
+2567,MAPS,positive,Valine,0,0
+2568,MAPS,positive,Xanthine,0,0
+2569,MAPS,positive,alpha-tocopherol,1,1
+2570,MAPS,positive,cis-Aconitic acid,0,0
+2571,MAPS,positive,gamma-Aminobutyric acid,0,0
+2572,MAPS,positive,myo-Inositol,0,0
+2573,NEDC,negative,2-Oxoglutaric acid,0,0
+2574,NEDC,negative,3-Hydroxyanthranilic acid,0,0
+2575,NEDC,negative,3-Hydroxymethylglutaric acid,1,1
+2576,NEDC,negative,3-Phosphoglyceric acid,1,0
+2577,NEDC,negative,"4,5-Dihydroorotic acid",0,1
+2578,NEDC,negative,4-Hydroxyproline,0,0
+2579,NEDC,negative,5-Hydroxyindoleacetic acid,0,1
+2580,NEDC,negative,6-Phosphogluconic acid,0,0
+2581,NEDC,negative,Acetoacetic acid,0,0
+2582,NEDC,negative,Acetyl-CoA,0,0
+2583,NEDC,negative,Acetylcarnitine,0,0
+2584,NEDC,negative,Acetylcholine,0,0
+2585,NEDC,negative,Adenine,0,0
+2586,NEDC,negative,Adenosine diphosphate,0,0
+2587,NEDC,negative,Adenosine monophosphate,1,0
+2588,NEDC,negative,Agmatine,0,0
+2589,NEDC,negative,Arginine,0,0
+2590,NEDC,negative,Argininosuccinic acid,0,0
+2591,NEDC,negative,Ascorbic acid,0,1
+2592,NEDC,negative,Asparagine,0,0
+2593,NEDC,negative,Aspartic acid,0,0
+2594,NEDC,negative,Biotin,0,1
+2595,NEDC,negative,Butyric acid,0,0
+2596,NEDC,negative,CAR 16:0,1,0
+2597,NEDC,negative,Cardiolipin 18:1,1,1
+2598,NEDC,negative,Carnitine,0,0
+2599,NEDC,negative,Carnosine,0,0
+2600,NEDC,negative,Cer d8:1/22:0 Cer,1,1
+2601,NEDC,negative,Cholecalciferol,0,0
+2602,NEDC,negative,Cholesterol,0,0
+2603,NEDC,negative,Cholesteryl acetate,0,0
+2604,NEDC,negative,Cholesteryl ester 17:0,0,0
+2605,NEDC,negative,Cholic acid,1,1
+2606,NEDC,negative,Choline,0,0
+2607,NEDC,negative,Citric acid,0,1
+2608,NEDC,negative,Citrulline,0,0
+2609,NEDC,negative,Coenzyme A,0,0
+2610,NEDC,negative,Creatine,0,0
+2611,NEDC,negative,Creatinine,0,0
+2612,NEDC,negative,Cyclic adenosine monophosphate,0,1
+2613,NEDC,negative,Cysteine,0,0
+2614,NEDC,negative,Cystine,0,0
+2615,NEDC,negative,Cytidine,0,0
+2616,NEDC,negative,Cytidine monophosphate,0,0
+2617,NEDC,negative,Cytosine,0,0
+2618,NEDC,negative,DG 18:0-22:6,0,0
+2619,NEDC,negative,Dihydroxyacetone,0,1
+2620,NEDC,negative,Dihydroxyacetone phosphate,0,1
+2621,NEDC,negative,Dopamine,0,0
+2622,NEDC,negative,Epinephrine,0,0
+2623,NEDC,negative,Estradiol,0,0
+2624,NEDC,negative,Flavin adenine dinucleotide,0,0
+2625,NEDC,negative,Flavin mononucleotide,0,1
+2626,NEDC,negative,Folic acid,0,0
+2627,NEDC,negative,"Fructose 1,6-bisphosphate",0,0
+2628,NEDC,negative,Fumaric acid,1,1
+2629,NEDC,negative,GM3 Ganglioside 18:0,0,0
+2630,NEDC,negative,GlcCer d18:1/18:0,1,1
+2631,NEDC,negative,Gluconic acid,0,0
+2632,NEDC,negative,Glucosamine,1,0
+2633,NEDC,negative,Glucosamine 6-phosphate,0,0
+2634,NEDC,negative,Glucose,0,0
+2635,NEDC,negative,Glucose 6-phosphate,0,0
+2636,NEDC,negative,Glucosyl cholesterol,1,1
+2637,NEDC,negative,Glutamic acid,0,0
+2638,NEDC,negative,Glutamine,0,0
+2639,NEDC,negative,Glutathione,0,0
+2640,NEDC,negative,Glycerol 3-phosphate,1,1
+2641,NEDC,negative,Glycerophosphocholine,0,1
+2642,NEDC,negative,Glycine,0,0
+2643,NEDC,negative,Guanine,0,0
+2644,NEDC,negative,Histamine,0,0
+2645,NEDC,negative,Histidine,0,0
+2646,NEDC,negative,Homocysteine,0,0
+2647,NEDC,negative,Hypoxanthine,0,0
+2648,NEDC,negative,Kynurenic acid,1,0
+2649,NEDC,negative,Kynurenine,0,0
+2650,NEDC,negative,L-Dopa,0,0
+2651,NEDC,negative,Lactic acid,0,1
+2652,NEDC,negative,Lyso PA 18:1,1,1
+2653,NEDC,negative,Lyso PC 15:0,1,1
+2654,NEDC,negative,Lyso PE 18:0,1,1
+2655,NEDC,negative,Lyso PG 16:0,1,1
+2656,NEDC,negative,Lyso PI 17:1,1,0
+2657,NEDC,negative,Lyso PS 17:1,1,1
+2658,NEDC,negative,MG 18:1,0,0
+2659,NEDC,negative,Malic acid,1,1
+2660,NEDC,negative,Malonic acid,1,1
+2661,NEDC,negative,Melatonin,0,0
+2662,NEDC,negative,Methionine,0,0
+2663,NEDC,negative,Mevalonic acid,0,1
+2664,NEDC,negative,Myo-inositol 1-phosphate,0,0
+2665,NEDC,negative,N-Acetylaspartic acid,0,1
+2666,NEDC,negative,N-Acetylaspartylglutamic acid,1,0
+2667,NEDC,negative,N-Acetylgalactosamine 6-phosphate,0,0
+2668,NEDC,negative,N-Acetylglucosamine,0,0
+2669,NEDC,negative,"N6,N6,N6-Trimethyllysine",0,0
+2670,NEDC,negative,Niacinamide,0,0
+2671,NEDC,negative,Nicotinamide adenine dinucleotide (NAD),0,0
+2672,NEDC,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+2673,NEDC,negative,Nicotinamide riboside,0,0
+2674,NEDC,negative,Nicotinamide ribotide,0,1
+2675,NEDC,negative,Nicotinic acid,0,0
+2676,NEDC,negative,Ornithine,0,0
+2677,NEDC,negative,Orotic acid,1,0
+2678,NEDC,negative,Oxalacetic acid,0,1
+2679,NEDC,negative,Oxidized glutathione,0,0
+2680,NEDC,negative,PA 16:0-18:1,1,1
+2681,NEDC,negative,PC (O) C16-18:1,0,1
+2682,NEDC,negative,PC 15:0-18:1,1,1
+2683,NEDC,negative,PE 18:0-20:4,1,1
+2684,NEDC,negative,PG 16:0-18:1,1,1
+2685,NEDC,negative,PI 16:0-18:1,1,1
+2686,NEDC,negative,PI(5)P 18:1,1,1
+2687,NEDC,negative,PS (POPS) 16:0-18:1,1,1
+2688,NEDC,negative,Palmitic acid,1,0
+2689,NEDC,negative,Palmitoyl-CoA,1,0
+2690,NEDC,negative,Pantetheine,1,0
+2691,NEDC,negative,Pantothenic acid,0,1
+2692,NEDC,negative,Phenylalanine,0,0
+2693,NEDC,negative,Phosphocreatine,0,0
+2694,NEDC,negative,Phosphoenolpyruvic acid,0,1
+2695,NEDC,negative,Phylloquinone,0,0
+2696,NEDC,negative,Proline,0,0
+2697,NEDC,negative,Propionylcarnitine,0,0
+2698,NEDC,negative,Prostaglandin E1,1,1
+2699,NEDC,negative,Putrescine,0,0
+2700,NEDC,negative,Pyridoxine,0,0
+2701,NEDC,negative,Pyruvic acid,0,0
+2702,NEDC,negative,Quinolinic acid,0,0
+2703,NEDC,negative,Retinoic acid,0,1
+2704,NEDC,negative,Riboflavin,1,0
+2705,NEDC,negative,Ribulose,0,0
+2706,NEDC,negative,Ribulose 5-phosphate,0,0
+2707,NEDC,negative,S-Adenosylhomocysteine,1,0
+2708,NEDC,negative,S-Adenosylmethionine,0,1
+2709,NEDC,negative,SM d18:1-16:0,1,1
+2710,NEDC,negative,Serine,1,0
+2711,NEDC,negative,Serotonin,0,0
+2712,NEDC,negative,Spermidine,0,0
+2713,NEDC,negative,Succinic acid,1,1
+2714,NEDC,negative,Sulfo GalCer 18:0(2S-OH),1,1
+2715,NEDC,negative,TG 15:0-18:1-15:0,0,0
+2716,NEDC,negative,Taurine,0,0
+2717,NEDC,negative,Taurocholic acid,1,1
+2718,NEDC,negative,Tetrahydrofolic acid,0,0
+2719,NEDC,negative,Thiamine,0,0
+2720,NEDC,negative,Thymine,1,0
+2721,NEDC,negative,Tryptophan,0,0
+2722,NEDC,negative,Tyrosine,0,0
+2723,NEDC,negative,Uracil,1,0
+2724,NEDC,negative,Ureidosuccinic acid,1,1
+2725,NEDC,negative,Uric acid,0,0
+2726,NEDC,negative,Uridine,0,0
+2727,NEDC,negative,Uridine diphosphate,0,0
+2728,NEDC,negative,Uridine diphosphate glucose,0,0
+2729,NEDC,negative,Uridine diphosphate glucuronic acid,0,0
+2730,NEDC,negative,Uridine diphosphate-N-acetylglucosamine,0,0
+2731,NEDC,negative,Urocanic acid,0,0
+2732,NEDC,negative,Valine,0,0
+2733,NEDC,negative,Xanthine,1,0
+2734,NEDC,negative,alpha-tocopherol,0,0
+2735,NEDC,negative,cis-Aconitic acid,0,1
+2736,NEDC,negative,gamma-Aminobutyric acid,0,0
+2737,NEDC,negative,myo-Inositol,0,0
+2738,NEDC,positive,2-Oxoglutaric acid,0,0
+2739,NEDC,positive,3-Hydroxyanthranilic acid,0,0
+2740,NEDC,positive,3-Hydroxymethylglutaric acid,1,0
+2741,NEDC,positive,3-Phosphoglyceric acid,0,0
+2742,NEDC,positive,"4,5-Dihydroorotic acid",0,0
+2743,NEDC,positive,4-Hydroxyproline,0,0
+2744,NEDC,positive,5-Hydroxyindoleacetic acid,0,0
+2745,NEDC,positive,6-Phosphogluconic acid,0,0
+2746,NEDC,positive,Acetoacetic acid,0,0
+2747,NEDC,positive,Acetyl-CoA,0,1
+2748,NEDC,positive,Acetylcarnitine,1,1
+2749,NEDC,positive,Acetylcholine,1,1
+2750,NEDC,positive,Adenine,0,0
+2751,NEDC,positive,Adenosine diphosphate,0,0
+2752,NEDC,positive,Adenosine monophosphate,0,0
+2753,NEDC,positive,Agmatine,1,1
+2754,NEDC,positive,Arginine,1,0
+2755,NEDC,positive,Argininosuccinic acid,1,0
+2756,NEDC,positive,Ascorbic acid,0,0
+2757,NEDC,positive,Asparagine,1,0
+2758,NEDC,positive,Aspartic acid,0,0
+2759,NEDC,positive,Biotin,0,0
+2760,NEDC,positive,Butyric acid,0,0
+2761,NEDC,positive,CAR 16:0,1,1
+2762,NEDC,positive,Cardiolipin 18:1,0,1
+2763,NEDC,positive,Carnitine,1,1
+2764,NEDC,positive,Carnosine,0,1
+2765,NEDC,positive,Cer d8:1/22:0 Cer,1,1
+2766,NEDC,positive,Cholecalciferol,1,1
+2767,NEDC,positive,Cholesterol,0,1
+2768,NEDC,positive,Cholesteryl acetate,0,1
+2769,NEDC,positive,Cholesteryl ester 17:0,0,1
+2770,NEDC,positive,Cholic acid,1,1
+2771,NEDC,positive,Choline,1,0
+2772,NEDC,positive,Citric acid,0,0
+2773,NEDC,positive,Citrulline,0,0
+2774,NEDC,positive,Coenzyme A,0,0
+2775,NEDC,positive,Creatine,0,0
+2776,NEDC,positive,Creatinine,1,0
+2777,NEDC,positive,Cyclic adenosine monophosphate,0,1
+2778,NEDC,positive,Cysteine,1,0
+2779,NEDC,positive,Cystine,0,1
+2780,NEDC,positive,Cytidine,1,1
+2781,NEDC,positive,Cytidine monophosphate,0,0
+2782,NEDC,positive,Cytosine,1,0
+2783,NEDC,positive,DG 18:0-22:6,0,1
+2784,NEDC,positive,Dihydroxyacetone,0,0
+2785,NEDC,positive,Dihydroxyacetone phosphate,0,0
+2786,NEDC,positive,Dopamine,0,1
+2787,NEDC,positive,Epinephrine,0,1
+2788,NEDC,positive,Estradiol,0,1
+2789,NEDC,positive,Flavin adenine dinucleotide,0,0
+2790,NEDC,positive,Flavin mononucleotide,0,0
+2791,NEDC,positive,Folic acid,0,0
+2792,NEDC,positive,"Fructose 1,6-bisphosphate",0,0
+2793,NEDC,positive,Fumaric acid,0,0
+2794,NEDC,positive,GM3 Ganglioside 18:0,1,0
+2795,NEDC,positive,GlcCer d18:1/18:0,1,1
+2796,NEDC,positive,Gluconic acid,0,0
+2797,NEDC,positive,Glucosamine,0,1
+2798,NEDC,positive,Glucosamine 6-phosphate,0,0
+2799,NEDC,positive,Glucose,0,0
+2800,NEDC,positive,Glucose 6-phosphate,0,0
+2801,NEDC,positive,Glucosyl cholesterol,1,1
+2802,NEDC,positive,Glutamic acid,0,0
+2803,NEDC,positive,Glutamine,0,0
+2804,NEDC,positive,Glutathione,0,1
+2805,NEDC,positive,Glycerol 3-phosphate,0,0
+2806,NEDC,positive,Glycerophosphocholine,1,1
+2807,NEDC,positive,Glycine,0,0
+2808,NEDC,positive,Guanine,0,0
+2809,NEDC,positive,Histamine,1,0
+2810,NEDC,positive,Histidine,0,0
+2811,NEDC,positive,Homocysteine,0,0
+2812,NEDC,positive,Hypoxanthine,0,0
+2813,NEDC,positive,Kynurenic acid,0,0
+2814,NEDC,positive,Kynurenine,1,0
+2815,NEDC,positive,L-Dopa,0,0
+2816,NEDC,positive,Lactic acid,0,0
+2817,NEDC,positive,Lyso PA 18:1,1,1
+2818,NEDC,positive,Lyso PC 15:0,1,1
+2819,NEDC,positive,Lyso PE 18:0,1,1
+2820,NEDC,positive,Lyso PG 16:0,1,1
+2821,NEDC,positive,Lyso PI 17:1,1,0
+2822,NEDC,positive,Lyso PS 17:1,1,1
+2823,NEDC,positive,MG 18:1,0,1
+2824,NEDC,positive,Malic acid,0,0
+2825,NEDC,positive,Malonic acid,0,0
+2826,NEDC,positive,Melatonin,1,0
+2827,NEDC,positive,Methionine,0,0
+2828,NEDC,positive,Mevalonic acid,0,0
+2829,NEDC,positive,Myo-inositol 1-phosphate,0,0
+2830,NEDC,positive,N-Acetylaspartic acid,0,0
+2831,NEDC,positive,N-Acetylaspartylglutamic acid,1,0
+2832,NEDC,positive,N-Acetylgalactosamine 6-phosphate,0,0
+2833,NEDC,positive,N-Acetylglucosamine,1,0
+2834,NEDC,positive,"N6,N6,N6-Trimethyllysine",1,1
+2835,NEDC,positive,Niacinamide,0,0
+2836,NEDC,positive,Nicotinamide adenine dinucleotide (NAD),0,1
+2837,NEDC,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,0
+2838,NEDC,positive,Nicotinamide riboside,0,1
+2839,NEDC,positive,Nicotinamide ribotide,0,0
+2840,NEDC,positive,Nicotinic acid,0,0
+2841,NEDC,positive,Ornithine,1,0
+2842,NEDC,positive,Orotic acid,0,0
+2843,NEDC,positive,Oxalacetic acid,0,0
+2844,NEDC,positive,Oxidized glutathione,1,0
+2845,NEDC,positive,PA 16:0-18:1,1,1
+2846,NEDC,positive,PC (O) C16-18:1,1,1
+2847,NEDC,positive,PC 15:0-18:1,1,1
+2848,NEDC,positive,PE 18:0-20:4,1,1
+2849,NEDC,positive,PG 16:0-18:1,1,1
+2850,NEDC,positive,PI 16:0-18:1,0,1
+2851,NEDC,positive,PI(5)P 18:1,0,1
+2852,NEDC,positive,PS (POPS) 16:0-18:1,1,1
+2853,NEDC,positive,Palmitic acid,0,0
+2854,NEDC,positive,Palmitoyl-CoA,1,0
+2855,NEDC,positive,Pantetheine,1,1
+2856,NEDC,positive,Pantothenic acid,0,0
+2857,NEDC,positive,Phenylalanine,0,0
+2858,NEDC,positive,Phosphocreatine,0,0
+2859,NEDC,positive,Phosphoenolpyruvic acid,0,0
+2860,NEDC,positive,Phylloquinone,0,1
+2861,NEDC,positive,Proline,0,0
+2862,NEDC,positive,Propionylcarnitine,1,1
+2863,NEDC,positive,Prostaglandin E1,1,1
+2864,NEDC,positive,Putrescine,0,1
+2865,NEDC,positive,Pyridoxine,0,1
+2866,NEDC,positive,Pyruvic acid,0,0
+2867,NEDC,positive,Quinolinic acid,0,0
+2868,NEDC,positive,Retinoic acid,0,1
+2869,NEDC,positive,Riboflavin,1,0
+2870,NEDC,positive,Ribulose,0,0
+2871,NEDC,positive,Ribulose 5-phosphate,0,0
+2872,NEDC,positive,S-Adenosylhomocysteine,1,1
+2873,NEDC,positive,S-Adenosylmethionine,0,1
+2874,NEDC,positive,SM d18:1-16:0,1,1
+2875,NEDC,positive,Serine,0,0
+2876,NEDC,positive,Serotonin,0,1
+2877,NEDC,positive,Spermidine,1,1
+2878,NEDC,positive,Succinic acid,0,0
+2879,NEDC,positive,Sulfo GalCer 18:0(2S-OH),0,1
+2880,NEDC,positive,TG 15:0-18:1-15:0,1,1
+2881,NEDC,positive,Taurine,0,0
+2882,NEDC,positive,Taurocholic acid,0,1
+2883,NEDC,positive,Tetrahydrofolic acid,0,0
+2884,NEDC,positive,Thiamine,0,1
+2885,NEDC,positive,Thymine,0,0
+2886,NEDC,positive,Tryptophan,0,1
+2887,NEDC,positive,Tyrosine,0,0
+2888,NEDC,positive,Uracil,0,0
+2889,NEDC,positive,Ureidosuccinic acid,0,0
+2890,NEDC,positive,Uric acid,0,0
+2891,NEDC,positive,Uridine,0,1
+2892,NEDC,positive,Uridine diphosphate,0,0
+2893,NEDC,positive,Uridine diphosphate glucose,0,0
+2894,NEDC,positive,Uridine diphosphate glucuronic acid,0,0
+2895,NEDC,positive,Uridine diphosphate-N-acetylglucosamine,0,0
+2896,NEDC,positive,Urocanic acid,0,0
+2897,NEDC,positive,Valine,0,0
+2898,NEDC,positive,Xanthine,0,0
+2899,NEDC,positive,alpha-tocopherol,1,1
+2900,NEDC,positive,cis-Aconitic acid,0,0
+2901,NEDC,positive,gamma-Aminobutyric acid,0,0
+2902,NEDC,positive,myo-Inositol,0,0
+2903,NOR,negative,2-Oxoglutaric acid,1,0
+2904,NOR,negative,3-Hydroxyanthranilic acid,0,1
+2905,NOR,negative,3-Hydroxymethylglutaric acid,0,1
+2906,NOR,negative,3-Phosphoglyceric acid,1,1
+2907,NOR,negative,"4,5-Dihydroorotic acid",1,1
+2908,NOR,negative,4-Hydroxyproline,1,1
+2909,NOR,negative,5-Hydroxyindoleacetic acid,0,1
+2910,NOR,negative,6-Phosphogluconic acid,1,1
+2911,NOR,negative,Acetoacetic acid,0,0
+2912,NOR,negative,Acetyl-CoA,1,1
+2913,NOR,negative,Acetylcarnitine,0,0
+2914,NOR,negative,Acetylcholine,0,0
+2915,NOR,negative,Adenine,1,0
+2916,NOR,negative,Adenosine diphosphate,1,1
+2917,NOR,negative,Adenosine monophosphate,1,1
+2918,NOR,negative,Agmatine,0,1
+2919,NOR,negative,Arginine,1,0
+2920,NOR,negative,Argininosuccinic acid,1,1
+2921,NOR,negative,Ascorbic acid,1,1
+2922,NOR,negative,Asparagine,1,1
+2923,NOR,negative,Aspartic acid,1,1
+2924,NOR,negative,Biotin,1,0
+2925,NOR,negative,Butyric acid,0,0
+2926,NOR,negative,CAR 16:0,0,0
+2927,NOR,negative,Cardiolipin 18:1,1,1
+2928,NOR,negative,Carnitine,0,0
+2929,NOR,negative,Carnosine,1,1
+2930,NOR,negative,Cer d8:1/22:0 Cer,1,0
+2931,NOR,negative,Cholecalciferol,0,0
+2932,NOR,negative,Cholesterol,0,0
+2933,NOR,negative,Cholesteryl acetate,0,0
+2934,NOR,negative,Cholic acid,1,1
+2935,NOR,negative,Choline,0,0
+2936,NOR,negative,Citric acid,1,1
+2937,NOR,negative,Citrulline,1,1
+2938,NOR,negative,Coenzyme A,1,1
+2939,NOR,negative,Creatine,1,1
+2940,NOR,negative,Creatinine,1,1
+2941,NOR,negative,Cyclic adenosine monophosphate,0,0
+2942,NOR,negative,Cysteine,1,1
+2943,NOR,negative,Cystine,0,1
+2944,NOR,negative,Cytidine,1,1
+2945,NOR,negative,Cytidine monophosphate,1,1
+2946,NOR,negative,Cytosine,0,1
+2947,NOR,negative,DG 18:0-22:6,0,0
+2948,NOR,negative,Dihydroxyacetone,0,1
+2949,NOR,negative,Dihydroxyacetone phosphate,1,1
+2950,NOR,negative,Dopamine,1,1
+2951,NOR,negative,Epinephrine,1,1
+2952,NOR,negative,Estradiol,0,0
+2953,NOR,negative,Flavin adenine dinucleotide,1,1
+2954,NOR,negative,Flavin mononucleotide,1,1
+2955,NOR,negative,Folic acid,0,1
+2956,NOR,negative,"Fructose 1,6-bisphosphate",1,1
+2957,NOR,negative,Fumaric acid,1,0
+2958,NOR,negative,GM3 Ganglioside 18:0,1,1
+2959,NOR,negative,GlcCer d18:1/18:0,1,1
+2960,NOR,negative,Gluconic acid,1,1
+2961,NOR,negative,Glucosamine 6-phosphate,1,1
+2962,NOR,negative,Glucose,1,1
+2963,NOR,negative,Glucose 6-phosphate,1,1
+2964,NOR,negative,Glucosyl cholesterol,1,1
+2965,NOR,negative,Glutamic acid,1,1
+2966,NOR,negative,Glutamine,1,1
+2967,NOR,negative,Glutathione,1,1
+2968,NOR,negative,Glycerol 3-phosphate,1,1
+2969,NOR,negative,Glycerophosphocholine,0,0
+2970,NOR,negative,Glycine,1,1
+2971,NOR,negative,Guanine,1,1
+2972,NOR,negative,Histamine,1,1
+2973,NOR,negative,Histidine,1,1
+2974,NOR,negative,Homocysteine,1,1
+2975,NOR,negative,Hypoxanthine,1,0
+2976,NOR,negative,Kynurenic acid,0,0
+2977,NOR,negative,Kynurenine,1,1
+2978,NOR,negative,L-Dopa,1,1
+2979,NOR,negative,Lactic acid,0,0
+2980,NOR,negative,Lyso PA 18:1,0,1
+2981,NOR,negative,Lyso PC 15:0,1,0
+2982,NOR,negative,Lyso PE 18:0,1,1
+2983,NOR,negative,Lyso PG 16:0,0,1
+2984,NOR,negative,Lyso PI 17:1,1,1
+2985,NOR,negative,Lyso PS 17:1,1,1
+2986,NOR,negative,MG 18:1,0,0
+2987,NOR,negative,Malic acid,1,1
+2988,NOR,negative,Malonic acid,1,0
+2989,NOR,negative,Melatonin,1,0
+2990,NOR,negative,Methionine,1,1
+2991,NOR,negative,Mevalonic acid,1,1
+2992,NOR,negative,Myo-inositol 1-phosphate,1,1
+2993,NOR,negative,N-Acetylaspartic acid,1,1
+2994,NOR,negative,N-Acetylaspartylglutamic acid,1,1
+2995,NOR,negative,N-Acetylgalactosamine 6-phosphate,1,1
+2996,NOR,negative,N-Acetylglucosamine,1,1
+2997,NOR,negative,"N6,N6,N6-Trimethyllysine",1,0
+2998,NOR,negative,Niacinamide,0,0
+2999,NOR,negative,Nicotinamide adenine dinucleotide (NAD),1,1
+3000,NOR,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+3001,NOR,negative,Nicotinamide riboside,0,1
+3002,NOR,negative,Nicotinamide ribotide,0,1
+3003,NOR,negative,Nicotinic acid,0,0
+3004,NOR,negative,Ornithine,1,1
+3005,NOR,negative,Orotic acid,1,1
+3006,NOR,negative,Oxalacetic acid,0,1
+3007,NOR,negative,Oxidized glutathione,1,1
+3008,NOR,negative,PA 16:0-18:1,1,0
+3009,NOR,negative,PC (O) C16-18:1,0,0
+3010,NOR,negative,PC 15:0-18:1,1,0
+3011,NOR,negative,PE 18:0-20:4,1,1
+3012,NOR,negative,PG 16:0-18:1,1,0
+3013,NOR,negative,PI 16:0-18:1,1,1
+3014,NOR,negative,PI(5)P 18:1,1,1
+3015,NOR,negative,PS (POPS) 16:0-18:1,1,1
+3016,NOR,negative,Palmitoyl-CoA,1,1
+3017,NOR,negative,Pantetheine,1,1
+3018,NOR,negative,Pantothenic acid,1,1
+3019,NOR,negative,Phenylalanine,1,1
+3020,NOR,negative,Phosphocreatine,0,1
+3021,NOR,negative,Phosphoenolpyruvic acid,1,1
+3022,NOR,negative,Phylloquinone,0,0
+3023,NOR,negative,Proline,1,0
+3024,NOR,negative,Propionylcarnitine,0,0
+3025,NOR,negative,Prostaglandin E1,1,0
+3026,NOR,negative,Putrescine,0,0
+3027,NOR,negative,Pyridoxine,1,1
+3028,NOR,negative,Pyruvic acid,0,0
+3029,NOR,negative,Quinolinic acid,1,0
+3030,NOR,negative,Retinoic acid,0,0
+3031,NOR,negative,Riboflavin,1,1
+3032,NOR,negative,Ribulose,1,1
+3033,NOR,negative,Ribulose 5-phosphate,1,1
+3034,NOR,negative,S-Adenosylhomocysteine,0,1
+3035,NOR,negative,S-Adenosylmethionine,0,1
+3036,NOR,negative,SM d18:1-16:0,1,0
+3037,NOR,negative,Serine,1,1
+3038,NOR,negative,Serotonin,1,1
+3039,NOR,negative,Spermidine,0,0
+3040,NOR,negative,Succinic acid,1,0
+3041,NOR,negative,Sulfo GalCer 18:0(2S-OH),1,0
+3042,NOR,negative,Taurine,1,0
+3043,NOR,negative,Taurocholic acid,1,0
+3044,NOR,negative,Tetrahydrofolic acid,1,1
+3045,NOR,negative,Thiamine,0,0
+3046,NOR,negative,Thymine,1,0
+3047,NOR,negative,Tryptophan,1,1
+3048,NOR,negative,Tyrosine,0,1
+3049,NOR,negative,Uracil,1,0
+3050,NOR,negative,Ureidosuccinic acid,1,1
+3051,NOR,negative,Uric acid,1,1
+3052,NOR,negative,Uridine,1,1
+3053,NOR,negative,Uridine diphosphate,1,1
+3054,NOR,negative,Uridine diphosphate glucose,1,1
+3055,NOR,negative,Uridine diphosphate glucuronic acid,1,1
+3056,NOR,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+3057,NOR,negative,Urocanic acid,1,1
+3058,NOR,negative,Valine,0,1
+3059,NOR,negative,Xanthine,1,1
+3060,NOR,negative,alpha-tocopherol,0,0
+3061,NOR,negative,cis-Aconitic acid,1,1
+3062,NOR,negative,gamma-Aminobutyric acid,1,1
+3063,NOR,negative,myo-Inositol,1,1
+3064,NOR,positive,2-Oxoglutaric acid,0,0
+3065,NOR,positive,3-Hydroxyanthranilic acid,0,0
+3066,NOR,positive,3-Hydroxymethylglutaric acid,0,0
+3067,NOR,positive,3-Phosphoglyceric acid,0,0
+3068,NOR,positive,"4,5-Dihydroorotic acid",0,0
+3069,NOR,positive,4-Hydroxyproline,1,0
+3070,NOR,positive,5-Hydroxyindoleacetic acid,1,0
+3071,NOR,positive,6-Phosphogluconic acid,0,0
+3072,NOR,positive,Acetoacetic acid,0,0
+3073,NOR,positive,Acetyl-CoA,1,1
+3074,NOR,positive,Acetylcarnitine,1,1
+3075,NOR,positive,Acetylcholine,1,1
+3076,NOR,positive,Adenine,0,1
+3077,NOR,positive,Adenosine diphosphate,1,1
+3078,NOR,positive,Adenosine monophosphate,1,1
+3079,NOR,positive,Agmatine,1,1
+3080,NOR,positive,Arginine,1,0
+3081,NOR,positive,Argininosuccinic acid,1,1
+3082,NOR,positive,Ascorbic acid,0,0
+3083,NOR,positive,Asparagine,1,0
+3084,NOR,positive,Aspartic acid,0,1
+3085,NOR,positive,Biotin,0,1
+3086,NOR,positive,Butyric acid,0,0
+3087,NOR,positive,CAR 16:0,1,1
+3088,NOR,positive,Cardiolipin 18:1,1,1
+3089,NOR,positive,Carnitine,1,1
+3090,NOR,positive,Carnosine,1,1
+3091,NOR,positive,Cer d8:1/22:0 Cer,1,1
+3092,NOR,positive,Cholecalciferol,0,0
+3093,NOR,positive,Cholesterol,0,0
+3094,NOR,positive,Cholesteryl acetate,0,1
+3095,NOR,positive,Cholesteryl ester 17:0,1,0
+3096,NOR,positive,Cholic acid,1,1
+3097,NOR,positive,Choline,1,0
+3098,NOR,positive,Citric acid,1,1
+3099,NOR,positive,Citrulline,1,1
+3100,NOR,positive,Coenzyme A,0,1
+3101,NOR,positive,Creatine,1,1
+3102,NOR,positive,Creatinine,1,1
+3103,NOR,positive,Cyclic adenosine monophosphate,1,1
+3104,NOR,positive,Cysteine,1,0
+3105,NOR,positive,Cystine,0,1
+3106,NOR,positive,Cytidine,1,1
+3107,NOR,positive,Cytidine monophosphate,1,1
+3108,NOR,positive,Cytosine,1,0
+3109,NOR,positive,DG 18:0-22:6,0,1
+3110,NOR,positive,Dihydroxyacetone,0,0
+3111,NOR,positive,Dihydroxyacetone phosphate,0,0
+3112,NOR,positive,Dopamine,1,1
+3113,NOR,positive,Epinephrine,0,1
+3114,NOR,positive,Estradiol,0,1
+3115,NOR,positive,Flavin adenine dinucleotide,1,1
+3116,NOR,positive,Flavin mononucleotide,1,1
+3117,NOR,positive,Folic acid,1,1
+3118,NOR,positive,"Fructose 1,6-bisphosphate",1,0
+3119,NOR,positive,Fumaric acid,0,1
+3120,NOR,positive,GM3 Ganglioside 18:0,1,1
+3121,NOR,positive,GlcCer d18:1/18:0,1,1
+3122,NOR,positive,Gluconic acid,0,0
+3123,NOR,positive,Glucosamine,1,1
+3124,NOR,positive,Glucosamine 6-phosphate,0,1
+3125,NOR,positive,Glucose,0,1
+3126,NOR,positive,Glucose 6-phosphate,0,0
+3127,NOR,positive,Glucosyl cholesterol,1,1
+3128,NOR,positive,Glutamic acid,1,0
+3129,NOR,positive,Glutamine,0,1
+3130,NOR,positive,Glutathione,1,1
+3131,NOR,positive,Glycerol 3-phosphate,0,0
+3132,NOR,positive,Glycerophosphocholine,1,1
+3133,NOR,positive,Glycine,0,0
+3134,NOR,positive,Guanine,1,0
+3135,NOR,positive,Histamine,1,1
+3136,NOR,positive,Histidine,1,0
+3137,NOR,positive,Homocysteine,0,1
+3138,NOR,positive,Hypoxanthine,1,0
+3139,NOR,positive,Kynurenic acid,0,0
+3140,NOR,positive,Kynurenine,0,0
+3141,NOR,positive,L-Dopa,1,0
+3142,NOR,positive,Lactic acid,0,0
+3143,NOR,positive,Lyso PA 18:1,1,1
+3144,NOR,positive,Lyso PC 15:0,1,1
+3145,NOR,positive,Lyso PE 18:0,1,1
+3146,NOR,positive,Lyso PG 16:0,1,1
+3147,NOR,positive,Lyso PI 17:1,1,1
+3148,NOR,positive,Lyso PS 17:1,1,1
+3149,NOR,positive,MG 18:1,1,0
+3150,NOR,positive,Malic acid,1,0
+3151,NOR,positive,Malonic acid,1,0
+3152,NOR,positive,Melatonin,1,1
+3153,NOR,positive,Methionine,0,1
+3154,NOR,positive,Mevalonic acid,0,0
+3155,NOR,positive,Myo-inositol 1-phosphate,0,0
+3156,NOR,positive,N-Acetylaspartic acid,0,0
+3157,NOR,positive,N-Acetylaspartylglutamic acid,1,1
+3158,NOR,positive,N-Acetylgalactosamine 6-phosphate,0,0
+3159,NOR,positive,N-Acetylglucosamine,1,1
+3160,NOR,positive,"N6,N6,N6-Trimethyllysine",1,1
+3161,NOR,positive,Niacinamide,0,1
+3162,NOR,positive,Nicotinamide adenine dinucleotide (NAD),1,1
+3163,NOR,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+3164,NOR,positive,Nicotinamide riboside,1,1
+3165,NOR,positive,Nicotinamide ribotide,0,1
+3166,NOR,positive,Nicotinic acid,0,0
+3167,NOR,positive,Ornithine,1,1
+3168,NOR,positive,Orotic acid,0,0
+3169,NOR,positive,Oxalacetic acid,0,0
+3170,NOR,positive,Oxidized glutathione,1,1
+3171,NOR,positive,PA 16:0-18:1,1,1
+3172,NOR,positive,PC (O) C16-18:1,1,1
+3173,NOR,positive,PC 15:0-18:1,1,1
+3174,NOR,positive,PE 18:0-20:4,1,1
+3175,NOR,positive,PG 16:0-18:1,1,1
+3176,NOR,positive,PI 16:0-18:1,1,1
+3177,NOR,positive,PI(5)P 18:1,1,1
+3178,NOR,positive,PS (POPS) 16:0-18:1,1,1
+3179,NOR,positive,Palmitic acid,0,0
+3180,NOR,positive,Palmitoyl-CoA,1,1
+3181,NOR,positive,Pantetheine,1,1
+3182,NOR,positive,Pantothenic acid,1,0
+3183,NOR,positive,Phenylalanine,1,0
+3184,NOR,positive,Phosphocreatine,0,0
+3185,NOR,positive,Phosphoenolpyruvic acid,1,0
+3186,NOR,positive,Phylloquinone,1,0
+3187,NOR,positive,Proline,1,0
+3188,NOR,positive,Propionylcarnitine,1,1
+3189,NOR,positive,Prostaglandin E1,1,1
+3190,NOR,positive,Putrescine,0,1
+3191,NOR,positive,Pyridoxine,1,1
+3192,NOR,positive,Pyruvic acid,0,0
+3193,NOR,positive,Quinolinic acid,0,0
+3194,NOR,positive,Retinoic acid,0,0
+3195,NOR,positive,Riboflavin,1,1
+3196,NOR,positive,Ribulose,0,0
+3197,NOR,positive,Ribulose 5-phosphate,0,0
+3198,NOR,positive,S-Adenosylhomocysteine,1,1
+3199,NOR,positive,S-Adenosylmethionine,0,1
+3200,NOR,positive,SM d18:1-16:0,1,1
+3201,NOR,positive,Serine,0,1
+3202,NOR,positive,Serotonin,1,1
+3203,NOR,positive,Spermidine,1,0
+3204,NOR,positive,Succinic acid,1,0
+3205,NOR,positive,Sulfo GalCer 18:0(2S-OH),0,0
+3206,NOR,positive,TG 15:0-18:1-15:0,1,1
+3207,NOR,positive,Taurine,0,0
+3208,NOR,positive,Taurocholic acid,1,0
+3209,NOR,positive,Tetrahydrofolic acid,1,1
+3210,NOR,positive,Thiamine,1,1
+3211,NOR,positive,Thymine,1,1
+3212,NOR,positive,Tryptophan,1,0
+3213,NOR,positive,Tyrosine,0,1
+3214,NOR,positive,Uracil,0,1
+3215,NOR,positive,Ureidosuccinic acid,0,0
+3216,NOR,positive,Uric acid,0,0
+3217,NOR,positive,Uridine,0,1
+3218,NOR,positive,Uridine diphosphate,1,1
+3219,NOR,positive,Uridine diphosphate glucose,1,0
+3220,NOR,positive,Uridine diphosphate glucuronic acid,0,1
+3221,NOR,positive,Uridine diphosphate-N-acetylglucosamine,0,1
+3222,NOR,positive,Urocanic acid,1,0
+3223,NOR,positive,Valine,0,1
+3224,NOR,positive,Xanthine,1,1
+3225,NOR,positive,alpha-tocopherol,0,0
+3226,NOR,positive,cis-Aconitic acid,1,1
+3227,NOR,positive,gamma-Aminobutyric acid,1,1
+3228,NOR,positive,myo-Inositol,1,0
+3229,pNA,negative,2-Oxoglutaric acid,1,1
+3230,pNA,negative,3-Hydroxyanthranilic acid,0,1
+3231,pNA,negative,3-Hydroxymethylglutaric acid,0,1
+3232,pNA,negative,3-Phosphoglyceric acid,1,0
+3233,pNA,negative,"4,5-Dihydroorotic acid",0,0
+3234,pNA,negative,4-Hydroxyproline,1,1
+3235,pNA,negative,5-Hydroxyindoleacetic acid,0,1
+3236,pNA,negative,6-Phosphogluconic acid,1,1
+3237,pNA,negative,Acetoacetic acid,0,0
+3238,pNA,negative,Acetyl-CoA,1,1
+3239,pNA,negative,Acetylcarnitine,0,0
+3240,pNA,negative,Acetylcholine,0,0
+3241,pNA,negative,Adenine,1,1
+3242,pNA,negative,Adenosine diphosphate,0,0
+3243,pNA,negative,Adenosine monophosphate,0,0
+3244,pNA,negative,Agmatine,0,0
+3245,pNA,negative,Arginine,1,0
+3246,pNA,negative,Argininosuccinic acid,1,1
+3247,pNA,negative,Ascorbic acid,1,1
+3248,pNA,negative,Asparagine,1,1
+3249,pNA,negative,Aspartic acid,1,1
+3250,pNA,negative,Biotin,0,0
+3251,pNA,negative,Butyric acid,0,0
+3252,pNA,negative,CAR 16:0,0,0
+3253,pNA,negative,Cardiolipin 18:1,1,1
+3254,pNA,negative,Carnitine,0,0
+3255,pNA,negative,Carnosine,1,0
+3256,pNA,negative,Cer d8:1/22:0 Cer,0,0
+3257,pNA,negative,Cholecalciferol,0,0
+3258,pNA,negative,Cholesterol,0,0
+3259,pNA,negative,Cholic acid,0,0
+3260,pNA,negative,Choline,0,0
+3261,pNA,negative,Citric acid,1,1
+3262,pNA,negative,Citrulline,1,1
+3263,pNA,negative,Coenzyme A,1,1
+3264,pNA,negative,Creatine,0,1
+3265,pNA,negative,Creatinine,1,1
+3266,pNA,negative,Cyclic adenosine monophosphate,0,0
+3267,pNA,negative,Cysteine,1,1
+3268,pNA,negative,Cystine,0,1
+3269,pNA,negative,Cytidine,1,0
+3270,pNA,negative,Cytidine monophosphate,0,0
+3271,pNA,negative,Cytosine,1,0
+3272,pNA,negative,Dihydroxyacetone,0,1
+3273,pNA,negative,Dihydroxyacetone phosphate,0,0
+3274,pNA,negative,Dopamine,1,1
+3275,pNA,negative,Epinephrine,1,1
+3276,pNA,negative,Estradiol,0,0
+3277,pNA,negative,Flavin adenine dinucleotide,1,1
+3278,pNA,negative,Flavin mononucleotide,0,1
+3279,pNA,negative,Folic acid,1,0
+3280,pNA,negative,"Fructose 1,6-bisphosphate",0,1
+3281,pNA,negative,Fumaric acid,1,1
+3282,pNA,negative,GM3 Ganglioside 18:0,1,1
+3283,pNA,negative,GlcCer d18:1/18:0,1,0
+3284,pNA,negative,Gluconic acid,1,1
+3285,pNA,negative,Glucosamine,0,1
+3286,pNA,negative,Glucosamine 6-phosphate,1,0
+3287,pNA,negative,Glucose,1,1
+3288,pNA,negative,Glucose 6-phosphate,1,1
+3289,pNA,negative,Glucosyl cholesterol,1,1
+3290,pNA,negative,Glutamic acid,1,1
+3291,pNA,negative,Glutamine,1,1
+3292,pNA,negative,Glutathione,1,1
+3293,pNA,negative,Glycerol 3-phosphate,0,1
+3294,pNA,negative,Glycerophosphocholine,0,0
+3295,pNA,negative,Glycine,0,1
+3296,pNA,negative,Guanine,1,1
+3297,pNA,negative,Histamine,1,0
+3298,pNA,negative,Histidine,1,1
+3299,pNA,negative,Homocysteine,1,1
+3300,pNA,negative,Hypoxanthine,1,1
+3301,pNA,negative,Kynurenic acid,1,0
+3302,pNA,negative,Kynurenine,1,1
+3303,pNA,negative,L-Dopa,1,1
+3304,pNA,negative,Lactic acid,0,1
+3305,pNA,negative,Lyso PA 18:1,1,1
+3306,pNA,negative,Lyso PC 15:0,0,0
+3307,pNA,negative,Lyso PE 18:0,0,1
+3308,pNA,negative,Lyso PG 16:0,1,1
+3309,pNA,negative,Lyso PI 17:1,1,1
+3310,pNA,negative,Lyso PS 17:1,1,1
+3311,pNA,negative,MG 18:1,0,0
+3312,pNA,negative,Malic acid,1,0
+3313,pNA,negative,Malonic acid,1,0
+3314,pNA,negative,Melatonin,0,0
+3315,pNA,negative,Methionine,1,1
+3316,pNA,negative,Mevalonic acid,1,0
+3317,pNA,negative,Myo-inositol 1-phosphate,1,1
+3318,pNA,negative,N-Acetylaspartic acid,1,0
+3319,pNA,negative,N-Acetylaspartylglutamic acid,1,0
+3320,pNA,negative,N-Acetylgalactosamine 6-phosphate,0,0
+3321,pNA,negative,N-Acetylglucosamine,1,1
+3322,pNA,negative,"N6,N6,N6-Trimethyllysine",1,1
+3323,pNA,negative,Niacinamide,0,1
+3324,pNA,negative,Nicotinamide adenine dinucleotide (NAD),0,1
+3325,pNA,negative,"Nicotinamide adenine dinucleotide, reduced (NADH)",1,1
+3326,pNA,negative,Nicotinamide riboside,0,0
+3327,pNA,negative,Nicotinamide ribotide,0,0
+3328,pNA,negative,Nicotinic acid,0,0
+3329,pNA,negative,Ornithine,1,1
+3330,pNA,negative,Orotic acid,0,0
+3331,pNA,negative,Oxalacetic acid,0,1
+3332,pNA,negative,Oxidized glutathione,1,1
+3333,pNA,negative,PA 16:0-18:1,1,1
+3334,pNA,negative,PC (O) C16-18:1,0,1
+3335,pNA,negative,PC 15:0-18:1,0,0
+3336,pNA,negative,PE 18:0-20:4,1,1
+3337,pNA,negative,PG 16:0-18:1,1,1
+3338,pNA,negative,PI 16:0-18:1,1,1
+3339,pNA,negative,PI(5)P 18:1,1,1
+3340,pNA,negative,PS (POPS) 16:0-18:1,1,1
+3341,pNA,negative,Palmitic acid,1,0
+3342,pNA,negative,Palmitoyl-CoA,1,1
+3343,pNA,negative,Pantetheine,1,0
+3344,pNA,negative,Pantothenic acid,1,1
+3345,pNA,negative,Phenylalanine,1,1
+3346,pNA,negative,Phosphocreatine,0,1
+3347,pNA,negative,Phosphoenolpyruvic acid,1,1
+3348,pNA,negative,Phylloquinone,0,0
+3349,pNA,negative,Proline,1,1
+3350,pNA,negative,Propionylcarnitine,0,0
+3351,pNA,negative,Prostaglandin E1,0,0
+3352,pNA,negative,Putrescine,0,0
+3353,pNA,negative,Pyridoxine,1,1
+3354,pNA,negative,Pyruvic acid,0,0
+3355,pNA,negative,Quinolinic acid,1,0
+3356,pNA,negative,Retinoic acid,0,0
+3357,pNA,negative,Riboflavin,0,1
+3358,pNA,negative,Ribulose,1,1
+3359,pNA,negative,Ribulose 5-phosphate,1,1
+3360,pNA,negative,S-Adenosylhomocysteine,0,0
+3361,pNA,negative,S-Adenosylmethionine,0,0
+3362,pNA,negative,SM d18:1-16:0,1,0
+3363,pNA,negative,Serine,1,1
+3364,pNA,negative,Serotonin,0,1
+3365,pNA,negative,Spermidine,0,0
+3366,pNA,negative,Succinic acid,1,1
+3367,pNA,negative,Sulfo GalCer 18:0(2S-OH),1,1
+3368,pNA,negative,Taurine,1,1
+3369,pNA,negative,Taurocholic acid,0,1
+3370,pNA,negative,Tetrahydrofolic acid,0,1
+3371,pNA,negative,Thiamine,0,0
+3372,pNA,negative,Thymine,0,0
+3373,pNA,negative,Tryptophan,0,1
+3374,pNA,negative,Tyrosine,1,1
+3375,pNA,negative,Uracil,0,0
+3376,pNA,negative,Ureidosuccinic acid,1,1
+3377,pNA,negative,Uric acid,0,0
+3378,pNA,negative,Uridine,0,1
+3379,pNA,negative,Uridine diphosphate,0,1
+3380,pNA,negative,Uridine diphosphate glucose,1,1
+3381,pNA,negative,Uridine diphosphate glucuronic acid,0,1
+3382,pNA,negative,Uridine diphosphate-N-acetylglucosamine,1,1
+3383,pNA,negative,Urocanic acid,0,0
+3384,pNA,negative,Valine,1,1
+3385,pNA,negative,Xanthine,1,1
+3386,pNA,negative,cis-Aconitic acid,1,1
+3387,pNA,negative,gamma-Aminobutyric acid,1,1
+3388,pNA,negative,myo-Inositol,1,1
+3389,pNA,positive,2-Oxoglutaric acid,0,0
+3390,pNA,positive,3-Hydroxyanthranilic acid,0,1
+3391,pNA,positive,3-Hydroxymethylglutaric acid,0,0
+3392,pNA,positive,3-Phosphoglyceric acid,0,0
+3393,pNA,positive,"4,5-Dihydroorotic acid",1,0
+3394,pNA,positive,4-Hydroxyproline,1,1
+3395,pNA,positive,5-Hydroxyindoleacetic acid,1,0
+3396,pNA,positive,6-Phosphogluconic acid,0,0
+3397,pNA,positive,Acetoacetic acid,0,0
+3398,pNA,positive,Acetyl-CoA,1,1
+3399,pNA,positive,Acetylcarnitine,1,1
+3400,pNA,positive,Acetylcholine,1,0
+3401,pNA,positive,Adenine,1,1
+3402,pNA,positive,Adenosine diphosphate,0,1
+3403,pNA,positive,Adenosine monophosphate,1,1
+3404,pNA,positive,Agmatine,1,1
+3405,pNA,positive,Arginine,1,1
+3406,pNA,positive,Argininosuccinic acid,1,1
+3407,pNA,positive,Ascorbic acid,1,1
+3408,pNA,positive,Asparagine,1,1
+3409,pNA,positive,Aspartic acid,1,1
+3410,pNA,positive,Biotin,1,1
+3411,pNA,positive,Butyric acid,0,0
+3412,pNA,positive,CAR 16:0,1,1
+3413,pNA,positive,Cardiolipin 18:1,1,1
+3414,pNA,positive,Carnitine,1,1
+3415,pNA,positive,Carnosine,1,1
+3416,pNA,positive,Cer d8:1/22:0 Cer,1,1
+3417,pNA,positive,Cholecalciferol,0,0
+3418,pNA,positive,Cholesterol,0,0
+3419,pNA,positive,Cholesteryl acetate,0,0
+3420,pNA,positive,Cholesteryl ester 17:0,1,0
+3421,pNA,positive,Cholic acid,1,1
+3422,pNA,positive,Choline,1,0
+3423,pNA,positive,Citric acid,1,0
+3424,pNA,positive,Citrulline,1,1
+3425,pNA,positive,Coenzyme A,1,1
+3426,pNA,positive,Creatine,1,1
+3427,pNA,positive,Creatinine,1,1
+3428,pNA,positive,Cyclic adenosine monophosphate,1,1
+3429,pNA,positive,Cysteine,1,1
+3430,pNA,positive,Cystine,0,1
+3431,pNA,positive,Cytidine,1,1
+3432,pNA,positive,Cytidine monophosphate,1,1
+3433,pNA,positive,Cytosine,1,0
+3434,pNA,positive,DG 18:0-22:6,0,1
+3435,pNA,positive,Dihydroxyacetone,0,0
+3436,pNA,positive,Dihydroxyacetone phosphate,0,0
+3437,pNA,positive,Dopamine,1,1
+3438,pNA,positive,Epinephrine,1,1
+3439,pNA,positive,Estradiol,1,1
+3440,pNA,positive,Flavin adenine dinucleotide,1,0
+3441,pNA,positive,Flavin mononucleotide,1,1
+3442,pNA,positive,Folic acid,1,1
+3443,pNA,positive,"Fructose 1,6-bisphosphate",0,0
+3444,pNA,positive,Fumaric acid,0,0
+3445,pNA,positive,GM3 Ganglioside 18:0,1,1
+3446,pNA,positive,GlcCer d18:1/18:0,1,1
+3447,pNA,positive,Gluconic acid,1,0
+3448,pNA,positive,Glucosamine,1,1
+3449,pNA,positive,Glucosamine 6-phosphate,1,0
+3450,pNA,positive,Glucose,1,1
+3451,pNA,positive,Glucose 6-phosphate,1,0
+3452,pNA,positive,Glucosyl cholesterol,1,1
+3453,pNA,positive,Glutamic acid,1,1
+3454,pNA,positive,Glutamine,1,1
+3455,pNA,positive,Glutathione,1,1
+3456,pNA,positive,Glycerol 3-phosphate,0,0
+3457,pNA,positive,Glycerophosphocholine,1,1
+3458,pNA,positive,Glycine,1,1
+3459,pNA,positive,Guanine,1,1
+3460,pNA,positive,Histamine,1,1
+3461,pNA,positive,Histidine,1,1
+3462,pNA,positive,Homocysteine,1,1
+3463,pNA,positive,Hypoxanthine,1,1
+3464,pNA,positive,Kynurenic acid,1,0
+3465,pNA,positive,Kynurenine,1,1
+3466,pNA,positive,L-Dopa,1,1
+3467,pNA,positive,Lactic acid,0,0
+3468,pNA,positive,Lyso PA 18:1,1,1
+3469,pNA,positive,Lyso PC 15:0,1,1
+3470,pNA,positive,Lyso PE 18:0,1,1
+3471,pNA,positive,Lyso PG 16:0,1,1
+3472,pNA,positive,Lyso PI 17:1,1,1
+3473,pNA,positive,Lyso PS 17:1,1,1
+3474,pNA,positive,MG 18:1,0,1
+3475,pNA,positive,Malic acid,1,0
+3476,pNA,positive,Malonic acid,0,0
+3477,pNA,positive,Melatonin,1,0
+3478,pNA,positive,Methionine,1,1
+3479,pNA,positive,Mevalonic acid,0,0
+3480,pNA,positive,Myo-inositol 1-phosphate,0,1
+3481,pNA,positive,N-Acetylaspartic acid,1,0
+3482,pNA,positive,N-Acetylaspartylglutamic acid,1,1
+3483,pNA,positive,N-Acetylgalactosamine 6-phosphate,1,1
+3484,pNA,positive,N-Acetylglucosamine,1,1
+3485,pNA,positive,"N6,N6,N6-Trimethyllysine",1,1
+3486,pNA,positive,Niacinamide,0,0
+3487,pNA,positive,Nicotinamide adenine dinucleotide (NAD),1,0
+3488,pNA,positive,"Nicotinamide adenine dinucleotide, reduced (NADH)",0,1
+3489,pNA,positive,Nicotinamide riboside,1,1
+3490,pNA,positive,Nicotinamide ribotide,1,1
+3491,pNA,positive,Nicotinic acid,0,0
+3492,pNA,positive,Ornithine,1,1
+3493,pNA,positive,Orotic acid,0,0
+3494,pNA,positive,Oxalacetic acid,0,0
+3495,pNA,positive,Oxidized glutathione,1,1
+3496,pNA,positive,PA 16:0-18:1,1,1
+3497,pNA,positive,PC (O) C16-18:1,1,1
+3498,pNA,positive,PC 15:0-18:1,1,1
+3499,pNA,positive,PE 18:0-20:4,1,1
+3500,pNA,positive,PG 16:0-18:1,1,1
+3501,pNA,positive,PI 16:0-18:1,1,1
+3502,pNA,positive,PI(5)P 18:1,1,1
+3503,pNA,positive,PS (POPS) 16:0-18:1,1,1
+3504,pNA,positive,Palmitic acid,0,1
+3505,pNA,positive,Palmitoyl-CoA,1,1
+3506,pNA,positive,Pantetheine,1,1
+3507,pNA,positive,Pantothenic acid,1,1
+3508,pNA,positive,Phenylalanine,1,1
+3509,pNA,positive,Phosphocreatine,0,1
+3510,pNA,positive,Phosphoenolpyruvic acid,0,0
+3511,pNA,positive,Phylloquinone,0,0
+3512,pNA,positive,Proline,1,1
+3513,pNA,positive,Propionylcarnitine,1,1
+3514,pNA,positive,Prostaglandin E1,1,1
+3515,pNA,positive,Putrescine,1,1
+3516,pNA,positive,Pyridoxine,1,1
+3517,pNA,positive,Pyruvic acid,0,0
+3518,pNA,positive,Quinolinic acid,1,0
+3519,pNA,positive,Retinoic acid,1,1
+3520,pNA,positive,Riboflavin,1,1
+3521,pNA,positive,Ribulose,0,1
+3522,pNA,positive,Ribulose 5-phosphate,1,0
+3523,pNA,positive,S-Adenosylhomocysteine,1,1
+3524,pNA,positive,S-Adenosylmethionine,1,1
+3525,pNA,positive,SM d18:1-16:0,1,1
+3526,pNA,positive,Serine,1,1
+3527,pNA,positive,Serotonin,0,1
+3528,pNA,positive,Spermidine,1,1
+3529,pNA,positive,Succinic acid,0,0
+3530,pNA,positive,Sulfo GalCer 18:0(2S-OH),1,1
+3531,pNA,positive,TG 15:0-18:1-15:0,1,0
+3532,pNA,positive,Taurine,1,1
+3533,pNA,positive,Taurocholic acid,1,1
+3534,pNA,positive,Tetrahydrofolic acid,1,1
+3535,pNA,positive,Thiamine,1,1
+3536,pNA,positive,Thymine,1,0
+3537,pNA,positive,Tryptophan,1,1
+3538,pNA,positive,Tyrosine,1,1
+3539,pNA,positive,Uracil,0,0
+3540,pNA,positive,Ureidosuccinic acid,1,0
+3541,pNA,positive,Uric acid,0,1
+3542,pNA,positive,Uridine,1,1
+3543,pNA,positive,Uridine diphosphate,1,1
+3544,pNA,positive,Uridine diphosphate glucose,1,1
+3545,pNA,positive,Uridine diphosphate glucuronic acid,0,1
+3546,pNA,positive,Uridine diphosphate-N-acetylglucosamine,1,1
+3547,pNA,positive,Urocanic acid,0,0
+3548,pNA,positive,Valine,1,1
+3549,pNA,positive,Xanthine,1,1
+3550,pNA,positive,alpha-tocopherol,1,0
+3551,pNA,positive,cis-Aconitic acid,1,0
+3552,pNA,positive,gamma-Aminobutyric acid,1,1
+3553,pNA,positive,myo-Inositol,1,1
