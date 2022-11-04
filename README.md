@@ -1,11 +1,5 @@
-# spotting-project-regression
-
-### TODO list: 
-- check the final plots/results
-  - Notebook for making plots and scores/results of paper
-  - Notebook for predicting stuff for unknown molecules
-- Put in readme or create a notebook? At least for using/predicting with the trained models?
-
+# Spotting Project: predict matrix intensities using a Machine Learning model
+The trained models and predictions can be found in the `training_results/paper_results` folder.
 
 ### Install
 - `conda create --name spottingProjIntensityEnv python=3.8`
@@ -13,15 +7,12 @@
 - `pip install -r requirements.txt`
 - `python setup.py install`
 
-### Reproducing paper results
-- Add splits and number of iterations!
-- `python -m pred_spot_intensity -s mol random --task_type regression_on_detected --pred_val_thresh 0.2 --postfix release_tests`
-- `python -m pred_spot_intensity -s mol --task_type regression_on_detected --pred_val_thresh 0.2 --do_feat_sel --only_save_feat --postfix release_tests`
+### Predicting matrix intensities for custom molecules
+Follow the instructions in the notebook `predict_intensities.ipynb` to predict matrix intensities on your custom set of molecules.
 
-### Stuff to do
-- Feature selection plots
-- Train command
-- How to evaluate model
-- Install for training
-  - Install with torch...?
-  - Skip pytorch and clean it in a new branch
+### Reproduce paper results
+To reproduce the paper results by following these steps:
+- Retrain the models by running `python train_models.py --exp_name <YOUR_NEW_EXPERIMENT_NAME>`, where `YOUR_NEW_EXPERIMENT_NAME` could be `reproduce_paper_results`
+- After training is done, models and predictions can be found in the `training_results/YOUR_NEW_EXPERIMENT_NAME` folder
+- To compute scores and make plots, use the `evaluate_trained_models.ipynb` notebook
+

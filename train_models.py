@@ -1,3 +1,4 @@
+import argparse
 import os
 import subprocess
 import sys
@@ -11,7 +12,11 @@ from pred_spot_intensity.combine_results import combine_results_from_multiple_ex
 
 
 if __name__ == "__main__":
-    EXP_NAME = "reproduce_article_results"
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--exp_name', type=str, default="reproduce_paper_results")
+    args = parser.parse_args()
+
+    EXP_NAME = args.exp_name
 
     python_interpreter = sys.executable
     # TODO:
