@@ -1,4 +1,4 @@
-name_short,pka_strongest_acidic,pka_strongest_basic,polar_surface_area,polarizability,acceptor_count,donor_count,physiological_charge
+molecule_name,pka_strongest_acidic,pka_strongest_basic,polar_surface_area,polarizability,acceptor_count,donor_count,physiological_charge
 Glucose,11.3,-3.0,110.38,16.35,6.0,5.0,0.0
 Glucose 6-phosphate,1.22,-3.6,156.91,21.0,8.0,6.0,-2.0
 "Fructose 1,6-bisphosphate",0.89,-3.7,203.44,25.7,10.0,7.0,-4.0

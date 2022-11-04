@@ -5,7 +5,6 @@ import sys
 from pred_spot_intensity.combine_results import combine_results_from_multiple_experiments
 
 # TODO:
-#   - notebook to predict with model
 #   - clean notebook to create plots
 #   - clean inputs / results / plots
 #   - clean package code
@@ -32,7 +31,7 @@ if __name__ == "__main__":
         )
         print(f"\n\n\n####### Running set of experiments {i + 1}/{len(all_options_to_run)}... ###### ")
         print(full_command)
-        # subprocess.run(full_command, shell=True, check=True)
+        subprocess.run(full_command, shell=True, check=True)
 
     # TODO: merge results from multiple iterations using the other script
     all_exp_names = [

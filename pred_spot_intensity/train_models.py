@@ -2,10 +2,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-try:
-    from imblearn.over_sampling import RandomOverSampler
-except ImportError:
-    RandomOverSampler = None
+from imblearn.over_sampling import RandomOverSampler
+# except ImportError:
+#     RandomOverSampler = None
 
 try:
     from .train_pytorch_models import train_pytorch_model_wrapper
@@ -20,7 +19,7 @@ from pred_spot_intensity.sklearn_training_utils import train_one_model_per_matri
 from pred_spot_intensity.train_pytorch_models import train_pytorch_model_on_intensities
 
 # plt.style.use('dark_background')
-
+from .io import load_molecule_features
 
 
 def train_models(args):
@@ -48,7 +47,7 @@ def train_models(args):
     # Paths:
     current_dir_path = Path(os.path.dirname(os.path.realpath(__file__)))
 
-    input_dir = current_dir_path / "../input_data"
+    input_dir = current_dir_path / "../training_data"
     plots_dir = current_dir_path / "../plots"
     plots_dir.mkdir(exist_ok=True)
     result_dir = current_dir_path / "../training_results"
@@ -58,30 +57,20 @@ def train_models(args):
     # Loading fingerprints, and molecule properties
 
     # Load fingerprints:
-    fingerprints = pd.read_csv(input_dir / "fingerprints.csv", index_col=0)
+    fingerprints = pd.read_csv(input_dir / "molecule_fingerprints.csv", index_col=0)
     fingerprints.sort_index(inplace=True)
     # There seems to be some duplicates in the rows:
     fingerprints.drop_duplicates(inplace=True)
     # Save columns names:
     fingerprints_cols = fingerprints.columns
+    assert fingerprints.index.is_unique
 
     # Load properties:
-    mol_properties = pd.read_csv(input_dir / "physchem_properties.csv", index_col=0)
-    mol_properties.sort_index(inplace=True)
-    mol_properties.drop_duplicates(inplace=True)
-    # mol_properties.set_index("name_short", inplace=True)
+    mol_properties = load_molecule_features(input_dir / "physchem_molecule_properties.csv",
+                           molecule_name_column="molecule_name",
+                                            normalize=False)
     mol_properties_cols = mol_properties.columns
 
-    # Check for NaN values:
-    null_mask_pka_acidic = mol_properties.pka_strongest_acidic.isnull()
-    mol_properties.loc[null_mask_pka_acidic, "pka_strongest_acidic"] = mol_properties.pka_strongest_acidic[~null_mask_pka_acidic].max()
-
-    null_mask_pka_basic = mol_properties.pka_strongest_basic.isnull()
-    mol_properties.loc[null_mask_pka_basic, "pka_strongest_basic"] = mol_properties.pka_strongest_basic[~null_mask_pka_basic].min()
-
-    # Perform some basic checks:
-    assert fingerprints.index.is_unique
-    assert mol_properties.index.is_unique
 
     print("Number of fingerprints: ", len(fingerprints))
     print("Number of mol properties: ", len(mol_properties))
