@@ -222,7 +222,17 @@ def train_models(args):
     dir_out = result_dir / experiment_name / out_folder
     dir_out.mkdir(exist_ok=True, parents=True)
 
-    random_features = pd.DataFrame(np.random.normal(size=features_norm_df.shape[0]), index=features_norm_df.index)
+    # Shuffle mol_features for generating random input:
+    random_features = []
+    for i, mol_col in enumerate(mol_properties_cols):
+        array_shuffled = features_norm_df[mol_col].to_numpy().copy()
+        # print(array_shuffled)
+        np.random.shuffle(array_shuffled)
+        random_features.append(array_shuffled)
+    random_features = pd.DataFrame(np.stack(random_features).T, index=features_norm_df.index,
+                                   columns=mol_properties_cols)
+    # print(random_features)
+    # random_features = pd.DataFrame(np.random.normal(size=features_norm_df[mol_properties_cols].shape), index=features_norm_df.index)
     zero_features = pd.DataFrame(np.zeros(shape=features_norm_df.shape[0], dtype="float"), index=features_norm_df.index)
 
     runs_setup = {

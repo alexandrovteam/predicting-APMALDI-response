@@ -175,6 +175,18 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         features_mask = ["adduct" not in feat for feat in feature_names]
         selected_features = [feat for feat in feature_names if "adduct" not in feat]
 
+        from matplotlib import rc
+        # rc('font', **{'family': 'serif', 'serif': ['Arial']})
+        # rc('text', usetex=False)
+        # plt.rcParams.update({'font.size': 10})
+        rc('font', **{'family': 'sans-serif',
+                      'sans-serif': ['Arial'],
+                      'size': 16})
+        rc('pdf', fonttype=42)
+        rc('ps', fonttype=42)
+
+
+
         # explainer = shap.KernelExplainer(model.predict, X_train)
         # shap_values = explainer.shap_values(X_test, nsamples=100)
         shap.initjs()
@@ -186,8 +198,66 @@ def train_pytorch_model_wrapper(train_x, test_x=None, train_y=None, test_y=None,
         # plot the explanation of the first prediction
         # Note the model is "multi-output" because it is rank-2 but only has one column
         # shap.force_plot(explainer.expected_value[0], shap_values[0][0], x_test_words[0])
+        print(shap_values.shape, train_x.shape)
+
+        # --------------------------------------------
+        # # Only necessary when using PyCharm:
+        # import matplotlib as mpl
+        # # import matplotlib.pyplot as plt
+        # mpl.use('TkAgg')  # !IMPORTANT
+        # --------------------------------------------
+
         shap.summary_plot(shap_values[:, features_mask], train_x[:, features_mask], feature_names=selected_features, show=False)
-        plt.savefig(feature_selection_out_dir / f'{matrix}_{polarity}_summary_plot.png')
+
+        import h5py
+        save_path = feature_selection_out_dir / \
+                    f'{matrix}_{polarity}_summary_plot_data.h5'
+
+        def writeHDF5(data, path, inner_path, compression='gzip'):
+            if os.path.exists(path):
+                write_mode = 'r+'
+            else:
+                write_mode = 'w'
+            with h5py.File(path, write_mode) as f:
+                if inner_path in f:
+                    del f[inner_path]
+                f.create_dataset(inner_path, data=data,
+                                 compression=compression)
+
+        writeHDF5(shap_values, save_path, "shape_values")
+        writeHDF5(features_mask, save_path, "features_mask")
+        writeHDF5(train_x, save_path, "train_x")
+        writeHDF5(selected_features, save_path, "selected_features")
+
+        # with h5py.File(save_path, 'r') as f:
+        #     output = f["shap_values"] = shap_values
+
+
+        def readHDF5(path,
+                     inner_path,
+                     crop_slice=None,
+                     dtype=None,
+                     ds_factor=None,
+                     ds_order=3,
+                     run_connected_components=False,
+                     ):
+            with h5py.File(path, 'r') as f:
+                output = f[inner_path][crop_slice]
+
+            if dtype is not None:
+                output = output.astype(dtype)
+
+            return output
+
+        # Change the colormap of the artists
+        for fc in plt.gcf().get_children():
+            for fcc in fc.get_children():
+                if hasattr(fcc, "set_cmap"):
+                    # fcc.set_cmap("viridis")
+                    fcc.set_cmap("cividis")
+                    # fcc.set_cma
+        plt.savefig(feature_selection_out_dir / f'{matrix}_{polarity}_summary_plot.png', dpi=400)
+        plt.savefig(feature_selection_out_dir / f'{matrix}_{polarity}_summary_plot.pdf')
 
         # Make sure that matplolib clears the history for next plots:
         plt.show(block=False)
