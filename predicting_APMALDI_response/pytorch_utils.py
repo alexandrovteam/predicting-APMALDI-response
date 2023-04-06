@@ -1,5 +1,4 @@
 # %%
-import torchmetrics
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 
@@ -10,15 +9,26 @@ from matplotlib import pyplot as plt
 
 from tqdm import tqdm
 
-import torch.nn as nn
+try:
+    import torchmetrics
+except ImportError:
+    torchmetrics = None
 
-import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader
+try:
+    import torch.nn as nn
 
-import torch.nn.functional as F
-import pytorch_lightning as pl
-import torch
-from pytorch_lightning.callbacks import LearningRateMonitor
+    import torch.optim as optim
+    from torch.utils.data import Dataset, DataLoader
+
+    import torch.nn.functional as F
+    import torch
+except ImportError:
+    torch = None
+try:
+    import pytorch_lightning as pl
+    from pytorch_lightning.callbacks import LearningRateMonitor
+except ImportError:
+    pl = None
 
 try:
     # from allrank.models.losses.neuralNDCG import neuralNDCG, neuralNDCG_transposed

@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 
 from sklearn.feature_selection import SelectKBest, mutual_info_classif, mutual_info_regression
 
-from pred_spot_intensity.train_pytorch_models import train_pytorch_model_wrapper
+from predicting_APMALDI_response.train_pytorch_models import train_pytorch_model_wrapper
 
 # plt.style.use('dark_background')
 from tqdm import tqdm

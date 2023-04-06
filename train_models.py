@@ -2,7 +2,7 @@ import argparse
 import subprocess
 import sys
 
-from pred_spot_intensity.combine_results import combine_results_from_multiple_experiments
+from predicting_APMALDI_response.combine_results import combine_results_from_multiple_experiments
 
 
 if __name__ == "__main__":

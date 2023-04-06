@@ -1,14 +1,14 @@
-# Spotting Project: Predict matrix intensities using a Machine Learning model
+# Predicting AP-MALDI response using Machine Learning
 The trained models and predictions can be found in the [training_results/paper_results](./training_results/paper_results) folder.
 
 ### How to Install
-- `conda create --name spottingProjIntensityEnv python=3.8`
-- `conda activate spottingProjIntensityEnv`
+- `conda create --name apMALDIresponseEnv python=3.8`
+- `conda activate apMALDIresponseEnv`
 - `pip install -r requirements.txt`
 - `python setup.py install`
 
-### Predicting matrix intensities for custom molecules
-Follow the instructions in the notebook [predict_intensities.ipynb](./predict_intensities.ipynb) to predict matrix intensities on your custom set of molecules.
+### Predicting AP-MALDI response for custom molecules
+Follow the instructions in the notebook [predict_intensities.ipynb](./predict_intensities.ipynb) to predict AP-MALDI response on your custom set of molecules.
 
 ### Reproducing paper results
 To reproduce the paper results, follow these steps:

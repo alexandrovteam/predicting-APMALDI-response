@@ -20,7 +20,7 @@ try:
     import torch
     from pytorch_lightning.callbacks import LearningRateMonitor
     from torch.utils.data import DataLoader
-    from pred_spot_intensity.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN, RankingLossWrapper
+    from predicting_APMALDI_response.pytorch_utils import TrainValData, TestData, SorensenDiceLoss, SimpleTwoLayersNN, RankingLossWrapper
     import skorch
 except ImportError:
     torch = None

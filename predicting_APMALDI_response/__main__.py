@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 
-from pred_spot_intensity.train_models import train_models
+from predicting_APMALDI_response.train_models import train_models
 
 
 if __name__ == "__main__":
