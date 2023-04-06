@@ -8,11 +8,11 @@ The trained models and predictions can be found in the [training_results/paper_r
 - `python setup.py install`
 
 ### Predicting AP-MALDI response for custom molecules
-Follow the instructions in the notebook [predict_intensities.ipynb](./predict_intensities.ipynb) to predict AP-MALDI response on your custom set of molecules.
+Follow the instructions in the notebook [predict_intensities.ipynb](notebooks/predict_intensities.ipynb) to predict AP-MALDI response on your custom set of molecules.
 
 ### Reproducing paper results
 To reproduce the paper results, follow these steps:
 - Retrain the models by running `python train_models.py --exp_name <YOUR_NEW_EXPERIMENT_NAME>`
 - After training is done, models and predictions can be found in the `training_results/YOUR_NEW_EXPERIMENT_NAME` folder
-- To compute scores and make plots, use the [evaluate_trained_models.ipynb](./evaluate_trained_models.ipynb) notebook
+- To compute scores and make plots, use the [evaluate_trained_models.ipynb](notebooks/evaluate_trained_models.ipynb) notebook
 
